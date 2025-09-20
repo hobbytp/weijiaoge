@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微蕉阁 (WeiJiaoGe) - Gemini 2.5 Flash Image Preview 资源收集</title>
+    <title>Nano Banana 使用案例 - 微蕉阁</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -43,6 +43,27 @@
             opacity: 0.9;
         }
         
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .nav a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .nav a:hover {
+            transform: translateY(-2px);
+        }
+        
         .filters {
             background: white;
             padding: 20px;
@@ -50,7 +71,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 15px;
             align-items: end;
         }
@@ -86,12 +107,13 @@
             font-size: 14px;
         }
         
-        .list {
+        .cases-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 20px;
         }
         
-        .card {
+        .case-card {
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -99,67 +121,94 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
         
-        .card:hover {
+        .case-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
         
-        .title {
-            font-size: 1.3rem;
+        .case-title {
+            font-size: 1.2rem;
             margin-bottom: 10px;
+            color: #333;
         }
         
-        .title a {
+        .case-category {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .prompt-section {
+            margin-bottom: 15px;
+        }
+        
+        .prompt-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .prompt-text {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .effect-section {
+            margin-bottom: 15px;
+        }
+        
+        .effect-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .effect-text {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .images-section {
+            margin-bottom: 15px;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .case-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 2px solid #e1e5e9;
+        }
+        
+        .source-link {
+            text-align: right;
+            margin-top: 15px;
+        }
+        
+        .source-link a {
             color: #667eea;
             text-decoration: none;
-        }
-        
-        .title a:hover {
-            text-decoration: underline;
-        }
-        
-        .meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 10px;
             font-size: 12px;
         }
         
-        .meta span {
-            background: #f1f3f4;
-            padding: 4px 8px;
-            border-radius: 4px;
-            color: #5f6368;
-            font-size: 11px;
-        }
-        
-        .type-badge {
-            background: #e3f2fd !important;
-            color: #1976d2 !important;
-        }
-        
-        .source-badge {
-            background: #f3e5f5 !important;
-            color: #7b1fa2 !important;
-        }
-        
-        .stars {
-            background: #fff3e0 !important;
-            color: #f57c00 !important;
-        }
-        
-        mark {
-            background: #ffeb3b;
-            color: #333;
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-weight: bold;
-        }
-        
-        .desc {
-            color: #666;
-            line-height: 1.5;
+        .source-link a:hover {
+            text-decoration: underline;
         }
         
         .empty {
@@ -173,6 +222,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
             h1 {
                 font-size: 2rem;
             }
@@ -182,49 +235,42 @@
 <body>
     <div class="container">
         <header>
-            <h1>🍌 微蕉阁 (WeiJiaoGe)</h1>
-            <p class="subtitle">Gemini 2.5 Flash Image Preview (Nano Banana) 资源收集</p>
+            <h1>🍌 Nano Banana 使用案例</h1>
+            <p class="subtitle">具体的 Prompt 和效果展示</p>
         </header>
         
-        <div style="text-align: center; margin-bottom: 30px;">
-            <a href="index.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">📚 资源列表</a>
-            <a href="cases.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">🎯 使用案例</a>
+        <div class="nav">
+            <a href="index.html">📚 资源列表</a>
+            <a href="cases.html">🎯 使用案例</a>
         </div>
         
         <div class="filters">
             <div class="filter-group">
-                <label for="q">搜索关键词</label>
-                <input type="text" id="q" placeholder="搜索标题、描述或作者...">
+                <label for="search">搜索案例</label>
+                <input type="text" id="search" placeholder="搜索标题、prompt或效果...">
             </div>
             <div class="filter-group">
-                <label for="type">类型</label>
-                <select id="type">
-                    <option value="">全部类型</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="source">来源</label>
-                <select id="source">
-                    <option value="">全部来源</option>
+                <label for="category">分类</label>
+                <select id="category">
+                    <option value="">全部分类</option>
                 </select>
             </div>
             <div class="filter-group">
                 <label for="sort">排序</label>
                 <select id="sort">
-                    <option value="score">综合排序</option>
-                    <option value="recent">最新更新</option>
-                    <option value="stars">星标数</option>
+                    <option value="category">按分类</option>
+                    <option value="title">按标题</option>
                 </select>
             </div>
         </div>
         
         <div class="stats" id="stats">加载中...</div>
         
-        <div class="list" id="list">
-            <div class="empty">正在加载数据...</div>
+        <div class="cases-grid" id="cases-grid">
+            <div class="empty">正在加载案例...</div>
         </div>
     </div>
     
-    <script src="app.js"></script>
+    <script src="cases.js"></script>
 </body>
 </html>

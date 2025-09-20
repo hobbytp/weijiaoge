@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
+import { processItemsForCases } from '../fetchers/case-extractor.mjs';
 
 // 加载.env文件
 dotenv.config();
@@ -13,6 +14,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const outDir = path.join(root, 'public');
 const outFile = path.join(outDir, 'data.json');
+const casesFile = path.join(outDir, 'cases.json');
 
 function dedupe(items) {
   const seen = new Map();
@@ -76,6 +78,24 @@ async function main() {
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(outFile, JSON.stringify(payload, null, 2), 'utf-8');
   console.log(`Wrote ${items.length} items to ${path.relative(root, outFile)}`);
+
+  // 提取使用案例
+  console.log('🔍 提取使用案例...');
+  const cases = processItemsForCases(items);
+  
+  const casesPayload = {
+    version: 1,
+    generatedAt: new Date().toISOString(),
+    total: cases.length,
+    categories: Object.keys(cases.reduce((acc, c) => {
+      acc[c.category] = (acc[c.category] || 0) + 1;
+      return acc;
+    }, {})),
+    cases
+  };
+  
+  fs.writeFileSync(casesFile, JSON.stringify(casesPayload, null, 2), 'utf-8');
+  console.log(`📝 Wrote ${cases.length} cases to ${path.relative(root, casesFile)}`);
 }
 
 main().catch(err => {
