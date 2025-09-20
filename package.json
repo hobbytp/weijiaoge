@@ -9,7 +9,10 @@
   "scripts": {
     "update": "node scripts/update.mjs",
     "serve": "node server.js",
-    "preview": "node server.js"
+    "preview": "node server.js",
+    "restart": "npm run update && npm run serve",
+    "clean": "rm -f test-env.mjs",
+    "help": "echo '🍌 微蕉阁项目管理命令: make help'"
   },
   "dependencies": {
     "dotenv": "^17.2.2"

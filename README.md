@@ -12,6 +12,48 @@
 
 ## 本地运行
 
+### 快速开始
+
+**方法一：使用启动脚本（推荐）**
+
+```bash
+# Linux/Mac
+./start.sh
+
+# Windows
+start.bat
+```
+
+**方法二：使用Makefile**
+
+```bash
+# 查看所有可用命令
+make help
+
+# 完整流程
+make install && make update && make preview
+
+# 或者分步执行
+make install    # 安装依赖
+make update     # 更新数据
+make preview    # 启动服务器
+```
+
+**方法三：使用npm命令**
+
+```bash
+# 安装依赖
+npm install
+
+# 更新数据
+npm run update
+
+# 启动服务器
+npm run preview
+```
+
+### 手动步骤
+
 1. 克隆项目
 
 ```bash
@@ -19,16 +61,23 @@ git clone <your-repo-url>
 cd weijiaoge
 ```
 
-2. 运行数据更新脚本
+2. 配置环境变量
+
+```bash
+cp env.example .env
+# 编辑.env文件，添加你的API密钥
+```
+
+3. 运行数据更新脚本
 
 ```bash
 node scripts/update.mjs
 ```
 
-3. 启动本地服务器
+4. 启动本地服务器
 
 ```bash
-npm run preview
+node server.js
 ```
 
 访问 `http://localhost:5173` 查看效果。
