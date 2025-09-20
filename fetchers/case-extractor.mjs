@@ -32,7 +32,18 @@ const PROMPT_PATTERNS = [
   
   // 示例中的prompt
   /example[:\s]*["']([^"']{30,})["']/gi,
-  /示例[:\s]*["']([^"']{30,})["']/gi
+  /示例[:\s]*["']([^"']{30,})["']/gi,
+  
+  // 文章中的详细prompt（以**Prompt:**开头）
+  /\*\*Prompt:\*\*\s*([^*]+?)(?=\*\*Output:\*\*|\*\*[A-Z]|\n\n|$)/gis,
+  
+  // 文章中的详细prompt（以Prompt:开头）
+  /Prompt:\s*([^\n]+(?:\n(?!\n)[^\n]+)*?)(?=Output:|[A-Z][a-z]+:|$)/gis,
+  
+  // 长段落中的详细描述（包含具体操作指令）
+  /(Create a [^.!?]*(?:full-length|portrait|image|photo)[^.!?]*(?:1970s|retro|vintage|Bollywood)[^.!?]*\.)/gi,
+  /(Craft a [^.!?]*(?:moody|studio|portrait|image)[^.!?]*(?:golden|warm|lighting)[^.!?]*\.)/gi,
+  /(Transform [^.!?]*(?:photo|image|person)[^.!?]*(?:into|as)[^.!?]*\.)/gi
 ];
 
 // 排除的假prompt模式
@@ -212,37 +223,92 @@ export function extractCaseFromContent(item) {
   };
 }
 
+// 新增：从单个文章中提取多个案例
+export function extractMultipleCasesFromArticle(item) {
+  const { title, description, url } = item;
+  const fullText = `${title} ${description}`;
+  
+  const cases = [];
+  
+  // 提取所有prompt
+  const prompts = extractPrompts(fullText);
+  
+  // 如果找到了多个prompt，为每个prompt创建一个案例
+  if (prompts.length > 1) {
+    prompts.forEach((prompt, index) => {
+      const effects = extractEffects(fullText);
+      const images = extractImages(fullText);
+      const category = categorizeCase(title, description, [prompt]);
+      
+      // 为每个prompt生成一个独特的标题
+      let caseTitle = title;
+      if (prompt.includes('Bollywood') || prompt.includes('1970s')) {
+        caseTitle = `${title} - 宝莱坞复古风格`;
+      } else if (prompt.includes('studio') || prompt.includes('portrait')) {
+        caseTitle = `${title} - 工作室肖像`;
+      } else if (prompt.includes('vintage') || prompt.includes('retro')) {
+        caseTitle = `${title} - 复古风格`;
+      } else if (prompt.includes('figurine') || prompt.includes('3D')) {
+        caseTitle = `${title} - 3D手办制作`;
+      }
+      
+      cases.push({
+        id: `case:${Date.now()}_${index}_${Math.random().toString(36).substr(2, 9)}`,
+        title: caseTitle,
+        category: category,
+        categoryName: CASE_CATEGORIES[category],
+        prompts: [prompt],
+        effects: effects,
+        images: images,
+        sourceUrl: url,
+        source: item.source || 'web',
+        extractedAt: new Date().toISOString(),
+        originalItem: item
+      });
+    });
+  } else if (prompts.length === 1) {
+    // 只有一个prompt，使用原来的逻辑
+    const caseData = extractCaseFromContent(item);
+    cases.push(caseData);
+  }
+  
+  return cases;
+}
+
 export function processItemsForCases(items) {
   const cases = [];
   
   for (const item of items) {
     try {
-      const caseData = extractCaseFromContent(item);
+      // 使用新的多案例提取功能
+      const extractedCases = extractMultipleCasesFromArticle(item);
       
-      // 更严格的筛选条件：必须有真正的prompt
-      if (caseData.prompts.length > 0) {
-        // 进一步验证prompt的质量
-        const hasValidPrompts = caseData.prompts.some(prompt => {
-          // 检查是否包含具体的操作指令
-          const hasAction = /(create|make|turn|transform|generate|edit|change|convert)/i.test(prompt);
-          // 检查是否包含具体的目标对象
-          const hasTarget = /(figurine|character|scene|style|clothing|outfit|person|image|photo|picture|3d|model)/i.test(prompt);
-          // 检查长度是否足够描述性
-          const isDescriptive = prompt.length >= 30;
+      // 验证每个提取的案例
+      extractedCases.forEach(caseData => {
+        if (caseData.prompts.length > 0) {
+          // 进一步验证prompt的质量
+          const hasValidPrompts = caseData.prompts.some(prompt => {
+            // 检查是否包含具体的操作指令
+            const hasAction = /(create|make|turn|transform|generate|edit|change|convert|craft)/i.test(prompt);
+            // 检查是否包含具体的目标对象
+            const hasTarget = /(figurine|character|scene|style|clothing|outfit|person|image|photo|picture|3d|model|portrait|Bollywood|retro|vintage)/i.test(prompt);
+            // 检查长度是否足够描述性
+            const isDescriptive = prompt.length >= 30;
+            
+            // 排除技术描述
+            const isNotTechnical = !/(built on|using|technology|model|api|function|code|typescript|react|javascript|gemini-2|generate-002|imagen|flash|preview)/i.test(prompt);
+            
+            // 检查是否像真正的用户prompt（包含形容词、名词等自然语言）
+            const isNaturalLanguage = /(a|an|the|beautiful|stunning|amazing|cute|detailed|realistic|fantasy|anime|cartoon|full-length|photorealistic|moody|studio|golden|warm|vintage|retro|Bollywood|1970s)/i.test(prompt);
+            
+            return hasAction && hasTarget && isDescriptive && isNotTechnical && isNaturalLanguage;
+          });
           
-          // 排除技术描述
-          const isNotTechnical = !/(built on|using|technology|model|api|function|code|typescript|react|javascript|gemini-2|generate-002|imagen|flash|preview)/i.test(prompt);
-          
-          // 检查是否像真正的用户prompt（包含形容词、名词等自然语言）
-          const isNaturalLanguage = /(a|an|the|beautiful|stunning|amazing|cute|detailed|realistic|fantasy|anime|cartoon)/i.test(prompt);
-          
-          return hasAction && hasTarget && isDescriptive && isNotTechnical && isNaturalLanguage;
-        });
-        
-        if (hasValidPrompts) {
-          cases.push(caseData);
+          if (hasValidPrompts) {
+            cases.push(caseData);
+          }
         }
-      }
+      });
     } catch (error) {
       console.error(`处理项目失败: ${item.title}`, error);
     }

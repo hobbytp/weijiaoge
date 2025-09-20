@@ -3,9 +3,10 @@ import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { processItemsForCases } from '../fetchers/case-extractor.mjs';
+import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
-import { processItemsForCases } from '../fetchers/case-extractor.mjs';
 
 // 加载.env文件
 dotenv.config();
@@ -83,19 +84,26 @@ async function main() {
   console.log('🔍 提取使用案例...');
   const cases = processItemsForCases(items);
   
+  // 从重要文章中提取详细案例
+  console.log('📚 从重要文章中提取详细案例...');
+  const importantCases = extractCasesFromImportantArticles();
+  
+  // 合并所有案例
+  const allCases = [...cases, ...importantCases];
+  
   const casesPayload = {
     version: 1,
     generatedAt: new Date().toISOString(),
-    total: cases.length,
-    categories: Object.keys(cases.reduce((acc, c) => {
+    total: allCases.length,
+    categories: Object.keys(allCases.reduce((acc, c) => {
       acc[c.category] = (acc[c.category] || 0) + 1;
       return acc;
     }, {})),
-    cases
+    cases: allCases
   };
   
   fs.writeFileSync(casesFile, JSON.stringify(casesPayload, null, 2), 'utf-8');
-  console.log(`📝 Wrote ${cases.length} cases to ${path.relative(root, casesFile)}`);
+  console.log(`📝 Wrote ${allCases.length} cases to ${path.relative(root, casesFile)} (${cases.length} from general sources + ${importantCases.length} from important articles)`);
 }
 
 main().catch(err => {
