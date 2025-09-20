@@ -1,8 +1,6 @@
 // fetchers/case-extractor.mjs
 // 从网页内容中提取Nano Banana使用案例
 
-import fs from 'fs';
-import path from 'path';
 
 // 案例分类定义
 const CASE_CATEGORIES = {
@@ -17,16 +15,40 @@ const CASE_CATEGORIES = {
   'other': '其他'
 };
 
-// 提取prompt的正则表达式模式
+// 提取prompt的正则表达式模式 - 更精确的匹配
 const PROMPT_PATTERNS = [
-  /prompt[:\s]*["']([^"']+)["']/gi,
-  /输入[:\s]*["']([^"']+)["']/gi,
-  /提示词[:\s]*["']([^"']+)["']/gi,
-  /"([^"]*create[^"]*figurine[^"]*)"/gi,
-  /"([^"]*turn[^"]*into[^"]*)"/gi,
-  /"([^"]*make[^"]*look[^"]*)"/gi,
-  /"([^"]*transform[^"]*)"/gi,
-  /"([^"]*generate[^"]*)"/gi
+  // 明确的prompt标记
+  /prompt[:\s]*["']([^"']{20,})["']/gi,
+  /输入[:\s]*["']([^"']{20,})["']/gi,
+  /提示词[:\s]*["']([^"']{20,})["']/gi,
+  /输入文本[:\s]*["']([^"']{20,})["']/gi,
+  
+  // 引号包围的完整描述性prompt
+  /"([^"]{30,}(?:create|make|turn|transform|generate|edit|change|convert)[^"]{20,})"/gi,
+  /"([^"]{30,}(?:figurine|character|scene|style|clothing|outfit)[^"]{20,})"/gi,
+  
+  // 代码块中的prompt
+  /```[^`]*["']([^"']{30,})["'][^`]*```/gi,
+  
+  // 示例中的prompt
+  /example[:\s]*["']([^"']{30,})["']/gi,
+  /示例[:\s]*["']([^"']{30,})["']/gi
+];
+
+// 排除的假prompt模式
+const EXCLUDE_PATTERNS = [
+  /^generateContent$/i,
+  /^generateText$/i,
+  /^model$/i,
+  /^function$/i,
+  /^api$/i,
+  /^code$/i,
+  /^example$/i,
+  /^test$/i,
+  /^demo$/i,
+  /^sample$/i,
+  /^[a-z_]+\(/i,  // 函数调用
+  /^[A-Z][a-z]+[A-Z]/  // 驼峰命名
 ];
 
 // 提取效果描述的模式
@@ -51,8 +73,26 @@ function extractPrompts(text) {
     let match;
     while ((match = pattern.exec(text)) !== null) {
       const prompt = match[1].trim();
-      if (prompt.length > 10 && prompt.length < 500) {
-        prompts.push(prompt);
+      
+      // 检查长度和排除假prompt
+      if (prompt.length >= 20 && prompt.length <= 500) {
+        // 检查是否应该排除
+        const shouldExclude = EXCLUDE_PATTERNS.some(excludePattern => 
+          excludePattern.test(prompt)
+        );
+        
+        if (!shouldExclude) {
+          // 检查是否包含有意义的词汇
+          const hasMeaningfulWords = /(create|make|turn|transform|generate|edit|change|convert|figurine|character|scene|style|clothing|outfit|person|image|photo|picture)/i.test(prompt);
+          
+          // 排除技术描述和代码片段
+          const isTechnicalDescription = /(built on|using|technology|model|api|function|code|typescript|react|javascript)/i.test(prompt);
+          const isCodeSnippet = /(gemini-2|generate-002|imagen|flash|preview)/i.test(prompt);
+          
+          if (hasMeaningfulWords && !isTechnicalDescription && !isCodeSnippet) {
+            prompts.push(prompt);
+          }
+        }
       }
     }
   }
@@ -179,9 +219,29 @@ export function processItemsForCases(items) {
     try {
       const caseData = extractCaseFromContent(item);
       
-      // 只保留有prompt或有效果描述的案例
-      if (caseData.prompts.length > 0 || caseData.effects.length > 0) {
-        cases.push(caseData);
+      // 更严格的筛选条件：必须有真正的prompt
+      if (caseData.prompts.length > 0) {
+        // 进一步验证prompt的质量
+        const hasValidPrompts = caseData.prompts.some(prompt => {
+          // 检查是否包含具体的操作指令
+          const hasAction = /(create|make|turn|transform|generate|edit|change|convert)/i.test(prompt);
+          // 检查是否包含具体的目标对象
+          const hasTarget = /(figurine|character|scene|style|clothing|outfit|person|image|photo|picture|3d|model)/i.test(prompt);
+          // 检查长度是否足够描述性
+          const isDescriptive = prompt.length >= 30;
+          
+          // 排除技术描述
+          const isNotTechnical = !/(built on|using|technology|model|api|function|code|typescript|react|javascript|gemini-2|generate-002|imagen|flash|preview)/i.test(prompt);
+          
+          // 检查是否像真正的用户prompt（包含形容词、名词等自然语言）
+          const isNaturalLanguage = /(a|an|the|beautiful|stunning|amazing|cute|detailed|realistic|fantasy|anime|cartoon)/i.test(prompt);
+          
+          return hasAction && hasTarget && isDescriptive && isNotTechnical && isNaturalLanguage;
+        });
+        
+        if (hasValidPrompts) {
+          cases.push(caseData);
+        }
       }
     } catch (error) {
       console.error(`处理项目失败: ${item.title}`, error);
