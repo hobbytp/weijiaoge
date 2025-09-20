@@ -10,6 +10,8 @@
     "update": "node scripts/update.mjs",
     "serve": "python -m http.server 5173",
     "preview": "start http://localhost:5173 && python -m http.server 5173"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2"
   }
 }
-

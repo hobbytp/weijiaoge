@@ -1,7 +1,311 @@
 {
   "version": 1,
-  "generatedAt": null,
-  "total": 0,
-  "items": []
+  "generatedAt": "2025-09-20T03:41:27.021Z",
+  "total": 19,
+  "items": [
+    {
+      "id": "web:1",
+      "title": "Introducing Gemini 2.5 Flash Image, our state-of-the-art ...",
+      "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
+      "description": "Explore Gemini 2.5 Flash Image, a powerful new image generation and editing model with advanced features and creative control.",
+      "source": "web",
+      "type": "article",
+      "author": "Google for Developers Blog",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:2",
+      "title": "How to prompt Gemini 2.5 Flash Image Generation ...",
+      "url": "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/",
+      "description": "This guide will teach you how to write prompts and provide instructions that get better results from Gemini 2.5 Flash. It all starts with ...",
+      "source": "web",
+      "type": "article",
+      "author": "Google for Developers Blog",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:3",
+      "title": "Gemini 2.5 Flash Image (Nano Banana)",
+      "url": "https://www.datacamp.com/tutorial/gemini-2-5-flash-image-guide",
+      "description": "In this tutorial, you'll learn how to set up and use Gemini 2.5 Flash Image through Python, master specific prompt engineering techniques for ...",
+      "source": "web",
+      "type": "article",
+      "author": "DataCamp",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:4",
+      "title": "Use Gemini 2.5 Flash Image (nano banana) on Vertex AI",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-2-5-flash-image-on-vertex-ai",
+      "description": "Developers and enterprises can access Gemini 2.5 Flash Image in preview today on Vertex AI, with built-in SynthID watermarking for responsible ...",
+      "source": "web",
+      "type": "article",
+      "author": "Google Cloud",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "Guides: Google Gemini Image Generation",
+      "url": "https://ai-sdk.dev/cookbook/guides/google-gemini-image-generation",
+      "description": "Generate and Edit Images with Google Gemini 2.5 Flash. This guide will show you how to generate and edit images with the AI SDK and Google's latest ...",
+      "source": "web",
+      "type": "article",
+      "author": "AI SDK",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:6",
+      "title": "My Experience Using the new Gemini 2.5 Flash Image | ...",
+      "url": "https://medium.com/google-cloud/my-experience-using-the-new-gemini-2-5-flash-image-8fbf79f00d76",
+      "description": "At its core, Gemini 2.5 Flash Image is a multimodal model designed for rapid and conversational image generation and editing. Think of it less ...",
+      "source": "web",
+      "type": "article",
+      "author": "Medium · David Regalado",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:7",
+      "title": "Gemini 2.5 Flash Image (Nano Banana)",
+      "url": "https://aistudio.google.com/models/gemini-2-5-flash-image",
+      "description": "All images created or edited with Gemini 2.5 Flash Image include an invisible SynthID digital watermark to clearly identify them as AI-generated. Build with ...",
+      "source": "web",
+      "type": "article",
+      "author": "Google AI Studio",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:1",
+      "title": "10 examples of our new native image editing in the Gemini ...",
+      "url": "https://blog.google/products/gemini/gemini-nano-banana-examples/",
+      "description": "A new Google DeepMind image editing model, fondly known as Nano Banana, is now in the Gemini app, giving you more creative control to blend ...",
+      "source": "web",
+      "type": "article",
+      "author": "The Keyword",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:2",
+      "title": "5 things to build with Google's new Nano Banana image ...",
+      "url": "https://medium.com/around-the-prompt/5-things-to-build-with-googles-new-nano-banana-image-editing-generation-model-ddfb0d167715",
+      "description": "How to build with Nano Banana for free in Google AI Studio and the Gemini API. Press enter or click to view image in full size.",
+      "source": "web",
+      "type": "article",
+      "author": "Medium · Logan Kilpatrick",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:4",
+      "title": "Nano Banana Tutorial: How to Use Google's AI Image Editing ...",
+      "url": "https://www.anangsha.me/nano-banana-tutorial-how-to-use-googles-ai-image-editing-model-in-2025/",
+      "description": "A step-by-step guide to editing, blending, and enhancing images with Nano Banana in Google Gemini.",
+      "source": "web",
+      "type": "article",
+      "author": "anangsha.me",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "How to try out Google's hot new Nano Banana image ...",
+      "url": "https://mashable.com/article/google-nano-banana-image-generator-how-to-use",
+      "description": "For instance, you can upload multiple images and have Gemini combine them into a single image. You can also upload a photo of yourself, and ...",
+      "source": "web",
+      "type": "article",
+      "author": "Mashable",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:6",
+      "title": "Image generation with Gemini (aka Nano Banana)",
+      "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "description": "Example prompt: \"Generate an illustrated recipe for a paella.\" Image(s) and text to image(s) and text (interleaved): Uses input images and text to create ...",
+      "source": "web",
+      "type": "article",
+      "author": "Google AI for Developers",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:7",
+      "title": "15 Nano Banana Prompts to Try Today!",
+      "url": "https://www.analyticsvidhya.com/blog/2025/09/nano-banana-prompts/",
+      "description": "10 Prompts to Try on Nano Banana: Image Generation · Task 1: Generating Realistic Images · Task 2: Sequential Art (Comic Panel / Storyboard) · Task ...",
+      "source": "web",
+      "type": "article",
+      "author": "Analytics Vidhya",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:3",
+      "title": "Gemini 2.5 Flash | Generative AI on Vertex AI",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash",
+      "description": "Maximum images per prompt: 3,000 · Maximum image size: 7 MB · Supported MIME types: image/png , image/jpeg , image/webp.",
+      "source": "web",
+      "type": "article",
+      "author": "Google Cloud",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:6",
+      "title": "Gemini models | Gemini API | Google AI for Developers",
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "description": "Gemini 2.5 Flash Image Preview gemini-2.5-flash-image-preview, Images and text, Images and text, Precise, conversational image generation and editing. Gemini ...",
+      "source": "web",
+      "type": "article",
+      "author": "Google AI for Developers",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:9",
+      "title": "Create and edit images with Gemini",
+      "url": "https://deepmind.google/models/gemini/image/",
+      "description": "Generate, transform and edit images with simple text prompts, or combine multiple images to create something new. All in Gemini.",
+      "source": "web",
+      "type": "article",
+      "author": "Google DeepMind",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:4",
+      "title": "Generate images with Gemini | Generative AI on Vertex AI",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-generation",
+      "description": "Gemini Flash Preview Image's public preview for image generation ( gemini-2.5-flash-image-preview ) supports the ability to generate images in addition to text.",
+      "source": "web",
+      "type": "article",
+      "author": "Google Cloud",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:7",
+      "title": "Google: Gemini 2.5 Flash Image Preview – Run with an API",
+      "url": "https://openrouter.ai/google/gemini-2.5-flash-image-preview:free/api",
+      "description": "Gemini 2.5 Flash Image Preview, AKA Nano Banana is a state of the art image generation model with contextual understanding.",
+      "source": "web",
+      "type": "article",
+      "author": "OpenRouter",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:8",
+      "title": "Generate & edit images using Gemini (aka \"nano banana\")",
+      "url": "https://firebase.google.com/docs/ai-logic/generate-images-gemini",
+      "description": "Important: The gemini-2.5-flash-image-preview model (aka \"nano banana\") requires the pay-as-you-go Blaze pricing plan regardless of your Gemini API provider.",
+      "source": "web",
+      "type": "article",
+      "author": "Firebase",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    }
+  ]
 }
-

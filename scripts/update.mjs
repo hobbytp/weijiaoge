@@ -2,8 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import dotenv from 'dotenv';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
+
+// 加载.env文件
+dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
