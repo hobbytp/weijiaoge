@@ -10,11 +10,16 @@
     "update": "node scripts/update.mjs",
     "serve": "node server.js",
     "preview": "node server.js",
+    "dev": "nodemon server.js",
+    "dev:update": "nodemon scripts/update.mjs",
     "restart": "npm run update && npm run serve",
     "clean": "rm -f test-env.mjs",
     "help": "echo '🍌 微蕉阁项目管理命令: make help'"
   },
   "dependencies": {
     "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

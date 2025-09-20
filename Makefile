@@ -11,6 +11,7 @@ help:
 	@echo "  make install    - 安装依赖"
 	@echo "  make update     - 更新数据（抓取最新资源）"
 	@echo "  make serve      - 启动本地服务器"
+	@echo "  make dev        - 启动热加载开发服务器"
 	@echo "  make preview    - 启动服务器并显示访问地址"
 	@echo "  make stop       - 停止服务器"
 	@echo "  make restart    - 重启服务器（更新数据后）"
@@ -36,6 +37,13 @@ update:
 serve:
 	@echo "🚀 启动服务器..."
 	node server.js
+
+# 启动热加载开发服务器
+dev:
+	@echo "🔥 启动热加载开发服务器..."
+	@echo "📁 监听文件变化: server.js, scripts/, fetchers/, public/, *.html, *.js"
+	@echo "🔄 文件变化时自动重启服务器"
+	npm run dev
 
 # 预览模式（启动服务器并显示信息）
 preview:
