@@ -38,9 +38,10 @@ const IMPORTANT_ARTICLES = [
   }
 ];
 
-export function extractCasesFromImportantArticles() {
+export function extractCasesFromImportantArticles(webItems = []) {
   const cases = [];
   
+  // 处理预定义的重要文章
   for (const article of IMPORTANT_ARTICLES) {
     try {
       // 创建包含完整内容的item对象
@@ -56,6 +57,31 @@ export function extractCasesFromImportantArticles() {
       console.log(`从文章 "${article.title}" 提取了 ${extractedCases.length} 个案例`);
     } catch (error) {
       console.error(`处理重要文章失败: ${article.title}`, error);
+    }
+  }
+  
+  // 处理GitHub仓库的README内容
+  const githubReadmes = webItems.filter(item => 
+    item.source === 'github' && 
+    item.type === 'readme' && 
+    item.fullContent
+  );
+  
+  for (const readme of githubReadmes) {
+    try {
+      // 创建包含完整内容的item对象
+      const itemWithFullContent = {
+        ...readme,
+        description: readme.fullContent // 使用完整README内容
+      };
+      
+      // 使用多案例提取功能
+      const extractedCases = extractMultipleCasesFromArticle(itemWithFullContent);
+      cases.push(...extractedCases);
+      
+      console.log(`从GitHub仓库 "${readme.title}" 提取了 ${extractedCases.length} 个案例`);
+    } catch (error) {
+      console.error(`处理GitHub README失败: ${readme.title}`, error);
     }
   }
   

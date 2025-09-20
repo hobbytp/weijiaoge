@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { processItemsForCases } from '../fetchers/case-extractor.mjs';
 import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
+import { processItemsForCases } from '../fetchers/case-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
 
@@ -86,7 +86,7 @@ async function main() {
   
   // 从重要文章中提取详细案例
   console.log('📚 从重要文章中提取详细案例...');
-  const importantCases = extractCasesFromImportantArticles();
+  const importantCases = extractCasesFromImportantArticles(items);
   
   // 合并所有案例
   const allCases = [...cases, ...importantCases];
