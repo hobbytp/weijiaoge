@@ -12,10 +12,11 @@ help:
 	@echo "  make update     - 更新数据（抓取最新资源）"
 	@echo "  make serve      - 启动本地服务器"
 	@echo "  make preview    - 启动服务器并显示访问地址"
+	@echo "  make stop       - 停止服务器"
+	@echo "  make restart    - 重启服务器（更新数据后）"
 	@echo "  make clean      - 清理临时文件"
 	@echo "  make push       - 推送代码到GitHub"
 	@echo "  make pull       - 从GitHub拉取最新代码"
-	@echo "  make restart    - 重启服务器（更新数据后）"
 	@echo ""
 	@echo "快速开始:"
 	@echo "  make install && make update && make preview"
@@ -44,8 +45,14 @@ preview:
 	@echo ""
 	node server.js
 
+# 停止服务器
+stop:
+	@echo "⏹️  停止服务器..."
+	@taskkill //F //IM node.exe 2>nul || echo "没有运行的Node.js进程"
+	@echo "✅ 服务器已停止"
+
 # 重启服务器（更新数据后使用）
-restart: update
+restart: stop update
 	@echo "🔄 重启服务器..."
 	@echo "📱 访问地址: http://localhost:5173"
 	@echo "⏹️  按 Ctrl+C 停止服务器"
