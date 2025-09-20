@@ -152,6 +152,10 @@
             margin-bottom: 5px;
         }
         
+        .prompt-container {
+            margin-bottom: 10px;
+        }
+        
         .prompt-text {
             background: #f8f9fa;
             padding: 10px;
@@ -160,6 +164,34 @@
             font-family: 'Courier New', monospace;
             font-size: 14px;
             line-height: 1.4;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+        
+        .prompt-truncated {
+            max-height: 120px;
+            overflow: hidden;
+        }
+        
+        .prompt-expanded {
+            max-height: none;
+            overflow: visible;
+        }
+        
+        .expand-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background-color 0.2s;
+        }
+        
+        .expand-btn:hover {
+            background: #5a6fd8;
         }
         
         .effect-section {

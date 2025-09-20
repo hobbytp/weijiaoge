@@ -11,9 +11,25 @@ const casesGrid = $('#cases-grid');
 let casesData = { cases: [] };
 
 function renderCase(caseItem) {
-  const promptsHtml = caseItem.prompts.map(prompt => 
-    `<div class="prompt-text">${prompt}</div>`
-  ).join('');
+  const promptsHtml = caseItem.prompts.map((prompt, index) => {
+    const isLongPrompt = prompt.length > 200;
+    const displayPrompt = isLongPrompt ? prompt.substring(0, 200) + '...' : prompt;
+    const fullPrompt = prompt;
+    
+    return `
+      <div class="prompt-container">
+        <div class="prompt-text ${isLongPrompt ? 'prompt-truncated' : ''}" data-full="${fullPrompt.replace(/"/g, '&quot;')}">
+          ${displayPrompt}
+        </div>
+        ${isLongPrompt ? `
+          <button class="expand-btn" onclick="togglePrompt(this)">
+            <span class="expand-text">展开完整prompt</span>
+            <span class="collapse-text" style="display: none;">收起</span>
+          </button>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
   
   const effectsHtml = caseItem.effects.map(effect => 
     `<div class="effect-text">${effect}</div>`
@@ -142,6 +158,30 @@ async function loadCases() {
 [searchInput, categorySelect, sortSelect].forEach(element => {
   element.addEventListener('input', filterAndSort);
 });
+
+// 展开/收起prompt功能
+function togglePrompt(button) {
+  const promptText = button.previousElementSibling;
+  const expandText = button.querySelector('.expand-text');
+  const collapseText = button.querySelector('.collapse-text');
+  
+  if (promptText.classList.contains('prompt-expanded')) {
+    // 收起
+    const fullText = promptText.getAttribute('data-full');
+    const truncatedText = fullText.substring(0, 200) + '...';
+    promptText.textContent = truncatedText;
+    promptText.classList.remove('prompt-expanded');
+    expandText.style.display = 'inline';
+    collapseText.style.display = 'none';
+  } else {
+    // 展开
+    const fullText = promptText.getAttribute('data-full');
+    promptText.textContent = fullText;
+    promptText.classList.add('prompt-expanded');
+    expandText.style.display = 'none';
+    collapseText.style.display = 'inline';
+  }
+}
 
 // 页面加载完成后加载数据
 document.addEventListener('DOMContentLoaded', loadCases);
