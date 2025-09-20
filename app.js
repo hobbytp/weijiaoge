@@ -17,22 +17,40 @@ function fmtDate(s) {
 }
 
 function render(items) {
+  if (items.length === 0) {
+    list.innerHTML = '<div class="empty">没有找到匹配的项目</div>';
+    stats.textContent = `共 0 条（生成时间：${data.generatedAt ? fmtDate(data.generatedAt) : '未知'}）`;
+    return;
+  }
+
   list.innerHTML = items.map(it => {
     const star = it.stars ? `⭐ ${it.stars}` : '';
     const t = it.type || '';
     const s = it.source || '';
     const up = it.updatedAt ? `更新: ${fmtDate(it.updatedAt)}` : '';
+    
+    // 高亮显示使用案例相关的关键词
+    const highlightKeywords = ['tutorial', 'example', 'use case', 'guide', 'figurine', '3d', 'editing'];
+    let highlightedTitle = it.title;
+    let highlightedDesc = it.description || '';
+    
+    highlightKeywords.forEach(keyword => {
+      const regex = new RegExp(`(${keyword})`, 'gi');
+      highlightedTitle = highlightedTitle.replace(regex, '<mark>$1</mark>');
+      highlightedDesc = highlightedDesc.replace(regex, '<mark>$1</mark>');
+    });
+    
     return `
       <li class="card">
-        <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></h3>
+        <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${highlightedTitle}</a></h3>
         <div class="meta">
-          <span>${t}</span>
-          <span>${s}</span>
-          ${star ? `<span>${star}</span>` : ''}
-          ${up ? `<span>${up}</span>` : ''}
-          ${it.author ? `<span>作者: ${it.author}</span>` : ''}
+          <span class="type-badge">${t}</span>
+          <span class="source-badge">${s}</span>
+          ${star ? `<span class="stars">${star}</span>` : ''}
+          ${up ? `<span class="update">${up}</span>` : ''}
+          ${it.author ? `<span class="author">作者: ${it.author}</span>` : ''}
         </div>
-        ${it.description ? `<p class="desc">${it.description.replace(/</g, '&lt;')}</p>` : ''}
+        ${highlightedDesc ? `<p class="desc">${highlightedDesc.replace(/</g, '&lt;')}</p>` : ''}
       </li>
     `;
   }).join('');
@@ -73,13 +91,44 @@ function filterAndSort() {
   render(items);
 }
 
+function populateFilters() {
+  // 获取所有唯一的类型和来源
+  const types = [...new Set(data.items.map(item => item.type).filter(Boolean))];
+  const sources = [...new Set(data.items.map(item => item.source).filter(Boolean))];
+  
+  // 清空并重新填充类型选项
+  type.innerHTML = '<option value="">全部类型</option>';
+  types.forEach(t => {
+    const option = document.createElement('option');
+    option.value = t;
+    option.textContent = t;
+    type.appendChild(option);
+  });
+  
+  // 清空并重新填充来源选项
+  source.innerHTML = '<option value="">全部来源</option>';
+  sources.forEach(s => {
+    const option = document.createElement('option');
+    option.value = s;
+    option.textContent = s;
+    source.appendChild(option);
+  });
+}
+
 async function boot() {
   try {
     const res = await fetch('./public/data.json', { cache: 'no-store' });
     data = await res.json();
-  } catch {
+    console.log(`加载了 ${data.items.length} 个项目`);
+  } catch (error) {
+    console.error('加载数据失败:', error);
     data = { items: [] };
   }
+  
+  // 填充筛选选项
+  populateFilters();
+  
+  // 初始渲染
   filterAndSort();
 }
 
