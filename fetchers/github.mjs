@@ -48,9 +48,13 @@ function mapIssue(i) {
   };
 }
 
-// 核心查询词（简化版：只搜索 nano banana）
+// 核心查询词（专注于使用案例和教程）
 const TERMS = [
-  '"nano banana"'
+  '"nano banana" tutorial',
+  '"nano banana" example',
+  '"nano banana" use case',
+  '"gemini 2.5 flash image" tutorial',
+  '"gemini 2.5 flash image" example'
 ];
 
 async function searchRepos(q, pages = 1) {
