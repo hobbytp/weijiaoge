@@ -48,23 +48,15 @@ function mapIssue(i) {
   };
 }
 
-// 核心查询词（可按需扩展）
+// 核心查询词（简化版：只搜索 nano banana）
 const TERMS = [
-  '"gemini-2.5-flash-image-preview"',
-  '"gemini 2.5 flash image preview"',
-  '"gemini nano banana"',
-  '"nano banana"',
-  'gemini-2.5-flash-image-preview in:readme',
-  'gemini nano banana in:readme',
-  '"gemini-2.5-flash-image-preview" language:Python',
-  '"gemini-2.5-flash-image-preview" language:JavaScript',
-  '"gemini-2.5-flash-image-preview" language:TypeScript'
+  '"nano banana"'
 ];
 
-async function searchRepos(q, pages = 2) {
+async function searchRepos(q, pages = 1) {
   const out = [];
   for (let p = 1; p <= pages; p++) {
-    const url = `${BASE}/search/repositories?q=${encodeURIComponent(q)}+in:name,description,readme&sort=updated&order=desc&per_page=30&page=${p}`;
+    const url = `${BASE}/search/repositories?q=${encodeURIComponent(q)}+in:name,description,readme&sort=updated&order=desc&per_page=20&page=${p}`;
     const data = await gh(url);
     if (!data.items?.length) break;
     out.push(...data.items.map(mapRepo));
@@ -72,10 +64,10 @@ async function searchRepos(q, pages = 2) {
   return out;
 }
 
-async function searchIssues(q, pages = 2) {
+async function searchIssues(q, pages = 1) {
   const out = [];
   for (let p = 1; p <= pages; p++) {
-    const url = `${BASE}/search/issues?q=${encodeURIComponent(q)}&sort=updated&order=desc&per_page=30&page=${p}`;
+    const url = `${BASE}/search/issues?q=${encodeURIComponent(q)}&sort=updated&order=desc&per_page=20&page=${p}`;
     const data = await gh(url);
     if (!data.items?.length) break;
     out.push(...data.items.map(mapIssue));

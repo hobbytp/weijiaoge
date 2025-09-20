@@ -1,8 +1,8 @@
 // scripts/update.mjs
+import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import dotenv from 'dotenv';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
 
