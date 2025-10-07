@@ -6,8 +6,8 @@ import { fileURLToPath } from 'node:url';
 import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
 import { processItemsForCases } from '../fetchers/case-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
-import { fetchFromWeb } from '../fetchers/web.mjs';
 import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
+import { fetchFromWeb } from '../fetchers/web.mjs';
 
 // 加载.env文件
 dotenv.config();
