@@ -26,12 +26,31 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install dependencies
+        run: |
+          npm install
+          npx playwright install chromium
+
       - name: Run update script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
-        run: node scripts/update.mjs
+          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_SEARCH_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NODE_TLS_REJECT_UNAUTHORIZED: 0
+        run: |
+          echo "🚀 开始运行智能提取算法..."
+          echo "📊 环境变量检查:"
+          echo "  GITHUB_TOKEN: ${GITHUB_TOKEN:+已设置}"
+          echo "  SERPAPI_KEY: ${SERPAPI_KEY:+已设置}"
+          echo "  GOOGLE_CSE_ID: ${GOOGLE_CSE_ID:+已设置}"
+          echo "  GOOGLE_SEARCH_API_KEY: ${GOOGLE_SEARCH_API_KEY:+已设置}"
+          echo "  GEMINI_API_KEY: ${GEMINI_API_KEY:+已设置}"
+          echo "  OPENAI_API_KEY: ${OPENAI_API_KEY:+已设置}"
+          echo ""
+          node scripts/update.mjs
 
       - name: Commit data.json
         uses: stefanzweifel/git-auto-commit-action@v5
