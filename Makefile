@@ -16,6 +16,9 @@ help:
 	@echo "  make stop       - 停止服务器"
 	@echo "  make restart    - 重启服务器（更新数据后）"
 	@echo "  make clean      - 清理临时文件"
+	@echo "  make test       - 测试增强系统（需要网络）"
+	@echo "  make test-data  - 测试现有数据提取"
+	@echo "  make test-basic - 测试基本功能"
 	@echo "  make push       - 推送代码到GitHub"
 	@echo "  make pull       - 从GitHub拉取最新代码"
 	@echo ""
@@ -66,6 +69,24 @@ restart: stop update
 	@echo "⏹️  按 Ctrl+C 停止服务器"
 	@echo ""
 	node server.js
+
+# 测试增强系统
+test:
+	@echo "🧪 测试增强系统..."
+	npm run test:enhanced
+	@echo "✅ 测试完成！"
+
+# 测试现有数据
+test-data:
+	@echo "🧪 测试现有数据提取..."
+	npm run test:existing
+	@echo "✅ 测试完成！"
+
+# 测试基本功能
+test-basic:
+	@echo "🧪 测试基本功能..."
+	npm run test:basic
+	@echo "✅ 测试完成！"
 
 # 清理临时文件
 clean:

@@ -223,11 +223,204 @@ export function extractCaseFromContent(item) {
   };
 }
 
+// 专门处理GitHub README的函数
+export function extractCasesFromGitHubReadme(item) {
+  const { title, description, url } = item;
+  const cases = [];
+  
+  // 直接使用原始内容，不清理代码块，因为我们需要提取其中的prompt
+  const fullText = description;
+  
+  // 检测README格式
+  
+  // 检测README格式并相应处理 - 优先检查更具体的格式
+  if (fullText.includes('### 例 1:') || fullText.includes('### 例 2:')) {
+    // PicoTrex仓库格式：使用"### 例 X:"
+    return extractPicoTrexFormat(fullText, item);
+  } else if (fullText.includes('Case 1:') || fullText.includes('Case 2:')) {
+    // Super-Maker-AI仓库格式：使用"Case X:"
+    return extractSuperMakerFormat(fullText, item);
+  } else if (fullText.includes('1️⃣') || fullText.includes('2️⃣')) {
+    // ZHO仓库格式：使用数字emoji
+    return extractZHOFormat(fullText, item);
+  }
+  return cases;
+}
+
+// 处理ZHO仓库格式
+function extractZHOFormat(fullText, item) {
+  const cases = [];
+  const seenTitles = new Set(); // 用于跟踪已见过的标题
+  
+  // 按章节分割内容（以数字开头的章节）
+  const sections = fullText.split(/(?=\d+️⃣)/);
+  
+  for (const section of sections) {
+    if (!section.trim()) continue;
+    
+    // 提取章节标题
+    const titleMatch = section.match(/^(\d+️⃣[^：:]+[：:]?)(.*)/s);
+    if (!titleMatch) continue;
+    
+    let sectionTitle = titleMatch[1].replace(/[：:]/g, '').trim();
+    const sectionContent = titleMatch[2];
+    
+    // 处理重复标题 - 为重复的案例添加后缀
+    const originalTitle = sectionTitle;
+    if (seenTitles.has(originalTitle)) {
+      sectionTitle = sectionTitle + " (Duplicate)";
+    }
+    seenTitles.add(originalTitle);
+    
+    // 在章节内容中查找prompt - 更精确的匹配
+    const promptPattern = /Prompt[：:]\s*```\s*([^`]+?)\s*```/gis;
+    let promptMatch;
+    
+    while ((promptMatch = promptPattern.exec(sectionContent)) !== null) {
+      const promptText = promptMatch[1].trim();
+      
+      if (promptText.length > 20) {
+        const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
+        const effects = extractEffects(sectionContent);
+        const images = extractImages(sectionContent);
+        
+        cases.push({
+          id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          title: sectionTitle,
+          category: category,
+          categoryName: CASE_CATEGORIES[category],
+          prompts: [promptText],
+          effects: effects,
+          images: images,
+          sourceUrl: item.url,
+          source: item.source || 'github',
+          extractedAt: new Date().toISOString(),
+          originalItem: item
+        });
+      }
+    }
+  }
+  
+  return cases;
+}
+
+// 处理PicoTrex仓库格式
+function extractPicoTrexFormat(fullText, item) {
+  const cases = [];
+  
+  // 按案例分割内容 - 匹配 ### 例 X: 格式
+  const sections = fullText.split(/(?=### 例 \d+:)/);
+  
+  for (const section of sections) {
+    if (!section.trim()) continue;
+    
+    // 提取案例标题 - 匹配 ### 例 X: [标题](链接)（by 作者）格式
+    const titleMatch = section.match(/^### (例 \d+:[^）]*?)（by[^）]+）(.*)/s);
+    if (!titleMatch) continue;
+    
+    const sectionTitle = titleMatch[1].trim();
+    const sectionContent = titleMatch[2];
+    
+    // 在章节内容中查找prompt
+    const promptPattern = /```\s*([^`]+?)\s*```/gis;
+    let promptMatch;
+    
+    while ((promptMatch = promptPattern.exec(sectionContent)) !== null) {
+      const promptText = promptMatch[1].trim();
+      
+      if (promptText.length > 20 && !promptText.includes('输入:') && !promptText.includes('输出:')) {
+        const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
+        const effects = extractEffects(sectionContent);
+        const images = extractImages(sectionContent);
+        
+        cases.push({
+          id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          title: sectionTitle,
+          category: category,
+          categoryName: CASE_CATEGORIES[category],
+          prompts: [promptText],
+          effects: effects,
+          images: images,
+          sourceUrl: item.url,
+          source: item.source || 'github',
+          extractedAt: new Date().toISOString(),
+          originalItem: item
+        });
+      }
+    }
+  }
+  
+  return cases;
+}
+
+// 处理Super-Maker-AI仓库格式
+function extractSuperMakerFormat(fullText, item) {
+  const cases = [];
+  const seenTitles = new Set(); // 用于跟踪已见过的标题
+  
+  // 按案例分割内容
+  const sections = fullText.split(/(?=Case \d+:)/);
+  
+  for (const section of sections) {
+    if (!section.trim()) continue;
+    
+    // 提取案例标题
+    const titleMatch = section.match(/^(Case \d+:[^(]+)(\(by[^)]+\))?(.*)/s);
+    if (!titleMatch) continue;
+    
+    let sectionTitle = titleMatch[1].trim();
+    const sectionContent = titleMatch[3];
+    
+    // 处理重复标题 - 为重复的案例添加后缀
+    const originalTitle = sectionTitle;
+    if (seenTitles.has(originalTitle)) {
+      sectionTitle = sectionTitle + " (Duplicate)";
+    }
+    seenTitles.add(originalTitle);
+    
+    // 在章节内容中查找prompt
+    const promptPattern = /```yaml\s*([^`]+?)\s*```/gis;
+    let promptMatch;
+    
+    while ((promptMatch = promptPattern.exec(sectionContent)) !== null) {
+      const promptText = promptMatch[1].trim();
+      
+      if (promptText.length > 20) {
+        const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
+        const effects = extractEffects(sectionContent);
+        const images = extractImages(sectionContent);
+        
+        cases.push({
+          id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          title: sectionTitle,
+          category: category,
+          categoryName: CASE_CATEGORIES[category],
+          prompts: [promptText],
+          effects: effects,
+          images: images,
+          sourceUrl: item.url,
+          source: item.source || 'github',
+          extractedAt: new Date().toISOString(),
+          originalItem: item
+        });
+      }
+    }
+  }
+  
+  return cases;
+}
+
 // 新增：从单个文章中提取多个案例
 export function extractMultipleCasesFromArticle(item) {
   const { title, description, url } = item;
-  const fullText = `${title} ${description}`;
   
+  // 如果是GitHub README，使用专门的处理函数
+  if (item.type === 'readme' || url.includes('github.com') || title.includes('README')) {
+    return extractCasesFromGitHubReadme(item);
+  }
+  
+  // 其他文章使用原来的逻辑
+  const fullText = `${title} ${description}`;
   const cases = [];
   
   // 提取所有prompt

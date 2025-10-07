@@ -2,6 +2,7 @@
 // 专门从重要文章中提取详细prompt内容
 
 import { extractMultipleCasesFromArticle } from './case-extractor.mjs';
+import { contentExtractor } from './content-fetcher.mjs';
 
 // 已知包含详细prompt的重要文章
 const IMPORTANT_ARTICLES = [
@@ -38,23 +39,42 @@ const IMPORTANT_ARTICLES = [
   }
 ];
 
-export function extractCasesFromImportantArticles(webItems = []) {
+export async function extractCasesFromImportantArticles(webItems = []) {
   const cases = [];
   
   // 处理预定义的重要文章
   for (const article of IMPORTANT_ARTICLES) {
     try {
-      // 创建包含完整内容的item对象
-      const itemWithFullContent = {
-        ...article,
-        description: article.fullContent // 使用完整内容替换简短描述
-      };
+      // 使用新的内容获取器获取完整内容
+      const extractedContent = await contentExtractor.extractContent(article.url);
       
-      // 使用多案例提取功能
-      const extractedCases = extractMultipleCasesFromArticle(itemWithFullContent);
-      cases.push(...extractedCases);
-      
-      console.log(`从文章 "${article.title}" 提取了 ${extractedCases.length} 个案例`);
+      if (extractedContent) {
+        // 创建包含完整内容的item对象
+        const itemWithFullContent = {
+          ...article,
+          title: extractedContent.title,
+          description: extractedContent.content, // 使用提取的完整内容
+          fullContent: extractedContent.content,
+          metadata: extractedContent.metadata
+        };
+        
+        // 使用多案例提取功能
+        const extractedCases = extractMultipleCasesFromArticle(itemWithFullContent);
+        cases.push(...extractedCases);
+        
+        console.log(`从文章 "${extractedContent.title}" 提取了 ${extractedCases.length} 个案例`);
+      } else {
+        // 如果无法获取内容，使用预定义的内容作为后备
+        const itemWithFullContent = {
+          ...article,
+          description: article.fullContent
+        };
+        
+        const extractedCases = extractMultipleCasesFromArticle(itemWithFullContent);
+        cases.push(...extractedCases);
+        
+        console.log(`从预定义内容 "${article.title}" 提取了 ${extractedCases.length} 个案例`);
+      }
     } catch (error) {
       console.error(`处理重要文章失败: ${article.title}`, error);
     }

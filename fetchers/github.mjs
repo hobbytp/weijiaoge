@@ -105,7 +105,8 @@ async function searchIssues(q, pages = 1) {
 async function fetchSpecificRepos() {
   const specificRepos = [
     'PicoTrex/Awesome-Nano-Banana-images',
-    'ZHO-ZHO-ZHO/ZHO-nano-banana-Creation'
+    'ZHO-ZHO-ZHO/ZHO-nano-banana-Creation',
+    'Super-Maker-AI/awesome-nano-banana'
   ];
   
   const results = [];
@@ -125,7 +126,7 @@ async function fetchSpecificRepos() {
           id: `readme:${repoData.id}`,
           title: `${repo} - README`,
           url: `${repoData.html_url}#readme`,
-          description: readmeContent.slice(0, 1000) + (readmeContent.length > 1000 ? '...' : ''),
+          description: readmeContent, // 保存完整内容，不截断
           source: 'github',
           type: 'readme',
           author: repoData.owner?.login || '',
