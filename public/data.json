@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-07T14:05:31.053Z",
-  "total": 340,
+  "generatedAt": "2025-10-07T14:48:48.714Z",
+  "total": 342,
   "items": [
     {
       "id": "repo:1046423290",
@@ -11,9 +11,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 14114,
+      "stars": 14115,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-07T13:48:22Z",
+      "updatedAt": "2025-10-07T14:27:48Z",
       "tags": [
         "repo"
       ]
@@ -26,9 +26,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 14114,
+      "stars": 14115,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-07T13:48:22Z",
+      "updatedAt": "2025-10-07T14:27:48Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -165,9 +165,9 @@
       "source": "github",
       "type": "repo",
       "author": "EnzeD",
-      "stars": 1357,
+      "stars": 1361,
       "createdAt": "2025-03-12T21:05:20Z",
-      "updatedAt": "2025-10-07T13:49:32Z",
+      "updatedAt": "2025-10-07T14:45:52Z",
       "tags": [
         "repo"
       ]
@@ -195,9 +195,9 @@
       "source": "github",
       "type": "repo",
       "author": "cgoinglove",
-      "stars": 709,
+      "stars": 710,
       "createdAt": "2025-04-13T15:44:51Z",
-      "updatedAt": "2025-10-07T12:50:48Z",
+      "updatedAt": "2025-10-07T14:36:22Z",
       "tags": [
         "repo"
       ]
@@ -415,6 +415,21 @@
       ]
     },
     {
+      "id": "repo:1070632808",
+      "title": "thuml/MiniVeo3-Reasoner",
+      "url": "https://github.com/thuml/MiniVeo3-Reasoner",
+      "description": "Thinking with Videos from Open-Source Priors. We reproduce chain-of-frames visual reasoning by fine-tuning open-source video models. Give it a star 🌟 if you find it useful.",
+      "source": "github",
+      "type": "repo",
+      "author": "thuml",
+      "stars": 5,
+      "createdAt": "2025-10-06T08:19:08Z",
+      "updatedAt": "2025-10-07T14:42:48Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:343858320",
       "title": "fluteds/starred",
       "url": "https://github.com/fluteds/starred",
@@ -430,16 +445,16 @@
       ]
     },
     {
-      "id": "repo:1070632808",
-      "title": "thuml/MiniVeo3-Reasoner",
-      "url": "https://github.com/thuml/MiniVeo3-Reasoner",
-      "description": "Thinking with Videos from Open-Source Priors. We reproduce chain-of-frames visual reasoning by fine-tuning open-source video models. Give it a star 🌟 if you find it useful.",
+      "id": "repo:1049892930",
+      "title": "etranHOLI/NanoBananaEditor",
+      "url": "https://github.com/etranHOLI/NanoBananaEditor",
+      "description": "🍌 Generate stunning images and edit them conversationally with the powerful NanoBananaEditor, built on React and TypeScript using AI technology.",
       "source": "github",
       "type": "repo",
-      "author": "thuml",
-      "stars": 3,
-      "createdAt": "2025-10-06T08:19:08Z",
-      "updatedAt": "2025-10-07T13:32:55Z",
+      "author": "etranHOLI",
+      "stars": 2,
+      "createdAt": "2025-09-03T16:41:16Z",
+      "updatedAt": "2025-10-07T14:28:42Z",
       "tags": [
         "repo"
       ]
@@ -505,6 +520,36 @@
       ]
     },
     {
+      "id": "issue:3425248268",
+      "title": "fix(container): update image ghcr.io/sillytavern/sillytavern to v1.13.4",
+      "url": "https://github.com/gavinmcfall/home-ops/pull/1135",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/sillytavern/sillytavern](https://redirect.github.com/SillyTavern/SillyTavern) | patch | `1.13.3` -> `1.13.4` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>SillyTavern/SillyTavern (ghcr.io/sillytavern/sillytavern)</summary>\n\n### [`v1.13.4`](https://redirect.github.com/SillyTavern/SillyTav",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-17T08:29:08Z",
+      "updatedAt": "2025-10-07T14:43:27Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3352171762",
+      "title": "feat(container): update ghcr.io/n8n-io/n8n ( 1.108.1 ➔ 1.115.0 )",
+      "url": "https://github.com/swibrow/home-ops/pull/449",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-25T14:53:49Z",
+      "updatedAt": "2025-10-07T14:41:52Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
       "id": "repo:1068191741",
       "title": "Faridmurzone/childhood-saga",
       "url": "https://github.com/Faridmurzone/childhood-saga",
@@ -520,18 +565,48 @@
       ]
     },
     {
-      "id": "issue:3461067377",
-      "title": "HunyuanImage-3.0 Release",
-      "url": "https://github.com/comfyanonymous/ComfyUI/issues/10068",
-      "description": "### Feature Idea\n\nThis is url.... https://huggingface.co/tencent/HunyuanImage-3.0\n\n### Existing Solutions\n\n_No response_\n\n### Other\n\n_No response_",
+      "id": "issue:3436354065",
+      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.115.0 )",
+      "url": "https://github.com/evjak/home-ops/pull/554",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-20T01:05:54Z",
+      "updatedAt": "2025-10-07T14:38:41Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3489983626",
+      "title": "🎃 [Hacktoberfest] Collect Project Ideas for Demo Apps",
+      "url": "https://github.com/pollinations/pollinations/issues/4393",
+      "description": "# 🎃 Hacktoberfest 2025: Project Ideas Collection\n\n## 🎯 Purpose\nThis is a **meta issue** to collect and organize project ideas for Hacktoberfest demo apps. Instead of creating individual issues for each idea, we'll maintain a living document of project ideas that contributors can pick from.\n\n## 📋 What We're Looking For\n\n**Frontend-only apps** that use Pollinations APIs (text/image generation):\n- Pure HTML/CSS/JS apps (single file)\n- React + Vite apps (for complex UIs)\n- **Discord bots & social",
       "source": "github",
       "type": "issue",
-      "author": "thaivb",
+      "author": "voodoohop",
       "stars": 0,
-      "createdAt": "2025-09-28T04:45:56Z",
-      "updatedAt": "2025-10-07T13:59:58Z",
+      "createdAt": "2025-10-07T05:14:12Z",
+      "updatedAt": "2025-10-07T14:38:33Z",
       "tags": [
         "issue"
+      ]
+    },
+    {
+      "id": "repo:1052007617",
+      "title": "shubinfilms/shubinfilms-best-veo3-bot",
+      "url": "https://github.com/shubinfilms/shubinfilms-best-veo3-bot",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "shubinfilms",
+      "stars": 0,
+      "createdAt": "2025-09-07T07:44:07Z",
+      "updatedAt": "2025-10-07T14:38:08Z",
+      "tags": [
+        "repo"
       ]
     },
     {
@@ -544,9 +619,54 @@
       "author": "KG-NINJA",
       "stars": 0,
       "createdAt": "2025-07-14T14:26:01Z",
-      "updatedAt": "2025-10-07T13:59:40Z",
+      "updatedAt": "2025-10-07T14:36:24Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:3349853204",
+      "title": "chore(main): release 1.5.2",
+      "url": "https://github.com/jhedev96/better-chatbot/pull/1",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n## [1.5.2](https://github.com/jhedev96/better-chatbot/compare/v1.24.0...v1.5.2) (2025-10-07)\n\n\n### Features\n\n* Add Azure OpenAI provider support with comprehensive testing ([#189](https://github.com/jhedev96/better-chatbot/issues/189)) ([edad917](https://github.com/jhedev96/better-chatbot/commit/edad91707d49fcb5d3bd244a77fbaae86527742a))\n* add bot name preference to user settings ([f4aa588](https://github.com/jhedev96/better-chatbot/commit/f4a",
+      "source": "github",
+      "type": "pull",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-24T19:56:34Z",
+      "updatedAt": "2025-10-07T14:15:34Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3270838807",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/meysam81/infra/pull/298",
+      "description": "> [!NOTE]\n> Mend has cancelled [the proposed renaming](https://redirect.github.com/renovatebot/renovate/discussions/37842) of the Renovate GitHub app being renamed to `mend[bot]`.\n> \n> This notice will be removed on 2025-10-07.\n\n<hr>\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.95.2` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-07-28T17:51:12Z",
+      "updatedAt": "2025-10-07T14:06:12Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3461067377",
+      "title": "HunyuanImage-3.0 Release",
+      "url": "https://github.com/comfyanonymous/ComfyUI/issues/10068",
+      "description": "### Feature Idea\n\nThis is url.... https://huggingface.co/tencent/HunyuanImage-3.0\n\n### Existing Solutions\n\n_No response_\n\n### Other\n\n_No response_",
+      "source": "github",
+      "type": "issue",
+      "author": "thaivb",
+      "stars": 0,
+      "createdAt": "2025-09-28T04:45:56Z",
+      "updatedAt": "2025-10-07T13:59:58Z",
+      "tags": [
+        "issue"
       ]
     },
     {
@@ -760,21 +880,6 @@
       ]
     },
     {
-      "id": "repo:1052007617",
-      "title": "shubinfilms/shubinfilms-best-veo3-bot",
-      "url": "https://github.com/shubinfilms/shubinfilms-best-veo3-bot",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "shubinfilms",
-      "stars": 0,
-      "createdAt": "2025-09-07T07:44:07Z",
-      "updatedAt": "2025-10-07T12:30:16Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1065339804",
       "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
       "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
@@ -815,21 +920,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T11:33:49Z",
       "updatedAt": "2025-10-07T12:07:11Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3270838807",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/meysam81/infra/pull/298",
-      "description": "> [!NOTE]\n> Mend has cancelled [the proposed renaming](https://redirect.github.com/renovatebot/renovate/discussions/37842) of the Renovate GitHub app being renamed to `mend[bot]`.\n> \n> This notice will be removed on 2025-10-07.\n\n<hr>\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.95.2` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-07-28T17:51:12Z",
-      "updatedAt": "2025-10-07T12:00:56Z",
       "tags": [
         "pull"
       ]
@@ -1282,21 +1372,6 @@
       "updatedAt": "2025-10-07T05:29:17Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "issue:3489983626",
-      "title": "🎃 [Hacktoberfest] Collect Project Ideas for Demo Apps",
-      "url": "https://github.com/pollinations/pollinations/issues/4393",
-      "description": "# 🎃 Hacktoberfest 2025: Project Ideas Collection\n\n## 🎯 Purpose\nThis is a **meta issue** to collect and organize project ideas for Hacktoberfest demo apps. Instead of creating individual issues for each idea, we'll maintain a living document of project ideas that contributors can pick from.\n\n## 📋 What We're Looking For\n\n**Frontend-only apps** that use Pollinations APIs (text/image generation):\n- Pure HTML/CSS/JS apps (single file)\n- React + Vite apps (for complex UIs)\n- **Discord bots & social",
-      "source": "github",
-      "type": "issue",
-      "author": "voodoohop",
-      "stars": 0,
-      "createdAt": "2025-10-07T05:14:12Z",
-      "updatedAt": "2025-10-07T05:27:10Z",
-      "tags": [
-        "issue"
       ]
     },
     {
@@ -1865,21 +1940,6 @@
       "stars": 2,
       "createdAt": "2024-12-01T07:58:15Z",
       "updatedAt": "2025-09-21T01:58:57Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1049892930",
-      "title": "etranHOLI/NanoBananaEditor",
-      "url": "https://github.com/etranHOLI/NanoBananaEditor",
-      "description": "🍌 Generate stunning images and edit them conversationally with the powerful NanoBananaEditor, built on React and TypeScript using AI technology.",
-      "source": "github",
-      "type": "repo",
-      "author": "etranHOLI",
-      "stars": 1,
-      "createdAt": "2025-09-03T16:41:16Z",
-      "updatedAt": "2025-09-21T04:19:46Z",
       "tags": [
         "repo"
       ]
@@ -2590,21 +2650,6 @@
       ]
     },
     {
-      "id": "issue:3352171762",
-      "title": "feat(container): update ghcr.io/n8n-io/n8n ( 1.108.1 ➔ 1.112.3 )",
-      "url": "https://github.com/swibrow/home-ops/pull/449",
-      "description": "Coming soon: The Renovate bot (GitHub App) will be renamed to Mend. PRs from Renovate will soon appear from 'Mend'. Learn more [here](https://redirect.github.com/renovatebot/renovate/discussions/37842).\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.112.3` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-25T14:53:49Z",
-      "updatedAt": "2025-09-20T08:23:48Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "repo:1047467538",
       "title": "Yasho321/Toenail",
       "url": "https://github.com/Yasho321/Toenail",
@@ -2960,21 +3005,6 @@
       "stars": 0,
       "createdAt": "2025-09-02T01:11:05Z",
       "updatedAt": "2025-09-20T01:12:12Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3436354065",
-      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.112.3 )",
-      "url": "https://github.com/evjak/home-ops/pull/554",
-      "description": "Coming soon: The Renovate bot (GitHub App) will be renamed to Mend. PRs from Renovate will soon appear from 'Mend'. Learn more [here](https://redirect.github.com/renovatebot/renovate/discussions/37842).\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.112.3` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-09-20T01:05:54Z",
-      "updatedAt": "2025-09-20T01:06:22Z",
       "tags": [
         "pull"
       ]
