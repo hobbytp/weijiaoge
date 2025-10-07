@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-07T14:05:31.053Z",
-  "total": 340,
+  "generatedAt": "2025-10-07T14:24:54.418Z",
+  "total": 359,
   "items": [
     {
       "id": "repo:1046423290",
@@ -520,6 +520,51 @@
       ]
     },
     {
+      "id": "repo:1019568386",
+      "title": "KG-NINJA/KGchallengedskill",
+      "url": "https://github.com/KG-NINJA/KGchallengedskill",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "KG-NINJA",
+      "stars": 0,
+      "createdAt": "2025-07-14T14:26:01Z",
+      "updatedAt": "2025-10-07T14:22:20Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3349853204",
+      "title": "chore(main): release 1.5.2",
+      "url": "https://github.com/jhedev96/better-chatbot/pull/1",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n## [1.5.2](https://github.com/jhedev96/better-chatbot/compare/v1.24.0...v1.5.2) (2025-10-07)\n\n\n### Features\n\n* Add Azure OpenAI provider support with comprehensive testing ([#189](https://github.com/jhedev96/better-chatbot/issues/189)) ([edad917](https://github.com/jhedev96/better-chatbot/commit/edad91707d49fcb5d3bd244a77fbaae86527742a))\n* add bot name preference to user settings ([f4aa588](https://github.com/jhedev96/better-chatbot/commit/f4a",
+      "source": "github",
+      "type": "pull",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-24T19:56:34Z",
+      "updatedAt": "2025-10-07T14:15:34Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3270838807",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/meysam81/infra/pull/298",
+      "description": "> [!NOTE]\n> Mend has cancelled [the proposed renaming](https://redirect.github.com/renovatebot/renovate/discussions/37842) of the Renovate GitHub app being renamed to `mend[bot]`.\n> \n> This notice will be removed on 2025-10-07.\n\n<hr>\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.95.2` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-07-28T17:51:12Z",
+      "updatedAt": "2025-10-07T14:06:12Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
       "id": "issue:3461067377",
       "title": "HunyuanImage-3.0 Release",
       "url": "https://github.com/comfyanonymous/ComfyUI/issues/10068",
@@ -532,21 +577,6 @@
       "updatedAt": "2025-10-07T13:59:58Z",
       "tags": [
         "issue"
-      ]
-    },
-    {
-      "id": "repo:1019568386",
-      "title": "KG-NINJA/KGchallengedskill",
-      "url": "https://github.com/KG-NINJA/KGchallengedskill",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "KG-NINJA",
-      "stars": 0,
-      "createdAt": "2025-07-14T14:26:01Z",
-      "updatedAt": "2025-10-07T13:59:40Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -815,21 +845,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T11:33:49Z",
       "updatedAt": "2025-10-07T12:07:11Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3270838807",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/meysam81/infra/pull/298",
-      "description": "> [!NOTE]\n> Mend has cancelled [the proposed renaming](https://redirect.github.com/renovatebot/renovate/discussions/37842) of the Renovate GitHub app being renamed to `mend[bot]`.\n> \n> This notice will be removed on 2025-10-07.\n\n<hr>\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.95.2` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-07-28T17:51:12Z",
-      "updatedAt": "2025-10-07T12:00:56Z",
       "tags": [
         "pull"
       ]
@@ -4165,10 +4180,10 @@
       ]
     },
     {
-      "id": "web:2",
-      "title": "Introducing Gemini 2.5 Flash Image, our state-of- ...",
+      "id": "web:4",
+      "title": "Introducing Gemini 2.5 Flash Image, our state-of-the-art ...",
       "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
-      "description": "Gemini 2.5 Flash Image can understand and merge multiple input images. You can put an object into a scene, restyle a room with a color scheme or ...",
+      "description": "Today, we're excited to introduce Gemini 2.5 Flash Image (aka nano-banana), our state-of-the-art image generation and editing model.",
       "source": "web",
       "type": "article",
       "author": "Google for Developers Blog",
@@ -4181,7 +4196,7 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:3",
       "title": "How to prompt Gemini 2.5 Flash Image ...",
       "url": "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/",
       "description": "1. Photorealistic scenes · 2. Stylized illustrations & stickers · 3. Accurate text in images · 4. Product mockups & commercial photography · 5.",
@@ -4197,8 +4212,8 @@
       ]
     },
     {
-      "id": "web:8",
-      "title": "Gemini 2.5 Flash Image (Nano Banana): A Complete ...",
+      "id": "web:4",
+      "title": "Gemini 2.5 Flash Image (Nano Banana)",
       "url": "https://www.datacamp.com/tutorial/gemini-2-5-flash-image-guide",
       "description": "Gemini 2.5 Flash Image stands out with conversational editing capabilities, multi-image composition, and character consistency features. Unlike ...",
       "source": "web",
@@ -4216,7 +4231,7 @@
       "id": "web:6",
       "title": "Use Gemini 2.5 Flash Image (nano banana) on ...",
       "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-2-5-flash-image-on-vertex-ai",
-      "description": "Today, we announced native image generation and editing in Gemini 2.5 Flash (aka nano-banana) to deliver higher-quality images and more powerful ...",
+      "description": "Here are some ways you can use our state of the art native image generation in Gemini 2.5 Flash. Multi-image fusion: Combine different images ...",
       "source": "web",
       "type": "article",
       "author": "Google Cloud",
@@ -4245,7 +4260,7 @@
       ]
     },
     {
-      "id": "web:3",
+      "id": "web:2",
       "title": "My Experience Using the new Gemini 2.5 Flash ...",
       "url": "https://medium.com/google-cloud/my-experience-using-the-new-gemini-2-5-flash-image-8fbf79f00d76",
       "description": "At its core, Gemini 2.5 Flash Image is a multimodal model designed for rapid and conversational image generation and editing. Think of it less ...",
@@ -4261,13 +4276,13 @@
       ]
     },
     {
-      "id": "web:7",
+      "id": "web:8",
       "title": "Gemini 2.5 Flash Image (Nano Banana)",
       "url": "https://aistudio.google.com/models/gemini-2-5-flash-image",
       "description": "All images created or edited with Gemini 2.5 Flash Image include an invisible SynthID digital watermark to clearly identify them as AI-generated. Build with ...",
       "source": "web",
       "type": "article",
-      "author": "Google AI Studio",
+      "author": "Google",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -4280,7 +4295,7 @@
       "id": "web:1",
       "title": "10 examples of our new native image editing in the Gemini ...",
       "url": "https://blog.google/products/gemini/gemini-nano-banana-examples/",
-      "description": "Gemini's new image editing model lets you create awesome pictures with ease. Turn your pet into a figurine or have a tea party with your younger ...",
+      "description": "A new Google DeepMind image editing model, fondly known as Nano Banana, is now in the Gemini app, giving you more creative control to blend ...",
       "source": "web",
       "type": "article",
       "author": "The Keyword",
@@ -4293,10 +4308,10 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:2",
       "title": "5 things to build with Google's new Nano Banana image ...",
       "url": "https://medium.com/around-the-prompt/5-things-to-build-with-googles-new-nano-banana-image-editing-generation-model-ddfb0d167715",
-      "description": "In this example, we use the Google Maps API to capture satellite data of a location and edit the image to be water color based. You can try ...",
+      "description": "AI powered interior design and editing with Nano Banana. Personally, this is one of the coolest use cases. I have always struggled to image the ...",
       "source": "web",
       "type": "article",
       "author": "Medium · Logan Kilpatrick",
@@ -4309,7 +4324,7 @@
       ]
     },
     {
-      "id": "web:3",
+      "id": "web:2",
       "title": "Nano Banana Tutorial: How to Use Google's AI Image Editing ...",
       "url": "https://www.anangsha.me/nano-banana-tutorial-how-to-use-googles-ai-image-editing-model-in-2025/",
       "description": "· Example 1: Transforming a selfie · Example 2: Blending two photos · Example 3: Virtual try-on · Example 4: AI Interior design with Nano Banana",
@@ -4341,10 +4356,10 @@
       ]
     },
     {
-      "id": "web:10",
-      "title": "Image generation with Gemini (aka Nano Banana)",
+      "id": "web:7",
+      "title": "Image generation with Gemini (aka Nano Banana) | Gemini API",
       "url": "https://ai.google.dev/gemini-api/docs/image-generation",
-      "description": "Gemini can generate and process images conversationally. You can prompt Gemini with text, images, or a combination of both allowing you to create, edit, ...",
+      "description": "Multi-turn image editing (chat): Keep generating and editing images conversationally. Example prompts: [upload an image of a blue car.] , \"Turn this car into a ...",
       "source": "web",
       "type": "article",
       "author": "Google AI for Developers",
@@ -4453,10 +4468,10 @@
       ]
     },
     {
-      "id": "web:7",
+      "id": "web:6",
       "title": "Generate & edit images using Gemini (aka \"nano banana\")",
       "url": "https://firebase.google.com/docs/ai-logic/generate-images-gemini",
-      "description": "Choosing between Gemini and Imagen models · To prioritize image quality, photorealism, artistic detail, or specific styles (for example, impressionism or anime).",
+      "description": "You can ask a Gemini model to generate interleaved images with its text responses. For example, you can generate images of what each step of a generated recipe ...",
       "source": "web",
       "type": "article",
       "author": "Firebase",
@@ -4533,7 +4548,7 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:3",
       "title": "50+ INSANE Ways To Use Nano Banana (For FREE)",
       "url": "https://www.youtube.com/watch?v=exWEkRHmhKU&vl=en-US",
       "description": "In this video I break down the BEST prompts for Nano Banana that help you level-up your image editing game.",
@@ -4565,10 +4580,10 @@
       ]
     },
     {
-      "id": "web:2",
+      "id": "web:5",
       "title": "nano banana use cases for designers : r/GeminiAI",
       "url": "https://www.reddit.com/r/GeminiAI/comments/1n8k936/nano_banana_use_cases_for_designers/",
-      "description": "While it can be useful for designers, they are truly anal about small things, most of who i know and work with are. These would be dismissed ...",
+      "description": "I am banging my head against the wall, why won't nano banana make 16:9 size images? Is there some sort of trick?",
       "source": "web",
       "type": "article",
       "author": "Reddit · r/GeminiAI",
@@ -4581,7 +4596,7 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:8",
       "title": "I Put Gemini's Nano Banana AI Image Editor to the Test ...",
       "url": "https://www.pcmag.com/explainers/i-put-geminis-nano-banana-model-to-the-test-these-5-tricks-blew-me-away",
       "description": "Gemini's new Nano Banana model is great for editing images with AI. Try it out for yourself with these five tips, ranging from creating ...",
@@ -4597,7 +4612,7 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:2",
       "title": "I Tested Google's New Nano Banana Image AI, and It's ...",
       "url": "https://medium.com/the-generator/i-tested-googles-new-nano-banana-image-ai-and-it-s-insane-826d23f7f9a7",
       "description": "Specifically, Nano Banana excels at editing existing images, rather than simply summoning new ones out of the AI ether. I put the new model ...",
@@ -4629,10 +4644,10 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:3",
       "title": "30+ Hottest Nano Banana Model Prompts (Copy and Paste)",
       "url": "https://www.fotor.com/blog/nano-banana-model-prompts/",
-      "description": "Input Nano Banana Prompts. Type in detailed AI photo prompts for Gemini Nano Banana describing the edits, styles, or transformations you want.",
+      "description": "In this guide, we'll explore the latest and hottest Nano Banana model prompt text, complete with step-by-step prompts and practical usage tips.",
       "source": "web",
       "type": "article",
       "author": "Fotor",
@@ -4661,7 +4676,7 @@
       ]
     },
     {
-      "id": "web:1",
+      "id": "web:2",
       "title": "How to generate Nano Banana 3D Figurine Image(Prompt ...",
       "url": "https://www.reddit.com/r/Bard/comments/1ngm4rb/how_to_generate_nano_banana_3d_figurine/",
       "description": "If you want to generate a nano banana 3D figurine, just use this prompt: Create a 1/7 scale commercialized figurine of the character in the ...",
@@ -4821,7 +4836,7 @@
       ]
     },
     {
-      "id": "web:7",
+      "id": "web:6",
       "title": "Google Nano Banana is WILD - 50+ Use Cases",
       "url": "https://www.youtube.com/watch?v=m8Ve7hNl9P0",
       "description": "I'll cover many more use cases for fun business creative tool combinations and everything in between. The best part is you can do this all for free.",
@@ -4869,7 +4884,7 @@
       ]
     },
     {
-      "id": "web:6",
+      "id": "web:7",
       "title": "Nano Banana INSANE Product Photos (Gemini 2.5 Flash ...",
       "url": "https://www.youtube.com/watch?v=tSDSSJlHFL4",
       "description": "Nanobanana also known as Gemini 2.5 Flash is a new image generation model from Google that has the internet going crazy right now.",
@@ -4901,10 +4916,10 @@
       ]
     },
     {
-      "id": "web:3",
+      "id": "web:4",
       "title": "Official Nano-Banana Prompting Guide and strategies for ...",
       "url": "https://www.reddit.com/r/Bard/comments/1n3wn70/official_nanobanana_prompting_guide_and/",
-      "description": "Official Nano-Banana Prompting Guide and strategies for Mastering Gemini 2.5 Flash Image Generation and Editing. Other · r/Bard - Official Nano ...",
+      "description": "Official Nano-Banana Prompting Guide and strategies for Mastering Gemini 2.5 Flash Image Generation and Editing. Other.",
       "source": "web",
       "type": "article",
       "author": "Reddit · r/Bard",
@@ -5061,10 +5076,10 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:5",
       "title": "27 Fun Ways to Use Nano Banana: Creative Ideas and ...",
       "url": "https://www.glbgpt.com/hub/27-fun-ways-to-use-nano-banana-creative-ideas-and-real-examples/",
-      "description": "Discover 27 fun and creative ways to use Nano Banana AI for image editing, animation, design, and marketing. Explore real examples and tips ...",
+      "description": "27 Fun Ways to Use Nano Banana: Creative Ideas and Real Examples · 1. Image Blending · 2. Remove People · 3. Remove Objects · 4. Replace Objects · 5.",
       "source": "web",
       "type": "article",
       "author": "GlobalGPT",
@@ -5164,6 +5179,294 @@
       "source": "web",
       "type": "article",
       "author": "YouTube · Tasia Custode",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:1",
+      "title": "Gemini Nano Banana Tutorial: The Best FREE AI Image ...",
+      "url": "https://www.linkedin.com/pulse/gemini-nano-banana-tutorial-best-free-ai-image-generation-moret-zv2we",
+      "description": "“Change my shirt to blue.” “Now make it blue.” “Now change it to a Versace style blazer.” An example of how to use Google Gemini App nanobanana ...",
+      "source": "web",
+      "type": "article",
+      "author": "LinkedIn · Shanee Moret",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:1",
+      "title": "Gemini 2.5 Flash Image now ready for production ...",
+      "url": "https://developers.googleblog.com/en/gemini-2-5-flash-image-now-ready-for-production-with-new-aspect-ratios/",
+      "description": "Gemini 2.5 Flash Image now ready for production with new aspect ratios · Landscape: 21:9, 16:9, 4:3, 3:2 · Square: 1:1 · Portrait: 9:16, 3:4, 2:3 ...",
+      "source": "web",
+      "type": "article",
+      "author": "Google for Developers Blog",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "Edit images with Gemini | Generative AI on Vertex AI",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-editing",
+      "description": "Gemini 2.5 Flash Image also supports improved multi-turn editing, allowing you to respond to the model with changes after receiving an edited image response.",
+      "source": "web",
+      "type": "article",
+      "author": "Google Cloud",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:1",
+      "title": "4 tips for using Nano Banana to create amazing images",
+      "url": "https://blog.google/products/gemini/nano-banana-tips/",
+      "description": "Use pixel-perfect editing to change small details like colors without affecting the scene. Explore new creative directions by using simple ...",
+      "source": "web",
+      "type": "article",
+      "author": "The Keyword",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:3",
+      "title": "Google's New AI – Nano Banana: Top 10 Use Cases That Will ...",
+      "url": "https://levelup.gitconnected.com/googles-new-ai-nano-banana-top-10-use-cases-that-will-blow-your-mind-63a19f1b28d7",
+      "description": "Google's Nano Banana isn't just another AI image tool. It's a glimpse into the future of creativity, design, and photo editing. This powerful ...",
+      "source": "web",
+      "type": "article",
+      "author": "Level Up Coding",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:7",
+      "title": "Nano Banana Prompts: 20 Free Creative Uses You'll Love",
+      "url": "https://notegpt.io/blog/nano-banana-prompts-20-free-creative-uses",
+      "description": "Nano Banana can combine people into social scenes, make multi-step edits, transform motion into sports scenes, and colorize vintage photos.",
+      "source": "web",
+      "type": "article",
+      "author": "NoteGPT",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:4",
+      "title": "The ultimate guide to Nano Banana: 100 great Gemini ...",
+      "url": "https://www.reddit.com/r/promptingmagic/comments/1nyxpw5/the_ultimate_guide_to_nano_banana_100_great/",
+      "description": "The ultimate guide to Nano Banana: 100 great Gemini image creation prompts to unlock your creativity ... Powerful ChatGPT Prompts for Mind-Blowing ...",
+      "source": "web",
+      "type": "article",
+      "author": "Reddit · r/promptingmagic",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "From Prompts To Pictures: My Gemini Nano Banana ... - AI Fire",
+      "url": "https://www.aifire.co/p/from-prompts-to-pictures-my-gemini-nano-banana-ai-experiments",
+      "description": "In this article, I will share my experience, explain how it works in a simple way, and give you many detailed examples so you can also create ...",
+      "source": "web",
+      "type": "article",
+      "author": "aifire.co",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:6",
+      "title": "Top 10 Gemini Nano Banana Prompts For Image Generation",
+      "url": "https://www.growthjockey.com/blogs/gemini-ai-nano-banana-prompt",
+      "description": "Discover the top 10 Gemini AI photo editor prompts to master the viral Nano Banana trend. Learn how to turn your photos into 3D figurines, saree ...",
+      "source": "web",
+      "type": "article",
+      "author": "GrowthJockey",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:1",
+      "title": "\"This AI Replaces Photoshop\" - Google Nano Banana Tutorial",
+      "url": "https://www.youtube.com/watch?v=aO9Mdqp6lJU",
+      "description": "It's able to generate and manipulate and combine different photos making product photos making photos of people.",
+      "source": "web",
+      "type": "article",
+      "author": "YouTube · Santrel Media",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:4",
+      "title": "How to Use Nano Banana for Image Generation",
+      "url": "https://www.freecodecamp.org/news/nano-banana-for-image-generation/",
+      "description": "The very first step for using “Nano Banana” is to get an API key. Head over to Google AI Studio, click on “Create API key“, and generate a new ...",
+      "source": "web",
+      "type": "article",
+      "author": "freeCodeCamp",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:8",
+      "title": "Google Nano Banana AI Tutorial : r/GoogleGeminiAI",
+      "url": "https://www.reddit.com/r/GoogleGeminiAI/comments/1nh2hwr/google_nano_banana_ai_tutorial/",
+      "description": "I want to share how I created high-end ads using Google Nano Banana AI — an amazing tool that turns simple product photos into ...",
+      "source": "web",
+      "type": "article",
+      "author": "Reddit · r/GoogleGeminiAI",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "7 Creative Uses of Gemini 2.5 Flash Image (Nano ...",
+      "url": "https://zenn.dev/saan/articles/a362f51d990719",
+      "description": "Gemini 2.5 Flash Image can take several images and compose them into a single scene or transfer style/texture from one image to another. That ...",
+      "source": "web",
+      "type": "article",
+      "author": "Zenn",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:4",
+      "title": "Nano Banana Prompts: Edit images with Google Gemini ...",
+      "url": "https://www.cyberlink.com/blog/trending-topics/4196/nano-banana?srsltid=AfmBOoq7YX4S9YnLb2f6UpJNQL4yePF07gS82PFhWOKgSBBn5rCTDY_9",
+      "description": "Use the brush tool to select any object from the image · Refine and modify using precise brush strokes · Use text prompts to describe changes and ...",
+      "source": "web",
+      "type": "article",
+      "author": "CyberLink",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "Complete Guide to Nano Banana AI for Photographers",
+      "url": "https://filterpixel.com/blog/complete-guide-to-nano-banana-ai-101-ai-editing-hacks-checklist",
+      "description": "This guide explores over 101 ways photographers can integrate Nano Banana into their process—starting with the basics, advancing to creative workflows, and ...",
+      "source": "web",
+      "type": "article",
+      "author": "FilterPixel",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:6",
+      "title": "Nano Banana Image Editing: 6 Insane ways and prompts ...",
+      "url": "https://www.iweaver.ai/blog/nano-banana-6-insane-ways-and-prompts/",
+      "description": "Explore nano banana image editing with 6 creative use cases and step-by-step nano banana prompt tutorials.",
+      "source": "web",
+      "type": "article",
+      "author": "iWeaver",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:5",
+      "title": "Nano Banana: We Found the Best Tips & Use Cases",
+      "url": "https://www.vp-land.com/p/nano-banana-we-found-the-best-tips-use-cases-2e8b",
+      "description": "Desk test: a real-world example. To prove the point, a desk test swapped modern laptops for vintage clamshell iBook computers and requested ...",
+      "source": "web",
+      "type": "article",
+      "author": "VP Land",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:8",
+      "title": "Tested Google's Nano Banana for Real World: Did it Succeed?",
+      "url": "https://www.truinc.com/blogs/stress-tested-googles-nano-banana-model-can-it-handle-real-world-demands",
+      "description": "We tested Google's Nano Banana AI in real-world scenarios. See what worked, what failed, key takeaways and Tru's operational guidance on ...",
+      "source": "web",
+      "type": "article",
+      "author": "truinc.com",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,

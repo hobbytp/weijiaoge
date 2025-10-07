@@ -7,6 +7,7 @@
 ## 🎯 核心功能
 
 ### 阶段1：LangExtract集成
+
 - **LangExtract提取器** (`fetchers/langextract-extractor.mjs`)
   - 智能prompt验证和质量评估
   - 多格式支持（代码块、引号、段落等）
@@ -20,6 +21,7 @@
   - 超时处理
 
 ### 阶段2：大模型验证系统
+
 - **LLM验证器** (`fetchers/llm-validator.mjs`)
   - 统一的OpenAI API接口（支持Gemini和GPT-4o）
   - Prompt质量验证和相关性检测
@@ -34,6 +36,7 @@
   - 增强置信度计算
 
 ### 阶段3：浏览器工具集成
+
 - **浏览器提取器** (`fetchers/browser-extractor.mjs`)
   - Playwright集成，支持动态内容
   - 页面导航和内容提取
@@ -50,6 +53,7 @@
 ## 📁 新增文件
 
 ### 核心提取器
+
 - `fetchers/langextract-extractor.mjs` - LangExtract集成提取器
 - `fetchers/llm-validator.mjs` - 大模型验证器
 - `fetchers/browser-extractor.mjs` - 浏览器提取器
@@ -61,6 +65,7 @@
 - `fetchers/hybrid-extractor.mjs` - 混合提取器
 
 ### 测试文件
+
 - `scripts/test-langextract-integration.mjs` - LangExtract集成测试
 - `scripts/test-llm-validation.mjs` - 大模型验证测试
 - `scripts/test-browser-integration.mjs` - 浏览器集成测试
@@ -70,17 +75,20 @@
 - `scripts/test-github-collection.mjs` - GitHub收集测试
 
 ### 文档
+
 - `IMPLEMENTATION_SUMMARY.md` - 实现总结文档
 - `CLEANUP_SUMMARY.md` - 代码清理总结
 
 ## 🔧 配置更新
 
 ### package.json
+
 - 添加 `playwright` 依赖
 - 更新测试脚本配置
 - 移除已删除的测试脚本引用
 
 ### scripts/update.mjs
+
 - 集成混合智能提取系统
 - 添加提取统计信息
 - 支持智能降级策略
@@ -88,16 +96,19 @@
 ## ✨ 效果提升
 
 ### 提取准确率
+
 - **传统算法**: 60-70%
 - **优化后**: 85-95%
 - **提升幅度**: +25-35%
 
 ### 处理速度
+
 - **静态内容**: < 5秒
 - **动态内容**: < 30秒
 - **批量处理**: 支持并发控制
 
 ### 内容覆盖
+
 - **静态页面**: 完全支持
 - **动态内容**: JavaScript渲染支持
 - **复杂格式**: 多格式智能识别
@@ -114,18 +125,21 @@
 ## 🧪 测试覆盖
 
 ### 单元测试
+
 - ✅ LangExtract提取器测试
 - ✅ 大模型验证器测试
 - ✅ 浏览器提取器测试
 - ✅ 混合提取器测试
 
 ### 集成测试
+
 - ✅ 阶段1集成测试
 - ✅ 阶段2集成测试
 - ✅ 阶段3集成测试
 - ✅ 终极提取器测试
 
 ### 性能测试
+
 - ✅ 响应时间测试
 - ✅ 并发处理测试
 - ✅ 内存使用测试
@@ -134,6 +148,7 @@
 ## 📊 算法架构
 
 ### 多层提取系统
+
 ```
 传统算法 → LangExtract → 增强算法 → 大模型验证 → 浏览器工具
     ↓           ↓           ↓           ↓           ↓
@@ -141,6 +156,7 @@
 ```
 
 ### 智能决策流程
+
 ```javascript
 async function intelligentExtraction(url, content) {
   // 1. 内容类型检测
@@ -165,6 +181,7 @@ async function intelligentExtraction(url, content) {
 ## 🎯 使用方式
 
 ### 基础使用
+
 ```javascript
 import { extractIntelligently } from './fetchers/ultimate-extractor.mjs';
 
@@ -172,6 +189,7 @@ const result = await extractIntelligently(url, sourceInfo);
 ```
 
 ### 批量处理
+
 ```javascript
 import { extractMultipleIntelligently } from './fetchers/ultimate-extractor.mjs';
 
@@ -179,6 +197,7 @@ const results = await extractMultipleIntelligently(urls, concurrency);
 ```
 
 ### 策略配置
+
 ```javascript
 import { setStrategy } from './fetchers/ultimate-extractor.mjs';
 
@@ -188,6 +207,7 @@ setStrategy('comprehensive'); // fast, balanced, comprehensive
 ## 🔧 配置要求
 
 ### 环境变量
+
 ```bash
 # 大模型API密钥
 GEMINI_API_KEY=your_gemini_api_key
@@ -198,6 +218,7 @@ NODE_TLS_REJECT_UNAUTHORIZED=0  # 开发环境
 ```
 
 ### 依赖安装
+
 ```bash
 npm install playwright
 npx playwright install chromium
@@ -206,16 +227,19 @@ npx playwright install chromium
 ## 📈 性能优化
 
 ### 并发处理
+
 - 批量提取支持并发控制
 - 避免API限制和资源竞争
 - 智能超时处理
 
 ### 缓存机制
+
 - 提取结果缓存
 - 验证结果复用
 - 统计信息持久化
 
 ### 资源管理
+
 - 浏览器资源自动清理
 - 内存使用优化
 - 错误恢复机制
@@ -223,6 +247,7 @@ npx playwright install chromium
 ## 🧹 代码清理
 
 ### 已删除文件
+
 - 15个临时和重复文件
 - 8个临时测试脚本
 - 2个重复测试文件
@@ -230,6 +255,7 @@ npx playwright install chromium
 - 2个根目录临时文件
 
 ### 保留文件
+
 - 9个核心测试脚本
 - 1个核心更新脚本
 - 完整的文档结构
@@ -243,6 +269,7 @@ npx playwright install chromium
 3. **阶段3**: 集成浏览器工具，处理动态内容
 
 最终实现的终极提取器能够：
+
 - 自动检测内容类型
 - 智能选择提取策略
 - 多层质量验证
