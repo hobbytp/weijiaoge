@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-08T08:43:50.154Z",
-  "total": 160,
+  "generatedAt": "2025-10-08T09:26:55.613Z",
+  "total": 161,
   "items": [
     {
       "id": "repo:793375104",
@@ -11,9 +11,9 @@
       "source": "github",
       "type": "repo",
       "author": "Shubhamsaboo",
-      "stars": 71372,
+      "stars": 71374,
       "createdAt": "2024-04-29T05:30:25Z",
-      "updatedAt": "2025-10-08T08:28:11Z",
+      "updatedAt": "2025-10-08T09:07:32Z",
       "tags": [
         "repo"
       ]
@@ -26,9 +26,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 14166,
+      "stars": 14167,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-08T08:21:16Z",
+      "updatedAt": "2025-10-08T08:44:08Z",
       "tags": [
         "repo"
       ]
@@ -41,9 +41,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 14166,
+      "stars": 14167,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-08T08:21:16Z",
+      "updatedAt": "2025-10-08T08:44:08Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -73,9 +73,9 @@
       "source": "github",
       "type": "repo",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 2609,
+      "stars": 2610,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2025-10-08T08:11:23Z",
+      "updatedAt": "2025-10-08T09:17:45Z",
       "tags": [
         "repo"
       ]
@@ -88,9 +88,9 @@
       "source": "github",
       "type": "readme",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 2609,
+      "stars": 2610,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2025-10-08T08:11:23Z",
+      "updatedAt": "2025-10-08T09:17:45Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -135,9 +135,9 @@
       "source": "github",
       "type": "repo",
       "author": "receptron",
-      "stars": 86,
+      "stars": 87,
       "createdAt": "2025-09-13T21:25:04Z",
-      "updatedAt": "2025-10-08T05:59:44Z",
+      "updatedAt": "2025-10-08T09:24:27Z",
       "tags": [
         "repo"
       ]
@@ -265,21 +265,6 @@
       ]
     },
     {
-      "id": "repo:419681956",
-      "title": "LikaiLee/rss-reader",
-      "url": "https://github.com/LikaiLee/rss-reader",
-      "description": "RSS 订阅工具",
-      "source": "github",
-      "type": "repo",
-      "author": "LikaiLee",
-      "stars": 9,
-      "createdAt": "2021-10-21T10:43:25Z",
-      "updatedAt": "2025-10-08T05:16:18Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:656229999",
       "title": "missuo/awesome-stars",
       "url": "https://github.com/missuo/awesome-stars",
@@ -305,6 +290,21 @@
       "stars": 3,
       "createdAt": "2021-12-23T10:20:04Z",
       "updatedAt": "2025-10-08T08:18:49Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:965384708",
+      "title": "lyx-JuneSnow/DailyArXiv",
+      "url": "https://github.com/lyx-JuneSnow/DailyArXiv",
+      "description": "forked from https://github.com/zezhishao/DailyArXiv",
+      "source": "github",
+      "type": "repo",
+      "author": "lyx-JuneSnow",
+      "stars": 2,
+      "createdAt": "2025-04-13T03:30:04Z",
+      "updatedAt": "2025-10-08T09:17:42Z",
       "tags": [
         "repo"
       ]
@@ -400,6 +400,96 @@
       ]
     },
     {
+      "id": "repo:1060525320",
+      "title": "CrackerCat/feed",
+      "url": "https://github.com/CrackerCat/feed",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "CrackerCat",
+      "stars": 0,
+      "createdAt": "2025-09-20T04:35:53Z",
+      "updatedAt": "2025-10-08T09:26:36Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3417986358",
+      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.115.1 )",
+      "url": "https://github.com/marcocondrache/hive/pull/467",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.1` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "hive-operator[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-15T13:30:36Z",
+      "updatedAt": "2025-10-08T09:24:26Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:1950181803",
+      "title": "feat(container): update n8nio/n8n docker tag to v1.115.1",
+      "url": "https://github.com/raelix/raelix-cluster-v2/pull/321",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://togithub.com/n8n-io/n8n)) | minor | `1.11.1` -> `1.115.1` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://togithub.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n-   `",
+      "source": "github",
+      "type": "pull",
+      "author": "raelix-bot[bot]",
+      "stars": 0,
+      "createdAt": "2023-10-18T16:32:29Z",
+      "updatedAt": "2025-10-08T09:18:01Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1061040388",
+      "title": "shohinsan/JinuAI",
+      "url": "https://github.com/shohinsan/JinuAI",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "shohinsan",
+      "stars": 0,
+      "createdAt": "2025-09-21T05:42:15Z",
+      "updatedAt": "2025-10-08T09:17:16Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:2656401737",
+      "title": "Update n8nio/n8n Docker tag to v1.115.0",
+      "url": "https://github.com/jamie-oconnell/homelab/pull/254",
+      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.67.1` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2024-11-13T18:32:44Z",
+      "updatedAt": "2025-10-08T09:13:14Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1038084891",
+      "title": "asnull-li/nano-banana",
+      "url": "https://github.com/asnull-li/nano-banana",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "asnull-li",
+      "stars": 0,
+      "createdAt": "2025-08-14T15:40:21Z",
+      "updatedAt": "2025-10-08T09:12:36Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:229347655",
       "title": "ddresch/ddresch-stars",
       "url": "https://github.com/ddresch/ddresch-stars",
@@ -412,6 +502,126 @@
       "updatedAt": "2025-10-08T00:47:52Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:3290075127",
+      "title": "chore(deps): update docker.n8n.io/n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/saveside/honeypot2/pull/10",
+      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.105.2` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-04T16:26:29Z",
+      "updatedAt": "2025-10-08T09:06:46Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3250341418",
+      "title": "chore(deps): update container image n8nio/n8n to v1.115.0",
+      "url": "https://github.com/pacholoamit/homelab-infrastructure/pull/248",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.103.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-07-21T23:23:45Z",
+      "updatedAt": "2025-10-08T09:02:36Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3436396112",
+      "title": "feat(container): update image n8nio/n8n ( 1.111.0 ➔ 1.115.0 )",
+      "url": "https://github.com/returnfloat/homelab/pull/1446",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-20T01:37:56Z",
+      "updatedAt": "2025-10-08T09:01:36Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3494498557",
+      "title": "chore: release main",
+      "url": "https://github.com/AIGNE-io/aigne-framework/pull/596",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n<details><summary>cli: 1.50.1-beta.1</summary>\n\n## [1.50.1-beta.1](https://github.com/AIGNE-io/aigne-framework/compare/cli-v1.50.1-beta...cli-v1.50.1-beta.1) (2025-10-08)\n\n\n### Bug Fixes\n\n* **cli:** add environment variable support for AIGNE Hub credentials ([#595](https://github.com/AIGNE-io/aigne-framework/issues/595)) ([00651e4](https://github.com/AIGNE-io/aigne-framework/commit/00651e4f1047c24be297b4f73e06e144592d934d))\n</details>\n\n<detail",
+      "source": "github",
+      "type": "pull",
+      "author": "li-yechao",
+      "stars": 0,
+      "createdAt": "2025-10-08T08:49:25Z",
+      "updatedAt": "2025-10-08T08:58:49Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3331623266",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/arjansiemons/homelab/pull/54",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.107.2` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-18T18:01:29Z",
+      "updatedAt": "2025-10-08T08:57:29Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1019568386",
+      "title": "KG-NINJA/KGchallengedskill",
+      "url": "https://github.com/KG-NINJA/KGchallengedskill",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "KG-NINJA",
+      "stars": 0,
+      "createdAt": "2025-07-14T14:26:01Z",
+      "updatedAt": "2025-10-08T08:54:56Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3352171762",
+      "title": "feat(container): update ghcr.io/n8n-io/n8n ( 1.108.1 ➔ 1.115.0 )",
+      "url": "https://github.com/swibrow/home-ops/pull/449",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-25T14:53:49Z",
+      "updatedAt": "2025-10-08T08:52:46Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3395074691",
+      "title": "Update n8nio/n8n Docker tag to v1.115.0",
+      "url": "https://github.com/wyvernzora/k2/pull/488",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.110.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-08T17:40:53Z",
+      "updatedAt": "2025-10-08T08:51:40Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -440,21 +650,6 @@
       "stars": 0,
       "createdAt": "2025-09-30T19:32:54Z",
       "updatedAt": "2025-10-08T08:43:05Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1019568386",
-      "title": "KG-NINJA/KGchallengedskill",
-      "url": "https://github.com/KG-NINJA/KGchallengedskill",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "KG-NINJA",
-      "stars": 0,
-      "createdAt": "2025-07-14T14:26:01Z",
-      "updatedAt": "2025-10-08T08:41:40Z",
       "tags": [
         "repo"
       ]
@@ -515,21 +710,6 @@
       "stars": 0,
       "createdAt": "2025-09-27T05:38:42Z",
       "updatedAt": "2025-10-08T08:37:31Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1060525320",
-      "title": "CrackerCat/feed",
-      "url": "https://github.com/CrackerCat/feed",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "CrackerCat",
-      "stars": 0,
-      "createdAt": "2025-09-20T04:35:53Z",
-      "updatedAt": "2025-10-08T08:32:49Z",
       "tags": [
         "repo"
       ]
@@ -715,36 +895,6 @@
       ]
     },
     {
-      "id": "issue:3250341418",
-      "title": "chore(deps): update container image n8nio/n8n to v1.115.0",
-      "url": "https://github.com/pacholoamit/homelab-infrastructure/pull/248",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.103.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-07-21T23:23:45Z",
-      "updatedAt": "2025-10-08T07:11:22Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3352171762",
-      "title": "feat(container): update ghcr.io/n8n-io/n8n ( 1.108.1 ➔ 1.115.0 )",
-      "url": "https://github.com/swibrow/home-ops/pull/449",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-25T14:53:49Z",
-      "updatedAt": "2025-10-08T06:59:05Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3491811027",
       "title": "Feature/nano banana algorithm optimization",
       "url": "https://github.com/hobbytp/weijiaoge/pull/1",
@@ -755,21 +905,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T14:46:54Z",
       "updatedAt": "2025-10-08T06:49:02Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3420131726",
-      "title": "Update docker.n8n.io/n8nio/n8n Docker tag to v1.115.0",
-      "url": "https://github.com/bensonphillipsiv/homelab-infra/pull/39",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.c",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-09-16T02:57:33Z",
-      "updatedAt": "2025-10-08T06:46:17Z",
       "tags": [
         "pull"
       ]
@@ -850,36 +985,6 @@
       ]
     },
     {
-      "id": "issue:3290075127",
-      "title": "chore(deps): update docker.n8n.io/n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/saveside/honeypot2/pull/10",
-      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.105.2` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-04T16:26:29Z",
-      "updatedAt": "2025-10-08T06:08:46Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:2656401737",
-      "title": "Update n8nio/n8n Docker tag to v1.115.0",
-      "url": "https://github.com/jamie-oconnell/homelab/pull/254",
-      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.67.1` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2024-11-13T18:32:44Z",
-      "updatedAt": "2025-10-08T06:07:55Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3270838807",
       "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
       "url": "https://github.com/meysam81/infra/pull/298",
@@ -922,36 +1027,6 @@
       "updatedAt": "2025-10-08T05:25:44Z",
       "tags": [
         "repo"
-      ]
-    },
-    {
-      "id": "issue:2116236439",
-      "title": "feat(container): update image docker.io/n8nio/n8n to v1.115.0",
-      "url": "https://github.com/imtoanle/mcluster/pull/124",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.26.0` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2024-02-03T05:06:01Z",
-      "updatedAt": "2025-10-08T05:17:21Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3321902643",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/Veirt/homelab-gitops/pull/108",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.107.0` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the warning logs for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-14T11:37:01Z",
-      "updatedAt": "2025-10-08T05:11:01Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -1015,21 +1090,6 @@
       ]
     },
     {
-      "id": "issue:3352602097",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/nezdemkovski/homelab-helm-charts/pull/7",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-25T17:15:15Z",
-      "updatedAt": "2025-10-08T04:13:20Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3485242394",
       "title": "[Hacktoberfest App] Product Packaging Designer",
       "url": "https://github.com/pollinations/pollinations/issues/4361",
@@ -1085,36 +1145,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T22:40:35Z",
       "updatedAt": "2025-10-08T03:05:24Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1071934770",
-      "title": "Xiaonan-debug/HCI",
-      "url": "https://github.com/Xiaonan-debug/HCI",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "Xiaonan-debug",
-      "stars": 0,
-      "createdAt": "2025-10-08T03:03:23Z",
-      "updatedAt": "2025-10-08T03:05:17Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1038084891",
-      "title": "asnull-li/nano-banana",
-      "url": "https://github.com/asnull-li/nano-banana",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "asnull-li",
-      "stars": 0,
-      "createdAt": "2025-08-14T15:40:21Z",
-      "updatedAt": "2025-10-08T03:03:37Z",
       "tags": [
         "repo"
       ]
@@ -1355,21 +1385,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T22:09:23Z",
       "updatedAt": "2025-10-07T22:19:16Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1071822589",
-      "title": "phantom4C3/Mango-SEO",
-      "url": "https://github.com/phantom4C3/Mango-SEO",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "phantom4C3",
-      "stars": 0,
-      "createdAt": "2025-10-07T21:27:58Z",
-      "updatedAt": "2025-10-07T21:31:49Z",
       "tags": [
         "repo"
       ]
