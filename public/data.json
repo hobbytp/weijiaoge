@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-08T07:42:56.142Z",
-  "total": 156,
+  "generatedAt": "2025-10-08T07:54:18.340Z",
+  "total": 158,
   "items": [
     {
       "id": "repo:793375104",
@@ -26,9 +26,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 14163,
+      "stars": 14164,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-08T07:07:52Z",
+      "updatedAt": "2025-10-08T07:48:59Z",
       "tags": [
         "repo"
       ]
@@ -41,9 +41,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 14163,
+      "stars": 14164,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-08T07:07:52Z",
+      "updatedAt": "2025-10-08T07:48:59Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -150,9 +150,9 @@
       "source": "github",
       "type": "repo",
       "author": "thuml",
-      "stars": 48,
+      "stars": 49,
       "createdAt": "2025-10-06T08:19:08Z",
-      "updatedAt": "2025-10-08T07:25:00Z",
+      "updatedAt": "2025-10-08T07:54:02Z",
       "tags": [
         "repo"
       ]
@@ -415,6 +415,21 @@
       ]
     },
     {
+      "id": "repo:1069153002",
+      "title": "banan-bot/banan",
+      "url": "https://github.com/banan-bot/banan",
+      "description": "banan is a Discord bot that lets you use stable diffusion image generation capabilities, right inside of Discord.",
+      "source": "github",
+      "type": "repo",
+      "author": "banan-bot",
+      "stars": 0,
+      "createdAt": "2025-10-03T13:40:03Z",
+      "updatedAt": "2025-10-08T07:48:51Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:520288382",
       "title": "shredthaGNAR/my-awesome-stars",
       "url": "https://github.com/shredthaGNAR/my-awesome-stars",
@@ -442,6 +457,21 @@
       "updatedAt": "2025-10-08T02:08:57Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:3494245840",
+      "title": "🚀 微蕉阁项目完整优化和修复",
+      "url": "https://github.com/hobbytp/weijiaoge/pull/2",
+      "description": "# 🚀 微蕉阁项目完整优化和修复\r\n\r\n## 📋 概述\r\n本次PR包含了微蕉阁项目的完整优化，包括nano banana算法优化、智能缓存系统、页面加载问题修复等多项重要改进。\r\n\r\n## 🎯 主要功能\r\n\r\n### 1. 智能缓存系统\r\n- ✅ **SimpleCacheManager**: 实现轻量级缓存管理\r\n- ✅ **智能跳过**: 自动跳过未变化的页面，节省73次API调用\r\n- ✅ **缓存统计**: 提供详细的缓存效果统计\r\n- ✅ **Git集成**: 缓存数据持久化到Git仓库\r\n\r\n### 2. 页面加载问题修复\r\n- ✅ **修复undefined分类**: 统一所有提取器的分类键名\r\n- ✅ **修复title字段缺失**: 为智能提取结果添加title字段\r\n- ✅ **修复prompts结构**: 支持混合prompts数据结构（字符串数组和对象数组）\r\n- ✅ **完全兼容**: 所有224个案例现在都能正常加载和显示\r\n\r\n### 3. 算法优化\r\n- ✅ **多阶段提取**: LangExtract + LLM验证 + 浏览器工具\r\n- ✅ *",
+      "source": "github",
+      "type": "pull",
+      "author": "hobbytp",
+      "stars": 0,
+      "createdAt": "2025-10-08T07:38:39Z",
+      "updatedAt": "2025-10-08T07:42:00Z",
+      "tags": [
+        "pull"
       ]
     },
     {
