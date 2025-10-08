@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-08T08:07:37.380Z",
-  "total": 158,
+  "generatedAt": "2025-10-08T09:26:55.613Z",
+  "total": 161,
   "items": [
     {
       "id": "repo:793375104",
@@ -11,9 +11,9 @@
       "source": "github",
       "type": "repo",
       "author": "Shubhamsaboo",
-      "stars": 71371,
+      "stars": 71374,
       "createdAt": "2024-04-29T05:30:25Z",
-      "updatedAt": "2025-10-08T07:38:32Z",
+      "updatedAt": "2025-10-08T09:07:32Z",
       "tags": [
         "repo"
       ]
@@ -26,9 +26,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 14164,
+      "stars": 14167,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-08T07:48:59Z",
+      "updatedAt": "2025-10-08T08:44:08Z",
       "tags": [
         "repo"
       ]
@@ -41,9 +41,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 14164,
+      "stars": 14167,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-08T07:48:59Z",
+      "updatedAt": "2025-10-08T08:44:08Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -73,9 +73,9 @@
       "source": "github",
       "type": "repo",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 2608,
+      "stars": 2610,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2025-10-08T04:09:07Z",
+      "updatedAt": "2025-10-08T09:17:45Z",
       "tags": [
         "repo"
       ]
@@ -88,9 +88,9 @@
       "source": "github",
       "type": "readme",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 2608,
+      "stars": 2610,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2025-10-08T04:09:07Z",
+      "updatedAt": "2025-10-08T09:17:45Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -135,9 +135,9 @@
       "source": "github",
       "type": "repo",
       "author": "receptron",
-      "stars": 86,
+      "stars": 87,
       "createdAt": "2025-09-13T21:25:04Z",
-      "updatedAt": "2025-10-08T05:59:44Z",
+      "updatedAt": "2025-10-08T09:24:27Z",
       "tags": [
         "repo"
       ]
@@ -150,15 +150,24 @@
       "source": "github",
       "type": "repo",
       "author": "thuml",
-<<<<<<< HEAD
-      "stars": 49,
+      "stars": 52,
       "createdAt": "2025-10-06T08:19:08Z",
-      "updatedAt": "2025-10-08T07:54:02Z",
-=======
-      "stars": 50,
-      "createdAt": "2025-10-06T08:19:08Z",
-      "updatedAt": "2025-10-08T07:57:33Z",
->>>>>>> bf55c3a916ed146017d613c5af6317ff683d4bbb
+      "updatedAt": "2025-10-08T08:25:39Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1046354241",
+      "title": "CodeGoat24/UniGenBench",
+      "url": "https://github.com/CodeGoat24/UniGenBench",
+      "description": "UniGenBench: A Unified T2I Generation Benchmark",
+      "source": "github",
+      "type": "repo",
+      "author": "CodeGoat24",
+      "stars": 48,
+      "createdAt": "2025-08-28T15:04:47Z",
+      "updatedAt": "2025-10-08T08:39:10Z",
       "tags": [
         "repo"
       ]
@@ -256,21 +265,6 @@
       ]
     },
     {
-      "id": "repo:419681956",
-      "title": "LikaiLee/rss-reader",
-      "url": "https://github.com/LikaiLee/rss-reader",
-      "description": "RSS 订阅工具",
-      "source": "github",
-      "type": "repo",
-      "author": "LikaiLee",
-      "stars": 9,
-      "createdAt": "2021-10-21T10:43:25Z",
-      "updatedAt": "2025-10-08T05:16:18Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:656229999",
       "title": "missuo/awesome-stars",
       "url": "https://github.com/missuo/awesome-stars",
@@ -286,21 +280,6 @@
       ]
     },
     {
-      "id": "repo:804294575",
-      "title": "varbhat/awesome-stars",
-      "url": "https://github.com/varbhat/awesome-stars",
-      "description": "🌟 A curated list of my Github stars!",
-      "source": "github",
-      "type": "repo",
-      "author": "varbhat",
-      "stars": 5,
-      "createdAt": "2024-05-22T10:23:17Z",
-      "updatedAt": "2025-10-08T00:51:27Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:441142079",
       "title": "shredthaGNAR/list-of-my-starred-repos",
       "url": "https://github.com/shredthaGNAR/list-of-my-starred-repos",
@@ -310,7 +289,52 @@
       "author": "shredthaGNAR",
       "stars": 3,
       "createdAt": "2021-12-23T10:20:04Z",
-      "updatedAt": "2025-10-08T05:13:13Z",
+      "updatedAt": "2025-10-08T08:18:49Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:965384708",
+      "title": "lyx-JuneSnow/DailyArXiv",
+      "url": "https://github.com/lyx-JuneSnow/DailyArXiv",
+      "description": "forked from https://github.com/zezhishao/DailyArXiv",
+      "source": "github",
+      "type": "repo",
+      "author": "lyx-JuneSnow",
+      "stars": 2,
+      "createdAt": "2025-04-13T03:30:04Z",
+      "updatedAt": "2025-10-08T09:17:42Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1066868826",
+      "title": "Bokichoy/BananaFlow-ZHO",
+      "url": "https://github.com/Bokichoy/BananaFlow-ZHO",
+      "description": "🍌 Streamline your workflow with BananaFlow-ZHO, an open-source platform combining NanoBanana and Veo for seamless creative collaboration.",
+      "source": "github",
+      "type": "repo",
+      "author": "Bokichoy",
+      "stars": 2,
+      "createdAt": "2025-09-30T04:29:54Z",
+      "updatedAt": "2025-10-08T08:41:52Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1049892930",
+      "title": "etranHOLI/NanoBananaEditor",
+      "url": "https://github.com/etranHOLI/NanoBananaEditor",
+      "description": "🍌 Generate stunning images and edit them conversationally with the powerful NanoBananaEditor, built on React and TypeScript using AI technology.",
+      "source": "github",
+      "type": "repo",
+      "author": "etranHOLI",
+      "stars": 2,
+      "createdAt": "2025-09-03T16:41:16Z",
+      "updatedAt": "2025-10-08T08:18:20Z",
       "tags": [
         "repo"
       ]
@@ -331,31 +355,31 @@
       ]
     },
     {
-      "id": "repo:1066868826",
-      "title": "Bokichoy/BananaFlow-ZHO",
-      "url": "https://github.com/Bokichoy/BananaFlow-ZHO",
-      "description": "🍌 Streamline your workflow with BananaFlow-ZHO, an open-source platform combining NanoBanana and Veo for seamless creative collaboration.",
+      "id": "repo:1071933869",
+      "title": "Gemini-free-web/Gemini-3.0",
+      "url": "https://github.com/Gemini-free-web/Gemini-3.0",
+      "description": "Google Gemini 3.0 免费使用指南 (含 GPT-5, Claude 4.5)【2025年10月】",
       "source": "github",
       "type": "repo",
-      "author": "Bokichoy",
-      "stars": 2,
-      "createdAt": "2025-09-30T04:29:54Z",
-      "updatedAt": "2025-10-08T05:41:27Z",
+      "author": "Gemini-free-web",
+      "stars": 1,
+      "createdAt": "2025-10-08T03:00:39Z",
+      "updatedAt": "2025-10-08T08:40:14Z",
       "tags": [
         "repo"
       ]
     },
     {
-      "id": "repo:1049892930",
-      "title": "etranHOLI/NanoBananaEditor",
-      "url": "https://github.com/etranHOLI/NanoBananaEditor",
-      "description": "🍌 Generate stunning images and edit them conversationally with the powerful NanoBananaEditor, built on React and TypeScript using AI technology.",
+      "id": "repo:1065339804",
+      "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
+      "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
+      "description": "📝 Create and run your AI Studio app effortlessly with Nano-Banana-Editor. Easily manage your dependencies and deploy locally for smooth development.",
       "source": "github",
       "type": "repo",
-      "author": "etranHOLI",
-      "stars": 2,
-      "createdAt": "2025-09-03T16:41:16Z",
-      "updatedAt": "2025-10-08T05:17:09Z",
+      "author": "ali-ashraf-mohammed",
+      "stars": 1,
+      "createdAt": "2025-09-27T14:24:36Z",
+      "updatedAt": "2025-10-08T08:38:31Z",
       "tags": [
         "repo"
       ]
@@ -376,6 +400,96 @@
       ]
     },
     {
+      "id": "repo:1060525320",
+      "title": "CrackerCat/feed",
+      "url": "https://github.com/CrackerCat/feed",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "CrackerCat",
+      "stars": 0,
+      "createdAt": "2025-09-20T04:35:53Z",
+      "updatedAt": "2025-10-08T09:26:36Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3417986358",
+      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.115.1 )",
+      "url": "https://github.com/marcocondrache/hive/pull/467",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.1` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "hive-operator[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-15T13:30:36Z",
+      "updatedAt": "2025-10-08T09:24:26Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:1950181803",
+      "title": "feat(container): update n8nio/n8n docker tag to v1.115.1",
+      "url": "https://github.com/raelix/raelix-cluster-v2/pull/321",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://togithub.com/n8n-io/n8n)) | minor | `1.11.1` -> `1.115.1` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://togithub.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n-   `",
+      "source": "github",
+      "type": "pull",
+      "author": "raelix-bot[bot]",
+      "stars": 0,
+      "createdAt": "2023-10-18T16:32:29Z",
+      "updatedAt": "2025-10-08T09:18:01Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1061040388",
+      "title": "shohinsan/JinuAI",
+      "url": "https://github.com/shohinsan/JinuAI",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "shohinsan",
+      "stars": 0,
+      "createdAt": "2025-09-21T05:42:15Z",
+      "updatedAt": "2025-10-08T09:17:16Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:2656401737",
+      "title": "Update n8nio/n8n Docker tag to v1.115.0",
+      "url": "https://github.com/jamie-oconnell/homelab/pull/254",
+      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.67.1` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2024-11-13T18:32:44Z",
+      "updatedAt": "2025-10-08T09:13:14Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1038084891",
+      "title": "asnull-li/nano-banana",
+      "url": "https://github.com/asnull-li/nano-banana",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "asnull-li",
+      "stars": 0,
+      "createdAt": "2025-08-14T15:40:21Z",
+      "updatedAt": "2025-10-08T09:12:36Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:229347655",
       "title": "ddresch/ddresch-stars",
       "url": "https://github.com/ddresch/ddresch-stars",
@@ -391,38 +505,291 @@
       ]
     },
     {
-      "id": "repo:1071933869",
-      "title": "Gemini-free-web/Gemini-3.0",
-      "url": "https://github.com/Gemini-free-web/Gemini-3.0",
-      "description": "Google Gemini 3.0 免费使用指南 (含 GPT-5, Claude 4.5)【2025年10月】",
+      "id": "issue:3290075127",
+      "title": "chore(deps): update docker.n8n.io/n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/saveside/honeypot2/pull/10",
+      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.105.2` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-04T16:26:29Z",
+      "updatedAt": "2025-10-08T09:06:46Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3250341418",
+      "title": "chore(deps): update container image n8nio/n8n to v1.115.0",
+      "url": "https://github.com/pacholoamit/homelab-infrastructure/pull/248",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.103.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-07-21T23:23:45Z",
+      "updatedAt": "2025-10-08T09:02:36Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3436396112",
+      "title": "feat(container): update image n8nio/n8n ( 1.111.0 ➔ 1.115.0 )",
+      "url": "https://github.com/returnfloat/homelab/pull/1446",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-20T01:37:56Z",
+      "updatedAt": "2025-10-08T09:01:36Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3494498557",
+      "title": "chore: release main",
+      "url": "https://github.com/AIGNE-io/aigne-framework/pull/596",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n<details><summary>cli: 1.50.1-beta.1</summary>\n\n## [1.50.1-beta.1](https://github.com/AIGNE-io/aigne-framework/compare/cli-v1.50.1-beta...cli-v1.50.1-beta.1) (2025-10-08)\n\n\n### Bug Fixes\n\n* **cli:** add environment variable support for AIGNE Hub credentials ([#595](https://github.com/AIGNE-io/aigne-framework/issues/595)) ([00651e4](https://github.com/AIGNE-io/aigne-framework/commit/00651e4f1047c24be297b4f73e06e144592d934d))\n</details>\n\n<detail",
+      "source": "github",
+      "type": "pull",
+      "author": "li-yechao",
+      "stars": 0,
+      "createdAt": "2025-10-08T08:49:25Z",
+      "updatedAt": "2025-10-08T08:58:49Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3331623266",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/arjansiemons/homelab/pull/54",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.107.2` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-18T18:01:29Z",
+      "updatedAt": "2025-10-08T08:57:29Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1019568386",
+      "title": "KG-NINJA/KGchallengedskill",
+      "url": "https://github.com/KG-NINJA/KGchallengedskill",
+      "description": "",
       "source": "github",
       "type": "repo",
-      "author": "Gemini-free-web",
-      "stars": 1,
-      "createdAt": "2025-10-08T03:00:39Z",
-      "updatedAt": "2025-10-08T06:19:20Z",
+      "author": "KG-NINJA",
+      "stars": 0,
+      "createdAt": "2025-07-14T14:26:01Z",
+      "updatedAt": "2025-10-08T08:54:56Z",
       "tags": [
         "repo"
       ]
     },
     {
-      "id": "repo:1065339804",
-      "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
-      "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
-      "description": "📝 Create and run your AI Studio app effortlessly with Nano-Banana-Editor. Easily manage your dependencies and deploy locally for smooth development.",
+      "id": "issue:3352171762",
+      "title": "feat(container): update ghcr.io/n8n-io/n8n ( 1.108.1 ➔ 1.115.0 )",
+      "url": "https://github.com/swibrow/home-ops/pull/449",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-25T14:53:49Z",
+      "updatedAt": "2025-10-08T08:52:46Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3395074691",
+      "title": "Update n8nio/n8n Docker tag to v1.115.0",
+      "url": "https://github.com/wyvernzora/k2/pull/488",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.110.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-08T17:40:53Z",
+      "updatedAt": "2025-10-08T08:51:40Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1052007617",
+      "title": "shubinfilms/shubinfilms-best-veo3-bot",
+      "url": "https://github.com/shubinfilms/shubinfilms-best-veo3-bot",
+      "description": "",
       "source": "github",
       "type": "repo",
-      "author": "ali-ashraf-mohammed",
-      "stars": 1,
-      "createdAt": "2025-09-27T14:24:36Z",
-      "updatedAt": "2025-10-08T05:37:42Z",
+      "author": "shubinfilms",
+      "stars": 0,
+      "createdAt": "2025-09-07T07:44:07Z",
+      "updatedAt": "2025-10-08T08:43:12Z",
       "tags": [
         "repo"
       ]
     },
     {
-<<<<<<< HEAD
-=======
+      "id": "repo:1067386289",
+      "title": "kittunaidu/Nano-Banana-AIO",
+      "url": "https://github.com/kittunaidu/Nano-Banana-AIO",
+      "description": "🍌 Create and edit images effortlessly with Nano Banana AIO, a web app using React and Google Gemini API for powerful AI-driven tools.",
+      "source": "github",
+      "type": "repo",
+      "author": "kittunaidu",
+      "stars": 0,
+      "createdAt": "2025-09-30T19:32:54Z",
+      "updatedAt": "2025-10-08T08:43:05Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065594082",
+      "title": "grayking1234/Nano-Banana-Supermarket",
+      "url": "https://github.com/grayking1234/Nano-Banana-Supermarket",
+      "description": "🍌 Generate images effortlessly with Nano-Banana-Supermarket using simple API configurations and Node.js for a seamless experience.",
+      "source": "github",
+      "type": "repo",
+      "author": "grayking1234",
+      "stars": 0,
+      "createdAt": "2025-09-28T03:22:14Z",
+      "updatedAt": "2025-10-08T08:40:15Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065325025",
+      "title": "Davivimix96/nano-banana-infinimap",
+      "url": "https://github.com/Davivimix96/nano-banana-infinimap",
+      "description": "🗺️ Generate seamless, neighbor-aware infinite maps with this experimental AI tool, powered by the Gemini Nano Banana model for efficient large-scale mapping.",
+      "source": "github",
+      "type": "repo",
+      "author": "Davivimix96",
+      "stars": 0,
+      "createdAt": "2025-09-27T13:51:31Z",
+      "updatedAt": "2025-10-08T08:38:26Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065248140",
+      "title": "kingofdeath420/Nano-Banana-images-Editor-API",
+      "url": "https://github.com/kingofdeath420/Nano-Banana-images-Editor-API",
+      "description": "🍌 Create stunning images effortlessly with the Nano Banana Images Editor API—combining powerful AI editing tools at a fraction of the cost.",
+      "source": "github",
+      "type": "repo",
+      "author": "kingofdeath420",
+      "stars": 0,
+      "createdAt": "2025-09-27T10:42:31Z",
+      "updatedAt": "2025-10-08T08:38:07Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065127302",
+      "title": "MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
+      "url": "https://github.com/MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
+      "description": "🎨 Create powerful image annotations with Enhancor, a modular React-based system for AI-driven editing and professional-quality tools.",
+      "source": "github",
+      "type": "repo",
+      "author": "MrBeastIsAmazing23",
+      "stars": 0,
+      "createdAt": "2025-09-27T05:38:42Z",
+      "updatedAt": "2025-10-08T08:37:31Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3436951876",
+      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.115.0 )",
+      "url": "https://github.com/Tomyail/talos-cluster/pull/200",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-20T09:11:04Z",
+      "updatedAt": "2025-10-08T08:32:17Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3189038360",
+      "title": "chore(deps): update docker.n8n.io/n8nio/n8n docker tag to v1.115.0",
+      "url": "https://github.com/pedrotchang/homelab/pull/22",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.100.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.c",
+      "source": "github",
+      "type": "pull",
+      "author": "pedrotchang",
+      "stars": 0,
+      "createdAt": "2025-06-30T16:00:51Z",
+      "updatedAt": "2025-10-08T08:29:45Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:799841673",
+      "title": "pasilastbot/ai_training",
+      "url": "https://github.com/pasilastbot/ai_training",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "pasilastbot",
+      "stars": 0,
+      "createdAt": "2024-05-13T07:53:14Z",
+      "updatedAt": "2025-10-08T08:28:10Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1061462324",
+      "title": "alex-phan/easygames",
+      "url": "https://github.com/alex-phan/easygames",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "alex-phan",
+      "stars": 0,
+      "createdAt": "2025-09-22T00:15:01Z",
+      "updatedAt": "2025-10-08T08:20:48Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3494377147",
+      "title": "bug: only extract one case from web page which include multiple cases",
+      "url": "https://github.com/hobbytp/weijiaoge/issues/4",
+      "description": "e.g. there are 10 cases from web page [Google’s New AI – Nano Banana: Top 10 Use Cases That Will Blow Your Mind](https://levelup.gitconnected.com/googles-new-ai-nano-banana-top-10-use-cases-that-will-blow-your-mind-63a19f1b28d7), but our web only shows 1 case. \n\n<img width=\"438\" height=\"319\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/b9641749-1127-48ed-9a4d-9e88eb1bd241\" />",
+      "source": "github",
+      "type": "issue",
+      "author": "hobbytp",
+      "stars": 0,
+      "createdAt": "2025-10-08T08:20:19Z",
+      "updatedAt": "2025-10-08T08:20:19Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
       "id": "repo:1069584535",
       "title": "yogeshbhongade/AI-Image-Editor",
       "url": "https://github.com/yogeshbhongade/AI-Image-Editor",
@@ -438,7 +805,6 @@
       ]
     },
     {
->>>>>>> bf55c3a916ed146017d613c5af6317ff683d4bbb
       "id": "repo:1069153002",
       "title": "banan-bot/banan",
       "url": "https://github.com/banan-bot/banan",
@@ -514,36 +880,6 @@
       ]
     },
     {
-      "id": "repo:1060525320",
-      "title": "CrackerCat/feed",
-      "url": "https://github.com/CrackerCat/feed",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "CrackerCat",
-      "stars": 0,
-      "createdAt": "2025-09-20T04:35:53Z",
-      "updatedAt": "2025-10-08T07:41:07Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1052007617",
-      "title": "shubinfilms/shubinfilms-best-veo3-bot",
-      "url": "https://github.com/shubinfilms/shubinfilms-best-veo3-bot",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "shubinfilms",
-      "stars": 0,
-      "createdAt": "2025-09-07T07:44:07Z",
-      "updatedAt": "2025-10-08T07:38:20Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:3062981951",
       "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
       "url": "https://github.com/amaotone/home-kubernetes/pull/22",
@@ -559,36 +895,6 @@
       ]
     },
     {
-      "id": "issue:3250341418",
-      "title": "chore(deps): update container image n8nio/n8n to v1.115.0",
-      "url": "https://github.com/pacholoamit/homelab-infrastructure/pull/248",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.103.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-07-21T23:23:45Z",
-      "updatedAt": "2025-10-08T07:11:22Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3352171762",
-      "title": "feat(container): update ghcr.io/n8n-io/n8n ( 1.108.1 ➔ 1.115.0 )",
-      "url": "https://github.com/swibrow/home-ops/pull/449",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-25T14:53:49Z",
-      "updatedAt": "2025-10-08T06:59:05Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3491811027",
       "title": "Feature/nano banana algorithm optimization",
       "url": "https://github.com/hobbytp/weijiaoge/pull/1",
@@ -599,21 +905,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T14:46:54Z",
       "updatedAt": "2025-10-08T06:49:02Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3420131726",
-      "title": "Update docker.n8n.io/n8nio/n8n Docker tag to v1.115.0",
-      "url": "https://github.com/bensonphillipsiv/homelab-infra/pull/39",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.c",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-09-16T02:57:33Z",
-      "updatedAt": "2025-10-08T06:46:17Z",
       "tags": [
         "pull"
       ]
@@ -644,21 +935,6 @@
       "stars": 0,
       "createdAt": "2025-09-09T21:29:59Z",
       "updatedAt": "2025-10-08T06:41:14Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3436951876",
-      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.115.0 )",
-      "url": "https://github.com/Tomyail/talos-cluster/pull/200",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-09-20T09:11:04Z",
-      "updatedAt": "2025-10-08T06:40:17Z",
       "tags": [
         "pull"
       ]
@@ -709,36 +985,6 @@
       ]
     },
     {
-      "id": "issue:3290075127",
-      "title": "chore(deps): update docker.n8n.io/n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/saveside/honeypot2/pull/10",
-      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.105.2` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-04T16:26:29Z",
-      "updatedAt": "2025-10-08T06:08:46Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:2656401737",
-      "title": "Update n8nio/n8n Docker tag to v1.115.0",
-      "url": "https://github.com/jamie-oconnell/homelab/pull/254",
-      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | Kustomization | minor | `1.67.1` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2024-11-13T18:32:44Z",
-      "updatedAt": "2025-10-08T06:07:55Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3270838807",
       "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
       "url": "https://github.com/meysam81/infra/pull/298",
@@ -749,21 +995,6 @@
       "stars": 0,
       "createdAt": "2025-07-28T17:51:12Z",
       "updatedAt": "2025-10-08T06:06:51Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3436354065",
-      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.111.0 → 1.115.0 )",
-      "url": "https://github.com/evjak/home-ops/pull/554",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.111.0` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-09-20T01:05:54Z",
-      "updatedAt": "2025-10-08T05:59:36Z",
       "tags": [
         "pull"
       ]
@@ -784,96 +1015,6 @@
       ]
     },
     {
-      "id": "repo:1019568386",
-      "title": "KG-NINJA/KGchallengedskill",
-      "url": "https://github.com/KG-NINJA/KGchallengedskill",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "KG-NINJA",
-      "stars": 0,
-      "createdAt": "2025-07-14T14:26:01Z",
-      "updatedAt": "2025-10-08T05:56:29Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1067386289",
-      "title": "kittunaidu/Nano-Banana-AIO",
-      "url": "https://github.com/kittunaidu/Nano-Banana-AIO",
-      "description": "🍌 Create and edit images effortlessly with Nano Banana AIO, a web app using React and Google Gemini API for powerful AI-driven tools.",
-      "source": "github",
-      "type": "repo",
-      "author": "kittunaidu",
-      "stars": 0,
-      "createdAt": "2025-09-30T19:32:54Z",
-      "updatedAt": "2025-10-08T05:42:43Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1065594082",
-      "title": "grayking1234/Nano-Banana-Supermarket",
-      "url": "https://github.com/grayking1234/Nano-Banana-Supermarket",
-      "description": "🍌 Generate images effortlessly with Nano-Banana-Supermarket using simple API configurations and Node.js for a seamless experience.",
-      "source": "github",
-      "type": "repo",
-      "author": "grayking1234",
-      "stars": 0,
-      "createdAt": "2025-09-28T03:22:14Z",
-      "updatedAt": "2025-10-08T05:39:32Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1065325025",
-      "title": "Davivimix96/nano-banana-infinimap",
-      "url": "https://github.com/Davivimix96/nano-banana-infinimap",
-      "description": "🗺️ Generate seamless, neighbor-aware infinite maps with this experimental AI tool, powered by the Gemini Nano Banana model for efficient large-scale mapping.",
-      "source": "github",
-      "type": "repo",
-      "author": "Davivimix96",
-      "stars": 0,
-      "createdAt": "2025-09-27T13:51:31Z",
-      "updatedAt": "2025-10-08T05:37:37Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1065248140",
-      "title": "kingofdeath420/Nano-Banana-images-Editor-API",
-      "url": "https://github.com/kingofdeath420/Nano-Banana-images-Editor-API",
-      "description": "🍌 Create stunning images effortlessly with the Nano Banana Images Editor API—combining powerful AI editing tools at a fraction of the cost.",
-      "source": "github",
-      "type": "repo",
-      "author": "kingofdeath420",
-      "stars": 0,
-      "createdAt": "2025-09-27T10:42:31Z",
-      "updatedAt": "2025-10-08T05:37:18Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1065127302",
-      "title": "MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
-      "url": "https://github.com/MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
-      "description": "🎨 Create powerful image annotations with Enhancor, a modular React-based system for AI-driven editing and professional-quality tools.",
-      "source": "github",
-      "type": "repo",
-      "author": "MrBeastIsAmazing23",
-      "stars": 0,
-      "createdAt": "2025-09-27T05:38:42Z",
-      "updatedAt": "2025-10-08T05:36:51Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1052561121",
       "title": "eamonblackwell1/etsyflow",
       "url": "https://github.com/eamonblackwell1/etsyflow",
@@ -886,36 +1027,6 @@
       "updatedAt": "2025-10-08T05:25:44Z",
       "tags": [
         "repo"
-      ]
-    },
-    {
-      "id": "issue:2116236439",
-      "title": "feat(container): update image docker.io/n8nio/n8n to v1.115.0",
-      "url": "https://github.com/imtoanle/mcluster/pull/124",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.26.0` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.io/n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2024-02-03T05:06:01Z",
-      "updatedAt": "2025-10-08T05:17:21Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3321902643",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/Veirt/homelab-gitops/pull/108",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.107.0` -> `1.115.0` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the warning logs for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-14T11:37:01Z",
-      "updatedAt": "2025-10-08T05:11:01Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -979,21 +1090,6 @@
       ]
     },
     {
-      "id": "issue:3352602097",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.0",
-      "url": "https://github.com/nezdemkovski/homelab-helm-charts/pull/7",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.108.1` -> `1.115.0` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-25T17:15:15Z",
-      "updatedAt": "2025-10-08T04:13:20Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3485242394",
       "title": "[Hacktoberfest App] Product Packaging Designer",
       "url": "https://github.com/pollinations/pollinations/issues/4361",
@@ -1049,36 +1145,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T22:40:35Z",
       "updatedAt": "2025-10-08T03:05:24Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1071934770",
-      "title": "Xiaonan-debug/HCI",
-      "url": "https://github.com/Xiaonan-debug/HCI",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "Xiaonan-debug",
-      "stars": 0,
-      "createdAt": "2025-10-08T03:03:23Z",
-      "updatedAt": "2025-10-08T03:05:17Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1038084891",
-      "title": "asnull-li/nano-banana",
-      "url": "https://github.com/asnull-li/nano-banana",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "asnull-li",
-      "stars": 0,
-      "createdAt": "2025-08-14T15:40:21Z",
-      "updatedAt": "2025-10-08T03:03:37Z",
       "tags": [
         "repo"
       ]
@@ -1319,21 +1385,6 @@
       "stars": 0,
       "createdAt": "2025-10-07T22:09:23Z",
       "updatedAt": "2025-10-07T22:19:16Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1071822589",
-      "title": "phantom4C3/Mango-SEO",
-      "url": "https://github.com/phantom4C3/Mango-SEO",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "phantom4C3",
-      "stars": 0,
-      "createdAt": "2025-10-07T21:27:58Z",
-      "updatedAt": "2025-10-07T21:31:49Z",
       "tags": [
         "repo"
       ]
@@ -1885,22 +1936,6 @@
     },
     {
       "id": "web:6",
-      "title": "How to build with Nano Banana: Complete Developer ...",
-      "url": "https://dev.to/googleai/how-to-build-with-nano-banana-complete-developer-tutorial-646",
-      "description": "The following examples use the Python SDK for demonstration. Equivalent code snippets to use Nano Banana in JavaScript are provided in this ...",
-      "source": "web",
-      "type": "article",
-      "author": "DEV Community",
-      "stars": 0,
-      "createdAt": null,
-      "updatedAt": null,
-      "tags": [
-        "web",
-        "article"
-      ]
-    },
-    {
-      "id": "web:7",
       "title": "27 Fun Ways to Use Nano Banana: Creative Ideas and ...",
       "url": "https://www.glbgpt.com/hub/27-fun-ways-to-use-nano-banana-creative-ideas-and-real-examples/",
       "description": "27 Fun Ways to Use Nano Banana: Creative Ideas and Real Examples · 1. Image Blending · 2. Remove People · 3. Remove Objects · 4. Replace Objects · 5.",
@@ -1916,13 +1951,29 @@
       ]
     },
     {
-      "id": "web:8",
+      "id": "web:7",
       "title": "Nano Banana Tutorial: How to Use Google's AI Image Editing ...",
       "url": "https://www.anangsha.me/nano-banana-tutorial-how-to-use-googles-ai-image-editing-model-in-2025/",
       "description": "· Example 1: Transforming a selfie · Example 2: Blending two photos · Example 3: Virtual try-on · Example 4: AI Interior design with Nano Banana",
       "source": "web",
       "type": "article",
       "author": "anangsha.me",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:8",
+      "title": "How to build with Nano Banana: Complete Developer ...",
+      "url": "https://dev.to/googleai/how-to-build-with-nano-banana-complete-developer-tutorial-646",
+      "description": "The following examples use the Python SDK for demonstration. Equivalent code snippets to use Nano Banana in JavaScript are provided in this ...",
+      "source": "web",
+      "type": "article",
+      "author": "DEV Community",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -1965,9 +2016,9 @@
     },
     {
       "id": "web:3",
-      "title": "Introducing Gemini 2.5 Flash Image, our state-of-the-art ...",
-      "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
-      "description": "Gemini 2.5 Flash Image can understand and merge multiple input images. You can put an object into a scene, restyle a room with a color scheme or ...",
+      "title": "How to prompt Gemini 2.5 Flash Image ...",
+      "url": "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/",
+      "description": "1. Photorealistic scenes · 2. Stylized illustrations & stickers · 3. Accurate text in images · 4. Product mockups & commercial photography · 5.",
       "source": "web",
       "type": "article",
       "author": "Google for Developers Blog",
@@ -2093,12 +2144,12 @@
     },
     {
       "id": "web:4",
-      "title": "Nano banana will replace traditional photo editing",
-      "url": "https://www.reddit.com/r/GeminiAI/comments/1nrehmh/nano_banana_will_replace_traditional_photo_editing/",
-      "description": "Nano banana will replace traditional photo editing ... Sorry, this post was deleted by the person who originally posted it.",
+      "title": "Introducing Gemini 2.5 Flash Image, our state-of-the-art ...",
+      "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
+      "description": "Today, we're excited to introduce Gemini 2.5 Flash Image (aka nano-banana), our state-of-the-art image generation and editing model.",
       "source": "web",
       "type": "article",
-      "author": "Reddit · r/GeminiAI",
+      "author": "Google for Developers Blog",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2109,28 +2160,12 @@
     },
     {
       "id": "web:6",
-      "title": "nano banana use cases for designers : r/GeminiAI",
-      "url": "https://www.reddit.com/r/GeminiAI/comments/1n8k936/nano_banana_use_cases_for_designers/",
-      "description": "I am banging my head against the wall, why won't nano banana make 16:9 size images? Is there some sort of trick?",
+      "title": "Nano Banana Prompts: 20 Free Creative Uses You'll Love",
+      "url": "https://notegpt.io/blog/nano-banana-prompts-20-free-creative-uses",
+      "description": "Explore 20 free Nano Banana prompts and creative uses. Discover how this AI Image Editor inspires fun edits, unique styles, and fresh design ideas.",
       "source": "web",
       "type": "article",
-      "author": "Reddit · r/GeminiAI",
-      "stars": 0,
-      "createdAt": null,
-      "updatedAt": null,
-      "tags": [
-        "web",
-        "article"
-      ]
-    },
-    {
-      "id": "web:7",
-      "title": "7 Cool Use Cases For Nano Banana | With Prompts & ...",
-      "url": "https://piktochart.com/blog/nano-banana-prompts-use-cases/",
-      "description": "Google Gemini 2.5 Flash, aka Nano Banana, excels at editing images. It's not bad at generating new visuals, but it's most impressive for the ...",
-      "source": "web",
-      "type": "article",
-      "author": "Piktochart",
+      "author": "NoteGPT",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2188,13 +2223,13 @@
       ]
     },
     {
-      "id": "web:5",
-      "title": "6 Viral Nano Banana Prompts You Must Try",
-      "url": "https://www.godofprompt.ai/blog/viral-nano-banana-prompts?srsltid=AfmBOorT3OTQh1MNI4o81bneRKNx8AAXfIH1w_bcNYxyO0_QpdA_ij0L",
-      "description": "6 Viral Nano Banana Prompts You Must Try · Turn Yourself Into an Action Figure · See Yourself in a Different Decade · Add Yourself to Any TV Show.",
+      "id": "web:6",
+      "title": "10 Mind Blowing Things Google's Nano Banana Image AI Can ...",
+      "url": "https://www.youtube.com/watch?v=c11bY0RBQm8",
+      "description": "Google just released a major upgrade to their AI image model inside of Google Gemini. You can now edit any image with a simple text prompt.",
       "source": "web",
       "type": "article",
-      "author": "God of Prompt",
+      "author": "YouTube · Skill Leap AI",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2204,10 +2239,26 @@
       ]
     },
     {
-      "id": "web:3",
+      "id": "web:7",
+      "title": "Gemini 2.5 Flash Image (Nano Banana)",
+      "url": "https://aistudio.google.com/models/gemini-2-5-flash-image",
+      "description": "Gemini 2.5 Flash Image (Nano Banana). Unlock ... Our state of the art models, excellent at coding, reasoning, creative writing, and multimodal capabilities.",
+      "source": "web",
+      "type": "article",
+      "author": "Google AI Studio",
+      "stars": 0,
+      "createdAt": null,
+      "updatedAt": null,
+      "tags": [
+        "web",
+        "article"
+      ]
+    },
+    {
+      "id": "web:2",
       "title": "\"This AI Replaces Photoshop\" - Google Nano Banana Tutorial",
       "url": "https://www.youtube.com/watch?v=aO9Mdqp6lJU",
-      "description": "It's able to generate and manipulate and combine different photos making product photos making photos of people.",
+      "description": "In this video, I will show you what Google Nano Banana, aka Gemini Flash 2.5 Image is, I will show you how to use it, and I will share 5 ...",
       "source": "web",
       "type": "article",
       "author": "YouTube · Santrel Media",
@@ -2236,7 +2287,7 @@
       ]
     },
     {
-      "id": "web:6",
+      "id": "web:5",
       "title": "How to Use Nano Banana for Image Generation",
       "url": "https://www.freecodecamp.org/news/nano-banana-for-image-generation/",
       "description": "The very first step for using “Nano Banana” is to get an API key. Head over to Google AI Studio, click on “Create API key“, and generate a new ...",
@@ -2252,13 +2303,13 @@
       ]
     },
     {
-      "id": "web:7",
-      "title": "Nano Banana INSANE Product Photos (Gemini 2.5 Flash ...",
-      "url": "https://www.youtube.com/watch?v=tSDSSJlHFL4",
-      "description": "ULTIMATE NANO BANANA TUTORIAL: 15 PROMPT TECHNIQUES. AI Master ... 7 Levels of AI Image Creation with Nano Banana (From Beginner to Pro!)",
+      "id": "web:4",
+      "title": "The Complete Gemini 2.5 Flash Image (Nano Banana) ...",
+      "url": "https://www.reddit.com/r/ThinkingDeeplyAI/comments/1n61paw/the_complete_gemini_25_flash_image_nano_banana/",
+      "description": "The Complete Gemini 2.5 Flash Image (Nano Banana) Master Guide: 100+ Things You NEED to Know (Prompts, Features, Use Cases, and Pro Tips).",
       "source": "web",
       "type": "article",
-      "author": "YouTube · Thomas Lundström",
+      "author": "Reddit · r/ThinkingDeeplyAI",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2268,24 +2319,8 @@
       ]
     },
     {
-      "id": "web:8",
-      "title": "Google Nano Banana AI Tutorial : r/GoogleGeminiAI",
-      "url": "https://www.reddit.com/r/GoogleGeminiAI/comments/1nh2hwr/google_nano_banana_ai_tutorial/",
-      "description": "I want to share how I created high-end ads using Google Nano Banana AI — an amazing tool that turns simple product photos into ...",
-      "source": "web",
-      "type": "article",
-      "author": "Reddit · r/GoogleGeminiAI",
-      "stars": 0,
-      "createdAt": null,
-      "updatedAt": null,
-      "tags": [
-        "web",
-        "article"
-      ]
-    },
-    {
-      "id": "web:5",
-      "title": "7 Creative Uses of Gemini 2.5 Flash Image (Nano Banana)",
+      "id": "web:6",
+      "title": "7 Creative Uses of Gemini 2.5 Flash Image (Nano ...",
       "url": "https://www.cometapi.com/7-creative-uses-of-gemini-2-5-flash-image-nano-banana/",
       "description": "Gemini 2.5 Flash Image can take several images and compose them into a single scene or transfer style/texture from one image to another. That ...",
       "source": "web",
@@ -2303,7 +2338,7 @@
       "id": "web:7",
       "title": "Use Gemini 2.5 Flash Image (nano banana) on ...",
       "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-2-5-flash-image-on-vertex-ai",
-      "description": "Here are some ways you can use our state of the art native image generation in Gemini 2.5 Flash. Multi-image fusion: Combine different images ...",
+      "description": "Example of an image application built in Poe to restore old images, using Gemini 2.5 Flash Image. “Gemini 2.5 Flash Image an incredible ...",
       "source": "web",
       "type": "article",
       "author": "Google Cloud",
@@ -2333,12 +2368,12 @@
     },
     {
       "id": "web:6",
-      "title": "Nano‑Banana – The Essentials",
-      "url": "https://help.scenario.com/en/articles/nanobanana/",
-      "description": "Open your image – Go to your gallery or workspace and select the image you want to edit. · Select the model – In the left‑hand panel, choose Nano ...",
+      "title": "Image generation with Gemini (aka Nano Banana) | Gemini API",
+      "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "description": "Gemini can generate and process images conversationally. You can prompt Gemini with text, images, or a combination of both allowing you to create, edit, ...",
       "source": "web",
       "type": "article",
-      "author": "Scenario - AI",
+      "author": "Google AI for Developers",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2365,12 +2400,12 @@
     },
     {
       "id": "web:8",
-      "title": "Image generation with Gemini (aka Nano Banana) | Gemini API",
-      "url": "https://ai.google.dev/gemini-api/docs/image-generation",
-      "description": "Gemini can generate and process images conversationally. You can prompt Gemini with text, images, or a combination of both allowing you to create, edit, ...",
+      "title": "A Designer's Guide to Prompting Google Nano Banana",
+      "url": "https://uxplanet.org/a-designers-guide-to-prompting-google-nano-banana-954d5b73fe71",
+      "description": "This model has a few notable features that make it stand out, such as advanced image editing with natural language, character consistency, and ...",
       "source": "web",
       "type": "article",
-      "author": "Google AI for Developers",
+      "author": "UX Planet",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2381,12 +2416,12 @@
     },
     {
       "id": "web:4",
-      "title": "I Tested Google's New Nano Banana Image AI, and It's ...",
-      "url": "https://medium.com/the-generator/i-tested-googles-new-nano-banana-image-ai-and-it-s-insane-826d23f7f9a7",
-      "description": "Photo by the author. Nano Banana nailed the overhead beams, big glass windows, and even the speakers mounted on the wall. It got the restaurant ...",
+      "title": "I Tried Gemini Nano Banana And My Experience Was Insane",
+      "url": "https://medium.com/write-a-catalyst/my-experience-with-gemini-nano-banana-c5662b03eb2e",
+      "description": "I spent a few days testing Gemini Nano Banana for image generation. It felt light but powerful. The results were clear and accurate.",
       "source": "web",
       "type": "article",
-      "author": "Medium · Thomas Smith",
+      "author": "Medium · Sushila Devi",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -2397,22 +2432,6 @@
     },
     {
       "id": "web:5",
-      "title": "Gemini 2.5 Flash Image (Nano Banana)",
-      "url": "https://aistudio.google.com/models/gemini-2-5-flash-image",
-      "description": "Place the same character in different scenes, showcase products from various angles in new settings, or generate consistent brand assets. Gemini 2.5 Flash ...",
-      "source": "web",
-      "type": "article",
-      "author": "Google AI Studio",
-      "stars": 0,
-      "createdAt": null,
-      "updatedAt": null,
-      "tags": [
-        "web",
-        "article"
-      ]
-    },
-    {
-      "id": "web:6",
       "title": "Nano Banana: We Found the Best Tips & Use Cases",
       "url": "https://www.vp-land.com/p/nano-banana-we-found-the-best-tips-use-cases-2e8b",
       "description": "Desk test: a real-world example. To prove the point, a desk test swapped modern laptops for vintage clamshell iBook computers and requested ...",
@@ -2428,13 +2447,13 @@
       ]
     },
     {
-      "id": "web:7",
-      "title": "EP 598: Nano Banana! Real Use cases for Google's new ...",
-      "url": "https://www.youreverydayai.com/nano-banana-real-use-cases-for-googles-new-gemini-2-5-flash-image/",
-      "description": "Google's Nano Banana is here! Discover real business use cases for Gemini 2.5 Flash Image and learn how this model enables faster and more ...",
+      "id": "web:6",
+      "title": "From Prompts To Pictures: My Gemini Nano Banana ... - AI Fire",
+      "url": "https://www.aifire.co/p/from-prompts-to-pictures-my-gemini-nano-banana-ai-experiments",
+      "description": "Making AI art seems hard, but it's not. I tried the new Gemini Nano Banana tool and share my simple process and prompts for anyone to start ...",
       "source": "web",
       "type": "article",
-      "author": "Everyday AI Podcast",
+      "author": "aifire.co",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
