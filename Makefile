@@ -16,6 +16,7 @@ help:
 	@echo "  make stop       - 停止服务器"
 	@echo "  make restart    - 重启服务器（更新数据后）"
 	@echo "  make clean      - 清理临时文件"
+	@echo "  make clean-all  - 彻底清理所有数据（包括缓存和生成的数据）"
 	@echo "  make test       - 测试增强系统（需要网络）"
 	@echo "  make test-data  - 测试现有数据提取"
 	@echo "  make test-basic - 测试基本功能"
@@ -93,6 +94,17 @@ clean:
 	@echo "🧹 清理临时文件..."
 	rm -f test-env.mjs
 	@echo "✅ 清理完成！"
+
+# 彻底清理所有数据（包括缓存和生成的数据）
+clean-all:
+	@echo "🧹 彻底清理所有数据..."
+	@echo "🗑️  删除public目录..."
+	@if exist public rmdir /s /q public
+	@echo "🗑️  删除缓存目录..."
+	@if exist .cache rmdir /s /q .cache
+	@echo "🗑️  删除临时文件..."
+	@if exist test-env.mjs del test-env.mjs
+	@echo "✅ 彻底清理完成！现在可以运行 make update 从头开始收集数据"
 
 # 推送到GitHub
 push:

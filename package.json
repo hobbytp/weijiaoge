@@ -20,6 +20,8 @@
     "test:stage2": "node scripts/test-stage2-integration.mjs",
     "test:browser": "node scripts/test-browser-integration.mjs",
     "test:stage3": "node scripts/test-stage3-integration.mjs",
+    "test:cache": "node scripts/test-simple-cache-manager.mjs",
+    "test:cache-integration": "node scripts/test-cache-integration.mjs",
     "help": "echo '🍌 微蕉阁项目管理命令: make help'"
   },
   "dependencies": {
