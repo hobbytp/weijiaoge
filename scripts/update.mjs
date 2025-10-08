@@ -7,6 +7,7 @@ import { extractCasesFromImportantArticles } from '../fetchers/article-extractor
 import { processItemsForCases } from '../fetchers/case-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
+import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
 
 // 加载.env文件
@@ -48,6 +49,11 @@ function mergeOld(oldItems, newItems) {
 }
 
 async function main() {
+  console.log('🚀 开始智能更新流程...');
+  
+  // 初始化缓存管理器
+  const cacheManager = new SimpleCacheManager();
+  
   const [gh, web] = await Promise.all([
     fetchFromGitHub().catch(e => {
       console.error('GitHub fetch failed:', e.message);
@@ -81,40 +87,97 @@ async function main() {
   fs.writeFileSync(outFile, JSON.stringify(payload, null, 2), 'utf-8');
   console.log(`Wrote ${items.length} items to ${path.relative(root, outFile)}`);
 
-  // 提取使用案例 - 使用混合智能提取器
-  console.log('🔍 使用混合智能提取器提取使用案例...');
-  const cases = processItemsForCases(items);
+  // 智能处理每个页面
+  console.log('🧠 开始智能处理页面...');
+  const processedCases = [];
+  const skippedPages = [];
+  
+  // 处理GitHub数据
+  console.log('📥 处理GitHub数据...');
+  for (const item of gh) {
+    if (item.description) {
+      const shouldProcess = cacheManager.shouldProcess(
+        item.url || item.id, 
+        item.description, 
+        item.caseCount || 0
+      );
+      
+      if (shouldProcess.shouldProcess) {
+        console.log(`🔄 处理页面: ${item.title} (${shouldProcess.reason})`);
+        try {
+          const result = await extractIntelligently(item.description, item.url || item.id, item);
+          if (result.result && result.confidence > 0.6) {
+            // 确保有category和title字段
+            const caseWithCategory = {
+              ...result.result,
+              category: result.result.category || result.result.categories?.[0] || 'other',
+              title: result.result.title || result.result.prompts?.[0]?.text?.substring(0, 50) + '...' || '未命名案例',
+              source: 'github',
+              extractor: result.extractor,
+              confidence: result.confidence
+            };
+            processedCases.push(caseWithCategory);
+          }
+          // 更新缓存
+          cacheManager.updateCache(item.url || item.id, item.description, result.result?.cases?.length || 0);
+        } catch (error) {
+          console.error(`智能提取失败: ${item.title}`, error);
+        }
+      } else {
+        console.log(`⏭️ 跳过页面: ${item.title} (${shouldProcess.reason})`);
+        skippedPages.push(item.title);
+      }
+    }
+  }
+  
+  // 处理Web数据
+  console.log('📥 处理Web数据...');
+  for (const item of web) {
+    if (item.description) {
+      const shouldProcess = cacheManager.shouldProcess(
+        item.url || item.id, 
+        item.description, 
+        item.caseCount || 0
+      );
+      
+      if (shouldProcess.shouldProcess) {
+        console.log(`🔄 处理页面: ${item.title} (${shouldProcess.reason})`);
+        try {
+          const result = await extractIntelligently(item.description, item.url || item.id, item);
+          if (result.result && result.confidence > 0.6) {
+            // 确保有category和title字段
+            const caseWithCategory = {
+              ...result.result,
+              category: result.result.category || result.result.categories?.[0] || 'other',
+              title: result.result.title || result.result.prompts?.[0]?.text?.substring(0, 50) + '...' || '未命名案例',
+              source: 'web',
+              extractor: result.extractor,
+              confidence: result.confidence
+            };
+            processedCases.push(caseWithCategory);
+          }
+          // 更新缓存
+          cacheManager.updateCache(item.url || item.id, item.description, result.result?.cases?.length || 0);
+        } catch (error) {
+          console.error(`智能提取失败: ${item.title}`, error);
+        }
+      } else {
+        console.log(`⏭️ 跳过页面: ${item.title} (${shouldProcess.reason})`);
+        skippedPages.push(item.title);
+      }
+    }
+  }
   
   // 从重要文章中提取详细案例
   console.log('📚 从重要文章中提取详细案例...');
   const importantCases = await extractCasesFromImportantArticles(items);
   
-  // 使用智能提取器处理低置信度的案例
-  console.log('🧠 使用智能提取器处理低置信度案例...');
-  const lowConfidenceItems = items.filter(item => {
-    // 这里可以添加逻辑来识别低置信度的项目
-    return item.description && item.description.length > 100;
-  });
-  
-  const intelligentCases = [];
-  for (const item of lowConfidenceItems.slice(0, 10)) { // 限制处理数量
-    try {
-      const result = await extractIntelligently(item.description, item);
-      if (result.result && result.confidence > 0.6) {
-        intelligentCases.push({
-          ...result.result,
-          source: 'intelligent',
-          extractor: result.extractor,
-          confidence: result.confidence
-        });
-      }
-    } catch (error) {
-      console.error(`智能提取失败: ${item.title}`, error);
-    }
-  }
+  // 传统提取器处理
+  console.log('🔍 使用传统提取器提取使用案例...');
+  const cases = processItemsForCases(items);
   
   // 合并所有案例
-  const allCases = [...cases, ...importantCases, ...intelligentCases];
+  const allCases = [...cases, ...importantCases, ...processedCases];
   
   const casesPayload = {
     version: 1,
@@ -128,7 +191,20 @@ async function main() {
   };
   
   fs.writeFileSync(casesFile, JSON.stringify(casesPayload, null, 2), 'utf-8');
-  console.log(`📝 Wrote ${allCases.length} cases to ${path.relative(root, casesFile)} (${cases.length} from general sources + ${importantCases.length} from important articles + ${intelligentCases.length} from intelligent extraction)`);
+  console.log(`📝 Wrote ${allCases.length} cases to ${path.relative(root, casesFile)} (${cases.length} from general sources + ${importantCases.length} from important articles + ${processedCases.length} from intelligent extraction)`);
+  
+  // 保存缓存
+  cacheManager.saveCache();
+  
+  // 显示缓存统计信息
+  const cacheStats = cacheManager.getStats();
+  console.log('\n📊 缓存统计信息:');
+  console.log(`   总页面数: ${cacheStats.totalPages}`);
+  console.log(`   已处理页面: ${cacheStats.processedPages}`);
+  console.log(`   跳过页面: ${cacheStats.skippedPages}`);
+  console.log(`   节省API调用: ${cacheStats.savedAPI}`);
+  console.log(`   缓存大小: ${cacheStats.cacheFileSize} 字节`);
+  console.log(`   跳过页面列表: ${skippedPages.join(', ')}`);
   
   // 显示提取统计信息
   const stats = getExtractionStats();

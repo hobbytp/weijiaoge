@@ -12,9 +12,11 @@ let casesData = { cases: [] };
 
 function renderCase(caseItem) {
   const promptsHtml = caseItem.prompts.map((prompt, index) => {
-    const isLongPrompt = prompt.length > 200;
-    const displayPrompt = isLongPrompt ? prompt.substring(0, 200) + '...' : prompt;
-    const fullPrompt = prompt;
+    // 处理prompt可能是字符串或对象的情况
+    const promptText = typeof prompt === 'string' ? prompt : prompt.text || '';
+    const isLongPrompt = promptText.length > 200;
+    const displayPrompt = isLongPrompt ? promptText.substring(0, 200) + '...' : promptText;
+    const fullPrompt = promptText;
     
     return `
       <div class="prompt-container">

@@ -1,7 +1,6 @@
 // fetchers/langextract-extractor.mjs
 // LangExtract集成提取器
 
-import { JSDOM } from 'jsdom';
 
 // LangExtract配置
 const LANGEXTRACT_CONFIG = {
@@ -32,18 +31,14 @@ const LANGEXTRACT_CONFIG = {
 
 // 案例分类配置
 const CATEGORY_KEYWORDS = {
-  '3d-figurine': ['3d', 'figurine', 'figure', 'model', 'sculpture', '手办', '模型', '雕塑'],
-  'character-editing': ['character', 'person', 'face', 'portrait', '人物', '角色', '肖像', '面部'],
-  'style-transfer': ['style', 'art', 'painting', 'artistic', '风格', '艺术', '绘画', '画风'],
-  'image-enhancement': ['enhance', 'improve', 'quality', 'resolution', '增强', '改善', '质量', '分辨率'],
-  'clothing-change': ['clothing', 'dress', 'outfit', 'fashion', '衣服', '服装', '穿搭', '时尚'],
-  'background-change': ['background', 'scene', 'environment', '背景', '场景', '环境'],
-  'pose-transfer': ['pose', 'action', 'movement', 'gesture', '姿势', '动作', '姿态'],
-  'age-change': ['age', 'young', 'old', 'aging', '年龄', '年轻', '年老', '老化'],
-  'gender-swap': ['gender', 'male', 'female', '性别', '男性', '女性'],
-  'retro-vintage': ['retro', 'vintage', 'classic', 'old', '复古', '经典', '怀旧'],
-  'fantasy-creature': ['fantasy', 'creature', 'monster', 'dragon', '奇幻', '生物', '怪物', '龙'],
-  'anime-manga': ['anime', 'manga', 'cartoon', '动漫', '漫画', '卡通']
+  'figurine': ['3d', 'figurine', 'figure', 'model', 'sculpture', '手办', '模型', '雕塑'],
+  'character': ['character', 'person', 'face', 'portrait', '人物', '角色', '肖像', '面部'],
+  'style': ['style', 'art', 'painting', 'artistic', '风格', '艺术', '绘画', '画风'],
+  'enhancement': ['enhance', 'improve', 'quality', 'resolution', '增强', '改善', '质量', '分辨率'],
+  'clothing': ['clothing', 'dress', 'outfit', 'fashion', '衣服', '服装', '穿搭', '时尚'],
+  'scene': ['background', 'scene', 'environment', '背景', '场景', '环境'],
+  'composition': ['pose', 'action', 'movement', 'gesture', '姿势', '动作', '姿态'],
+  'other': ['age', 'young', 'old', 'aging', '性别', '男性', '女性', 'retro', 'vintage', 'classic', 'old', '复古', '经典', '怀旧', 'fantasy', 'creature', 'monster', 'dragon', '奇幻', '生物', '怪物', '龙', 'anime', 'manga', 'cartoon', '动漫', '漫画', '卡通']
 };
 
 class LangExtractExtractor {
