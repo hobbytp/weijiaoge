@@ -57,12 +57,16 @@ function mapResult(r) {
   };
 }
 
-// 搜索关键词
+// 搜索关键词（专注于具体使用案例）
 const WEB_TERMS = [
-  'gemini 2.5 flash image preview tutorial',
-  'gemini nano banana examples',
-  'gemini-2.5-flash-image-preview guide',
-  'google gemini image preview api'
+  'nano banana tutorial how to use examples',
+  'gemini 2.5 flash image editing examples',
+  'nano banana image editing use cases',
+  'gemini nano banana creative examples',
+  'nano banana image generation tutorial',
+  'gemini 2.5 flash image practical examples',
+  'nano banana image manipulation guide',
+  'gemini nano banana real world examples'
 ];
 
 export async function fetchFromWeb() {
