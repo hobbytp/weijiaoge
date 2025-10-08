@@ -10,6 +10,49 @@ import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-ext
 import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
 
+/**
+ * 智能去重函数
+ * @param {Array} cases - 案例数组
+ * @returns {Array} 去重后的案例数组
+ */
+function deduplicateCases(cases) {
+  const seen = new Set();
+  const deduplicated = [];
+  
+  for (const caseItem of cases) {
+    // 创建唯一标识符：基于标题和第一个prompt
+    const firstPrompt = caseItem.prompts && caseItem.prompts.length > 0 
+      ? (typeof caseItem.prompts[0] === 'string' ? caseItem.prompts[0] : caseItem.prompts[0].text || '')
+      : '';
+    
+    // 清理标题，移除特殊字符、数字前缀和emoji
+    const cleanTitle = (caseItem.title || '')
+      .replace(/^[\d\s\-\u{1F300}-\u{1F9FF}]+/u, '') // 移除开头的数字、空格、连字符和emoji
+      .replace(/\(Duplicate\)/g, '') // 移除(Duplicate)标记
+      .replace(/\s+/g, ' ') // 合并多个空格
+      .trim();
+    
+    // 清理prompt，移除特殊字符
+    const cleanPrompt = firstPrompt
+      .replace(/[^\w\s\u4e00-\u9fff]/g, ' ') // 只保留字母、数字、空格和中文字符
+      .replace(/\s+/g, ' ') // 合并多个空格
+      .trim()
+      .substring(0, 100);
+    
+    // 使用清理后的标题和prompt作为标识符
+    const identifier = `${cleanTitle}|${cleanPrompt}`;
+    
+    if (!seen.has(identifier)) {
+      seen.add(identifier);
+      deduplicated.push(caseItem);
+    } else {
+      console.log(`🔄 跳过重复案例: ${caseItem.title}`);
+    }
+  }
+  
+  return deduplicated;
+}
+
 // 加载.env文件
 dotenv.config();
 
@@ -179,15 +222,20 @@ async function main() {
   // 合并所有案例
   const allCases = [...cases, ...importantCases, ...processedCases];
   
+  // 智能去重
+  console.log('🔄 开始智能去重...');
+  const deduplicatedCases = deduplicateCases(allCases);
+  console.log(`📊 去重前: ${allCases.length} 个案例，去重后: ${deduplicatedCases.length} 个案例，去除了 ${allCases.length - deduplicatedCases.length} 个重复案例`);
+  
   const casesPayload = {
     version: 1,
     generatedAt: new Date().toISOString(),
-    total: allCases.length,
-    categories: Object.keys(allCases.reduce((acc, c) => {
+    total: deduplicatedCases.length,
+    categories: Object.keys(deduplicatedCases.reduce((acc, c) => {
       acc[c.category] = (acc[c.category] || 0) + 1;
       return acc;
     }, {})),
-    cases: allCases
+    cases: deduplicatedCases
   };
   
   fs.writeFileSync(casesFile, JSON.stringify(casesPayload, null, 2), 'utf-8');
