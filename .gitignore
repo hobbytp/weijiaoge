@@ -2,3 +2,6 @@ node_modules
 .env
 .DS_Store
 
+# 缓存目录（临时数据，不需要版本控制）
+.cache/
+
