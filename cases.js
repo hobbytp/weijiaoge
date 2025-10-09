@@ -10,6 +10,54 @@ const casesGrid = $('#cases-grid');
 
 let casesData = { cases: [] };
 
+// 解析Markdown链接格式的标题
+function parseMarkdownTitle(title) {
+  // 匹配 [标题](链接) 格式
+  const markdownLinkRegex = /^\[([^\]]+)\]\(([^)]+)\)$/;
+  const match = title.match(markdownLinkRegex);
+  
+  if (match) {
+    return {
+      text: match[1], // 提取标题文本
+      url: match[2]   // 提取链接URL
+    };
+  }
+  
+  // 如果不是Markdown格式，返回原标题
+  return {
+    text: title,
+    url: null
+  };
+}
+
+// 从URL中提取作者名称
+function extractAuthorFromUrl(url) {
+  try {
+    // 匹配 x.com/username 或 twitter.com/username 格式
+    const twitterMatch = url.match(/(?:x\.com|twitter\.com)\/([^\/\?]+)/);
+    if (twitterMatch) {
+      return twitterMatch[1];
+    }
+    
+    // 匹配 github.com/username 格式
+    const githubMatch = url.match(/github\.com\/([^\/\?]+)/);
+    if (githubMatch) {
+      return githubMatch[1];
+    }
+    
+    // 其他情况，尝试从域名后第一个路径段提取
+    const urlObj = new URL(url);
+    const pathSegments = urlObj.pathname.split('/').filter(segment => segment);
+    if (pathSegments.length > 0) {
+      return pathSegments[0];
+    }
+  } catch (e) {
+    // URL解析失败，返回null
+  }
+  
+  return null;
+}
+
 function renderCase(caseItem) {
   const promptsHtml = caseItem.prompts.map((prompt, index) => {
     // 处理prompt可能是字符串或对象的情况
@@ -49,7 +97,7 @@ function renderCase(caseItem) {
         </div>
       `;
     }
-    
+
     // 如果有图片，只显示简短的效果描述；如果没有图片，显示完整描述
     if (caseItem.effects.length > 0) {
       if (caseItem.images.length > 0) {
@@ -69,9 +117,53 @@ function renderCase(caseItem) {
     return html;
   })();
   
+  // 解析标题，移除中括号并提取链接
+  const titleInfo = parseMarkdownTitle(caseItem.title);
+  const displayTitle = titleInfo.text;
+  
+  // 构建标题HTML，如果有链接则使用链接，否则使用原始sourceUrl
+  const titleHtml = titleInfo.url 
+    ? `<a href="${titleInfo.url}" target="_blank" rel="noopener noreferrer">${displayTitle}</a>`
+    : displayTitle;
+  
+  // 如果标题中包含链接，在source-link中显示简化的作者信息
+  let sourceLinkHtml = '';
+  if (titleInfo.url) {
+    const author = extractAuthorFromUrl(titleInfo.url);
+    if (author) {
+      sourceLinkHtml = `
+        <div class="source-link">
+          <a href="${titleInfo.url}" target="_blank" rel="noopener noreferrer">
+            @${author}
+          </a>
+          <span class="separator">•</span>
+          <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
+            查看原文 →
+          </a>
+        </div>
+      `;
+    } else {
+      sourceLinkHtml = `
+        <div class="source-link">
+          <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
+            查看原文 →
+          </a>
+        </div>
+      `;
+    }
+  } else {
+    sourceLinkHtml = `
+      <div class="source-link">
+        <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
+          查看原文 →
+        </a>
+      </div>
+    `;
+  }
+  
   return `
     <div class="case-card">
-      <div class="case-title">${caseItem.title}</div>
+      <div class="case-title">${titleHtml}</div>
       <div class="case-category">${caseItem.categoryName}</div>
       
       ${caseItem.prompts.length > 0 ? `
@@ -88,11 +180,7 @@ function renderCase(caseItem) {
         </div>
       ` : ''}
       
-      <div class="source-link">
-        <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
-          查看原文 →
-        </a>
-      </div>
+      ${sourceLinkHtml}
     </div>
   `;
 }
