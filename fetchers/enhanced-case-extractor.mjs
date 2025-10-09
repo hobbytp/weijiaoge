@@ -242,7 +242,7 @@ export async function processMultipleSources(sources) {
 
 // 导出主要功能
 export {
-    isValidPrompt,
-    smartCategorizeCase, smartCleanText
+  isValidPrompt,
+  smartCategorizeCase, smartCleanText
 };
 
