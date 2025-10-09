@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-09T03:34:55.132Z",
-  "total": 144,
+  "generatedAt": "2025-10-09T03:38:42.576Z",
+  "total": 145,
   "items": [
     {
       "id": "repo:104337773",
@@ -26,9 +26,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 14206,
+      "stars": 14207,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-09T03:26:48Z",
+      "updatedAt": "2025-10-09T03:38:28Z",
       "tags": [
         "repo"
       ]
@@ -41,9 +41,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 14206,
+      "stars": 14207,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2025-10-09T03:26:48Z",
+      "updatedAt": "2025-10-09T03:38:28Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -73,9 +73,9 @@
       "source": "github",
       "type": "repo",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 2617,
+      "stars": 2618,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2025-10-09T02:27:07Z",
+      "updatedAt": "2025-10-09T03:37:57Z",
       "tags": [
         "repo"
       ]
@@ -88,9 +88,9 @@
       "source": "github",
       "type": "readme",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 2617,
+      "stars": 2618,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2025-10-09T02:27:07Z",
+      "updatedAt": "2025-10-09T03:37:57Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -415,6 +415,21 @@
       ]
     },
     {
+      "id": "repo:1063244915",
+      "title": "polokang/mochiface",
+      "url": "https://github.com/polokang/mochiface",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "polokang",
+      "stars": 0,
+      "createdAt": "2025-09-24T11:10:43Z",
+      "updatedAt": "2025-10-09T03:36:19Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:1072013663",
       "title": "samelltiger/node-backend-srv",
       "url": "https://github.com/samelltiger/node-backend-srv",
@@ -442,21 +457,6 @@
       "updatedAt": "2025-10-09T03:21:14Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1063244915",
-      "title": "polokang/mochiface",
-      "url": "https://github.com/polokang/mochiface",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "polokang",
-      "stars": 0,
-      "createdAt": "2025-09-24T11:10:43Z",
-      "updatedAt": "2025-10-09T03:20:06Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -1310,6 +1310,21 @@
       "stars": 0,
       "createdAt": "2025-10-03T07:32:51Z",
       "updatedAt": "2025-10-07T12:39:27Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3491111491",
+      "title": "Improve Quick Lane UI designer normalization",
+      "url": "https://github.com/bacoco/AiDesigner/pull/157",
+      "description": "## Summary\n- normalize Quick Lane brand palette, typography, and layout inputs so auto-generated briefs include structured tokens\n- update per-screen UI designer prompt generation to reuse normalized tokens and fall back gracefully when journey data is missing\n\n## Testing\n- npm test *(fails: missing codex/mcp fixtures in repository)*\n\n------\nhttps://chatgpt.com/codex/tasks/task_e_68e4f7e51d148326b28cf9c86a2b746b\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n## Summa",
+      "source": "github",
+      "type": "pull",
+      "author": "bacoco",
+      "stars": 0,
+      "createdAt": "2025-10-07T11:33:49Z",
+      "updatedAt": "2025-10-07T12:07:11Z",
       "tags": [
         "pull"
       ]
