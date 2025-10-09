@@ -92,18 +92,13 @@ test-basic:
 # 清理临时文件
 clean:
 	@echo "🧹 清理临时文件..."
-	rm -f test-env.mjs
+	@node -e "const fs = require('fs'); try { fs.unlinkSync('test-env.mjs'); } catch(e) {}"
 	@echo "✅ 清理完成！"
 
 # 彻底清理所有数据（包括缓存和生成的数据）
 clean-all:
 	@echo "🧹 彻底清理所有数据..."
-	@echo "🗑️  删除public目录..."
-	@if exist public rmdir /s /q public
-	@echo "🗑️  删除缓存目录..."
-	@if exist .cache rmdir /s /q .cache
-	@echo "🗑️  删除临时文件..."
-	@if exist test-env.mjs del test-env.mjs
+	@node -e "const fs = require('fs'); const path = require('path'); try { fs.rmSync('public', { recursive: true, force: true }); console.log('🗑️  删除public目录...'); } catch(e) {} try { fs.rmSync('.cache', { recursive: true, force: true }); console.log('🗑️  删除缓存目录...'); } catch(e) {} try { fs.unlinkSync('test-env.mjs'); console.log('🗑️  删除临时文件...'); } catch(e) {}"
 	@echo "✅ 彻底清理完成！现在可以运行 make update 从头开始收集数据"
 
 # 推送到GitHub
