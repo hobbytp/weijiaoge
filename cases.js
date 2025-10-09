@@ -33,19 +33,32 @@ function renderCase(caseItem) {
     `;
   }).join('');
   
-  const effectsHtml = caseItem.effects.map(effect => 
-    `<div class="effect-text">${effect}</div>`
-  ).join('');
-  
-  const imagesHtml = caseItem.images.length > 0 ? `
-    <div class="images-section">
-      <div class="image-grid">
-        ${caseItem.images.map(img => 
-          `<img src="${img}" alt="效果图" class="case-image" onerror="this.style.display='none'">`
-        ).join('')}
-      </div>
-    </div>
-  ` : '';
+  // 合并效果描述和图片显示
+  const effectsAndImagesHtml = (() => {
+    let html = '';
+    
+    // 显示效果描述
+    if (caseItem.effects.length > 0) {
+      html += caseItem.effects.map(effect => 
+        `<div class="effect-text">${effect}</div>`
+      ).join('');
+    }
+    
+    // 显示效果图片
+    if (caseItem.images.length > 0) {
+      html += `
+        <div class="images-section">
+          <div class="image-grid">
+            ${caseItem.images.map(img => 
+              `<img src="${img}" alt="效果图" class="case-image" onerror="this.style.display='none'">`
+            ).join('')}
+          </div>
+        </div>
+      `;
+    }
+    
+    return html;
+  })();
   
   return `
     <div class="case-card">
@@ -59,14 +72,12 @@ function renderCase(caseItem) {
         </div>
       ` : ''}
       
-      ${caseItem.effects.length > 0 ? `
+      ${(caseItem.effects.length > 0 || caseItem.images.length > 0) ? `
         <div class="effect-section">
           <div class="effect-label">✨ 效果:</div>
-          ${effectsHtml}
+          ${effectsAndImagesHtml}
         </div>
       ` : ''}
-      
-      ${imagesHtml}
       
       <div class="source-link">
         <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">

@@ -55,13 +55,34 @@ const EXCLUDE_PATTERNS = [
   /^[A-Z][a-z]+[A-Z]/  // 驼峰命名
 ];
 
-// 提取效果描述的模式
+// 提取效果描述的模式 - 增强版
 const EFFECT_PATTERNS = [
+  // 中文效果描述
   /效果[:\s]*([^。！？\n]+)/gi,
   /结果[:\s]*([^。！？\n]+)/gi,
   /生成[:\s]*([^。！？\n]+)/gi,
   /转换[:\s]*([^。！？\n]+)/gi,
-  /制作[:\s]*([^。！？\n]+)/gi
+  /制作[:\s]*([^。！？\n]+)/gi,
+  /变成[:\s]*([^。！？\n]+)/gi,
+  /变成[:\s]*([^。！？\n]+)/gi,
+  
+  // 英文效果描述
+  /result[:\s]*([^.!?\n]+)/gi,
+  /effect[:\s]*([^.!?\n]+)/gi,
+  /transform[:\s]*([^.!?\n]+)/gi,
+  /convert[:\s]*([^.!?\n]+)/gi,
+  /turn[:\s]*([^.!?\n]+)/gi,
+  /make[:\s]*([^.!?\n]+)/gi,
+  /create[:\s]*([^.!?\n]+)/gi,
+  /generate[:\s]*([^.!?\n]+)/gi,
+  
+  // 描述性文本模式
+  /(将[^。！？\n]{10,50})/gi,
+  /(把[^。！？\n]{10,50})/gi,
+  /(从[^。！？\n]{10,50})/gi,
+  /(into[^.!?\n]{10,50})/gi,
+  /(from[^.!?\n]{10,50})/gi,
+  /(to[^.!?\n]{10,50})/gi
 ];
 
 // 提取图片URL的模式
@@ -105,6 +126,8 @@ function extractPrompts(text) {
 
 function extractEffects(text) {
   const effects = [];
+  
+  // 使用模式匹配提取效果描述
   for (const pattern of EFFECT_PATTERNS) {
     let match;
     while ((match = pattern.exec(text)) !== null) {
@@ -114,7 +137,75 @@ function extractEffects(text) {
       }
     }
   }
+  
+  // 如果没有找到明确的效果描述，从标题和内容中推断
+  if (effects.length === 0) {
+    const inferredEffects = inferEffectsFromContent(text);
+    effects.push(...inferredEffects);
+  }
+  
   return [...new Set(effects)];
+}
+
+// 从内容中推断效果描述
+function inferEffectsFromContent(text) {
+  const effects = [];
+  const lowerText = text.toLowerCase();
+  
+  // 基于关键词推断效果
+  const effectMappings = {
+    'figurine': '将照片转换为精美的3D手办模型',
+    '手办': '将照片转换为精美的3D手办模型',
+    '3d': '转换为3D模型效果',
+    'character': '角色编辑和特征保持',
+    '角色': '角色编辑和特征保持',
+    'clothing': '服装替换，保持人物特征不变',
+    '服装': '服装替换，保持人物特征不变',
+    'outfit': '服装替换，保持人物特征不变',
+    'scene': '将人物放置到新的场景环境中',
+    '场景': '将人物放置到新的场景环境中',
+    'background': '背景替换和场景合成',
+    '背景': '背景替换和场景合成',
+    'style': '风格转换和艺术效果',
+    '风格': '风格转换和艺术效果',
+    'artistic': '艺术风格转换',
+    'enhance': '图像增强和画质提升',
+    '增强': '图像增强和画质提升',
+    'high-definition': '高清画质提升',
+    '高清': '高清画质提升',
+    'realistic': '超写实照片级生成',
+    '写实': '超写实照片级生成',
+    'portrait': '专业肖像摄影效果',
+    '肖像': '专业肖像摄影效果',
+    'studio': '专业摄影棚效果',
+    '摄影': '专业摄影效果',
+    'design': '设计相关效果',
+    '设计': '设计相关效果',
+    'product': '产品设计效果',
+    '产品': '产品设计效果',
+    'packaging': '包装设计效果',
+    '包装': '包装设计效果'
+  };
+  
+  // 检查文本中的关键词并推断效果
+  for (const [keyword, effect] of Object.entries(effectMappings)) {
+    if (lowerText.includes(keyword)) {
+      effects.push(effect);
+    }
+  }
+  
+  // 如果没有找到特定效果，提供通用描述
+  if (effects.length === 0) {
+    if (lowerText.includes('prompt') || lowerText.includes('提示')) {
+      effects.push('基于提示词生成的效果');
+    } else if (lowerText.includes('image') || lowerText.includes('图片')) {
+      effects.push('图像处理和转换效果');
+    } else {
+      effects.push('AI生成的效果展示');
+    }
+  }
+  
+  return effects;
 }
 
 function extractImages(text) {
