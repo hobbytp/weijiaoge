@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
-import { processItemsForCases } from '../fetchers/case-extractor.mjs';
+import { processItemsForCases, CASE_CATEGORIES } from '../fetchers/case-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
 import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
@@ -151,9 +151,11 @@ async function main() {
           const result = await extractIntelligently(item.description, item.url || item.id, item);
           if (result.result && result.confidence > 0.6) {
             // 确保有category和title字段
+            const category = result.result.category || result.result.categories?.[0] || 'other';
             const caseWithCategory = {
               ...result.result,
-              category: result.result.category || result.result.categories?.[0] || 'other',
+              category: category,
+              categoryName: CASE_CATEGORIES[category] || '其他',
               title: result.result.title || result.result.prompts?.[0]?.text?.substring(0, 50) + '...' || '未命名案例',
               source: 'github',
               extractor: result.extractor,
@@ -189,9 +191,11 @@ async function main() {
           const result = await extractIntelligently(item.description, item.url || item.id, item);
           if (result.result && result.confidence > 0.6) {
             // 确保有category和title字段
+            const category = result.result.category || result.result.categories?.[0] || 'other';
             const caseWithCategory = {
               ...result.result,
-              category: result.result.category || result.result.categories?.[0] || 'other',
+              category: category,
+              categoryName: CASE_CATEGORIES[category] || '其他',
               title: result.result.title || result.result.prompts?.[0]?.text?.substring(0, 50) + '...' || '未命名案例',
               source: 'web',
               extractor: result.extractor,

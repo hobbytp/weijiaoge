@@ -3,7 +3,7 @@
 
 
 // 案例分类定义
-const CASE_CATEGORIES = {
+export const CASE_CATEGORIES = {
   'figurine': '3D手办制作',
   'clothing': '服装替换',
   'scene': '场景合成',

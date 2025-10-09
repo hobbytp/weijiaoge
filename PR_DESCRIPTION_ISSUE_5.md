@@ -13,6 +13,7 @@ Issue #5 指出"其他"类别包含了太多案例，需要进一步细化分类
 ## 🛠️ 解决方案
 
 ### 新增细化分类
+
 添加了5个新的细化分类：
 
 1. **design** (设计相关) - 工业设计、产品设计、包装设计等
@@ -24,21 +25,25 @@ Issue #5 指出"其他"类别包含了太多案例，需要进一步细化分类
 ### 技术实现
 
 #### 1. 更新分类定义
+
 - 在 `fetchers/case-extractor.mjs` 中添加新分类
 - 更新 `CASE_CATEGORIES` 对象
 
 #### 2. 更新分类逻辑
+
 - 更新 `fetchers/enhanced-case-extractor.mjs` 中的 `smartCategorizeCase` 函数
 - 更新 `fetchers/langextract-extractor.mjs` 中的 `CATEGORY_KEYWORDS`
 - 添加关键词匹配规则
 
 #### 3. 重新分类现有案例
+
 - 创建 `scripts/reclassify-other-cases.mjs` 脚本
 - 自动重新分类24个原"其他"类别案例
 
 ## 📊 效果统计
 
 ### 重新分类结果
+
 - **总重新分类案例数**: 24个
 - **各新分类案例数**:
   - design: 7个案例
@@ -48,6 +53,7 @@ Issue #5 指出"其他"类别包含了太多案例，需要进一步细化分类
   - technical: 2个案例
 
 ### 最终分类统计
+
 - **其他类别**: 从37个减少到13个 (减少65%)
 - **新增分类**: 5个细化分类，共24个案例
 - **分类精度**: 显著提升，用户更容易找到特定类型案例
