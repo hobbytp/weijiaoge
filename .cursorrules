@@ -1,0 +1,29 @@
+# Cursor Rules for WeiJiaoGe Project
+
+## Chinese Character Display in Makefile
+
+**Problem**: Chinese characters display as garbled text in Makefile `@echo` commands on Windows.
+
+**Solution**: Use Node.js scripts instead of direct `@echo` for Chinese text.
+
+### Implementation:
+1. Create separate `.mjs` scripts for commands with Chinese output
+2. Use `console.log()` in Node.js scripts for Chinese text
+3. Call scripts from Makefile using `@node script-name.mjs`
+
+### Example:
+```makefile
+# Instead of:
+# @echo "🧹 清理临时文件..."
+
+# Use:
+clean:
+	@node scripts/clean.mjs
+```
+
+```javascript
+// scripts/clean.mjs
+console.log('🧹 清理临时文件...');
+```
+
+**Result**: Chinese characters display correctly without encoding issues.
