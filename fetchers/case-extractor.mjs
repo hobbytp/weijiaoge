@@ -12,6 +12,11 @@ const CASE_CATEGORIES = {
   'background': '背景替换',
   'composition': '图像合成',
   'enhancement': '图像增强',
+  'design': '设计相关',
+  'education': '教育相关',
+  'business': '商业相关',
+  'technical': '技术相关',
+  'artistic': '艺术相关',
   'other': '其他'
 };
 
@@ -161,6 +166,28 @@ function categorizeCase(title, description, prompts) {
   }
   if (text.includes('enhance') || text.includes('enhancement') || text.includes('增强')) {
     return 'enhancement';
+  }
+  
+  // 新增细化分类
+  if (text.includes('design') || text.includes('设计') || text.includes('包装') || text.includes('工业设计') || 
+      text.includes('产品设计') || text.includes('包装设计') || text.includes('卡片设计') || text.includes('包装生成')) {
+    return 'design';
+  }
+  if (text.includes('教育') || text.includes('教学') || text.includes('分析') || text.includes('批注') || 
+      text.includes('标注') || text.includes('卡路里') || text.includes('批改') || text.includes('教学')) {
+    return 'education';
+  }
+  if (text.includes('广告') || text.includes('营销') || text.includes('信息图') || text.includes('商业') || 
+      text.includes('广告短片') || text.includes('商品') || text.includes('营销') || text.includes('business')) {
+    return 'business';
+  }
+  if (text.includes('技术') || text.includes('参数') || text.includes('设置') || text.includes('拆解') || 
+      text.includes('硬件') || text.includes('相机') || text.includes('technical') || text.includes('iso')) {
+    return 'technical';
+  }
+  if (text.includes('艺术') || text.includes('绘画') || text.includes('插画') || text.includes('漫画') || 
+      text.includes('artistic') || text.includes('painting') || text.includes('illustration') || text.includes('drawing')) {
+    return 'artistic';
   }
   
   return 'other';
