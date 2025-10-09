@@ -60,7 +60,7 @@ preview:
 # Stop server
 stop:
 	@echo "⏹️  Stopping server..."
-	@taskkill //F //IM node.exe 2>nul || echo "No running Node.js processes found"
+	@cmd //c "for /f \"tokens=5\" %%i in ('netstat -ano ^| findstr :5173') do taskkill /F /PID %%i >nul 2>&1"
 	@echo "✅ Server stopped"
 
 # Restart server
