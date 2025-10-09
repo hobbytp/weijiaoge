@@ -2,18 +2,11 @@
 // 从网页内容中提取Nano Banana使用案例
 
 
-// 案例分类定义
-const CASE_CATEGORIES = {
-  'figurine': '3D手办制作',
-  'clothing': '服装替换',
-  'scene': '场景合成',
-  'style': '风格转换',
-  'character': '角色编辑',
-  'background': '背景替换',
-  'composition': '图像合成',
-  'enhancement': '图像增强',
-  'other': '其他'
-};
+// 导入共享的分类函数
+import { CASE_CATEGORIES, categorizeCase } from './case-categorizer.mjs';
+
+// 重新导出以保持向后兼容
+export { CASE_CATEGORIES };
 
 // 提取prompt的正则表达式模式 - 更精确的匹配
 const PROMPT_PATTERNS = [
@@ -138,33 +131,7 @@ function extractImages(text) {
   return [...new Set(images)];
 }
 
-function categorizeCase(title, description, prompts) {
-  const text = (title + ' ' + description + ' ' + prompts.join(' ')).toLowerCase();
-  
-  if (text.includes('figurine') || text.includes('手办') || text.includes('3d')) {
-    return 'figurine';
-  }
-  if (text.includes('clothing') || text.includes('outfit') || text.includes('衣服') || text.includes('服装')) {
-    return 'clothing';
-  }
-  if (text.includes('scene') || text.includes('场景') || text.includes('background') || text.includes('背景')) {
-    return 'scene';
-  }
-  if (text.includes('style') || text.includes('风格') || text.includes('artistic')) {
-    return 'style';
-  }
-  if (text.includes('character') || text.includes('角色') || text.includes('person')) {
-    return 'character';
-  }
-  if (text.includes('composition') || text.includes('合成') || text.includes('combine')) {
-    return 'composition';
-  }
-  if (text.includes('enhance') || text.includes('enhancement') || text.includes('增强')) {
-    return 'enhancement';
-  }
-  
-  return 'other';
-}
+// 使用共享的分类函数
 
 export function extractCaseFromContent(item) {
   const { title, description, url } = item;

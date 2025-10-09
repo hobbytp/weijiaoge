@@ -4,11 +4,90 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
-import { processItemsForCases } from '../fetchers/case-extractor.mjs';
+import { CASE_CATEGORIES, processItemsForCases } from '../fetchers/case-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
 import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
+
+// 常量定义
+const DEFAULT_CATEGORY = 'other';
+const DEFAULT_CATEGORY_NAME = '其他';
+const DEFAULT_TITLE = '未命名案例';
+const TITLE_MAX_LENGTH = 50;
+
+/**
+ * 创建带有分类信息的案例对象
+ * @param {Object} result - 提取结果
+ * @param {string} source - 数据源 ('github' 或 'web')
+ * @returns {Object} 带有分类信息的案例对象
+ */
+function createCaseWithCategory(result, source) {
+  const category = result.result.category || result.result.categories?.[0] || DEFAULT_CATEGORY;
+  const title = result.result.title || 
+    result.result.prompts?.[0]?.text?.substring(0, TITLE_MAX_LENGTH) + '...' || 
+    DEFAULT_TITLE;
+  
+  return {
+    ...result.result,
+    category: category,
+    categoryName: CASE_CATEGORIES[category] || DEFAULT_CATEGORY_NAME,
+    title: title,
+    source: source,
+    extractor: result.extractor,
+    confidence: result.confidence
+  };
+}
+
+/**
+ * 处理单个页面的智能提取
+ * @param {Object} item - 页面项目
+ * @param {string} source - 数据源 ('github' 或 'web')
+ * @param {Array} processedCases - 已处理的案例数组
+ * @param {Array} skippedPages - 跳过的页面数组
+ * @param {Object} cacheManager - 缓存管理器
+ */
+async function processPageIntelligently(item, source, processedCases, skippedPages, cacheManager) {
+  const shouldProcess = cacheManager.shouldProcess(
+    item.url || item.id, 
+    item.description, 
+    item.caseCount || 0
+  );
+  
+  if (shouldProcess.shouldProcess) {
+    console.log(`🔄 处理页面: ${item.title} (${shouldProcess.reason})`);
+    try {
+      const result = await extractIntelligently(item.description, item.url || item.id, item);
+      if (result.result && result.confidence > 0.6) {
+        const caseWithCategory = createCaseWithCategory(result, source);
+        processedCases.push(caseWithCategory);
+      }
+      // 更新缓存
+      cacheManager.updateCache(item.url || item.id, item.description, result.result?.cases?.length || 0);
+    } catch (error) {
+      console.error(`智能提取失败: ${item.title}`, error);
+    }
+  } else {
+    console.log(`⏭️ 跳过页面: ${item.title} (${shouldProcess.reason})`);
+    skippedPages.push(item.title);
+  }
+}
+
+/**
+ * 批量处理页面项目
+ * @param {Array} items - 页面项目数组
+ * @param {string} source - 数据源 ('github' 或 'web')
+ * @param {Array} processedCases - 已处理的案例数组
+ * @param {Array} skippedPages - 跳过的页面数组
+ * @param {Object} cacheManager - 缓存管理器
+ */
+async function processItemsBatch(items, source, processedCases, skippedPages, cacheManager) {
+  for (const item of items) {
+    if (item.description) {
+      await processPageIntelligently(item, source, processedCases, skippedPages, cacheManager);
+    }
+  }
+}
 
 /**
  * 智能去重函数
@@ -137,79 +216,11 @@ async function main() {
   
   // 处理GitHub数据
   console.log('📥 处理GitHub数据...');
-  for (const item of gh) {
-    if (item.description) {
-      const shouldProcess = cacheManager.shouldProcess(
-        item.url || item.id, 
-        item.description, 
-        item.caseCount || 0
-      );
-      
-      if (shouldProcess.shouldProcess) {
-        console.log(`🔄 处理页面: ${item.title} (${shouldProcess.reason})`);
-        try {
-          const result = await extractIntelligently(item.description, item.url || item.id, item);
-          if (result.result && result.confidence > 0.6) {
-            // 确保有category和title字段
-            const caseWithCategory = {
-              ...result.result,
-              category: result.result.category || result.result.categories?.[0] || 'other',
-              title: result.result.title || result.result.prompts?.[0]?.text?.substring(0, 50) + '...' || '未命名案例',
-              source: 'github',
-              extractor: result.extractor,
-              confidence: result.confidence
-            };
-            processedCases.push(caseWithCategory);
-          }
-          // 更新缓存
-          cacheManager.updateCache(item.url || item.id, item.description, result.result?.cases?.length || 0);
-        } catch (error) {
-          console.error(`智能提取失败: ${item.title}`, error);
-        }
-      } else {
-        console.log(`⏭️ 跳过页面: ${item.title} (${shouldProcess.reason})`);
-        skippedPages.push(item.title);
-      }
-    }
-  }
+  await processItemsBatch(gh, 'github', processedCases, skippedPages, cacheManager);
   
   // 处理Web数据
   console.log('📥 处理Web数据...');
-  for (const item of web) {
-    if (item.description) {
-      const shouldProcess = cacheManager.shouldProcess(
-        item.url || item.id, 
-        item.description, 
-        item.caseCount || 0
-      );
-      
-      if (shouldProcess.shouldProcess) {
-        console.log(`🔄 处理页面: ${item.title} (${shouldProcess.reason})`);
-        try {
-          const result = await extractIntelligently(item.description, item.url || item.id, item);
-          if (result.result && result.confidence > 0.6) {
-            // 确保有category和title字段
-            const caseWithCategory = {
-              ...result.result,
-              category: result.result.category || result.result.categories?.[0] || 'other',
-              title: result.result.title || result.result.prompts?.[0]?.text?.substring(0, 50) + '...' || '未命名案例',
-              source: 'web',
-              extractor: result.extractor,
-              confidence: result.confidence
-            };
-            processedCases.push(caseWithCategory);
-          }
-          // 更新缓存
-          cacheManager.updateCache(item.url || item.id, item.description, result.result?.cases?.length || 0);
-        } catch (error) {
-          console.error(`智能提取失败: ${item.title}`, error);
-        }
-      } else {
-        console.log(`⏭️ 跳过页面: ${item.title} (${shouldProcess.reason})`);
-        skippedPages.push(item.title);
-      }
-    }
-  }
+  await processItemsBatch(web, 'web', processedCases, skippedPages, cacheManager);
   
   // 从重要文章中提取详细案例
   console.log('📚 从重要文章中提取详细案例...');

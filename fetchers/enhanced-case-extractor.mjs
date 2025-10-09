@@ -1,6 +1,7 @@
 // fetchers/enhanced-case-extractor.mjs
 // 增强的案例提取器，支持更多格式和智能解析
 
+import { categorizeCase } from './case-categorizer.mjs';
 import { extractCasesFromGitHubReadme } from './case-extractor.mjs';
 
 // 增强的prompt模式，支持更多格式
@@ -97,28 +98,9 @@ function isValidPrompt(prompt) {
   return hasNanoBanana;
 }
 
-// 智能案例分类
+// 使用共享的分类函数
 function smartCategorizeCase(title, content, prompt) {
-  const text = `${title} ${content} ${prompt}`.toLowerCase();
-  
-  const categories = {
-    'figurine': ['3d', 'figurine', 'figure', 'model', 'sculpture', '手办', '模型', '雕塑'],
-    'character': ['character', 'person', 'face', 'portrait', '人物', '角色', '肖像', '面部'],
-    'style': ['style', 'art', 'painting', 'artistic', '风格', '艺术', '绘画', '画风'],
-    'enhancement': ['enhance', 'improve', 'quality', 'resolution', '增强', '改善', '质量', '分辨率'],
-    'clothing': ['clothing', 'dress', 'outfit', 'fashion', '衣服', '服装', '穿搭', '时尚'],
-    'scene': ['background', 'scene', 'environment', '背景', '场景', '环境'],
-    'composition': ['pose', 'action', 'movement', 'gesture', '姿势', '动作', '姿态'],
-    'other': ['age', 'young', 'old', 'aging', '性别', '男性', '女性', 'retro', 'vintage', 'classic', 'old', '复古', '经典', '怀旧', 'fantasy', 'creature', 'monster', 'dragon', '奇幻', '生物', '怪物', '龙', 'anime', 'manga', 'cartoon', '动漫', '漫画', '卡通']
-  };
-  
-  for (const [category, keywords] of Object.entries(categories)) {
-    if (keywords.some(keyword => text.includes(keyword))) {
-      return category;
-    }
-  }
-  
-  return 'general';
+  return categorizeCase(title, content, [prompt]);
 }
 
 // 增强的案例提取
@@ -260,7 +242,7 @@ export async function processMultipleSources(sources) {
 
 // 导出主要功能
 export {
-    isValidPrompt,
-    smartCategorizeCase, smartCleanText
+  isValidPrompt,
+  smartCategorizeCase, smartCleanText
 };
 
