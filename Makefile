@@ -1,120 +1,115 @@
-# 微蕉阁 (WeiJiaoGe) - Gemini 2.5 Flash Image Preview 资源收集
-# 统一管理命令
+# WeiJiaoGe - Gemini 2.5 Flash Image Preview Resource Collection
+# Unified Management Commands
 
 .PHONY: help install update serve preview clean push pull
 
-# 默认目标
+# Default target
 help:
-	@echo "🍌 微蕉阁 (WeiJiaoGe) - 项目管理命令"
+	@echo "🍌 WeiJiaoGe - Project Management Commands"
 	@echo ""
-	@echo "可用命令:"
-	@echo "  make install    - 安装依赖"
-	@echo "  make update     - 更新数据（抓取最新资源）"
-	@echo "  make serve      - 启动本地服务器"
-	@echo "  make dev        - 启动热加载开发服务器"
-	@echo "  make preview    - 启动服务器并显示访问地址"
-	@echo "  make stop       - 停止服务器"
-	@echo "  make restart    - 重启服务器（更新数据后）"
-	@echo "  make clean      - 清理临时文件"
-	@echo "  make clean-all  - 彻底清理所有数据（包括缓存和生成的数据）"
-	@echo "  make test       - 测试增强系统（需要网络）"
-	@echo "  make test-data  - 测试现有数据提取"
-	@echo "  make test-basic - 测试基本功能"
-	@echo "  make push       - 推送代码到GitHub"
-	@echo "  make pull       - 从GitHub拉取最新代码"
+	@echo "Available commands:"
+	@echo "  make install    - Install dependencies"
+	@echo "  make update     - Update data (fetch latest resources)"
+	@echo "  make serve      - Start local server"
+	@echo "  make dev        - Start hot-reload development server"
+	@echo "  make preview    - Start server and show access URL"
+	@echo "  make stop       - Stop server"
+	@echo "  make restart    - Restart server (after updating data)"
+	@echo "  make clean      - Clean temporary files"
+	@echo "  make clean-all  - Clean all data (including cache and generated data)"
+	@echo "  make test       - Test enhanced system (requires network)"
+	@echo "  make test-data  - Test existing data extraction"
+	@echo "  make test-basic - Test basic functionality"
+	@echo "  make push       - Push code to GitHub"
+	@echo "  make pull       - Pull latest code from GitHub"
 	@echo ""
-	@echo "快速开始:"
+	@echo "Quick start:"
 	@echo "  make install && make update && make preview"
 
-# 安装依赖
+# Install dependencies
 install:
-	@echo "📦 安装依赖..."
+	@echo "📦 Installing dependencies..."
 	npm install
+	@echo "✅ Installation completed!"
 
-# 更新数据
+# Update data
 update:
-	@echo "🔄 更新数据中..."
-	node scripts/update.mjs
-	@echo "✅ 数据更新完成！"
+	@echo "🔄 Updating data..."
+	npm run update
+	@echo "✅ Data update completed!"
 
-# 启动服务器
+# Start server
 serve:
-	@echo "🚀 启动服务器..."
-	node server.js
+	@echo "🚀 Starting server..."
+	npm run serve
 
-# 启动热加载开发服务器
+# Development server with hot reload
 dev:
-	@echo "🔥 启动热加载开发服务器..."
-	@echo "📁 监听文件变化: server.js, scripts/, fetchers/, public/, *.html, *.js"
-	@echo "🔄 文件变化时自动重启服务器"
+	@echo "🔥 Starting hot-reload development server..."
+	@echo "📁 Watching files: server.js, scripts/, fetchers/, public/, *.html, *.js"
+	@echo "🔄 Server will restart automatically when files change"
 	npm run dev
 
-# 预览模式（启动服务器并显示信息）
+# Start server and show access URL
 preview:
-	@echo "🚀 微蕉阁服务器启动中..."
-	@echo "📱 访问地址: http://localhost:5173"
-	@echo "⏹️  按 Ctrl+C 停止服务器"
-	@echo ""
-	node server.js
+	@echo "🚀 WeiJiaoGe server starting..."
+	@echo "📱 Access URL: http://localhost:5173"
+	@echo "⏹️  Press Ctrl+C to stop server"
+	npm run preview
 
-# 停止服务器
+# Stop server
 stop:
-	@echo "⏹️  停止服务器..."
-	@taskkill //F //IM node.exe 2>nul || echo "没有运行的Node.js进程"
-	@echo "✅ 服务器已停止"
+	@echo "⏹️  Stopping server..."
+	@taskkill //F //IM node.exe 2>nul || echo "No running Node.js processes found"
+	@echo "✅ Server stopped"
 
-# 重启服务器（更新数据后使用）
-restart: stop update
-	@echo "🔄 重启服务器..."
-	@echo "📱 访问地址: http://localhost:5173"
-	@echo "⏹️  按 Ctrl+C 停止服务器"
-	@echo ""
-	node server.js
+# Restart server
+restart: update
+	@echo "🔄 Restarting server..."
+	@echo "📱 Access URL: http://localhost:5173"
+	@echo "⏹️  Press Ctrl+C to stop server"
+	npm run serve
 
-# 测试增强系统
+# Test enhanced system
 test:
-	@echo "🧪 测试增强系统..."
-	npm run test:enhanced
-	@echo "✅ 测试完成！"
+	@echo "🧪 Testing enhanced system..."
+	npm run test:stage3
+	@echo "✅ Test completed!"
 
-# 测试现有数据
+# Test existing data extraction
 test-data:
-	@echo "🧪 测试现有数据提取..."
-	npm run test:existing
-	@echo "✅ 测试完成！"
+	@echo "🧪 Testing existing data extraction..."
+	npm run test:github
+	@echo "✅ Test completed!"
 
-# 测试基本功能
+# Test basic functionality
 test-basic:
-	@echo "🧪 测试基本功能..."
+	@echo "🧪 Testing basic functionality..."
 	npm run test:basic
-	@echo "✅ 测试完成！"
+	@echo "✅ Test completed!"
 
-# 清理临时文件
+# Clean temporary files
 clean:
-	@echo "🧹 清理临时文件..."
-	@node -e "const fs = require('fs'); try { fs.unlinkSync('test-env.mjs'); } catch(e) {}"
-	@echo "✅ 清理完成！"
+	@node scripts/clean.mjs
 
-# 彻底清理所有数据（包括缓存和生成的数据）
+# Clean all data (including cache and generated data)
 clean-all:
-	@echo "🧹 彻底清理所有数据..."
-	@node -e "const fs = require('fs'); const path = require('path'); try { fs.rmSync('public', { recursive: true, force: true }); console.log('🗑️  删除public目录...'); } catch(e) {} try { fs.rmSync('.cache', { recursive: true, force: true }); console.log('🗑️  删除缓存目录...'); } catch(e) {} try { fs.unlinkSync('test-env.mjs'); console.log('🗑️  删除临时文件...'); } catch(e) {}"
-	@echo "✅ 彻底清理完成！现在可以运行 make update 从头开始收集数据"
+	@node scripts/clean-all.mjs
 
-# 推送到GitHub
+# Push to GitHub
 push:
-	@echo "📤 推送到GitHub..."
+	@echo "📤 Pushing to GitHub..."
 	git add .
-	git commit -m "chore: 自动更新数据" || true
-	git push
-	@echo "✅ 推送完成！"
+	git commit -m "Update: $(shell date)"
+	git push origin master
+	@echo "✅ Push completed!"
 
-# 从GitHub拉取
+# Pull from GitHub
 pull:
-	@echo "📥 从GitHub拉取..."
-	git pull
-	@echo "✅ 拉取完成！"
+	@echo "📥 Pulling from GitHub..."
+	git pull origin master
+	@echo "✅ Pull completed!"
 
-# 完整部署流程
-deploy: update push
-	@echo "🚀 部署完成！"
+# Deploy
+deploy: push
+	@echo "🚀 Deployment completed!"
