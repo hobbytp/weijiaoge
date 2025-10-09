@@ -520,7 +520,9 @@ function extractZHOFormat(fullText, item) {
       if (promptText.length > 20) {
         const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
         const effects = extractEffects(sectionContent);
-        const images = extractImages(sectionContent, sectionTitle, sectionContent);
+        
+        // 修复：只提取当前章节相关的图片，而不是所有图片
+        const images = extractCaseSpecificImages(sectionTitle, sectionContent);
         
         cases.push({
           id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -540,6 +542,81 @@ function extractZHOFormat(fullText, item) {
   }
   
   return cases;
+}
+
+// 新增：提取案例特定图片的函数
+function extractCaseSpecificImages(caseTitle, caseContent) {
+  const images = [];
+  
+  // 清理标题，用于匹配
+  const cleanTitle = caseTitle
+    .replace(/[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣\s]/g, '') // 移除数字emoji
+    .replace(/[（(].*?[）)]/g, '') // 移除括号内容
+    .replace(/\s+/g, ' ') // 合并空格
+    .trim();
+  
+  // 根据案例标题提取相关图片
+  const titleKeywords = cleanTitle.split(/\s+/).filter(word => word.length > 1);
+  
+  // 查找包含案例标题关键词的图片
+  const imgPattern = /<img[^>]+src="([^"]+)"[^>]*>/g;
+  let match;
+  
+  while ((match = imgPattern.exec(caseContent)) !== null) {
+    const imgUrl = match[1];
+    const imgTag = match[0];
+    
+    // 检查图片是否与当前案例相关
+    let isRelevant = false;
+    
+    // 方法1: 检查图片周围的文本是否包含案例关键词
+    const contextStart = Math.max(0, match.index - 500);
+    const contextEnd = Math.min(caseContent.length, match.index + 500);
+    const context = caseContent.substring(contextStart, contextEnd).toLowerCase();
+    
+    // 检查上下文是否包含案例关键词
+    for (const keyword of titleKeywords) {
+      if (context.includes(keyword.toLowerCase())) {
+        isRelevant = true;
+        break;
+      }
+    }
+    
+    // 方法2: 检查图片alt属性
+    const altMatch = imgTag.match(/alt="([^"]*)"/);
+    if (altMatch) {
+      const altText = altMatch[1].toLowerCase();
+      for (const keyword of titleKeywords) {
+        if (altText.includes(keyword.toLowerCase())) {
+          isRelevant = true;
+          break;
+        }
+      }
+    }
+    
+    // 方法3: 对于ZHO仓库，使用案例编号匹配
+    const caseNumberPattern = /[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣]/;
+    const caseNumberMatch = caseTitle.match(caseNumberPattern);
+    
+    if (caseNumberMatch) {
+      const caseNumber = caseNumberMatch[0];
+      // 查找包含该案例编号的图片
+      const numberContextStart = Math.max(0, match.index - 200);
+      const numberContextEnd = Math.min(caseContent.length, match.index + 200);
+      const numberContext = caseContent.substring(numberContextStart, numberContextEnd);
+      
+      if (numberContext.includes(caseNumber)) {
+        isRelevant = true;
+      }
+    }
+    
+    if (isRelevant && imgUrl.startsWith('http')) {
+      images.push(imgUrl);
+    }
+  }
+  
+  // 去重
+  return [...new Set(images)];
 }
 
 // 处理PicoTrex仓库格式
