@@ -1,6 +1,8 @@
 // fetchers/langextract-extractor.mjs
 // LangExtract集成提取器
 
+import { categorizeCase } from './case-categorizer.mjs';
+
 
 // LangExtract配置
 const LANGEXTRACT_CONFIG = {
@@ -29,22 +31,7 @@ const LANGEXTRACT_CONFIG = {
   }
 };
 
-// 案例分类配置
-const CATEGORY_KEYWORDS = {
-  'figurine': ['3d', 'figurine', 'figure', 'model', 'sculpture', '手办', '模型', '雕塑'],
-  'character': ['character', 'person', 'face', 'portrait', '人物', '角色', '肖像', '面部'],
-  'style': ['style', 'art', 'painting', 'artistic', '风格', '艺术', '绘画', '画风'],
-  'enhancement': ['enhance', 'improve', 'quality', 'resolution', '增强', '改善', '质量', '分辨率'],
-  'clothing': ['clothing', 'dress', 'outfit', 'fashion', '衣服', '服装', '穿搭', '时尚'],
-  'scene': ['background', 'scene', 'environment', '背景', '场景', '环境'],
-  'composition': ['pose', 'action', 'movement', 'gesture', '姿势', '动作', '姿态'],
-  'design': ['design', '设计', '包装', '工业设计', '产品设计', '包装设计', '卡片设计', '包装生成', 'product', 'packaging'],
-  'education': ['教育', '教学', '分析', '批注', '标注', '卡路里', '批改', 'education', 'teaching', 'analysis', 'annotation'],
-  'business': ['广告', '营销', '信息图', '商业', '广告短片', '商品', 'business', 'advertisement', 'marketing', 'infographic'],
-  'technical': ['技术', '参数', '设置', '拆解', '硬件', '相机', 'technical', 'iso', 'camera', 'hardware', 'parameter'],
-  'artistic': ['艺术', '绘画', '插画', '漫画', 'artistic', 'painting', 'illustration', 'drawing', 'manga', 'comic'],
-  'other': ['age', 'young', 'old', 'aging', '性别', '男性', '女性', 'retro', 'vintage', 'classic', 'old', '复古', '经典', '怀旧', 'fantasy', 'creature', 'monster', 'dragon', '奇幻', '生物', '怪物', '龙', 'anime', 'manga', 'cartoon', '动漫', '漫画', '卡通']
-};
+// 案例分类配置已移至 case-categorizer.mjs
 
 class LangExtractExtractor {
   constructor() {
@@ -138,16 +125,8 @@ class LangExtractExtractor {
 
   // 智能分类
   categorizeContent(text) {
-    const lowerText = text.toLowerCase();
-    const categories = [];
-    
-    for (const [category, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
-      if (keywords.some(keyword => lowerText.includes(keyword))) {
-        categories.push(category);
-      }
-    }
-    
-    return categories.length > 0 ? categories : ['general'];
+    const category = categorizeCase('', text, []);
+    return [category];
   }
 
   // 计算置信度
