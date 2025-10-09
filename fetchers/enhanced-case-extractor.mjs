@@ -1,8 +1,8 @@
 // fetchers/enhanced-case-extractor.mjs
 // 增强的案例提取器，支持更多格式和智能解析
 
-import { extractCasesFromGitHubReadme } from './case-extractor.mjs';
 import { categorizeCase } from './case-categorizer.mjs';
+import { extractCasesFromGitHubReadme } from './case-extractor.mjs';
 
 // 增强的prompt模式，支持更多格式
 const ENHANCED_PROMPT_PATTERNS = [

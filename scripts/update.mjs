@@ -5,6 +5,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
 import { CASE_CATEGORIES, processItemsForCases } from '../fetchers/case-extractor.mjs';
+import { fetchFromGitHub } from '../fetchers/github.mjs';
+import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
+import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
+import { fetchFromWeb } from '../fetchers/web.mjs';
 
 // 常量定义
 const DEFAULT_CATEGORY = 'other';
@@ -84,10 +88,6 @@ async function processItemsBatch(items, source, processedCases, skippedPages, ca
     }
   }
 }
-import { fetchFromGitHub } from '../fetchers/github.mjs';
-import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
-import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
-import { fetchFromWeb } from '../fetchers/web.mjs';
 
 /**
  * 智能去重函数
