@@ -4,6 +4,31 @@
 import { categorizeCase } from './case-categorizer.mjs';
 import { extractCasesFromGitHubReadme } from './case-extractor.mjs';
 
+// 清理标题，移除无意义的前缀和图片信息
+function cleanTitle(title) {
+  if (!title) return title;
+  
+  // 移除数字emoji前缀 (如 ⑥、1️⃣、2️⃣等)
+  let cleaned = title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣\s]*/, '');
+  
+  // 移除常见的无意义前缀
+  cleaned = cleaned.replace(/^(例\s*\d+[:：]\s*|Case\s*\d+[:：]\s*|案例\s*\d+[:：]\s*)/i, '');
+  
+  // 移除图片相关后缀
+  cleaned = cleaned.replace(/\s*image[^a-zA-Z]*$/i, '');
+  cleaned = cleaned.replace(/\s*图片[^a-zA-Z]*$/i, '');
+  cleaned = cleaned.replace(/\s*艺术相关.*$/i, '');
+  
+  // 移除HTML标签（包括不完整的标签）
+  cleaned = cleaned.replace(/<[^>]*$/g, '');
+  cleaned = cleaned.replace(/<[^>]*>/g, '');
+  
+  // 移除多余的空格
+  cleaned = cleaned.replace(/\s+/g, ' ').trim();
+  
+  return cleaned;
+}
+
 // 增强的prompt模式，支持更多格式
 const ENHANCED_PROMPT_PATTERNS = [
   // 标准格式
@@ -39,12 +64,25 @@ const ENHANCED_EFFECT_PATTERNS = [
   /(?:use case|application|scenario)[：:]\s*([^\n]+(?:\n(?!\n)[^\n]+)*)/gis
 ];
 
-// 增强的图片模式
+// 增强的图片模式 - 针对不同布局优化
 const ENHANCED_IMAGE_PATTERNS = [
+  // 基础图片模式
   /!\[([^\]]*)\]\(([^)]+)\)/g,
   /<img[^>]+src="([^"]+)"[^>]*>/g,
   /src="([^"]+\.(?:jpg|jpeg|png|gif|webp))"/g,
-  /(?:图片|image|photo)[：:]\s*([^\s]+)/gis
+  /(?:图片|image|photo)[：:]\s*([^\s]+)/gis,
+  
+  // 针对"效果图在前，prompt在后"布局
+  /<img[^>]+src="([^"]+)"[^>]*>(?=[^<]*(?:prompt|输入|提示词|Prompt|Input))/gi,
+  /!\[([^\]]*)\]\(([^)]+)\)(?=[^<]*(?:prompt|输入|提示词|Prompt|Input))/gi,
+  
+  // 针对"效果图在后，prompt在前"布局
+  /(?:prompt|输入|提示词|Prompt|Input)[^<]*<img[^>]+src="([^"]+)"[^>]*>/gi,
+  /(?:prompt|输入|提示词|Prompt|Input)[^<]*!\[([^\]]*)\]\(([^)]+)\)/gi,
+  
+  // 查找效果图片
+  /<img[^>]+src="([^"]+)"[^>]*(?:alt="[^"]*(?:效果|结果|输出|展示|示例)[^"]*"|title="[^"]*(?:效果|结果|输出|展示|示例)[^"]*")[^>]*>/gi,
+  /!\[(?:效果|结果|输出|展示|示例)[^\]]*\]\(([^)]+)\)/gi
 ];
 
 // 智能文本清理
@@ -151,8 +189,14 @@ export function extractEnhancedCases(content, sourceInfo = {}) {
           let imageMatch;
           while ((imageMatch = imagePattern.exec(cleanedContent)) !== null) {
             const imageUrl = imageMatch[2] || imageMatch[1];
-            if (imageUrl && imageUrl.startsWith('http')) {
-              images.push(imageUrl);
+            if (imageUrl) {
+              if (imageUrl.startsWith('http')) {
+                images.push(imageUrl);
+              } else if (imageUrl.startsWith('images/')) {
+                // 处理相对路径的图片，转换为GitHub完整URL
+                const githubUrl = `https://raw.githubusercontent.com/PicoTrex/Awesome-Nano-Banana-images/main/${imageUrl}`;
+                images.push(githubUrl);
+              }
             }
           }
         }
@@ -194,12 +238,12 @@ function generateCaseTitle(prompt, sourceInfo) {
   
   // 基于关键词生成标题
   if (keywords.length > 0) {
-    return keywords.join(' ').replace(/\b\w/g, l => l.toUpperCase());
+    return cleanTitle(keywords.join(' ').replace(/\b\w/g, l => l.toUpperCase()));
   }
   
   // 基于来源生成标题
   if (sourceInfo.title) {
-    return sourceInfo.title;
+    return cleanTitle(sourceInfo.title);
   }
   
   return 'Nano Banana 使用案例';

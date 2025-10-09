@@ -16,9 +16,18 @@ function fmtDate(s) {
   return d.toISOString().slice(0, 10);
 }
 
+function showLoading() {
+  list.innerHTML = '<div class="loading">正在加载资源数据...</div>';
+  stats.textContent = '加载中...';
+}
+
 function render(items) {
   if (items.length === 0) {
-    list.innerHTML = '<div class="empty">没有找到匹配的项目</div>';
+    const hasFilters = q.value || type.value || source.value;
+    const emptyMessage = hasFilters ? 
+      '没有找到匹配的项目，请尝试调整搜索条件' : 
+      '暂无资源数据';
+    list.innerHTML = `<div class="empty">${emptyMessage}</div>`;
     stats.textContent = `共 0 条（生成时间：${data.generatedAt ? fmtDate(data.generatedAt) : '未知'}）`;
     return;
   }
@@ -40,6 +49,27 @@ function render(items) {
       highlightedDesc = highlightedDesc.replace(regex, '<mark>$1</mark>');
     });
     
+    // 处理描述内容截断
+    let descHtml = '';
+    if (highlightedDesc) {
+      const maxLength = 200; // 最大显示字符数
+      const escapedDesc = highlightedDesc.replace(/</g, '&lt;');
+      
+      if (escapedDesc.length > maxLength) {
+        const truncatedDesc = escapedDesc.substring(0, maxLength);
+        const cardId = `card-${Math.random().toString(36).substr(2, 9)}`;
+        descHtml = `
+          <div class="desc-container">
+            <p class="desc" id="${cardId}-short">${truncatedDesc}...</p>
+            <p class="desc" id="${cardId}-full" style="display: none;">${escapedDesc}</p>
+            <button class="toggle-desc" onclick="toggleDescription('${cardId}')">展开</button>
+          </div>
+        `;
+      } else {
+        descHtml = `<p class="desc">${escapedDesc}</p>`;
+      }
+    }
+    
     return `
       <li class="card">
         <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${highlightedTitle}</a></h3>
@@ -50,7 +80,7 @@ function render(items) {
           ${up ? `<span class="update">${up}</span>` : ''}
           ${it.author ? `<span class="author">作者: ${it.author}</span>` : ''}
         </div>
-        ${highlightedDesc ? `<p class="desc">${highlightedDesc.replace(/</g, '&lt;')}</p>` : ''}
+        ${descHtml}
       </li>
     `;
   }).join('');
@@ -65,9 +95,28 @@ function score(it) {
   return stars * 1000 + recencyScore;
 }
 
+// 检查内容是否与 nano banana 相关
+function isRelevantContent(item) {
+  // 对于 repo 和 readme 类型，通常都是相关的
+  if (item.type === 'repo' || item.type === 'readme') {
+    return true;
+  }
+  
+  // 完全排除所有 PR 和 Issue 类型
+  if (item.type === 'pull' || item.type === 'issue') {
+    return false;
+  }
+  
+  // 其他类型默认保留
+  return true;
+}
+
 function filterAndSort() {
-  const kw = (q.value || '').toLowerCase();
+  const kw = q.value.toLowerCase();
   let items = data.items.slice();
+
+  // 首先过滤内容相关性
+  items = items.filter(isRelevantContent);
 
   if (kw) {
     items = items.filter(it => {
@@ -92,9 +141,10 @@ function filterAndSort() {
 }
 
 function populateFilters() {
-  // 获取所有唯一的类型和来源
-  const types = [...new Set(data.items.map(item => item.type).filter(Boolean))];
-  const sources = [...new Set(data.items.map(item => item.source).filter(Boolean))];
+  // 只基于过滤后的相关内容获取类型和来源
+  const relevantItems = data.items.filter(isRelevantContent);
+  const types = [...new Set(relevantItems.map(item => item.type).filter(Boolean))];
+  const sources = [...new Set(relevantItems.map(item => item.source).filter(Boolean))];
   
   // 清空并重新填充类型选项
   type.innerHTML = '<option value="">全部类型</option>';
@@ -116,6 +166,9 @@ function populateFilters() {
 }
 
 async function boot() {
+  // 显示加载状态
+  showLoading();
+  
   try {
     const res = await fetch('./public/data.json', { cache: 'no-store' });
     data = await res.json();
@@ -123,6 +176,9 @@ async function boot() {
   } catch (error) {
     console.error('加载数据失败:', error);
     data = { items: [] };
+    list.innerHTML = '<div class="empty">加载失败，请刷新页面重试</div>';
+    stats.textContent = '加载失败';
+    return;
   }
   
   // 填充筛选选项
@@ -131,6 +187,25 @@ async function boot() {
   // 初始渲染
   filterAndSort();
 }
+
+// 切换描述展开/收起的函数
+window.toggleDescription = function(cardId) {
+  const shortDesc = document.getElementById(`${cardId}-short`);
+  const fullDesc = document.getElementById(`${cardId}-full`);
+  const toggleBtn = shortDesc.parentElement.querySelector('.toggle-desc');
+  
+  if (shortDesc.style.display === 'none') {
+    // 当前显示完整描述，切换到简短描述
+    shortDesc.style.display = 'block';
+    fullDesc.style.display = 'none';
+    toggleBtn.textContent = '展开';
+  } else {
+    // 当前显示简短描述，切换到完整描述
+    shortDesc.style.display = 'none';
+    fullDesc.style.display = 'block';
+    toggleBtn.textContent = '收起';
+  }
+};
 
 [q, type, source, sortSel].forEach(el => el.addEventListener('input', filterAndSort));
 boot();

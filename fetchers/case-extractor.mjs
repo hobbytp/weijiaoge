@@ -1,6 +1,84 @@
 // fetchers/case-extractor.mjs
 // 从网页内容中提取Nano Banana使用案例
 
+// 智能Prompt提取函数 - 多层级策略
+function extractPromptsIntelligently(content) {
+  const prompts = [];
+  
+  // 策略1: 严格的Prompt模式匹配
+  const strictPatterns = [
+    /Prompt[：:]\s*```\s*([^`]+?)\s*```/gis,
+    /\d+\)[^：:]*Prompt[：:]\s*```\s*([^`]+?)\s*```/gis,
+    /Prompt[：:]\s*```\s*([^`]+?)\s*```/gis
+  ];
+  
+  for (const pattern of strictPatterns) {
+    let match;
+    while ((match = pattern.exec(content)) !== null) {
+      const promptText = match[1].trim();
+      if (promptText.length > 20 && !prompts.includes(promptText)) {
+        prompts.push(promptText);
+      }
+    }
+  }
+  
+  // 策略2: 宽松的代码块匹配 - 查找所有```代码块
+  const codeBlocks = content.match(/```([^`]+?)```/gs);
+  if (codeBlocks) {
+    for (const block of codeBlocks) {
+      const codeContent = block.replace(/```/g, '').trim();
+      // 过滤掉明显不是prompt的内容
+      if (codeContent.length > 20 && 
+          !codeContent.includes('http') && 
+          !codeContent.includes('github.com') &&
+          !codeContent.includes('```') &&
+          !codeContent.includes('<!---') &&
+          !codeContent.includes('---') &&
+          !prompts.includes(codeContent)) {
+        prompts.push(codeContent);
+      }
+    }
+  }
+  
+  // 策略3: 基于关键词的智能分割
+  const promptSections = content.split(/(?:Prompt[：:]|prompt[：:]|输入[：:]|提示词[：:])/gi);
+  for (let i = 1; i < promptSections.length; i++) {
+    const section = promptSections[i];
+    // 提取第一个代码块或长文本
+    const codeMatch = section.match(/```([^`]+?)```/s);
+    if (codeMatch) {
+      const promptText = codeMatch[1].trim();
+      if (promptText.length > 20 && !prompts.includes(promptText)) {
+        prompts.push(promptText);
+      }
+    } else {
+      // 如果没有代码块，提取前几行文本
+      const lines = section.split('\n').slice(0, 5).join('\n').trim();
+      if (lines.length > 20 && !prompts.includes(lines)) {
+        prompts.push(lines);
+      }
+    }
+  }
+  
+  // 策略4: 基于内容结构的智能提取
+  const paragraphs = content.split(/\n\s*\n/);
+  for (const paragraph of paragraphs) {
+    if (paragraph.length > 50 && 
+        (paragraph.includes('turn') || 
+         paragraph.includes('create') || 
+         paragraph.includes('generate') ||
+         paragraph.includes('transform') ||
+         paragraph.includes('make') ||
+         paragraph.includes('convert'))) {
+      const cleanText = paragraph.replace(/```/g, '').trim();
+      if (cleanText.length > 20 && !prompts.includes(cleanText)) {
+        prompts.push(cleanText);
+      }
+    }
+  }
+  
+  return prompts;
+}
 
 // 导入共享的分类函数
 import { CASE_CATEGORIES, categorizeCase } from './case-categorizer.mjs';
@@ -147,6 +225,31 @@ function extractEffects(text) {
   return [...new Set(effects)];
 }
 
+// 清理标题，移除无意义的前缀和图片信息
+function cleanTitle(title) {
+  if (!title) return title;
+  
+  // 移除数字emoji前缀 (如 ⑥、1️⃣、2️⃣等)
+  let cleaned = title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣\s]*/, '');
+  
+  // 移除常见的无意义前缀
+  cleaned = cleaned.replace(/^(例\s*\d+[:：]\s*|Case\s*\d+[:：]\s*|案例\s*\d+[:：]\s*)/i, '');
+  
+  // 移除图片相关后缀
+  cleaned = cleaned.replace(/\s*image[^a-zA-Z]*$/i, '');
+  cleaned = cleaned.replace(/\s*图片[^a-zA-Z]*$/i, '');
+  cleaned = cleaned.replace(/\s*艺术相关.*$/i, '');
+  
+  // 移除HTML标签（包括不完整的标签）
+  cleaned = cleaned.replace(/<[^>]*$/g, '');
+  cleaned = cleaned.replace(/<[^>]*>/g, '');
+  
+  // 移除多余的空格
+  cleaned = cleaned.replace(/\s+/g, ' ').trim();
+  
+  return cleaned;
+}
+
 // 从内容中推断效果描述
 function inferEffectsFromContent(text) {
   const effects = [];
@@ -208,17 +311,97 @@ function inferEffectsFromContent(text) {
   return effects;
 }
 
-function extractImages(text) {
+// 智能图片提取函数 - 针对不同布局优化
+function extractImages(text, title = '', description = '') {
   const images = [];
+  
+  // 基础图片提取
   for (const pattern of IMAGE_PATTERNS) {
     let match;
     while ((match = pattern.exec(text)) !== null) {
       const imageUrl = match[1].trim();
       if (imageUrl.startsWith('http')) {
         images.push(imageUrl);
+      } else if (imageUrl.startsWith('images/')) {
+        // 处理相对路径的图片，转换为GitHub完整URL
+        const githubUrl = `https://raw.githubusercontent.com/PicoTrex/Awesome-Nano-Banana-images/main/${imageUrl}`;
+        images.push(githubUrl);
       }
     }
   }
+  
+  // 针对"效果图在前，prompt在后"布局的优化
+  // 查找在prompt之前出现的图片
+  const beforePromptPatterns = [
+    // 查找prompt标记前的图片
+    /<img[^>]+src=["']([^"']+)["'][^>]*>(?=[^<]*(?:prompt|输入|提示词|Prompt|Input))/gi,
+    /!\[[^\]]*\]\(([^)]+)\)(?=[^<]*(?:prompt|输入|提示词|Prompt|Input))/gi,
+    // 查找在"输入:"或"提示词:"之前的图片
+    /<img[^>]+src=["']([^"']+)["'][^>]*>(?=[^<]*(?:输入:|提示词:|Prompt:|Input:))/gi,
+    /!\[[^\]]*\]\(([^)]+)\)(?=[^<]*(?:输入:|提示词:|Prompt:|Input:))/gi
+  ];
+  
+  for (const pattern of beforePromptPatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const imageUrl = match[1].trim();
+      if (imageUrl.startsWith('http')) {
+        images.push(imageUrl);
+      } else if (imageUrl.startsWith('images/')) {
+        const githubUrl = `https://raw.githubusercontent.com/PicoTrex/Awesome-Nano-Banana-images/main/${imageUrl}`;
+        images.push(githubUrl);
+      }
+    }
+  }
+  
+  // 针对"效果图在后，prompt在前"布局的优化
+  // 查找在prompt之后出现的图片
+  const afterPromptPatterns = [
+    // 查找prompt标记后的图片
+    /(?:prompt|输入|提示词|Prompt|Input)[^<]*<img[^>]+src=["']([^"']+)["'][^>]*>/gi,
+    /(?:prompt|输入|提示词|Prompt|Input)[^<]*!\[[^\]]*\]\(([^)]+)\)/gi,
+    // 查找在"输出:"或"结果:"之后的图片
+    /(?:输出:|结果:|Output:|Result:)[^<]*<img[^>]+src=["']([^"']+)["'][^>]*>/gi,
+    /(?:输出:|结果:|Output:|Result:)[^<]*!\[[^\]]*\]\(([^)]+)\)/gi
+  ];
+  
+  for (const pattern of afterPromptPatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const imageUrl = match[1].trim();
+      if (imageUrl.startsWith('http')) {
+        images.push(imageUrl);
+      } else if (imageUrl.startsWith('images/')) {
+        const githubUrl = `https://raw.githubusercontent.com/PicoTrex/Awesome-Nano-Banana-images/main/${imageUrl}`;
+        images.push(githubUrl);
+      }
+    }
+  }
+  
+  // 查找高质量的效果图片（通常包含特定关键词）
+  const effectImagePatterns = [
+    // 查找包含"效果"、"结果"、"输出"等关键词的图片
+    /<img[^>]+src=["']([^"']+)["'][^>]*(?:alt=["'][^"']*(?:效果|结果|输出|展示|示例)[^"']*["']|title=["'][^"']*(?:效果|结果|输出|展示|示例)[^"']*["'])[^>]*>/gi,
+    /!\[(?:效果|结果|输出|展示|示例)[^\]]*\]\(([^)]+)\)/gi,
+    // 查找在特定区域内的图片
+    /(?:效果图|结果图|输出图|展示图)[^<]*<img[^>]+src=["']([^"']+)["'][^>]*>/gi,
+    /(?:效果图|结果图|输出图|展示图)[^<]*!\[[^\]]*\]\(([^)]+)\)/gi
+  ];
+  
+  for (const pattern of effectImagePatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const imageUrl = match[1].trim();
+      if (imageUrl.startsWith('http')) {
+        images.push(imageUrl);
+      } else if (imageUrl.startsWith('images/')) {
+        const githubUrl = `https://raw.githubusercontent.com/PicoTrex/Awesome-Nano-Banana-images/main/${imageUrl}`;
+        images.push(githubUrl);
+      }
+    }
+  }
+  
+  // 去重并返回
   return [...new Set(images)];
 }
 
@@ -230,7 +413,7 @@ export function extractCaseFromContent(item) {
   
   const prompts = extractPrompts(fullText);
   const effects = extractEffects(fullText);
-  const images = extractImages(fullText);
+  const images = extractImages(fullText, title, description);
   
   // 如果没有找到明确的prompt，尝试从描述中推断
   if (prompts.length === 0 && description) {
@@ -268,7 +451,7 @@ export function extractCaseFromContent(item) {
   
   return {
     id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    title: title,
+    title: cleanTitle(title),
     category: category,
     categoryName: CASE_CATEGORIES[category],
     prompts: prompts,
@@ -330,21 +513,18 @@ function extractZHOFormat(fullText, item) {
     }
     seenTitles.add(originalTitle);
     
-    // 在章节内容中查找prompt - 更精确的匹配
-    const promptPattern = /Prompt[：:]\s*```\s*([^`]+?)\s*```/gis;
-    let promptMatch;
+    // 智能Prompt提取 - 多层级策略
+    const prompts = extractPromptsIntelligently(sectionContent);
     
-    while ((promptMatch = promptPattern.exec(sectionContent)) !== null) {
-      const promptText = promptMatch[1].trim();
-      
+    for (const promptText of prompts) {
       if (promptText.length > 20) {
         const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
         const effects = extractEffects(sectionContent);
-        const images = extractImages(sectionContent);
+        const images = extractImages(sectionContent, sectionTitle, sectionContent);
         
         cases.push({
           id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          title: sectionTitle,
+          title: cleanTitle(sectionTitle),
           category: category,
           categoryName: CASE_CATEGORIES[category],
           prompts: [promptText],
@@ -389,11 +569,11 @@ function extractPicoTrexFormat(fullText, item) {
       if (promptText.length > 20 && !promptText.includes('输入:') && !promptText.includes('输出:')) {
         const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
         const effects = extractEffects(sectionContent);
-        const images = extractImages(sectionContent);
+        const images = extractImages(sectionContent, sectionTitle, sectionContent);
         
         cases.push({
           id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          title: sectionTitle,
+          title: cleanTitle(sectionTitle),
           category: category,
           categoryName: CASE_CATEGORIES[category],
           prompts: [promptText],
@@ -446,11 +626,11 @@ function extractSuperMakerFormat(fullText, item) {
       if (promptText.length > 20) {
         const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
         const effects = extractEffects(sectionContent);
-        const images = extractImages(sectionContent);
+        const images = extractImages(sectionContent, sectionTitle, sectionContent);
         
         cases.push({
           id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          title: sectionTitle,
+          title: cleanTitle(sectionTitle),
           category: category,
           categoryName: CASE_CATEGORIES[category],
           prompts: [promptText],
@@ -488,19 +668,19 @@ export function extractMultipleCasesFromArticle(item) {
   if (prompts.length > 1) {
     prompts.forEach((prompt, index) => {
       const effects = extractEffects(fullText);
-      const images = extractImages(fullText);
+      const images = extractImages(fullText, title, description);
       const category = categorizeCase(title, description, [prompt]);
       
       // 为每个prompt生成一个独特的标题
-      let caseTitle = title;
+      let caseTitle = cleanTitle(title);
       if (prompt.includes('Bollywood') || prompt.includes('1970s')) {
-        caseTitle = `${title} - 宝莱坞复古风格`;
+        caseTitle = `${cleanTitle(title)} - 宝莱坞复古风格`;
       } else if (prompt.includes('studio') || prompt.includes('portrait')) {
-        caseTitle = `${title} - 工作室肖像`;
+        caseTitle = `${cleanTitle(title)} - 工作室肖像`;
       } else if (prompt.includes('vintage') || prompt.includes('retro')) {
-        caseTitle = `${title} - 复古风格`;
+        caseTitle = `${cleanTitle(title)} - 复古风格`;
       } else if (prompt.includes('figurine') || prompt.includes('3D')) {
-        caseTitle = `${title} - 3D手办制作`;
+        caseTitle = `${cleanTitle(title)} - 3D手办制作`;
       }
       
       cases.push({

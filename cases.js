@@ -33,18 +33,11 @@ function renderCase(caseItem) {
     `;
   }).join('');
   
-  // 合并效果描述和图片显示
+  // 效果部分主要显示图片，文字描述作为补充
   const effectsAndImagesHtml = (() => {
     let html = '';
     
-    // 显示效果描述
-    if (caseItem.effects.length > 0) {
-      html += caseItem.effects.map(effect => 
-        `<div class="effect-text">${effect}</div>`
-      ).join('');
-    }
-    
-    // 显示效果图片
+    // 优先显示效果图片
     if (caseItem.images.length > 0) {
       html += `
         <div class="images-section">
@@ -55,6 +48,22 @@ function renderCase(caseItem) {
           </div>
         </div>
       `;
+    }
+    
+    // 如果有图片，只显示简短的效果描述；如果没有图片，显示完整描述
+    if (caseItem.effects.length > 0) {
+      if (caseItem.images.length > 0) {
+        // 有图片时，只显示第一个简短的效果描述
+        const shortEffect = caseItem.effects[0].length > 50 ? 
+          caseItem.effects[0].substring(0, 50) + '...' : 
+          caseItem.effects[0];
+        html += `<div class="effect-text effect-summary">${shortEffect}</div>`;
+      } else {
+        // 没有图片时，显示所有效果描述
+        html += caseItem.effects.map(effect => 
+          `<div class="effect-text">${effect}</div>`
+        ).join('');
+      }
     }
     
     return html;
