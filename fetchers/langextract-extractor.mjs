@@ -39,8 +39,8 @@ const CATEGORY_KEYWORDS = {
   'scene': ['background', 'scene', 'environment', '背景', '场景', '环境'],
   'composition': ['pose', 'action', 'movement', 'gesture', '姿势', '动作', '姿态'],
   'design': ['design', '设计', '包装', '工业设计', '产品设计', '包装设计', '卡片设计', '包装生成', 'product', 'packaging'],
-  'education': ['教育', '教学', '分析', '批注', '标注', '卡路里', '批改', '教学', 'education', 'teaching', 'analysis', 'annotation'],
-  'business': ['广告', '营销', '信息图', '商业', '广告短片', '商品', '营销', 'business', 'advertisement', 'marketing', 'infographic'],
+  'education': ['教育', '教学', '分析', '批注', '标注', '卡路里', '批改', 'education', 'teaching', 'analysis', 'annotation'],
+  'business': ['广告', '营销', '信息图', '商业', '广告短片', '商品', 'business', 'advertisement', 'marketing', 'infographic'],
   'technical': ['技术', '参数', '设置', '拆解', '硬件', '相机', 'technical', 'iso', 'camera', 'hardware', 'parameter'],
   'artistic': ['艺术', '绘画', '插画', '漫画', 'artistic', 'painting', 'illustration', 'drawing', 'manga', 'comic'],
   'other': ['age', 'young', 'old', 'aging', '性别', '男性', '女性', 'retro', 'vintage', 'classic', 'old', '复古', '经典', '怀旧', 'fantasy', 'creature', 'monster', 'dragon', '奇幻', '生物', '怪物', '龙', 'anime', 'manga', 'cartoon', '动漫', '漫画', '卡通']

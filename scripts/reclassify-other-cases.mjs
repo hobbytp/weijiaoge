@@ -36,11 +36,11 @@ function categorizeCase(title, description, prompts) {
     return 'design';
   }
   if (text.includes('教育') || text.includes('教学') || text.includes('分析') || text.includes('批注') || 
-      text.includes('标注') || text.includes('卡路里') || text.includes('批改') || text.includes('教学')) {
+      text.includes('标注') || text.includes('卡路里') || text.includes('批改')) {
     return 'education';
   }
   if (text.includes('广告') || text.includes('营销') || text.includes('信息图') || text.includes('商业') || 
-      text.includes('广告短片') || text.includes('商品') || text.includes('营销') || text.includes('business')) {
+      text.includes('广告短片') || text.includes('商品') || text.includes('business')) {
     return 'business';
   }
   if (text.includes('技术') || text.includes('参数') || text.includes('设置') || text.includes('拆解') || 
