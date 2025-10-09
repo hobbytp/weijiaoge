@@ -501,6 +501,171 @@
       "createdAt": "2025-09-03T06:13:11Z",
       "updatedAt": "2025-10-09T08:59:33Z",
       "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3497300247",
+      "title": "feat: 细化其他类别分类 - 解决Issue #5",
+      "url": "https://github.com/hobbytp/weijiaoge/pull/7",
+      "description": "# feat: 细化其他类别分类 - 解决Issue #5\r\n\r\n## 🎯 问题描述\r\n\r\nIssue #5 指出\"其他\"类别包含了太多案例，需要进一步细化分类。\r\n\r\n## 🔍 问题分析\r\n\r\n- **原问题**: \"其他\"类别包含37个案例，过于宽泛\r\n- **影响**: 用户难以快速找到特定类型的案例\r\n- **需求**: 需要将\"其他\"类别细化为更具体的分类\r\n\r\n## 🛠️ 解决方案\r\n\r\n### 新增细化分类\r\n添加了5个新的细化分类：\r\n\r\n1. **design** (设计相关) - 工业设计、产品设计、包装设计等\r\n2. **education** (教育相关) - 教学、分析、批注等  \r\n3. **business** (商业相关) - 广告、营销、信息图等\r\n4. **technical** (技术相关) - 硬件拆解、参数设置等\r\n5. **artistic** (艺术相关) - 绘画、插画、漫画等\r\n\r\n### 技术实现\r\n\r\n#### 1. 更新分类定义\r\n- 在 `fetchers/case-extractor.mjs` 中添加新分类\r\n- 更新 ",
+      "source": "github",
+      "type": "pull",
+      "author": "hobbytp",
+      "stars": 0,
+      "createdAt": "2025-10-09T01:05:27Z",
+      "updatedAt": "2025-10-09T02:40:16Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1071849274",
+      "title": "Juliovivas99/crybb",
+      "url": "https://github.com/Juliovivas99/crybb",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "Juliovivas99",
+      "stars": 0,
+      "createdAt": "2025-10-07T22:40:35Z",
+      "updatedAt": "2025-10-09T02:14:58Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3497330182",
+      "title": "chore: release main",
+      "url": "https://github.com/AIGNE-io/aigne-framework/pull/599",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n<details><summary>afs-user-profile-memory: 1.0.1-beta</summary>\n\n## [1.0.1-beta](https://github.com/AIGNE-io/aigne-framework/compare/afs-user-profile-memory-v1.0.0...afs-user-profile-memory-v1.0.1-beta) (2025-10-09)\n\n\n### Dependencies\n\n* The following workspace dependencies were updated\n  * dependencies\n    * @aigne/core bumped to 1.63.0-beta.1\n</details>\n\n<details><summary>agent-library: 1.21.48-beta.1</summary>\n\n## [1.21.48-beta.1](https://g",
+      "source": "github",
+      "type": "pull",
+      "author": "li-yechao",
+      "stars": 0,
+      "createdAt": "2025-10-09T01:29:02Z",
+      "updatedAt": "2025-10-09T02:12:20Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:948330521",
+      "title": "killerddd3/my-stars",
+      "url": "https://github.com/killerddd3/my-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "killerddd3",
+      "stars": 0,
+      "createdAt": "2025-03-14T06:20:54Z",
+      "updatedAt": "2025-10-09T02:10:24Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3389206520",
+      "title": "feat(container): update image ghcr.io/n8n-io/n8n ( 1.110.0 → 1.115.1 )",
+      "url": "https://github.com/npmulder/homelab/pull/193",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/n8n-io/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.110.0` -> `1.115.1` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (ghcr.io/n8n-io/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-20",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-06T02:15:40Z",
+      "updatedAt": "2025-10-09T02:00:50Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1045461967",
+      "title": "oomol-flows/ai-image-edit",
+      "url": "https://github.com/oomol-flows/ai-image-edit",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "oomol-flows",
+      "stars": 0,
+      "createdAt": "2025-08-27T07:57:46Z",
+      "updatedAt": "2025-10-09T01:48:28Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3373806562",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.1",
+      "url": "https://github.com/vidjinnangni/selfhosted-docker/pull/228",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.109.1` -> `1.115.1` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n- `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091))",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-01T21:37:38Z",
+      "updatedAt": "2025-10-09T01:38:56Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:986500742",
+      "title": "AbhishekGowda28/my-feed-list",
+      "url": "https://github.com/AbhishekGowda28/my-feed-list",
+      "description": "List of all my scraps",
+      "source": "github",
+      "type": "repo",
+      "author": "AbhishekGowda28",
+      "stars": 0,
+      "createdAt": "2025-05-19T17:48:58Z",
+      "updatedAt": "2025-10-09T01:38:49Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:984783773",
+      "title": "kstv364/kstv364",
+      "url": "https://github.com/kstv364/kstv364",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "kstv364",
+      "stars": 0,
+      "createdAt": "2025-05-16T13:56:32Z",
+      "updatedAt": "2025-10-09T01:18:38Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3374060002",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.115.1",
+      "url": "https://github.com/vyrtualsynthese/homelab/pull/833",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.109.1` -> `1.115.1` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.115.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11150-2025-10-06)\n\n##### Bug Fixes\n\n-   `n8n-node` not working on Windows ([#&#8203;20091](https://redirect.github.com/n8n-io/n8n/issues/20091",
+      "source": "github",
+      "type": "pull",
+      "author": "vyrtualsynthese",
+      "stars": 0,
+      "createdAt": "2025-09-02T01:11:05Z",
+      "updatedAt": "2025-10-09T01:11:52Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1051272126",
+      "title": "AnkitDevCode/Rss-Feed",
+      "url": "https://github.com/AnkitDevCode/Rss-Feed",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "AnkitDevCode",
+      "stars": 0,
+      "createdAt": "2025-09-05T17:58:32Z",
+      "updatedAt": "2025-10-09T01:11:36Z",
+      "tags": [
         "repo"
       ]
     },
