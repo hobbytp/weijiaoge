@@ -183,14 +183,49 @@ class LangExtractExtractor {
         }
       }
       
-      // 去重
+      // 增强去重：处理完全重复和截断重复
       const uniquePrompts = [];
-      const seenTexts = new Set();
+      const normalizedTexts = [];
       
       for (const prompt of prompts) {
-        const normalizedText = prompt.text.toLowerCase().trim();
-        if (!seenTexts.has(normalizedText)) {
-          seenTexts.add(normalizedText);
+        // 标准化文本：移除代码块标记、转小写、去空格
+        const normalizedText = prompt.text
+          .replace(/^```[\s\S]*?\n/, '') // 移除开头的代码块标记
+          .replace(/\n```$/, '') // 移除结尾的代码块标记
+          .replace(/^`+|`+$/g, '') // 移除首尾的反引号
+          .replace(/\s+/g, ' ') // 标准化空格
+          .toLowerCase()
+          .trim();
+        
+        // 检查是否与已有的文本重复或截断重复
+        let isDuplicate = false;
+        
+        for (let i = 0; i < normalizedTexts.length; i++) {
+          const existingText = normalizedTexts[i];
+          
+          // 完全相同
+          if (normalizedText === existingText) {
+            isDuplicate = true;
+            break;
+          }
+          
+          // 截断重复：一个是另一个的前缀（长度差异超过10个字符才考虑）
+          if (Math.abs(normalizedText.length - existingText.length) > 10) {
+            if (normalizedText.startsWith(existingText) || existingText.startsWith(normalizedText)) {
+              // 保留较长的版本
+              if (normalizedText.length > existingText.length) {
+                // 当前文本更长，替换已有的
+                normalizedTexts[i] = normalizedText;
+                uniquePrompts[i] = prompt;
+              }
+              isDuplicate = true;
+              break;
+            }
+          }
+        }
+        
+        if (!isDuplicate) {
+          normalizedTexts.push(normalizedText);
           uniquePrompts.push(prompt);
         }
       }
