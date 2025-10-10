@@ -2,6 +2,7 @@
 // LangExtract集成提取器
 
 import { categorizeCase } from './case-categorizer.mjs';
+import { normalizePrompt, isTruncatedPrompt } from './text-utils.mjs';
 
 
 // LangExtract配置
@@ -183,14 +184,42 @@ class LangExtractExtractor {
         }
       }
       
-      // 去重
+      // 增强去重：处理完全重复和截断重复
+      const TRUNCATION_LENGTH_THRESHOLD = 10; // 截断检测的长度差异阈值
       const uniquePrompts = [];
-      const seenTexts = new Set();
+      const normalizedTexts = [];
       
       for (const prompt of prompts) {
-        const normalizedText = prompt.text.toLowerCase().trim();
-        if (!seenTexts.has(normalizedText)) {
-          seenTexts.add(normalizedText);
+        // 使用共享的文本标准化函数
+        const normalizedText = normalizePrompt(prompt.text);
+        
+        // 检查是否与已有的文本重复或截断重复
+        let isDuplicate = false;
+        
+        for (let i = 0; i < normalizedTexts.length; i++) {
+          const existingText = normalizedTexts[i];
+          
+          // 完全相同
+          if (normalizedText === existingText) {
+            isDuplicate = true;
+            break;
+          }
+          
+          // 截断重复：使用共享的截断检测函数
+          if (isTruncatedPrompt(normalizedText, existingText, TRUNCATION_LENGTH_THRESHOLD)) {
+            // 保留较长的版本
+            if (normalizedText.length > existingText.length) {
+              // 当前文本更长，替换已有的
+              normalizedTexts[i] = normalizedText;
+              uniquePrompts[i] = prompt;
+            }
+            isDuplicate = true;
+            break;
+          }
+        }
+        
+        if (!isDuplicate) {
+          normalizedTexts.push(normalizedText);
           uniquePrompts.push(prompt);
         }
       }

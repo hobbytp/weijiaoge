@@ -1,78 +1,99 @@
 // fetchers/case-extractor.mjs
 // 从网页内容中提取Nano Banana使用案例
 
+import { normalizePromptSimple } from './text-utils.mjs';
+
 // 智能Prompt提取函数 - 多层级策略
 function extractPromptsIntelligently(content) {
   const prompts = [];
+  const seenPrompts = new Set(); // 用于去重
   
-  // 策略1: 严格的Prompt模式匹配
+  // 使用共享的文本标准化函数
+  
+  // 策略1: 严格的Prompt模式匹配 - 优先使用这个策略
   const strictPatterns = [
     /Prompt[：:]\s*```\s*([^`]+?)\s*```/gis,
-    /\d+\)[^：:]*Prompt[：:]\s*```\s*([^`]+?)\s*```/gis,
-    /Prompt[：:]\s*```\s*([^`]+?)\s*```/gis
+    /\d+\)[^：:]*Prompt[：:]\s*```\s*([^`]+?)\s*```/gis
   ];
   
   for (const pattern of strictPatterns) {
     let match;
     while ((match = pattern.exec(content)) !== null) {
       const promptText = match[1].trim();
-      if (promptText.length > 20 && !prompts.includes(promptText)) {
+      const normalizedPrompt = normalizePromptSimple(promptText);
+      if (promptText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
         prompts.push(promptText);
+        seenPrompts.add(normalizedPrompt);
       }
     }
   }
   
-  // 策略2: 宽松的代码块匹配 - 查找所有```代码块
-  const codeBlocks = content.match(/```([^`]+?)```/gs);
-  if (codeBlocks) {
-    for (const block of codeBlocks) {
-      const codeContent = block.replace(/```/g, '').trim();
-      // 过滤掉明显不是prompt的内容
-      if (codeContent.length > 20 && 
-          !codeContent.includes('http') && 
-          !codeContent.includes('github.com') &&
-          !codeContent.includes('```') &&
-          !codeContent.includes('<!---') &&
-          !codeContent.includes('---') &&
-          !prompts.includes(codeContent)) {
-        prompts.push(codeContent);
+  // 如果严格模式没有找到，才使用宽松模式
+  if (prompts.length === 0) {
+    // 策略2: 宽松的代码块匹配 - 查找所有```代码块
+    const codeBlocks = content.match(/```([^`]+?)```/gs);
+    if (codeBlocks) {
+      for (const block of codeBlocks) {
+        const codeContent = block.replace(/```/g, '').trim();
+        const normalizedPrompt = normalizePromptSimple(codeContent);
+        // 过滤掉明显不是prompt的内容
+        if (codeContent.length > 20 && 
+            !codeContent.includes('http') && 
+            !codeContent.includes('github.com') &&
+            !codeContent.includes('```') &&
+            !codeContent.includes('<!---') &&
+            !codeContent.includes('---') &&
+            !seenPrompts.has(normalizedPrompt)) {
+          prompts.push(codeContent);
+          seenPrompts.add(normalizedPrompt);
+        }
       }
     }
   }
   
-  // 策略3: 基于关键词的智能分割
-  const promptSections = content.split(/(?:Prompt[：:]|prompt[：:]|输入[：:]|提示词[：:])/gi);
-  for (let i = 1; i < promptSections.length; i++) {
-    const section = promptSections[i];
-    // 提取第一个代码块或长文本
-    const codeMatch = section.match(/```([^`]+?)```/s);
-    if (codeMatch) {
-      const promptText = codeMatch[1].trim();
-      if (promptText.length > 20 && !prompts.includes(promptText)) {
-        prompts.push(promptText);
-      }
-    } else {
-      // 如果没有代码块，提取前几行文本
-      const lines = section.split('\n').slice(0, 5).join('\n').trim();
-      if (lines.length > 20 && !prompts.includes(lines)) {
-        prompts.push(lines);
+  // 如果还是没有找到，使用基于关键词的智能分割
+  if (prompts.length === 0) {
+    const promptSections = content.split(/(?:Prompt[：:]|prompt[：:]|输入[：:]|提示词[：:])/gi);
+    for (let i = 1; i < promptSections.length; i++) {
+      const section = promptSections[i];
+      // 提取第一个代码块或长文本
+      const codeMatch = section.match(/```([^`]+?)```/s);
+      if (codeMatch) {
+        const promptText = codeMatch[1].trim();
+        const normalizedPrompt = normalizePromptSimple(promptText);
+        if (promptText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
+          prompts.push(promptText);
+          seenPrompts.add(normalizedPrompt);
+        }
+      } else {
+        // 如果没有代码块，提取前几行文本
+        const lines = section.split('\n').slice(0, 5).join('\n').trim();
+        const normalizedPrompt = normalizePromptSimple(lines);
+        if (lines.length > 20 && !seenPrompts.has(normalizedPrompt)) {
+          prompts.push(lines);
+          seenPrompts.add(normalizedPrompt);
+        }
       }
     }
   }
   
-  // 策略4: 基于内容结构的智能提取
-  const paragraphs = content.split(/\n\s*\n/);
-  for (const paragraph of paragraphs) {
-    if (paragraph.length > 50 && 
-        (paragraph.includes('turn') || 
-         paragraph.includes('create') || 
-         paragraph.includes('generate') ||
-         paragraph.includes('transform') ||
-         paragraph.includes('make') ||
-         paragraph.includes('convert'))) {
-      const cleanText = paragraph.replace(/```/g, '').trim();
-      if (cleanText.length > 20 && !prompts.includes(cleanText)) {
-        prompts.push(cleanText);
+  // 最后回退：基于内容结构的智能提取
+  if (prompts.length === 0) {
+    const paragraphs = content.split(/\n\s*\n/);
+    for (const paragraph of paragraphs) {
+      if (paragraph.length > 50 && 
+          (paragraph.includes('turn') || 
+           paragraph.includes('create') || 
+           paragraph.includes('generate') ||
+           paragraph.includes('transform') ||
+           paragraph.includes('make') ||
+           paragraph.includes('convert'))) {
+        const cleanText = paragraph.replace(/```/g, '').trim();
+        const normalizedPrompt = normalizePromptSimple(cleanText);
+        if (cleanText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
+          prompts.push(cleanText);
+          seenPrompts.add(normalizedPrompt);
+        }
       }
     }
   }
@@ -493,7 +514,6 @@ export async function extractCasesFromGitHubReadme(item) {
 // 处理ZHO仓库格式
 async function extractZHOFormat(fullText, item) {
   const cases = [];
-  const seenTitles = new Set(); // 用于跟踪已见过的标题
   
   // 按章节分割内容（以数字开头的章节），并增加多种备选分割策略
   let sections = fullText.split(/(?=\d+️⃣)/);
@@ -516,12 +536,8 @@ async function extractZHOFormat(fullText, item) {
     let sectionTitle = titleMatch[1].replace(/[：:]/g, '').trim();
     const sectionContent = titleMatch[2];
     
-    // 处理重复标题 - 为重复的案例添加后缀
-    const originalTitle = sectionTitle;
-    if (seenTitles.has(originalTitle)) {
-      sectionTitle = sectionTitle + " (Duplicate)";
-    }
-    seenTitles.add(originalTitle);
+    // 保持原始标题，不在单个文章内部进行重复检测
+    // 真正的去重应该在全局级别基于prompt内容进行
     
     // 尝试LangExtract提取
     let prompts = [];
@@ -690,26 +706,61 @@ function extractCaseSpecificImages(caseTitle, caseContent) {
 // 新增：提取章节内所有图片的函数（严格按章节边界）
 function extractSectionImages(sectionContent) {
   const images = [];
+  const seenUrls = new Set(); // 用于去重
+  
+  // 策略1: HTML img标签
   const imgPattern = /<img[^>]+src="([^"]+)"[^>]*>/g;
   let match;
   
   while ((match = imgPattern.exec(sectionContent)) !== null) {
     const imgUrl = match[1];
-    if (imgUrl && imgUrl.startsWith('http')) {
+    if (imgUrl && imgUrl.startsWith('http') && !seenUrls.has(imgUrl)) {
       images.push(imgUrl);
+      seenUrls.add(imgUrl);
     }
   }
   
-  // 也检查markdown图片语法
+  // 策略2: Markdown图片语法
   const mdPattern = /!\[([^\]]*)\]\(([^)]+)\)/g;
   while ((match = mdPattern.exec(sectionContent)) !== null) {
     const imgUrl = match[2];
-    if (imgUrl && imgUrl.startsWith('http')) {
+    if (imgUrl && imgUrl.startsWith('http') && !seenUrls.has(imgUrl)) {
       images.push(imgUrl);
+      seenUrls.add(imgUrl);
     }
   }
   
-  return [...new Set(images)]; // 去重
+  // 策略3: 查找GitHub图片链接
+  const githubImgPattern = /https:\/\/github\.com\/[^\/]+\/[^\/]+\/assets\/\d+[^\)\s]+/g;
+  while ((match = githubImgPattern.exec(sectionContent)) !== null) {
+    const imgUrl = match[0];
+    if (!seenUrls.has(imgUrl)) {
+      images.push(imgUrl);
+      seenUrls.add(imgUrl);
+    }
+  }
+  
+  // 策略4: 查找raw.githubusercontent.com图片
+  const rawImgPattern = /https:\/\/raw\.githubusercontent\.com\/[^\)\s]+\.(jpg|jpeg|png|gif|webp)/gi;
+  while ((match = rawImgPattern.exec(sectionContent)) !== null) {
+    const imgUrl = match[0];
+    if (!seenUrls.has(imgUrl)) {
+      images.push(imgUrl);
+      seenUrls.add(imgUrl);
+    }
+  }
+  
+  // 策略5: 查找其他常见的图片URL模式
+  const otherImgPattern = /https:\/\/[^\)\s]+\.(jpg|jpeg|png|gif|webp|svg)/gi;
+  while ((match = otherImgPattern.exec(sectionContent)) !== null) {
+    const imgUrl = match[0];
+    if (!seenUrls.has(imgUrl) && !imgUrl.includes('github.com/user-attachments')) {
+      images.push(imgUrl);
+      seenUrls.add(imgUrl);
+    }
+  }
+  
+  return images;
 }
 
 // 处理PicoTrex仓库格式
@@ -764,7 +815,6 @@ function extractPicoTrexFormat(fullText, item) {
 // 处理Super-Maker-AI仓库格式
 function extractSuperMakerFormat(fullText, item) {
   const cases = [];
-  const seenTitles = new Set(); // 用于跟踪已见过的标题
   
   // 按案例分割内容
   const sections = fullText.split(/(?=Case \d+:)/);
@@ -779,12 +829,8 @@ function extractSuperMakerFormat(fullText, item) {
     let sectionTitle = titleMatch[1].trim();
     const sectionContent = titleMatch[3];
     
-    // 处理重复标题 - 为重复的案例添加后缀
-    const originalTitle = sectionTitle;
-    if (seenTitles.has(originalTitle)) {
-      sectionTitle = sectionTitle + " (Duplicate)";
-    }
-    seenTitles.add(originalTitle);
+    // 保持原始标题，不在单个文章内部进行重复检测
+    // 真正的去重应该在全局级别基于prompt内容进行
     
     // 在章节内容中查找prompt
     const promptPattern = /```yaml\s*([^`]+?)\s*```/gis;

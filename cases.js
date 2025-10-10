@@ -59,6 +59,48 @@ function extractAuthorFromUrl(url) {
   return null;
 }
 
+// 从URL中提取简化的显示文本
+function getSimplifiedSourceText(url) {
+  try {
+    const urlObj = new URL(url);
+    const host = urlObj.hostname.toLowerCase();
+    const segments = urlObj.pathname.split('/').filter(Boolean);
+
+    // GitHub: 只显示仓库名
+    if (host === 'github.com' || host === 'raw.githubusercontent.com') {
+      if (segments.length >= 2) {
+        return segments[1]; // 只返回仓库名
+      }
+      return segments[0] || 'GitHub';
+    }
+
+    // X/Twitter: 显示为 "@用户名"
+    if (host === 'x.com' || host === 'twitter.com') {
+      return segments[0] ? `@${segments[0]}` : 'X/Twitter';
+    }
+
+    // Medium相关域名: 显示为 "Medium + 文章关键词"
+    if (host.includes('medium.com') || host.includes('gitconnected.com')) {
+      if (segments.length > 0) {
+        // 提取路径中的关键词，通常是文章标题的一部分
+        const articlePath = segments[segments.length - 1];
+        // 提取前几个有意义的词汇
+        const MAX_KEYWORDS_COUNT = 3; // 最大关键词数量
+        const keywords = articlePath.split('-').slice(0, MAX_KEYWORDS_COUNT).join('-');
+        return keywords.length > 20 ? keywords.substring(0, 20) + '...' : keywords;
+      }
+      return 'Medium';
+    }
+
+    // 其他域名: 显示域名，但限制长度
+    const simplifiedHost = host.replace('www.', '');
+    return simplifiedHost.length > 20 ? simplifiedHost.substring(0, 20) + '...' : simplifiedHost;
+  } catch (e) {
+    // URL解析失败，返回简化版本
+    return url.length > 30 ? url.substring(0, 30) + '...' : url;
+  }
+}
+
 // 从URL中提取路径作为分类依据
 function extractUrlPath(url) {
   try {
@@ -79,25 +121,24 @@ function extractUrlPath(url) {
       return segments[0] || host;
     }
 
-    // 通用逻辑：取最后一个有效段（去掉锚点/查询/扩展名）
-    let pathname = urlObj.pathname;
-    if (pathname.startsWith('/')) pathname = pathname.substring(1);
-    if (pathname.endsWith('/')) pathname = pathname.substring(0, pathname.length - 1);
-    if (!pathname) return host;
-    const pathSegments = pathname.split('/');
-    let lastSegment = pathSegments[pathSegments.length - 1];
-    lastSegment = lastSegment.split('#')[0].split('?')[0];
-    if (!lastSegment || lastSegment.includes('.')) {
-      if (pathSegments.length > 1) {
-        lastSegment = pathSegments[pathSegments.length - 2];
-      } else {
-        return host;
+    // Medium相关域名: 使用简化的关键词
+    if (host.includes('medium.com') || host.includes('gitconnected.com')) {
+      if (segments.length > 0) {
+        // 提取路径中的关键词，通常是文章标题的一部分
+        const articlePath = segments[segments.length - 1];
+        // 提取前几个有意义的词汇
+        const keywords = articlePath.split('-').slice(0, 3).join('-');
+        return keywords.length > 20 ? keywords.substring(0, 20) + '...' : keywords;
       }
+      return 'Medium';
     }
-    return lastSegment || host;
+
+    // 其他域名: 显示域名，但限制长度
+    const simplifiedHost = host.replace('www.', '');
+    return simplifiedHost.length > 20 ? simplifiedHost.substring(0, 20) + '...' : simplifiedHost;
   } catch (e) {
-    // URL解析失败，返回原始URL
-    return url;
+    // URL解析失败，返回简化版本
+    return url.length > 30 ? url.substring(0, 30) + '...' : url;
   }
 }
 
@@ -171,6 +212,8 @@ function renderCase(caseItem) {
   
   // 如果标题中包含链接，在source-link中显示简化的作者信息
   let sourceLinkHtml = '';
+  const simplifiedSourceText = getSimplifiedSourceText(caseItem.sourceUrl);
+  
   if (titleInfo.url) {
     const author = extractAuthorFromUrl(titleInfo.url);
     if (author) {
@@ -180,16 +223,16 @@ function renderCase(caseItem) {
             @${author}
           </a>
           <span class="separator">•</span>
-          <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
-            查看原文 →
+          <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer" title="${caseItem.sourceUrl}">
+            ${simplifiedSourceText}
           </a>
         </div>
       `;
     } else {
       sourceLinkHtml = `
         <div class="source-link">
-          <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
-            查看原文 →
+          <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer" title="${caseItem.sourceUrl}">
+            ${simplifiedSourceText}
           </a>
         </div>
       `;
@@ -197,8 +240,8 @@ function renderCase(caseItem) {
   } else {
     sourceLinkHtml = `
       <div class="source-link">
-        <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer">
-          查看原文 →
+        <a href="${caseItem.sourceUrl}" target="_blank" rel="noopener noreferrer" title="${caseItem.sourceUrl}">
+          ${simplifiedSourceText}
         </a>
       </div>
     `;
