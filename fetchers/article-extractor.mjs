@@ -96,8 +96,10 @@ export async function extractCasesFromImportantArticles(webItems = []) {
       };
       
       // 使用多案例提取功能
-      const extractedCases = extractMultipleCasesFromArticle(itemWithFullContent);
-      cases.push(...extractedCases);
+      const extractedCases = await extractMultipleCasesFromArticle(itemWithFullContent);
+      if (Array.isArray(extractedCases)) {
+        cases.push(...extractedCases);
+      }
       
       console.log(`从GitHub仓库 "${readme.title}" 提取了 ${extractedCases.length} 个案例`);
     } catch (error) {

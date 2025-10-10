@@ -1,8 +1,8 @@
 // test-zho-langextract.mjs
 // 测试LangExtract集成的ZHO仓库案例提取
 
-import { extractCasesFromGitHubReadme } from './fetchers/case-extractor.mjs';
 import fs from 'fs';
+import { extractCasesFromGitHubReadme } from './fetchers/case-extractor.mjs';
 
 async function testZHOExtraction() {
   console.log('🧪 测试LangExtract集成的ZHO仓库案例提取...\n');

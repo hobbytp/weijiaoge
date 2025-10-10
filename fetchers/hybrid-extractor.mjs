@@ -1,7 +1,7 @@
 // fetchers/hybrid-extractor.mjs
 // 混合提取器：结合传统算法和LangExtract
 
-import { extractCaseFromContent, extractMultipleCasesFromArticle } from './case-extractor.mjs';
+import { extractCaseFromContent } from './case-extractor.mjs';
 import { extractEnhancedCases } from './enhanced-case-extractor.mjs';
 import { LangExtractExtractor } from './langextract-extractor.mjs';
 

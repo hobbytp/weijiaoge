@@ -245,7 +245,7 @@ async function main() {
   
   // 传统提取器处理
   console.log('🔍 使用传统提取器提取使用案例...');
-  const cases = processItemsForCases(items);
+  const cases = await processItemsForCases(items);
   
   // 合并所有案例
   const allCases = [...cases, ...importantCases, ...processedCases];
