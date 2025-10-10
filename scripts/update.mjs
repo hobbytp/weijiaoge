@@ -99,27 +99,44 @@ function deduplicateCases(cases) {
   const deduplicated = [];
   
   for (const caseItem of cases) {
-    // 创建唯一标识符：基于标题和第一个prompt
+    // 创建唯一标识符：加入来源信息，减少误合并
     const firstPrompt = caseItem.prompts && caseItem.prompts.length > 0 
       ? (typeof caseItem.prompts[0] === 'string' ? caseItem.prompts[0] : caseItem.prompts[0].text || '')
       : '';
+
+    const sourceKey = caseItem.sourceUrl 
+      || (caseItem.originalItem && (caseItem.originalItem.url || caseItem.originalItem.sourceUrl))
+      || caseItem.url 
+      || caseItem.id 
+      || '';
     
     // 清理标题，移除特殊字符、数字前缀和emoji
     const cleanTitle = (caseItem.title || '')
-      .replace(/^[\d\s\-\u{1F300}-\u{1F9FF}]+/u, '') // 移除开头的数字、空格、连字符和emoji
-      .replace(/\(Duplicate\)/g, '') // 移除(Duplicate)标记
-      .replace(/\s+/g, ' ') // 合并多个空格
+      .replace(/^[\d\s\-\u{1F300}-\u{1F9FF}]+/u, '')
+      .replace(/\(Duplicate\)/g, '')
+      .replace(/\s+/g, ' ')
       .trim();
     
     // 清理prompt，移除特殊字符
-    const cleanPrompt = firstPrompt
-      .replace(/[^\w\s\u4e00-\u9fff]/g, ' ') // 只保留字母、数字、空格和中文字符
-      .replace(/\s+/g, ' ') // 合并多个空格
+    const cleanPrompt = (firstPrompt || '')
+      .replace(/[^\w\s\u4e00-\u9fff]/g, ' ')
+      .replace(/\s+/g, ' ')
       .trim()
       .substring(0, 100);
+
+    // 当prompt为空时加入效果片段作为辅助标识
+    const effectSnippet = Array.isArray(caseItem.effects)
+      ? caseItem.effects.join(' ')
+          .replace(/[^\w\s\u4e00-\u9fff]/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .substring(0, 100)
+      : '';
+
+    const category = caseItem.category || '';
     
-    // 使用清理后的标题和prompt作为标识符
-    const identifier = `${cleanTitle}|${cleanPrompt}`;
+    // 组合更稳健的标识符（同源 + 标题 + prompt/效果 + 类别）
+    const identifier = `${sourceKey}|${cleanTitle}|${cleanPrompt || effectSnippet}|${category}`;
     
     if (!seen.has(identifier)) {
       seen.add(identifier);

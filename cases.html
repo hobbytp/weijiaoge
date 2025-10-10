@@ -71,7 +71,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 30px;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 15px;
             align-items: end;
         }
@@ -297,10 +297,17 @@
                 </select>
             </div>
             <div class="filter-group">
+                <label for="path">来源路径</label>
+                <select id="path">
+                    <option value="">全部来源</option>
+                </select>
+            </div>
+            <div class="filter-group">
                 <label for="sort">排序</label>
                 <select id="sort">
                     <option value="category">按分类</option>
                     <option value="title">按标题</option>
+                    <option value="path">按来源</option>
                 </select>
             </div>
         </div>

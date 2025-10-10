@@ -71,7 +71,7 @@ class HybridExtractor {
           if (this.enhancedExtractor) {
             result = await this.enhancedExtractor.extractEnhancedCases(content, sourceInfo);
           } else {
-            result = extractEnhancedCases(content, sourceInfo);
+            result = await extractEnhancedCases(content, sourceInfo);
           }
           break;
           

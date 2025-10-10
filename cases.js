@@ -4,6 +4,7 @@ const $$ = (s) => document.querySelectorAll(s);
 
 const searchInput = $('#search');
 const categorySelect = $('#category');
+const pathSelect = $('#path');
 const sortSelect = $('#sort');
 const stats = $('#stats');
 const casesGrid = $('#cases-grid');
@@ -56,6 +57,48 @@ function extractAuthorFromUrl(url) {
   }
   
   return null;
+}
+
+// 从URL中提取路径作为分类依据
+function extractUrlPath(url) {
+  try {
+    const urlObj = new URL(url);
+    const host = urlObj.hostname.toLowerCase();
+    const segments = urlObj.pathname.split('/').filter(Boolean);
+
+    // GitHub: 统一归一化为仓库名
+    if (host === 'github.com' || host === 'raw.githubusercontent.com') {
+      if (segments.length >= 2) {
+        return segments[1]; // owner/repo -> repo
+      }
+      return segments[0] || host;
+    }
+
+    // X/Twitter: 使用用户名
+    if (host === 'x.com' || host === 'twitter.com') {
+      return segments[0] || host;
+    }
+
+    // 通用逻辑：取最后一个有效段（去掉锚点/查询/扩展名）
+    let pathname = urlObj.pathname;
+    if (pathname.startsWith('/')) pathname = pathname.substring(1);
+    if (pathname.endsWith('/')) pathname = pathname.substring(0, pathname.length - 1);
+    if (!pathname) return host;
+    const pathSegments = pathname.split('/');
+    let lastSegment = pathSegments[pathSegments.length - 1];
+    lastSegment = lastSegment.split('#')[0].split('?')[0];
+    if (!lastSegment || lastSegment.includes('.')) {
+      if (pathSegments.length > 1) {
+        lastSegment = pathSegments[pathSegments.length - 2];
+      } else {
+        return host;
+      }
+    }
+    return lastSegment || host;
+  } catch (e) {
+    // URL解析失败，返回原始URL
+    return url;
+  }
 }
 
 function renderCase(caseItem) {
@@ -192,13 +235,46 @@ function renderCases(cases) {
     return;
   }
 
-  casesGrid.innerHTML = cases.map(renderCase).join('');
-  stats.textContent = `共 ${cases.length} 个案例`;
+  // 防嵌套：重置容器的内容，避免残留节点造成嵌套
+  casesGrid.innerHTML = '';
+
+  // 去重：按 (标题 + 来源路径 + 首个prompt片段) 生成稳定键
+  const seen = new Set();
+  const deduped = [];
+
+  for (const c of cases) {
+    const path = extractUrlPath(c.sourceUrl || '');
+    const title = (c.title || '').trim();
+    const promptKey = (Array.isArray(c.prompts) && c.prompts.length > 0) 
+      ? (typeof c.prompts[0] === 'string' ? c.prompts[0] : (c.prompts[0].text || ''))
+      : '';
+    const promptSnippet = promptKey.replace(/\s+/g, ' ').slice(0, 60);
+    const key = `${title}|${path}|${promptSnippet}`;
+
+    if (!seen.has(key)) {
+      seen.add(key);
+      deduped.push(c);
+    }
+  }
+
+  // 渲染卡片（逐个追加，避免大字符串拼接造成结构异常）
+  const fragments = document.createDocumentFragment();
+  deduped.forEach(item => {
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = renderCase(item);
+    // 提取最外层 .case-card 并追加到容器，确保结构平整
+    const card = wrapper.firstElementChild;
+    fragments.appendChild(card);
+  });
+
+  casesGrid.appendChild(fragments);
+  stats.textContent = `共 ${deduped.length} 个案例`;
 }
 
 function filterAndSort() {
   const searchTerm = (searchInput.value || '').toLowerCase();
   const selectedCategory = categorySelect.value;
+  const selectedPath = pathSelect.value;
   const sortBy = sortSelect.value;
   
   let filteredCases = casesData.cases.slice();
@@ -216,6 +292,14 @@ function filterAndSort() {
     filteredCases = filteredCases.filter(caseItem => caseItem.category === selectedCategory);
   }
   
+  // 路径过滤
+  if (selectedPath) {
+    filteredCases = filteredCases.filter(caseItem => {
+      const urlPath = extractUrlPath(caseItem.sourceUrl);
+      return urlPath === selectedPath;
+    });
+  }
+  
   // 排序
   if (sortBy === 'title') {
     filteredCases.sort((a, b) => a.title.localeCompare(b.title));
@@ -223,6 +307,15 @@ function filterAndSort() {
     filteredCases.sort((a, b) => {
       if (a.category !== b.category) {
         return a.category.localeCompare(b.category);
+      }
+      return a.title.localeCompare(b.title);
+    });
+  } else if (sortBy === 'path') {
+    filteredCases.sort((a, b) => {
+      const pathA = extractUrlPath(a.sourceUrl);
+      const pathB = extractUrlPath(b.sourceUrl);
+      if (pathA !== pathB) {
+        return pathA.localeCompare(pathB);
       }
       return a.title.localeCompare(b.title);
     });
@@ -243,6 +336,19 @@ function populateFilters() {
     option.value = category;
     option.textContent = `${caseItem.categoryName} (${casesData.cases.filter(c => c.category === category).length})`;
     categorySelect.appendChild(option);
+  });
+  
+  // 获取所有唯一的路径
+  const paths = [...new Set(casesData.cases.map(c => extractUrlPath(c.sourceUrl)))];
+  
+  // 清空并重新填充路径选项
+  pathSelect.innerHTML = '<option value="">全部来源</option>';
+  paths.sort().forEach(path => {
+    const count = casesData.cases.filter(c => extractUrlPath(c.sourceUrl) === path).length;
+    const option = document.createElement('option');
+    option.value = path;
+    option.textContent = `${path} (${count})`;
+    pathSelect.appendChild(option);
   });
 }
 
@@ -265,7 +371,7 @@ async function loadCases() {
 }
 
 // 事件监听
-[searchInput, categorySelect, sortSelect].forEach(element => {
+[searchInput, categorySelect, pathSelect, sortSelect].forEach(element => {
   element.addEventListener('input', filterAndSort);
 });
 

@@ -82,6 +82,8 @@ function extractPromptsIntelligently(content) {
 
 // 导入共享的分类函数
 import { CASE_CATEGORIES, categorizeCase } from './case-categorizer.mjs';
+// 导入LangExtract
+import { extractWithLangExtract } from './langextract-extractor.mjs';
 
 // 重新导出以保持向后兼容
 export { CASE_CATEGORIES };
@@ -465,7 +467,7 @@ export function extractCaseFromContent(item) {
 }
 
 // 专门处理GitHub README的函数
-export function extractCasesFromGitHubReadme(item) {
+export async function extractCasesFromGitHubReadme(item) {
   const { title, description, url } = item;
   const cases = [];
   
@@ -483,18 +485,26 @@ export function extractCasesFromGitHubReadme(item) {
     return extractSuperMakerFormat(fullText, item);
   } else if (fullText.includes('1️⃣') || fullText.includes('2️⃣')) {
     // ZHO仓库格式：使用数字emoji
-    return extractZHOFormat(fullText, item);
+    return await extractZHOFormat(fullText, item);
   }
   return cases;
 }
 
 // 处理ZHO仓库格式
-function extractZHOFormat(fullText, item) {
+async function extractZHOFormat(fullText, item) {
   const cases = [];
   const seenTitles = new Set(); // 用于跟踪已见过的标题
   
-  // 按章节分割内容（以数字开头的章节）
-  const sections = fullText.split(/(?=\d+️⃣)/);
+  // 按章节分割内容（以数字开头的章节），并增加多种备选分割策略
+  let sections = fullText.split(/(?=\d+️⃣)/);
+  if (!sections || sections.length <= 1) {
+    // 兼容 "### 1️⃣" 标题 或 "1. 标题" 的写法
+    sections = fullText.split(/(?=^#{1,6}\s*\d+️⃣)|(?=^\s*\d+\.\s+)/m);
+  }
+  if (!sections || sections.length <= 1) {
+    // 兼容中文编号样式：一、二、三、 或 1）
+    sections = fullText.split(/(?=^[一二三四五六七八九十]+、)|(?=^\s*\d+\))/m);
+  }
   
   for (const section of sections) {
     if (!section.trim()) continue;
@@ -513,37 +523,95 @@ function extractZHOFormat(fullText, item) {
     }
     seenTitles.add(originalTitle);
     
-    // 智能Prompt提取 - 多层级策略
-    const prompts = extractPromptsIntelligently(sectionContent);
+    // 尝试LangExtract提取
+    let prompts = [];
+    let images = [];
+    let effects = [];
+    let langExtractSuccess = false;
     
-    for (const promptText of prompts) {
-      if (promptText.length > 20) {
-        const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
-        const effects = extractEffects(sectionContent);
-        
-        // 修复：只提取当前章节相关的图片，而不是所有图片
-        const images = extractCaseSpecificImages(sectionTitle, sectionContent);
-        
-        cases.push({
-          id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          title: cleanTitle(sectionTitle),
-          category: category,
-          categoryName: CASE_CATEGORIES[category],
-          prompts: [promptText],
-          effects: effects,
-          images: images,
-          sourceUrl: item.url,
-          source: item.source || 'github',
-          extractedAt: new Date().toISOString(),
-          originalItem: item
-        });
+    try {
+      const langExtractResult = await extractWithLangExtract(sectionContent);
+      if (langExtractResult.prompts && langExtractResult.prompts.length > 0) {
+        prompts = langExtractResult.prompts.map(p => p.text);
+        images = langExtractResult.images.map(img => img.url);
+        effects = langExtractResult.effects.map(e => e.text);
+        langExtractSuccess = true;
+        console.log(`✅ LangExtract成功提取章节: ${sectionTitle}`);
       }
+    } catch (error) {
+      console.log(`⚠️ LangExtract失败，使用传统方法: ${sectionTitle} - ${error.message}`);
+    }
+    
+    // 回退到传统提取方法
+    if (!langExtractSuccess) {
+      prompts = extractPromptsIntelligently(sectionContent);
+      if (!prompts || prompts.length === 0) {
+        const fallback = extractFallbackPrompt(sectionContent, sectionTitle);
+        if (fallback) {
+          prompts = [fallback];
+        }
+      }
+      
+      if (images.length === 0) {
+        images = extractSectionImages(sectionContent);
+      }
+      
+      if (effects.length === 0) {
+        effects = extractEffects(sectionContent);
+      }
+    }
+    
+    // 创建每个章节一个案例
+    if (prompts.length > 0) {
+      const category = categorizeCase(sectionTitle, sectionContent, prompts);
+      cases.push({
+        id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        title: cleanTitle(sectionTitle),
+        category: category,
+        categoryName: CASE_CATEGORIES[category],
+        prompts: prompts.slice(0, 3), // 最多3个prompt
+        effects: effects.slice(0, 3),
+        images: images.slice(0, 6), // 最多6张图片
+        sourceUrl: item.url,
+        source: item.source || 'github',
+        extractedAt: new Date().toISOString(),
+        originalItem: item
+      });
     }
   }
   
   return cases;
 }
 
+// 新增：当智能提取失败时的 Prompt 回退推断
+function extractFallbackPrompt(content, sectionTitle = '') {
+  // 1) 直接查找“Prompt/输入/提示词”标记后的文本段
+  const labelPattern = /(Prompt|提示词|输入)[：:]+\s*([^\n`]{20,})/i;
+  const labelMatch = content.match(labelPattern);
+  if (labelMatch) {
+    const text = labelMatch[2].trim();
+    if (text.length >= 20) return text;
+  }
+  
+  // 2) 选取包含动作词的段落作为近似 Prompt
+  const paragraphs = content.split(/\n\s*\n/);
+  const actionWords = /(create|make|turn|transform|generate|convert|craft|render|produce|将|把|生成|转换|制作)/i;
+  for (const p of paragraphs) {
+    const cleaned = p.replace(/```[\s\S]*?```/g, '').trim();
+    if (cleaned.length >= 30 && actionWords.test(cleaned)) {
+      // 进一步排除技术段
+      if (!/(api|function|代码|TypeScript|JavaScript|React|模型|Gemini|Imagen)/i.test(cleaned)) {
+        return cleaned;
+      }
+    }
+  }
+  
+  // 3) 没有明显标记时，取章节前若干行组合
+  const firstLines = content.split('\n').slice(0, 6).join('\n').trim();
+  if (firstLines.length >= 20) return firstLines;
+  
+  return null;
+}
 // 新增：提取案例特定图片的函数
 function extractCaseSpecificImages(caseTitle, caseContent) {
   const images = [];
@@ -617,6 +685,31 @@ function extractCaseSpecificImages(caseTitle, caseContent) {
   
   // 去重
   return [...new Set(images)];
+}
+
+// 新增：提取章节内所有图片的函数（严格按章节边界）
+function extractSectionImages(sectionContent) {
+  const images = [];
+  const imgPattern = /<img[^>]+src="([^"]+)"[^>]*>/g;
+  let match;
+  
+  while ((match = imgPattern.exec(sectionContent)) !== null) {
+    const imgUrl = match[1];
+    if (imgUrl && imgUrl.startsWith('http')) {
+      images.push(imgUrl);
+    }
+  }
+  
+  // 也检查markdown图片语法
+  const mdPattern = /!\[([^\]]*)\]\(([^)]+)\)/g;
+  while ((match = mdPattern.exec(sectionContent)) !== null) {
+    const imgUrl = match[2];
+    if (imgUrl && imgUrl.startsWith('http')) {
+      images.push(imgUrl);
+    }
+  }
+  
+  return [...new Set(images)]; // 去重
 }
 
 // 处理PicoTrex仓库格式

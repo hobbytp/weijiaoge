@@ -90,37 +90,18 @@ class LangExtractExtractor {
     // 基本长度检查
     if (cleaned.length < 10 || cleaned.length > 2000) return false;
     
-    // 检查是否包含nano banana相关内容
-    const nanoBananaKeywords = [
-      'nano banana', 'nanobanana', 'nano-banana', 'nano_banana',
-      'gemini 2.5', 'flash image', 'image preview'
-    ];
-    
-    const hasNanoBanana = nanoBananaKeywords.some(keyword => 
-      cleaned.toLowerCase().includes(keyword.toLowerCase())
-    );
-    
-    // 检查是否包含有意义的操作词汇
+    // 检查是否包含有意义的操作词汇（放宽要求，不要求nano banana关键词）
     const actionWords = [
       'create', 'make', 'turn', 'transform', 'generate', 'edit', 'change', 'convert',
-      'craft', 'design', 'style', 'modify', 'enhance', 'improve'
+      'craft', 'design', 'style', 'modify', 'enhance', 'improve',
+      '将', '把', '变', '转', '生成', '制作', '改', '换', '化'
     ];
     
     const hasAction = actionWords.some(word => 
-      cleaned.toLowerCase().includes(word)
+      cleaned.toLowerCase().includes(word.toLowerCase())
     );
     
-    // 检查是否包含目标对象
-    const targetWords = [
-      'figurine', 'character', 'scene', 'style', 'clothing', 'outfit', 
-      'person', 'image', 'photo', 'picture', 'portrait', 'model'
-    ];
-    
-    const hasTarget = targetWords.some(word => 
-      cleaned.toLowerCase().includes(word)
-    );
-    
-    return hasNanoBanana && hasAction && hasTarget;
+    return hasAction; // 只要求包含动作词，不要求nano banana关键词
   }
 
   // 智能分类

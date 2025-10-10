@@ -142,7 +142,7 @@ function smartCategorizeCase(title, content, prompt) {
 }
 
 // 增强的案例提取
-export function extractEnhancedCases(content, sourceInfo = {}) {
+export async function extractEnhancedCases(content, sourceInfo = {}) {
   const cases = [];
   
   if (!content || typeof content !== 'string') {
@@ -151,7 +151,7 @@ export function extractEnhancedCases(content, sourceInfo = {}) {
   
   // 如果是GitHub README，使用专门的解析器
   if (sourceInfo.type === 'github-readme') {
-    const githubCases = extractCasesFromGitHubReadme({
+    const githubCases = await extractCasesFromGitHubReadme({
       title: sourceInfo.title || 'GitHub README',
       description: content,
       url: sourceInfo.url || ''
