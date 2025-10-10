@@ -1,15 +1,14 @@
 // fetchers/case-extractor.mjs
 // 从网页内容中提取Nano Banana使用案例
 
+import { normalizePromptSimple } from './text-utils.mjs';
+
 // 智能Prompt提取函数 - 多层级策略
 function extractPromptsIntelligently(content) {
   const prompts = [];
   const seenPrompts = new Set(); // 用于去重
   
-  // 辅助函数：标准化prompt文本用于去重比较
-  function normalizePrompt(text) {
-    return text.replace(/```/g, '').trim();
-  }
+  // 使用共享的文本标准化函数
   
   // 策略1: 严格的Prompt模式匹配 - 优先使用这个策略
   const strictPatterns = [
@@ -21,7 +20,7 @@ function extractPromptsIntelligently(content) {
     let match;
     while ((match = pattern.exec(content)) !== null) {
       const promptText = match[1].trim();
-      const normalizedPrompt = normalizePrompt(promptText);
+      const normalizedPrompt = normalizePromptSimple(promptText);
       if (promptText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
         prompts.push(promptText);
         seenPrompts.add(normalizedPrompt);
@@ -36,7 +35,7 @@ function extractPromptsIntelligently(content) {
     if (codeBlocks) {
       for (const block of codeBlocks) {
         const codeContent = block.replace(/```/g, '').trim();
-        const normalizedPrompt = normalizePrompt(codeContent);
+        const normalizedPrompt = normalizePromptSimple(codeContent);
         // 过滤掉明显不是prompt的内容
         if (codeContent.length > 20 && 
             !codeContent.includes('http') && 
@@ -61,7 +60,7 @@ function extractPromptsIntelligently(content) {
       const codeMatch = section.match(/```([^`]+?)```/s);
       if (codeMatch) {
         const promptText = codeMatch[1].trim();
-        const normalizedPrompt = normalizePrompt(promptText);
+        const normalizedPrompt = normalizePromptSimple(promptText);
         if (promptText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
           prompts.push(promptText);
           seenPrompts.add(normalizedPrompt);
@@ -69,7 +68,7 @@ function extractPromptsIntelligently(content) {
       } else {
         // 如果没有代码块，提取前几行文本
         const lines = section.split('\n').slice(0, 5).join('\n').trim();
-        const normalizedPrompt = normalizePrompt(lines);
+        const normalizedPrompt = normalizePromptSimple(lines);
         if (lines.length > 20 && !seenPrompts.has(normalizedPrompt)) {
           prompts.push(lines);
           seenPrompts.add(normalizedPrompt);
@@ -90,7 +89,7 @@ function extractPromptsIntelligently(content) {
            paragraph.includes('make') ||
            paragraph.includes('convert'))) {
         const cleanText = paragraph.replace(/```/g, '').trim();
-        const normalizedPrompt = normalizePrompt(cleanText);
+        const normalizedPrompt = normalizePromptSimple(cleanText);
         if (cleanText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
           prompts.push(cleanText);
           seenPrompts.add(normalizedPrompt);

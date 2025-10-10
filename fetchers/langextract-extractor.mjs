@@ -2,6 +2,7 @@
 // LangExtract集成提取器
 
 import { categorizeCase } from './case-categorizer.mjs';
+import { normalizePrompt, isTruncatedPrompt } from './text-utils.mjs';
 
 
 // LangExtract配置
@@ -184,18 +185,13 @@ class LangExtractExtractor {
       }
       
       // 增强去重：处理完全重复和截断重复
+      const TRUNCATION_LENGTH_THRESHOLD = 10; // 截断检测的长度差异阈值
       const uniquePrompts = [];
       const normalizedTexts = [];
       
       for (const prompt of prompts) {
-        // 标准化文本：移除代码块标记、转小写、去空格
-        const normalizedText = prompt.text
-          .replace(/^```[\s\S]*?\n/, '') // 移除开头的代码块标记
-          .replace(/\n```$/, '') // 移除结尾的代码块标记
-          .replace(/^`+|`+$/g, '') // 移除首尾的反引号
-          .replace(/\s+/g, ' ') // 标准化空格
-          .toLowerCase()
-          .trim();
+        // 使用共享的文本标准化函数
+        const normalizedText = normalizePrompt(prompt.text);
         
         // 检查是否与已有的文本重复或截断重复
         let isDuplicate = false;
@@ -209,18 +205,16 @@ class LangExtractExtractor {
             break;
           }
           
-          // 截断重复：一个是另一个的前缀（长度差异超过10个字符才考虑）
-          if (Math.abs(normalizedText.length - existingText.length) > 10) {
-            if (normalizedText.startsWith(existingText) || existingText.startsWith(normalizedText)) {
-              // 保留较长的版本
-              if (normalizedText.length > existingText.length) {
-                // 当前文本更长，替换已有的
-                normalizedTexts[i] = normalizedText;
-                uniquePrompts[i] = prompt;
-              }
-              isDuplicate = true;
-              break;
+          // 截断重复：使用共享的截断检测函数
+          if (isTruncatedPrompt(normalizedText, existingText, TRUNCATION_LENGTH_THRESHOLD)) {
+            // 保留较长的版本
+            if (normalizedText.length > existingText.length) {
+              // 当前文本更长，替换已有的
+              normalizedTexts[i] = normalizedText;
+              uniquePrompts[i] = prompt;
             }
+            isDuplicate = true;
+            break;
           }
         }
         

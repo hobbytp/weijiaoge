@@ -33,7 +33,8 @@ function isTruncatedPrompt(prompt1, prompt2) {
 
 // 检查是否为中英文对照
 function isBilingualPair(prompt1, prompt2) {
-  // 简单检查：包含中文字符和英文字符，且用｜或|分隔
+  // Detects bilingual prompt pairs by checking if either prompt contains both Chinese and English characters separated by ｜ or |,
+  // or if both prompts are exclusively Chinese or exclusively English.
   const hasChinese1 = /[\u4e00-\u9fff]/.test(prompt1);
   const hasEnglish1 = /[a-zA-Z]/.test(prompt1);
   const hasChinese2 = /[\u4e00-\u9fff]/.test(prompt2);

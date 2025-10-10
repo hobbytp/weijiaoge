@@ -85,7 +85,8 @@ function getSimplifiedSourceText(url) {
         // 提取路径中的关键词，通常是文章标题的一部分
         const articlePath = segments[segments.length - 1];
         // 提取前几个有意义的词汇
-        const keywords = articlePath.split('-').slice(0, 3).join('-');
+        const MAX_KEYWORDS_COUNT = 3; // 最大关键词数量
+        const keywords = articlePath.split('-').slice(0, MAX_KEYWORDS_COUNT).join('-');
         return keywords.length > 20 ? keywords.substring(0, 20) + '...' : keywords;
       }
       return 'Medium';
