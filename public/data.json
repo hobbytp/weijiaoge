@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2025-10-10T05:12:37.601Z",
-  "total": 167,
+  "generatedAt": "2025-10-10T05:19:26.252Z",
+  "total": 171,
   "items": [
     {
       "id": "repo:793375104",
@@ -1615,6 +1615,36 @@
       ]
     },
     {
+      "id": "issue:3493633634",
+      "title": "[每日信息流] 2025-10-08",
+      "url": "https://github.com/BruceFeIix/picker/issues/2000",
+      "description": "# 每日安全资讯（2025-10-08）\n\n- CXSECURITY Database RSS Feed - CXSecurity.com\n  - [ ] [SugarCRM unauthenticated Remote Code Execution (RCE)](https://cxsecurity.com/issue/WLB-2025100006)\n  - [ ] [GaatiTrack-1.0 Copyright©2025-Multiple-SQLi - Metasploit module](https://cxsecurity.com/issue/WLB-2025100005)\n- SecWiki News\n  - [ ] [SecWiki News 2025-10-07 Review](http://www.sec-wiki.com/?2025-10-07)\n- Tenable Blog\n  - [ ] [Don’t Let Your Cloud Security Catch a Bad Case of Permission Creep](https://www.tenabl",
+      "source": "github",
+      "type": "issue",
+      "author": "BruceFeIix",
+      "stars": 0,
+      "createdAt": "2025-10-08T02:55:14Z",
+      "updatedAt": "2025-10-08T02:55:14Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3220448466",
+      "title": "chore(main): release 1.5.2",
+      "url": "https://github.com/chaseingai/mcp-client-chatbot/pull/2",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n## [1.5.2](https://github.com/chaseingai/mcp-client-chatbot/compare/v1.24.0...v1.5.2) (2025-10-08)\n\n\n### Features\n\n* Add Azure OpenAI provider support with comprehensive testing ([#189](https://github.com/chaseingai/mcp-client-chatbot/issues/189)) ([edad917](https://github.com/chaseingai/mcp-client-chatbot/commit/edad91707d49fcb5d3bd244a77fbaae86527742a))\n* add bot name preference to user settings ([f4aa588](https://github.com/chaseingai/mcp-c",
+      "source": "github",
+      "type": "pull",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2025-07-10T19:31:25Z",
+      "updatedAt": "2025-10-08T01:20:57Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
       "id": "issue:3492328343",
       "title": "Display the CREDIT, SINGLE, CAMPAIGN & TUTORIAL icons",
       "url": "https://github.com/vcmi-mods/greek-translation/pull/3",
@@ -1625,6 +1655,36 @@
       "stars": 0,
       "createdAt": "2025-10-07T17:16:03Z",
       "updatedAt": "2025-10-07T17:16:43Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3489983626",
+      "title": "🎃 [Hacktoberfest] Collect Project Ideas for Demo Apps",
+      "url": "https://github.com/pollinations/pollinations/issues/4393",
+      "description": "# 🎃 Hacktoberfest 2025: Project Ideas Collection\n\n## 🎯 Purpose\nThis is a **meta issue** to collect and organize project ideas for Hacktoberfest demo apps. Instead of creating individual issues for each idea, we'll maintain a living document of project ideas that contributors can pick from.\n\n## 📋 What We're Looking For\n\n**Frontend-only apps** that use Pollinations APIs (text/image generation):\n- Pure HTML/CSS/JS apps (single file)\n- React + Vite apps (for complex UIs)\n- **Discord bots & social",
+      "source": "github",
+      "type": "issue",
+      "author": "voodoohop",
+      "stars": 0,
+      "createdAt": "2025-10-07T05:14:12Z",
+      "updatedAt": "2025-10-07T14:38:33Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3349853204",
+      "title": "chore(main): release 1.5.2",
+      "url": "https://github.com/jhedev96/better-chatbot/pull/1",
+      "description": ":robot: I have created a release *beep* *boop*\n---\n\n\n## [1.5.2](https://github.com/jhedev96/better-chatbot/compare/v1.24.0...v1.5.2) (2025-10-07)\n\n\n### Features\n\n* Add Azure OpenAI provider support with comprehensive testing ([#189](https://github.com/jhedev96/better-chatbot/issues/189)) ([edad917](https://github.com/jhedev96/better-chatbot/commit/edad91707d49fcb5d3bd244a77fbaae86527742a))\n* add bot name preference to user settings ([f4aa588](https://github.com/jhedev96/better-chatbot/commit/f4a",
+      "source": "github",
+      "type": "pull",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-24T19:56:34Z",
+      "updatedAt": "2025-10-07T14:15:34Z",
       "tags": [
         "pull"
       ]
