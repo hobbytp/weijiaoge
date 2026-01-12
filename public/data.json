@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-01-11T02:54:06.037Z",
-  "total": 2439,
+  "generatedAt": "2026-01-12T02:52:13.489Z",
+  "total": 2449,
   "items": [
     {
       "id": "repo:793375104",
@@ -71,9 +71,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 19748,
+      "stars": 19792,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2026-01-11T02:34:37Z",
+      "updatedAt": "2026-01-12T02:13:45Z",
       "tags": [
         "repo"
       ]
@@ -86,9 +86,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 19748,
+      "stars": 19792,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2026-01-11T02:34:37Z",
+      "updatedAt": "2026-01-12T02:13:45Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -268,9 +268,9 @@
       "source": "github",
       "type": "repo",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 3436,
+      "stars": 3445,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2026-01-10T08:20:49Z",
+      "updatedAt": "2026-01-12T02:26:28Z",
       "tags": [
         "repo"
       ]
@@ -283,9 +283,9 @@
       "source": "github",
       "type": "readme",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 3436,
+      "stars": 3445,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2026-01-10T08:20:49Z",
+      "updatedAt": "2026-01-12T02:26:28Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -392,7 +392,7 @@
       "author": "nbonamy",
       "stars": 1820,
       "createdAt": "2024-04-25T03:55:22Z",
-      "updatedAt": "2026-01-11T02:53:20Z",
+      "updatedAt": "2026-01-12T02:49:46Z",
       "tags": [
         "repo"
       ]
@@ -563,6 +563,21 @@
       ]
     },
     {
+      "id": "repo:10111265",
+      "title": "xvoland/Extract",
+      "url": "https://github.com/xvoland/Extract",
+      "description": "Bash/Zsh function for extract: .zip, .rar, .bz2, .gz, .zlib, .tar, .tbz2, .tgz, .Z, .7z, .xz, .exe, .tar.bz2, .tar.gz, .tar.xz, etc.",
+      "source": "github",
+      "type": "repo",
+      "author": "xvoland",
+      "stars": 501,
+      "createdAt": "2013-05-16T21:48:29Z",
+      "updatedAt": "2026-01-12T01:21:12Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:965636860",
       "title": "cgoinglove/better-chatbot",
       "url": "https://github.com/cgoinglove/better-chatbot",
@@ -675,24 +690,9 @@
       "source": "github",
       "type": "repo",
       "author": "YouMind-OpenLab",
-      "stars": 298,
+      "stars": 299,
       "createdAt": "2025-11-27T11:07:31Z",
-      "updatedAt": "2026-01-11T01:41:53Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:10111265",
-      "title": "xvoland/Extract",
-      "url": "https://github.com/xvoland/Extract",
-      "description": "Bash/Zsh function for extract: .zip, .rar, .bz2, .gz, .zlib, .tar, .tbz2, .tgz, .Z, .7z, .xz, .exe, .tar.bz2, .tar.gz, .tar.xz, etc.",
-      "source": "github",
-      "type": "repo",
-      "author": "xvoland",
-      "stars": 496,
-      "createdAt": "2013-05-16T21:48:29Z",
-      "updatedAt": "2025-12-19T01:15:24Z",
+      "updatedAt": "2026-01-12T01:28:33Z",
       "tags": [
         "repo"
       ]
@@ -872,7 +872,22 @@
       "author": "wjf0214",
       "stars": 77,
       "createdAt": "2022-08-01T06:08:15Z",
-      "updatedAt": "2026-01-11T02:05:43Z",
+      "updatedAt": "2026-01-12T02:02:25Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:572341295",
+      "title": "jxzzlfh/awesome-stars",
+      "url": "https://github.com/jxzzlfh/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "jxzzlfh",
+      "stars": 69,
+      "createdAt": "2022-11-30T03:56:35Z",
+      "updatedAt": "2026-01-12T02:46:41Z",
       "tags": [
         "repo"
       ]
@@ -925,21 +940,6 @@
       ]
     },
     {
-      "id": "repo:572341295",
-      "title": "jxzzlfh/awesome-stars",
-      "url": "https://github.com/jxzzlfh/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "jxzzlfh",
-      "stars": 69,
-      "createdAt": "2022-11-30T03:56:35Z",
-      "updatedAt": "2026-01-10T02:35:31Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1048781396",
       "title": "songtianlun/awesome-prompts",
       "url": "https://github.com/songtianlun/awesome-prompts",
@@ -950,6 +950,21 @@
       "stars": 369,
       "createdAt": "2025-09-02T02:43:41Z",
       "updatedAt": "2025-12-06T02:25:56Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:410833405",
+      "title": "yks0000/starred-repo-toc",
+      "url": "https://github.com/yks0000/starred-repo-toc",
+      "description": "Generates Markdown table for all Starred Repositories by a GitHub user.",
+      "source": "github",
+      "type": "repo",
+      "author": "yks0000",
+      "stars": 44,
+      "createdAt": "2021-09-27T10:08:02Z",
+      "updatedAt": "2026-01-12T01:28:57Z",
       "tags": [
         "repo"
       ]
@@ -985,16 +1000,16 @@
       ]
     },
     {
-      "id": "repo:410833405",
-      "title": "yks0000/starred-repo-toc",
-      "url": "https://github.com/yks0000/starred-repo-toc",
-      "description": "Generates Markdown table for all Starred Repositories by a GitHub user.",
+      "id": "repo:760182894",
+      "title": "chanmuzi/NLP-Paper-News",
+      "url": "https://github.com/chanmuzi/NLP-Paper-News",
+      "description": "The list of NLP paper and news I've checked. There might be short description of them (abstract) in Korean.",
       "source": "github",
       "type": "repo",
-      "author": "yks0000",
-      "stars": 44,
-      "createdAt": "2021-09-27T10:08:02Z",
-      "updatedAt": "2026-01-11T01:42:07Z",
+      "author": "chanmuzi",
+      "stars": 34,
+      "createdAt": "2024-02-19T23:55:22Z",
+      "updatedAt": "2026-01-12T01:34:23Z",
       "tags": [
         "repo"
       ]
@@ -1015,6 +1030,21 @@
       ]
     },
     {
+      "id": "repo:64724851",
+      "title": "wangjiezhe/awesome-stars",
+      "url": "https://github.com/wangjiezhe/awesome-stars",
+      "description": "Awesome List of my own!",
+      "source": "github",
+      "type": "repo",
+      "author": "wangjiezhe",
+      "stars": 33,
+      "createdAt": "2016-08-02T04:44:32Z",
+      "updatedAt": "2026-01-12T02:44:38Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:628172384",
       "title": "johe123qwe/github-trending",
       "url": "https://github.com/johe123qwe/github-trending",
@@ -1025,21 +1055,6 @@
       "stars": 46,
       "createdAt": "2023-04-15T05:54:54Z",
       "updatedAt": "2026-01-10T01:57:16Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:64724851",
-      "title": "wangjiezhe/awesome-stars",
-      "url": "https://github.com/wangjiezhe/awesome-stars",
-      "description": "Awesome List of my own!",
-      "source": "github",
-      "type": "repo",
-      "author": "wangjiezhe",
-      "stars": 33,
-      "createdAt": "2016-08-02T04:44:32Z",
-      "updatedAt": "2026-01-11T02:49:05Z",
       "tags": [
         "repo"
       ]
@@ -1060,16 +1075,16 @@
       ]
     },
     {
-      "id": "repo:760182894",
-      "title": "chanmuzi/NLP-Paper-News",
-      "url": "https://github.com/chanmuzi/NLP-Paper-News",
-      "description": "The list of NLP paper and news I've checked. There might be short description of them (abstract) in Korean.",
+      "id": "repo:1126663737",
+      "title": "alfredolopez80/multi-agent-ralph-loop",
+      "url": "https://github.com/alfredolopez80/multi-agent-ralph-loop",
+      "description": "Multi-Agent Orchestration System with Ultrathink Doctrine - Coordinates Claude, Codex, Gemini, MiniMax with 8-step workflow, 95% token savings, quality gates, and iterative refinement loops",
       "source": "github",
       "type": "repo",
-      "author": "chanmuzi",
-      "stars": 33,
-      "createdAt": "2024-02-19T23:55:22Z",
-      "updatedAt": "2026-01-09T02:33:12Z",
+      "author": "alfredolopez80",
+      "stars": 19,
+      "createdAt": "2026-01-02T10:59:29Z",
+      "updatedAt": "2026-01-12T01:24:29Z",
       "tags": [
         "repo"
       ]
@@ -1084,7 +1099,187 @@
       "author": "zengzzzzz",
       "stars": 13,
       "createdAt": "2023-10-09T13:00:57Z",
-      "updatedAt": "2026-01-11T01:30:01Z",
+      "updatedAt": "2026-01-12T01:29:37Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1121414919",
+      "title": "Chat2AnyLLM/awesome-claude-plugins",
+      "url": "https://github.com/Chat2AnyLLM/awesome-claude-plugins",
+      "description": "A curated list of awesome claude marketplaces and plugins",
+      "source": "github",
+      "type": "repo",
+      "author": "Chat2AnyLLM",
+      "stars": 8,
+      "createdAt": "2025-12-23T00:47:15Z",
+      "updatedAt": "2026-01-12T02:21:09Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1071686941",
+      "title": "programmify/builder-lab",
+      "url": "https://github.com/programmify/builder-lab",
+      "description": "Discover, learn, and use the best AI, open-source, and free tools to build and launch projects fast.",
+      "source": "github",
+      "type": "repo",
+      "author": "programmify",
+      "stars": 8,
+      "createdAt": "2025-10-07T17:16:18Z",
+      "updatedAt": "2026-01-12T02:09:20Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1111075380",
+      "title": "fionalee1412/bestnanobananaprompt-github",
+      "url": "https://github.com/fionalee1412/bestnanobananaprompt-github",
+      "description": "nano banana prompts, updates everyday",
+      "source": "github",
+      "type": "repo",
+      "author": "fionalee1412",
+      "stars": 8,
+      "createdAt": "2025-12-06T08:07:55Z",
+      "updatedAt": "2026-01-12T02:03:10Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:489605306",
+      "title": "dick318/awesome-stars",
+      "url": "https://github.com/dick318/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "dick318",
+      "stars": 7,
+      "createdAt": "2022-05-07T07:40:49Z",
+      "updatedAt": "2026-01-12T01:06:52Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1066868826",
+      "title": "Bokichoy/BananaFlow-ZHO",
+      "url": "https://github.com/Bokichoy/BananaFlow-ZHO",
+      "description": "🍌 Streamline your workflow with BananaFlow-ZHO, an open-source platform combining NanoBanana and Veo for seamless creative collaboration.",
+      "source": "github",
+      "type": "repo",
+      "author": "Bokichoy",
+      "stars": 5,
+      "createdAt": "2025-09-30T04:29:54Z",
+      "updatedAt": "2026-01-12T02:45:59Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065248140",
+      "title": "kingofdeath420/Nano-Banana-images-Editor-API",
+      "url": "https://github.com/kingofdeath420/Nano-Banana-images-Editor-API",
+      "description": "🍌 Create stunning images effortlessly with the Nano Banana Images Editor API—combining powerful AI editing tools at a fraction of the cost.",
+      "source": "github",
+      "type": "repo",
+      "author": "kingofdeath420",
+      "stars": 4,
+      "createdAt": "2025-09-27T10:42:31Z",
+      "updatedAt": "2026-01-12T02:44:55Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:712383471",
+      "title": "xvoland/shuffle-files",
+      "url": "https://github.com/xvoland/shuffle-files",
+      "description": "This is a CLI tool which shuffles the files in the directory, their content, but without changing the file names",
+      "source": "github",
+      "type": "repo",
+      "author": "xvoland",
+      "stars": 3,
+      "createdAt": "2023-10-31T11:12:34Z",
+      "updatedAt": "2026-01-12T01:57:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:773408798",
+      "title": "maxzhang666/Stars",
+      "url": "https://github.com/maxzhang666/Stars",
+      "description": "我的Start列表，自动生成",
+      "source": "github",
+      "type": "repo",
+      "author": "maxzhang666",
+      "stars": 3,
+      "createdAt": "2024-03-17T15:31:07Z",
+      "updatedAt": "2026-01-12T01:26:46Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065339804",
+      "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
+      "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
+      "description": "📝 Create and run your AI Studio app effortlessly with Nano-Banana-Editor. Easily manage your dependencies and deploy locally for smooth development.",
+      "source": "github",
+      "type": "repo",
+      "author": "ali-ashraf-mohammed",
+      "stars": 2,
+      "createdAt": "2025-09-27T14:24:36Z",
+      "updatedAt": "2026-01-12T02:45:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065325025",
+      "title": "Davivimix96/nano-banana-infinimap",
+      "url": "https://github.com/Davivimix96/nano-banana-infinimap",
+      "description": "🗺️ Generate seamless, neighbor-aware infinite maps with this experimental AI tool, powered by the Gemini Nano Banana model for efficient large-scale mapping.",
+      "source": "github",
+      "type": "repo",
+      "author": "Davivimix96",
+      "stars": 2,
+      "createdAt": "2025-09-27T13:51:31Z",
+      "updatedAt": "2026-01-12T02:44:59Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1049892930",
+      "title": "etranHOLI/NanoBananaEditor",
+      "url": "https://github.com/etranHOLI/NanoBananaEditor",
+      "description": "🍌 Generate stunning images and edit them conversationally with the powerful NanoBananaEditor, built on React and TypeScript using AI technology.",
+      "source": "github",
+      "type": "repo",
+      "author": "etranHOLI",
+      "stars": 2,
+      "createdAt": "2025-09-03T16:41:16Z",
+      "updatedAt": "2026-01-12T02:40:04Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:590328351",
+      "title": "stenalpjolly/awesome-stars",
+      "url": "https://github.com/stenalpjolly/awesome-stars",
+      "description": "List of repo from my star list",
+      "source": "github",
+      "type": "repo",
+      "author": "stenalpjolly",
+      "stars": 2,
+      "createdAt": "2023-01-18T06:40:40Z",
+      "updatedAt": "2026-01-12T02:38:18Z",
       "tags": [
         "repo"
       ]
@@ -1105,33 +1300,663 @@
       ]
     },
     {
-      "id": "repo:1121414919",
-      "title": "Chat2AnyLLM/awesome-claude-plugins",
-      "url": "https://github.com/Chat2AnyLLM/awesome-claude-plugins",
-      "description": "A curated list of awesome claude marketplaces and plugins",
+      "id": "repo:1065127302",
+      "title": "MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
+      "url": "https://github.com/MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
+      "description": "🎨 Create powerful image annotations with Enhancor, a modular React-based system for AI-driven editing and professional-quality tools.",
       "source": "github",
       "type": "repo",
-      "author": "Chat2AnyLLM",
-      "stars": 8,
-      "createdAt": "2025-12-23T00:47:15Z",
-      "updatedAt": "2026-01-11T02:25:45Z",
+      "author": "MrBeastIsAmazing23",
+      "stars": 1,
+      "createdAt": "2025-09-27T05:38:42Z",
+      "updatedAt": "2026-01-12T02:44:43Z",
       "tags": [
         "repo"
       ]
     },
     {
-      "id": "repo:1111075380",
-      "title": "fionalee1412/bestnanobananaprompt-github",
-      "url": "https://github.com/fionalee1412/bestnanobananaprompt-github",
-      "description": "nano banana prompts, updates everyday",
+      "id": "repo:818050386",
+      "title": "TrumanDu/trumandu-stars",
+      "url": "https://github.com/TrumanDu/trumandu-stars",
+      "description": "",
       "source": "github",
       "type": "repo",
-      "author": "fionalee1412",
-      "stars": 8,
-      "createdAt": "2025-12-06T08:07:55Z",
-      "updatedAt": "2026-01-11T02:06:13Z",
+      "author": "TrumanDu",
+      "stars": 1,
+      "createdAt": "2024-06-21T02:03:23Z",
+      "updatedAt": "2026-01-12T02:41:15Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "repo:666221552",
+      "title": "biantris/my-awesome-stars",
+      "url": "https://github.com/biantris/my-awesome-stars",
+      "description": "list of my github stars",
+      "source": "github",
+      "type": "repo",
+      "author": "biantris",
+      "stars": 1,
+      "createdAt": "2023-07-14T02:10:22Z",
+      "updatedAt": "2026-01-12T02:40:30Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:859739804",
+      "title": "sankeyangshu/awesome-stars",
+      "url": "https://github.com/sankeyangshu/awesome-stars",
+      "description": "creating my Awesome List used GitHub stars!",
+      "source": "github",
+      "type": "repo",
+      "author": "sankeyangshu",
+      "stars": 1,
+      "createdAt": "2024-09-19T07:43:14Z",
+      "updatedAt": "2026-01-12T02:39:25Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1128998415",
+      "title": "jneaimi/offers",
+      "url": "https://github.com/jneaimi/offers",
+      "description": "Executive AI Strategy marketing materials - Teaser slides and image generation for UAE C-level AI training program",
+      "source": "github",
+      "type": "repo",
+      "author": "jneaimi",
+      "stars": 1,
+      "createdAt": "2026-01-06T13:10:32Z",
+      "updatedAt": "2026-01-12T02:25:08Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:372090651",
+      "title": "xvoland/gulp-xv-webp-html",
+      "url": "https://github.com/xvoland/gulp-xv-webp-html",
+      "description": "GULP extension for support tag <picture> WEBP images and replaced original image tag in HTML in other words: replace <img> to <picture> for supports webp",
+      "source": "github",
+      "type": "repo",
+      "author": "xvoland",
+      "stars": 1,
+      "createdAt": "2021-05-30T00:03:35Z",
+      "updatedAt": "2026-01-12T02:18:38Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3801197497",
+      "title": "Rename skill folder to ai-content-pipeline",
+      "url": "https://github.com/donghaozhang/video-agent-claude-skill/pull/2",
+      "description": "## Summary\n- Renamed `.claude/skills/aicontentpipeline` to `.claude/skills/ai-content-pipeline`\n- Follows Claude Code naming conventions (folder name should match skill name)\n- Aligns with CLI command naming (`ai-content-pipeline`, `aicp`)\n\n## Test plan\n- [x] Verify folder renamed correctly\n- [x] Verify Skill.md and REFERENCE.md files intact\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n## Summary by C",
+      "source": "github",
+      "type": "pull",
+      "author": "donghaozhang",
+      "stars": 0,
+      "createdAt": "2026-01-11T12:29:43Z",
+      "updatedAt": "2026-01-12T02:52:08Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1132479283",
+      "title": "rahulgarg123/nano-banana-art-generator",
+      "url": "https://github.com/rahulgarg123/nano-banana-art-generator",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "rahulgarg123",
+      "stars": 0,
+      "createdAt": "2026-01-12T02:36:26Z",
+      "updatedAt": "2026-01-12T02:50:22Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:676299776",
+      "title": "KABBOUCHI/starred",
+      "url": "https://github.com/KABBOUCHI/starred",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "KABBOUCHI",
+      "stars": 0,
+      "createdAt": "2023-08-08T22:29:34Z",
+      "updatedAt": "2026-01-12T02:46:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065594082",
+      "title": "grayking1234/Nano-Banana-Supermarket",
+      "url": "https://github.com/grayking1234/Nano-Banana-Supermarket",
+      "description": "🍌 Generate images effortlessly with Nano-Banana-Supermarket using simple API configurations and Node.js for a seamless experience.",
+      "source": "github",
+      "type": "repo",
+      "author": "grayking1234",
+      "stars": 0,
+      "createdAt": "2025-09-28T03:22:14Z",
+      "updatedAt": "2026-01-12T02:45:25Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3802566477",
+      "title": "Add 4-panel manga generation feature",
+      "url": "https://github.com/ckazu/llm-news-curator/pull/12",
+      "description": "## Summary\n- Gemini Nano Banana を使用した4コマ漫画生成機能を追加\n- ニュースまとめから自動でストーリーを生成し、画像化\n- 画像生成用に別リージョンを設定可能（モデルの利用可能リージョンが異なるため）\n\n## Changes\n- `src/image_generator.py`: 新規作成 - 4コマ漫画生成クラス\n- `src/config.py`: 画像生成関連の設定を追加\n- `src/main.py`: 画像生成フローを統合\n- `src/slack_poster.py`: 画像アップロード機能を追加\n- `.env.example`: 全環境変数の設定例を追加\n\n## New Configuration\n| 環境変数 | 説明 | デフォルト |\n|---------|------|-----------|\n| `GENERATE_MANGA` | 4コマ漫画生成の有効化 | `false` |\n| `IMAGE_MODEL_NAME` | 画像生成モデル | `gemini-2.0-flash-preview-image-generati",
+      "source": "github",
+      "type": "pull",
+      "author": "ckazu",
+      "stars": 0,
+      "createdAt": "2026-01-12T02:44:21Z",
+      "updatedAt": "2026-01-12T02:45:17Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:586316103",
+      "title": "yuceltoluyag/awesome",
+      "url": "https://github.com/yuceltoluyag/awesome",
+      "description": "my awesome stars",
+      "source": "github",
+      "type": "repo",
+      "author": "yuceltoluyag",
+      "stars": 0,
+      "createdAt": "2023-01-07T17:48:46Z",
+      "updatedAt": "2026-01-12T02:41:40Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1118754381",
+      "title": "dontlove14/modellink-api",
+      "url": "https://github.com/dontlove14/modellink-api",
+      "description": "ModelLink Dify 专用 模型调用插件",
+      "source": "github",
+      "type": "repo",
+      "author": "dontlove14",
+      "stars": 0,
+      "createdAt": "2025-12-18T08:25:56Z",
+      "updatedAt": "2026-01-12T02:40:26Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:493895015",
+      "title": "ryanxili/my-awesome-stars",
+      "url": "https://github.com/ryanxili/my-awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "ryanxili",
+      "stars": 0,
+      "createdAt": "2022-05-19T02:36:20Z",
+      "updatedAt": "2026-01-12T02:40:19Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:822930235",
+      "title": "cursorkey/my-starred",
+      "url": "https://github.com/cursorkey/my-starred",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "cursorkey",
+      "stars": 0,
+      "createdAt": "2024-07-02T05:39:26Z",
+      "updatedAt": "2026-01-12T02:38:57Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:725215171",
+      "title": "yishangzhang/awesome-stars",
+      "url": "https://github.com/yishangzhang/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "yishangzhang",
+      "stars": 0,
+      "createdAt": "2023-11-29T17:14:33Z",
+      "updatedAt": "2026-01-12T02:38:51Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1131089906",
+      "title": "jatwell93/my-stars",
+      "url": "https://github.com/jatwell93/my-stars",
+      "description": "Testing maguowei/starred ",
+      "source": "github",
+      "type": "repo",
+      "author": "jatwell93",
+      "stars": 0,
+      "createdAt": "2026-01-09T13:09:56Z",
+      "updatedAt": "2026-01-12T02:38:37Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1127462236",
+      "title": "1vishen/my-github-Stars",
+      "url": "https://github.com/1vishen/my-github-Stars",
+      "description": "Personal list of all my github starred repos. ",
+      "source": "github",
+      "type": "repo",
+      "author": "1vishen",
+      "stars": 0,
+      "createdAt": "2026-01-03T23:46:15Z",
+      "updatedAt": "2026-01-12T02:37:51Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:935820989",
+      "title": "AJayBBB/stars",
+      "url": "https://github.com/AJayBBB/stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "AJayBBB",
+      "stars": 0,
+      "createdAt": "2025-02-20T04:28:45Z",
+      "updatedAt": "2026-01-12T02:37:05Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1114974425",
+      "title": "frconor-ebook/frcmed-poster",
+      "url": "https://github.com/frconor-ebook/frcmed-poster",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "frconor-ebook",
+      "stars": 0,
+      "createdAt": "2025-12-12T06:49:37Z",
+      "updatedAt": "2026-01-12T02:34:44Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3704386053",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
+      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/38",
+      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/personalized-shopping directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [spacy](https://github.com/explosion/spaCy) | `3.8.8` | `3.8.11` |\n| [pytest](https://github.com/pytest-dev/pytes",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:49Z",
+      "updatedAt": "2026-01-12T02:33:41Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704384176",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/ashishraghav/-adk-samples/pull/34",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.51.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.5` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` | `1.",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:01Z",
+      "updatedAt": "2026-01-12T02:33:18Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704384021",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/33",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.51.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.5` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` | `1.",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:56Z",
+      "updatedAt": "2026-01-12T02:33:08Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704384797",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/ashishraghav/-adk-samples/pull/36",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/academic-research directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:11Z",
+      "updatedAt": "2026-01-12T02:32:40Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704385186",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
+      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/36",
+      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/personalized-shopping directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [spacy](https://github.com/explosion/spaCy) | `3.8.8` | `3.8.11` |\n| [pytest](https://github.com/pytest-dev/pytes",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:23Z",
+      "updatedAt": "2026-01-12T02:32:39Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704385207",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
+      "url": "https://github.com/ashishraghav/-adk-samples/pull/37",
+      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/travel-concierge directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:24Z",
+      "updatedAt": "2026-01-12T02:32:37Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704382706",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/ashishraghav/-adk-samples/pull/31",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/marketing-agency directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:24Z",
+      "updatedAt": "2026-01-12T02:32:36Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704383759",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/30",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/marketing-agency directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:48Z",
+      "updatedAt": "2026-01-12T02:32:33Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704385628",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
+      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/37",
+      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/travel-concierge directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:32Z",
+      "updatedAt": "2026-01-12T02:32:33Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704385135",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/35",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/financial-advisor directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.52.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.6` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:22Z",
+      "updatedAt": "2026-01-12T02:32:30Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704383964",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/31",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/academic-research directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:54Z",
+      "updatedAt": "2026-01-12T02:32:00Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704383702",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/31",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/academic-research directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:46Z",
+      "updatedAt": "2026-01-12T02:31:59Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704383654",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
+      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/30",
+      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/travel-concierge directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:44Z",
+      "updatedAt": "2026-01-12T02:31:51Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704384695",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/ashishraghav/-adk-samples/pull/35",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/financial-advisor directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.52.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.6` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:29:08Z",
+      "updatedAt": "2026-01-12T02:31:44Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704383558",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/29",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/marketing-agency directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:28:41Z",
+      "updatedAt": "2026-01-12T02:31:38Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704377786",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/sajinnovation/adksamples/pull/39",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.40.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:26:30Z",
+      "updatedAt": "2026-01-12T02:31:14Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704377163",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/Tonybleything76/adk_samples/pull/26",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.40.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:26:17Z",
+      "updatedAt": "2026-01-12T02:30:53Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704377105",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/7sg-ai/adk-samples/pull/29",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.40.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:26:15Z",
+      "updatedAt": "2026-01-12T02:30:35Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3704377263",
+      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
+      "url": "https://github.com/rajpalgloballogic-cyber/-adk-samples/pull/29",
+      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.39.1` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
+      "source": "github",
+      "type": "pull",
+      "author": "dependabot[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-08T02:26:18Z",
+      "updatedAt": "2026-01-12T02:30:31Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1098647378",
+      "title": "vinitwadgaonkar/vis_ifeval",
+      "url": "https://github.com/vinitwadgaonkar/vis_ifeval",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "vinitwadgaonkar",
+      "stars": 0,
+      "createdAt": "2025-11-18T00:54:19Z",
+      "updatedAt": "2026-01-12T02:11:31Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:536192273",
+      "title": "ZekXtreme/starred",
+      "url": "https://github.com/ZekXtreme/starred",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "ZekXtreme",
+      "stars": 0,
+      "createdAt": "2022-09-13T15:30:57Z",
+      "updatedAt": "2026-01-12T01:51:55Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1131795456",
+      "title": "alexlopespereira/imagefront",
+      "url": "https://github.com/alexlopespereira/imagefront",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "alexlopespereira",
+      "stars": 0,
+      "createdAt": "2026-01-10T17:55:48Z",
+      "updatedAt": "2026-01-12T01:44:36Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:911523899",
+      "title": "Temoa/awesome-stars-temoa",
+      "url": "https://github.com/Temoa/awesome-stars-temoa",
+      "description": "每天凌晨自动更新",
+      "source": "github",
+      "type": "repo",
+      "author": "Temoa",
+      "stars": 0,
+      "createdAt": "2025-01-03T08:10:56Z",
+      "updatedAt": "2026-01-12T01:09:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:271788800",
+      "title": "New daily trending repos in Python",
+      "url": "https://github.com/vitalets/github-trending-repos/issues/7",
+      "description": "Subscribe to this issue and stay notified about new [daily trending repos in Python](https://github.com/trending/python?since=daily)!",
+      "source": "github",
+      "type": "issue",
+      "author": "vitalets",
+      "stars": 0,
+      "createdAt": "2017-11-07T10:54:34Z",
+      "updatedAt": "2026-01-12T00:09:02Z",
+      "tags": [
+        "issue"
       ]
     },
     {
@@ -1145,21 +1970,6 @@
       "stars": 526,
       "createdAt": "2025-03-24T22:49:13Z",
       "updatedAt": "2025-11-12T00:40:47Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:489605306",
-      "title": "dick318/awesome-stars",
-      "url": "https://github.com/dick318/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "dick318",
-      "stars": 7,
-      "createdAt": "2022-05-07T07:40:49Z",
-      "updatedAt": "2026-01-11T01:10:03Z",
       "tags": [
         "repo"
       ]
@@ -1210,108 +2020,33 @@
       ]
     },
     {
-      "id": "repo:1066868826",
-      "title": "Bokichoy/BananaFlow-ZHO",
-      "url": "https://github.com/Bokichoy/BananaFlow-ZHO",
-      "description": "🍌 Streamline your workflow with BananaFlow-ZHO, an open-source platform combining NanoBanana and Veo for seamless creative collaboration.",
+      "id": "issue:3801114819",
+      "title": "Nano Banana Pro vs Traditional Supplements",
+      "url": "https://github.com/freeweibo/s/issues/105",
+      "description": "The **Nano Banana Pro** is an advanced single-board computer (SBC) designed for makers, developers, educators, and hobbyists who want a compact but powerful computing platform. Combining affordability with high performance, the Nano Banana Pro is suitable for a wide range of applications, from home servers and media centers to robotics and IoT projects. Its small size, multiple connectivity options, and support for popular operating systems make it a versatile tool for creative and technical pro",
       "source": "github",
-      "type": "repo",
-      "author": "Bokichoy",
-      "stars": 5,
-      "createdAt": "2025-09-30T04:29:54Z",
-      "updatedAt": "2026-01-11T02:27:40Z",
+      "type": "issue",
+      "author": "it2482534-web",
+      "stars": 0,
+      "createdAt": "2026-01-11T11:12:14Z",
+      "updatedAt": "2026-01-11T11:12:14Z",
       "tags": [
-        "repo"
+        "issue"
       ]
     },
     {
-      "id": "repo:1065248140",
-      "title": "kingofdeath420/Nano-Banana-images-Editor-API",
-      "url": "https://github.com/kingofdeath420/Nano-Banana-images-Editor-API",
-      "description": "🍌 Create stunning images effortlessly with the Nano Banana Images Editor API—combining powerful AI editing tools at a fraction of the cost.",
+      "id": "issue:3801092072",
+      "title": "How to Use Nano Banana Pro Effectively",
+      "url": "https://github.com/freeweibo/s/issues/104",
+      "description": "The **Nano Banana Pro** is a compact, high-performance single-board computer (SBC) designed for hobbyists, makers, and developers. Combining versatility, affordability, and a range of interfaces, this small board provides the power needed for various projects, from DIY servers and media centers to robotics and IoT applications. The Nano Banana Pro has grown in popularity among tech enthusiasts due to its robust hardware, open-source flexibility, and active community support.\n\nThis guide explores",
       "source": "github",
-      "type": "repo",
-      "author": "kingofdeath420",
-      "stars": 4,
-      "createdAt": "2025-09-27T10:42:31Z",
-      "updatedAt": "2026-01-11T02:26:33Z",
+      "type": "issue",
+      "author": "it2482534-web",
+      "stars": 0,
+      "createdAt": "2026-01-11T10:44:40Z",
+      "updatedAt": "2026-01-11T10:44:40Z",
       "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:590328351",
-      "title": "stenalpjolly/awesome-stars",
-      "url": "https://github.com/stenalpjolly/awesome-stars",
-      "description": "List of repo from my star list",
-      "source": "github",
-      "type": "repo",
-      "author": "stenalpjolly",
-      "stars": 2,
-      "createdAt": "2023-01-18T06:40:40Z",
-      "updatedAt": "2026-01-11T02:43:22Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1065339804",
-      "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
-      "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
-      "description": "📝 Create and run your AI Studio app effortlessly with Nano-Banana-Editor. Easily manage your dependencies and deploy locally for smooth development.",
-      "source": "github",
-      "type": "repo",
-      "author": "ali-ashraf-mohammed",
-      "stars": 2,
-      "createdAt": "2025-09-27T14:24:36Z",
-      "updatedAt": "2026-01-11T02:26:39Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1049892930",
-      "title": "etranHOLI/NanoBananaEditor",
-      "url": "https://github.com/etranHOLI/NanoBananaEditor",
-      "description": "🍌 Generate stunning images and edit them conversationally with the powerful NanoBananaEditor, built on React and TypeScript using AI technology.",
-      "source": "github",
-      "type": "repo",
-      "author": "etranHOLI",
-      "stars": 2,
-      "createdAt": "2025-09-03T16:41:16Z",
-      "updatedAt": "2026-01-11T02:21:17Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:818050386",
-      "title": "TrumanDu/trumandu-stars",
-      "url": "https://github.com/TrumanDu/trumandu-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "TrumanDu",
-      "stars": 1,
-      "createdAt": "2024-06-21T02:03:23Z",
-      "updatedAt": "2026-01-11T02:45:21Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:666221552",
-      "title": "biantris/my-awesome-stars",
-      "url": "https://github.com/biantris/my-awesome-stars",
-      "description": "list of my github stars",
-      "source": "github",
-      "type": "repo",
-      "author": "biantris",
-      "stars": 1,
-      "createdAt": "2023-07-14T02:10:22Z",
-      "updatedAt": "2026-01-11T02:44:32Z",
-      "tags": [
-        "repo"
+        "issue"
       ]
     },
     {
@@ -1420,21 +2155,6 @@
       ]
     },
     {
-      "id": "repo:676299776",
-      "title": "KABBOUCHI/starred",
-      "url": "https://github.com/KABBOUCHI/starred",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "KABBOUCHI",
-      "stars": 0,
-      "createdAt": "2023-08-08T22:29:34Z",
-      "updatedAt": "2026-01-11T02:46:08Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:948330521",
       "title": "killerddd3/my-stars",
       "url": "https://github.com/killerddd3/my-stars",
@@ -1445,81 +2165,6 @@
       "stars": 0,
       "createdAt": "2025-03-14T06:20:54Z",
       "updatedAt": "2026-01-11T02:44:07Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:725215171",
-      "title": "yishangzhang/awesome-stars",
-      "url": "https://github.com/yishangzhang/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "yishangzhang",
-      "stars": 0,
-      "createdAt": "2023-11-29T17:14:33Z",
-      "updatedAt": "2026-01-11T02:43:16Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:822930235",
-      "title": "cursorkey/my-starred",
-      "url": "https://github.com/cursorkey/my-starred",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "cursorkey",
-      "stars": 0,
-      "createdAt": "2024-07-02T05:39:26Z",
-      "updatedAt": "2026-01-11T02:43:07Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1131089906",
-      "title": "jatwell93/my-stars",
-      "url": "https://github.com/jatwell93/my-stars",
-      "description": "Testing maguowei/starred ",
-      "source": "github",
-      "type": "repo",
-      "author": "jatwell93",
-      "stars": 0,
-      "createdAt": "2026-01-09T13:09:56Z",
-      "updatedAt": "2026-01-11T02:42:56Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1127462236",
-      "title": "1vishen/my-github-Stars",
-      "url": "https://github.com/1vishen/my-github-Stars",
-      "description": "Personal list of all my github starred repos. ",
-      "source": "github",
-      "type": "repo",
-      "author": "1vishen",
-      "stars": 0,
-      "createdAt": "2026-01-03T23:46:15Z",
-      "updatedAt": "2026-01-11T02:41:58Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:935820989",
-      "title": "AJayBBB/stars",
-      "url": "https://github.com/AJayBBB/stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "AJayBBB",
-      "stars": 0,
-      "createdAt": "2025-02-20T04:28:45Z",
-      "updatedAt": "2026-01-11T02:41:28Z",
       "tags": [
         "repo"
       ]
@@ -1585,21 +2230,6 @@
       ]
     },
     {
-      "id": "repo:1065594082",
-      "title": "grayking1234/Nano-Banana-Supermarket",
-      "url": "https://github.com/grayking1234/Nano-Banana-Supermarket",
-      "description": "🍌 Generate images effortlessly with Nano-Banana-Supermarket using simple API configurations and Node.js for a seamless experience.",
-      "source": "github",
-      "type": "repo",
-      "author": "grayking1234",
-      "stars": 0,
-      "createdAt": "2025-09-28T03:22:14Z",
-      "updatedAt": "2026-01-11T02:27:00Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1128262390",
       "title": "bangdoll/youtube_summary",
       "url": "https://github.com/bangdoll/youtube_summary",
@@ -1615,21 +2245,6 @@
       ]
     },
     {
-      "id": "repo:1098647378",
-      "title": "vinitwadgaonkar/vis_ifeval",
-      "url": "https://github.com/vinitwadgaonkar/vis_ifeval",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "vinitwadgaonkar",
-      "stars": 0,
-      "createdAt": "2025-11-18T00:54:19Z",
-      "updatedAt": "2026-01-11T02:21:43Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1100927840",
       "title": "nickpending/llmcli-tools",
       "url": "https://github.com/nickpending/llmcli-tools",
@@ -1640,21 +2255,6 @@
       "stars": 0,
       "createdAt": "2025-11-21T00:30:31Z",
       "updatedAt": "2026-01-11T02:11:36Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:536192273",
-      "title": "ZekXtreme/starred",
-      "url": "https://github.com/ZekXtreme/starred",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "ZekXtreme",
-      "stars": 0,
-      "createdAt": "2022-09-13T15:30:57Z",
-      "updatedAt": "2026-01-11T01:55:20Z",
       "tags": [
         "repo"
       ]
@@ -1840,21 +2440,6 @@
       ]
     },
     {
-      "id": "repo:911523899",
-      "title": "Temoa/awesome-stars-temoa",
-      "url": "https://github.com/Temoa/awesome-stars-temoa",
-      "description": "每天凌晨自动更新",
-      "source": "github",
-      "type": "repo",
-      "author": "Temoa",
-      "stars": 0,
-      "createdAt": "2025-01-03T08:10:56Z",
-      "updatedAt": "2026-01-11T01:12:02Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:2973738918",
       "title": "feat(container): update image docker.io/n8nio/n8n ( 1.85.4 → 1.123.11 )",
       "url": "https://github.com/DragonHunter274/proxmox-hetzner-ops-prod/pull/101",
@@ -1912,21 +2497,6 @@
       "updatedAt": "2026-01-11T00:26:54Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "issue:271788800",
-      "title": "New daily trending repos in Python",
-      "url": "https://github.com/vitalets/github-trending-repos/issues/7",
-      "description": "Subscribe to this issue and stay notified about new [daily trending repos in Python](https://github.com/trending/python?since=daily)!",
-      "source": "github",
-      "type": "issue",
-      "author": "vitalets",
-      "stars": 0,
-      "createdAt": "2017-11-07T10:54:34Z",
-      "updatedAt": "2026-01-11T00:08:44Z",
-      "tags": [
-        "issue"
       ]
     },
     {
@@ -2425,21 +2995,6 @@
       ]
     },
     {
-      "id": "repo:1065325025",
-      "title": "Davivimix96/nano-banana-infinimap",
-      "url": "https://github.com/Davivimix96/nano-banana-infinimap",
-      "description": "🗺️ Generate seamless, neighbor-aware infinite maps with this experimental AI tool, powered by the Gemini Nano Banana model for efficient large-scale mapping.",
-      "source": "github",
-      "type": "repo",
-      "author": "Davivimix96",
-      "stars": 2,
-      "createdAt": "2025-09-27T13:51:31Z",
-      "updatedAt": "2026-01-10T02:36:37Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1131102159",
       "title": "EricGrill/agents-skills-plugins",
       "url": "https://github.com/EricGrill/agents-skills-plugins",
@@ -2465,21 +3020,6 @@
       "stars": 1,
       "createdAt": "2026-01-09T06:44:00Z",
       "updatedAt": "2026-01-10T02:37:39Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1065127302",
-      "title": "MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
-      "url": "https://github.com/MrBeastIsAmazing23/enhancor-draw-to-edit-nano-banana",
-      "description": "🎨 Create powerful image annotations with Enhancor, a modular React-based system for AI-driven editing and professional-quality tools.",
-      "source": "github",
-      "type": "repo",
-      "author": "MrBeastIsAmazing23",
-      "stars": 1,
-      "createdAt": "2025-09-27T05:38:42Z",
-      "updatedAt": "2026-01-10T02:36:25Z",
       "tags": [
         "repo"
       ]
@@ -2585,21 +3125,6 @@
       "stars": 0,
       "createdAt": "2026-01-04T20:58:24Z",
       "updatedAt": "2026-01-10T02:38:43Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:586316103",
-      "title": "yuceltoluyag/awesome",
-      "url": "https://github.com/yuceltoluyag/awesome",
-      "description": "my awesome stars",
-      "source": "github",
-      "type": "repo",
-      "author": "yuceltoluyag",
-      "stars": 0,
-      "createdAt": "2023-01-07T17:48:46Z",
-      "updatedAt": "2026-01-10T02:30:31Z",
       "tags": [
         "repo"
       ]
@@ -4600,21 +5125,6 @@
       ]
     },
     {
-      "id": "repo:1118754381",
-      "title": "dontlove14/modellink-api",
-      "url": "https://github.com/dontlove14/modellink-api",
-      "description": "ModelLink Dify 专用 模型调用插件",
-      "source": "github",
-      "type": "repo",
-      "author": "dontlove14",
-      "stars": 0,
-      "createdAt": "2025-12-18T08:25:56Z",
-      "updatedAt": "2026-01-06T01:56:01Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:3765321891",
       "title": "New plugin submission: GPTProto Tools",
       "url": "https://github.com/langgenius/dify-plugins/pull/1812",
@@ -4807,21 +5317,6 @@
       "updatedAt": "2026-01-05T11:38:38Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:773408798",
-      "title": "maxzhang666/Stars",
-      "url": "https://github.com/maxzhang666/Stars",
-      "description": "我的Start列表，自动生成",
-      "source": "github",
-      "type": "repo",
-      "author": "maxzhang666",
-      "stars": 3,
-      "createdAt": "2024-03-17T15:31:07Z",
-      "updatedAt": "2026-01-05T01:28:56Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -5035,111 +5530,6 @@
       ]
     },
     {
-      "id": "issue:3704386053",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
-      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/38",
-      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/personalized-shopping directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [spacy](https://github.com/explosion/spaCy) | `3.8.8` | `3.8.11` |\n| [pytest](https://github.com/pytest-dev/pytes",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:49Z",
-      "updatedAt": "2026-01-05T02:45:40Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704384797",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/ashishraghav/-adk-samples/pull/36",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/academic-research directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:11Z",
-      "updatedAt": "2026-01-05T02:45:04Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704382706",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/ashishraghav/-adk-samples/pull/31",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/marketing-agency directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:24Z",
-      "updatedAt": "2026-01-05T02:44:59Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704385207",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
-      "url": "https://github.com/ashishraghav/-adk-samples/pull/37",
-      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/travel-concierge directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:24Z",
-      "updatedAt": "2026-01-05T02:44:57Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704384176",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/ashishraghav/-adk-samples/pull/34",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.51.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.5` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` | `1.",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:01Z",
-      "updatedAt": "2026-01-05T02:44:52Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704384695",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/ashishraghav/-adk-samples/pull/35",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/financial-advisor directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.52.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.6` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:08Z",
-      "updatedAt": "2026-01-05T02:44:51Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704385186",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
-      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/36",
-      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/personalized-shopping directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [spacy](https://github.com/explosion/spaCy) | `3.8.8` | `3.8.11` |\n| [pytest](https://github.com/pytest-dev/pytes",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:23Z",
-      "updatedAt": "2026-01-05T02:44:48Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3704385144",
       "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
       "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/34",
@@ -5150,96 +5540,6 @@
       "stars": 0,
       "createdAt": "2025-12-08T02:29:22Z",
       "updatedAt": "2026-01-05T02:44:48Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704383759",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/30",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/marketing-agency directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:48Z",
-      "updatedAt": "2026-01-05T02:44:47Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704384021",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/33",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.51.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.5` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` | `1.",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:56Z",
-      "updatedAt": "2026-01-05T02:44:46Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704385628",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
-      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/37",
-      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/travel-concierge directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:32Z",
-      "updatedAt": "2026-01-05T02:44:45Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704385135",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/35",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/financial-advisor directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.52.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.19.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.6` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:29:22Z",
-      "updatedAt": "2026-01-05T02:44:21Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704383964",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/codespace-labs/adk-samples-codespace/pull/31",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/academic-research directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:54Z",
-      "updatedAt": "2026-01-05T02:44:14Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704383702",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/31",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/academic-research directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2`",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:46Z",
-      "updatedAt": "2026-01-05T02:44:05Z",
       "tags": [
         "pull"
       ]
@@ -5260,21 +5560,6 @@
       ]
     },
     {
-      "id": "issue:3704383654",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 8 updates",
-      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/30",
-      "description": "Bumps the all-dependencies group with 8 updates in the /python/agents/travel-concierge directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:44Z",
-      "updatedAt": "2026-01-05T02:44:00Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3704385223",
       "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
       "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/37",
@@ -5284,21 +5569,6 @@
       "author": "dependabot[bot]",
       "stars": 0,
       "createdAt": "2025-12-08T02:29:24Z",
-      "updatedAt": "2026-01-05T02:43:53Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704383558",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/jovin-nicholas/Medi-Agent-System/pull/29",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/marketing-agency directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.49.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.12.4` | `2.12.5` |\n| [google-adk](https://github.com/google/adk-python) | `1.18.0` | `1.20.0` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.14.4` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2` ",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:28:41Z",
       "updatedAt": "2026-01-05T02:43:53Z",
       "tags": [
         "pull"
@@ -7900,21 +8170,6 @@
       ]
     },
     {
-      "id": "repo:859739804",
-      "title": "sankeyangshu/awesome-stars",
-      "url": "https://github.com/sankeyangshu/awesome-stars",
-      "description": "creating my Awesome List used GitHub stars!",
-      "source": "github",
-      "type": "repo",
-      "author": "sankeyangshu",
-      "stars": 1,
-      "createdAt": "2024-09-19T07:43:14Z",
-      "updatedAt": "2025-12-29T02:39:45Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:3766147550",
       "title": "[Image Generation] Explore Nano Banana Pro capabilities for improved visual output",
       "url": "https://github.com/elizaOS/knowledge/issues/31",
@@ -7942,66 +8197,6 @@
       "updatedAt": "2025-12-29T02:46:00Z",
       "tags": [
         "repo"
-      ]
-    },
-    {
-      "id": "repo:493895015",
-      "title": "ryanxili/my-awesome-stars",
-      "url": "https://github.com/ryanxili/my-awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "ryanxili",
-      "stars": 0,
-      "createdAt": "2022-05-19T02:36:20Z",
-      "updatedAt": "2025-12-29T02:42:13Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "issue:3704377786",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/sajinnovation/adksamples/pull/39",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.40.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:26:30Z",
-      "updatedAt": "2025-12-29T02:39:59Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704377163",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/Tonybleything76/adk_samples/pull/26",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.40.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:26:17Z",
-      "updatedAt": "2025-12-29T02:32:37Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3704377105",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/7sg-ai/adk-samples/pull/29",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.40.0` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:26:15Z",
-      "updatedAt": "2025-12-29T02:32:18Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -10255,21 +10450,6 @@
       ]
     },
     {
-      "id": "issue:3704377263",
-      "title": "chore(deps): bump the all-dependencies group across 1 directory with 7 updates",
-      "url": "https://github.com/rajpalgloballogic-cyber/-adk-samples/pull/29",
-      "description": "Bumps the all-dependencies group with 7 updates in the /python/agents/blog-writer directory:\n\n| Package | From | To |\n| --- | --- | --- |\n| [google-genai](https://github.com/googleapis/python-genai) | `1.39.1` | `1.53.0` |\n| [pydantic](https://github.com/pydantic/pydantic) | `2.11.9` | `2.12.5` |\n| [python-dotenv](https://github.com/theskumar/python-dotenv) | `1.1.1` | `1.2.1` |\n| [ruff](https://github.com/astral-sh/ruff) | `0.13.2` | `0.14.8` |\n| [mypy](https://github.com/python/mypy) | `1.18.2",
-      "source": "github",
-      "type": "pull",
-      "author": "dependabot[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-08T02:26:18Z",
-      "updatedAt": "2025-12-22T02:37:52Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "repo:1109094616",
       "title": "sammywilko/design-agent-v7",
       "url": "https://github.com/sammywilko/design-agent-v7",
@@ -11290,21 +11470,6 @@
       ]
     },
     {
-      "id": "repo:712383471",
-      "title": "xvoland/shuffle-files",
-      "url": "https://github.com/xvoland/shuffle-files",
-      "description": "This is a CLI tool which shuffles the files in the directory, their content, but without changing the file names",
-      "source": "github",
-      "type": "repo",
-      "author": "xvoland",
-      "stars": 3,
-      "createdAt": "2023-10-31T11:12:34Z",
-      "updatedAt": "2025-12-19T01:47:46Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:3746637995",
       "title": "merge develop into main",
       "url": "https://github.com/jieunmarslim/nano-banana-image-translate/pull/1",
@@ -11345,21 +11510,6 @@
       "stars": 2,
       "createdAt": "2025-12-04T12:55:11Z",
       "updatedAt": "2025-12-19T02:29:55Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:372090651",
-      "title": "xvoland/gulp-xv-webp-html",
-      "url": "https://github.com/xvoland/gulp-xv-webp-html",
-      "description": "GULP extension for support tag <picture> WEBP images and replaced original image tag in HTML in other words: replace <img> to <picture> for supports webp",
-      "source": "github",
-      "type": "repo",
-      "author": "xvoland",
-      "stars": 1,
-      "createdAt": "2021-05-30T00:03:35Z",
-      "updatedAt": "2025-12-19T02:01:59Z",
       "tags": [
         "repo"
       ]
