@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-01-21T02:47:04.096Z",
-  "total": 2652,
+  "generatedAt": "2026-01-22T02:51:25.840Z",
+  "total": 2675,
   "items": [
     {
       "id": "repo:793375104",
@@ -71,9 +71,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 20180,
+      "stars": 20210,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2026-01-21T02:44:06Z",
+      "updatedAt": "2026-01-22T02:50:35Z",
       "tags": [
         "repo"
       ]
@@ -86,9 +86,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 20180,
+      "stars": 20210,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2026-01-21T02:44:06Z",
+      "updatedAt": "2026-01-22T02:50:35Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -136,6 +136,21 @@
       "stars": 9887,
       "createdAt": "2025-02-24T08:03:24Z",
       "updatedAt": "2025-12-30T02:37:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1033778670",
+      "title": "iOfficeAI/AionUi",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "description": "Free, local, open-source Cowork for Gemini CLI, Claude Code, Codex, Opencode, Qwen Code, Goose Cli, Auggie, and more | 🌟 Star if you like it!",
+      "source": "github",
+      "type": "repo",
+      "author": "iOfficeAI",
+      "stars": 8742,
+      "createdAt": "2025-08-07T10:29:51Z",
+      "updatedAt": "2026-01-22T02:48:55Z",
       "tags": [
         "repo"
       ]
@@ -193,24 +208,9 @@
       "source": "github",
       "type": "repo",
       "author": "enricoros",
-      "stars": 6812,
+      "stars": 6823,
       "createdAt": "2023-03-19T04:50:47Z",
-      "updatedAt": "2026-01-16T01:48:17Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1033778670",
-      "title": "iOfficeAI/AionUi",
-      "url": "https://github.com/iOfficeAI/AionUi",
-      "description": "Free, local, open-source Cowork for Gemini CLI, Claude Code, Codex, Opencode, Qwen Code, Goose Cli, Auggie, and more | 🌟 Star if you like it!",
-      "source": "github",
-      "type": "repo",
-      "author": "iOfficeAI",
-      "stars": 5779,
-      "createdAt": "2025-08-07T10:29:51Z",
-      "updatedAt": "2026-01-19T02:51:45Z",
+      "updatedAt": "2026-01-22T02:38:56Z",
       "tags": [
         "repo"
       ]
@@ -283,9 +283,9 @@
       "source": "github",
       "type": "repo",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 3484,
+      "stars": 3491,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2026-01-21T01:13:10Z",
+      "updatedAt": "2026-01-22T02:13:21Z",
       "tags": [
         "repo"
       ]
@@ -298,9 +298,9 @@
       "source": "github",
       "type": "readme",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 3484,
+      "stars": 3491,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2026-01-21T01:13:10Z",
+      "updatedAt": "2026-01-22T02:13:21Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -390,9 +390,9 @@
       "source": "github",
       "type": "repo",
       "author": "nbonamy",
-      "stars": 1820,
+      "stars": 1835,
       "createdAt": "2024-04-25T03:55:22Z",
-      "updatedAt": "2026-01-12T02:49:46Z",
+      "updatedAt": "2026-01-22T02:39:16Z",
       "tags": [
         "repo"
       ]
@@ -638,6 +638,21 @@
       ]
     },
     {
+      "id": "repo:1105262876",
+      "title": "YouMind-OpenLab/awesome-gemini-3-prompts",
+      "url": "https://github.com/YouMind-OpenLab/awesome-gemini-3-prompts",
+      "description": "♊ 50+ selected Gemini prompts with images, multilingual support, and instant gallery preview. Open-source prompt engineering library",
+      "source": "github",
+      "type": "repo",
+      "author": "YouMind-OpenLab",
+      "stars": 364,
+      "createdAt": "2025-11-27T11:07:31Z",
+      "updatedAt": "2026-01-22T01:27:39Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:994476128",
       "title": "NeekChaw/awesome-prompt",
       "url": "https://github.com/NeekChaw/awesome-prompt",
@@ -648,21 +663,6 @@
       "stars": 846,
       "createdAt": "2025-06-02T01:56:03Z",
       "updatedAt": "2025-11-27T01:56:59Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1105262876",
-      "title": "YouMind-OpenLab/awesome-gemini-3-prompts",
-      "url": "https://github.com/YouMind-OpenLab/awesome-gemini-3-prompts",
-      "description": "♊ 50+ selected Gemini prompts with images, multilingual support, and instant gallery preview. Open-source prompt engineering library",
-      "source": "github",
-      "type": "repo",
-      "author": "YouMind-OpenLab",
-      "stars": 357,
-      "createdAt": "2025-11-27T11:07:31Z",
-      "updatedAt": "2026-01-21T01:27:34Z",
       "tags": [
         "repo"
       ]
@@ -848,6 +848,21 @@
       ]
     },
     {
+      "id": "repo:774695329",
+      "title": "zhangp365/ComfyUI-utils-nodes",
+      "url": "https://github.com/zhangp365/ComfyUI-utils-nodes",
+      "description": "This repo contains some useful tools, especially for improving speed.",
+      "source": "github",
+      "type": "repo",
+      "author": "zhangp365",
+      "stars": 116,
+      "createdAt": "2024-03-20T02:15:21Z",
+      "updatedAt": "2026-01-22T01:08:54Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:1126792121",
       "title": "smallnest/notex",
       "url": "https://github.com/smallnest/notex",
@@ -858,21 +873,6 @@
       "stars": 130,
       "createdAt": "2026-01-02T15:31:33Z",
       "updatedAt": "2026-01-20T02:36:23Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:774695329",
-      "title": "zhangp365/ComfyUI-utils-nodes",
-      "url": "https://github.com/zhangp365/ComfyUI-utils-nodes",
-      "description": "This repo contains some useful tools, especially for improving speed.",
-      "source": "github",
-      "type": "repo",
-      "author": "zhangp365",
-      "stars": 116,
-      "createdAt": "2024-03-20T02:15:21Z",
-      "updatedAt": "2026-01-21T02:05:34Z",
       "tags": [
         "repo"
       ]
@@ -903,6 +903,21 @@
       "stars": 388,
       "createdAt": "2025-09-16T13:07:11Z",
       "updatedAt": "2025-12-19T02:37:11Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:519984658",
+      "title": "wjf0214/awesome-stars-wjf0214",
+      "url": "https://github.com/wjf0214/awesome-stars-wjf0214",
+      "description": " ⭐我的star列表，每天凌晨自动更新 ⭐",
+      "source": "github",
+      "type": "repo",
+      "author": "wjf0214",
+      "stars": 78,
+      "createdAt": "2022-08-01T06:08:15Z",
+      "updatedAt": "2026-01-22T02:01:09Z",
       "tags": [
         "repo"
       ]
@@ -940,21 +955,6 @@
       "fullContent": "# Awesome Nano Banana 🍌\n\nAwesome curated collection of Nano Banana strategies, use cases, and tutorials from the SuperMaker AI team. Discover a complete playbook to unlock the full potential of Nano Banana, from basic setups to complex integrations.\n\nSmash that ⭐ if you like it!\n\n---\n\n## Table of Contents\n\n[🍌Nano Banana Introduction](#-nano-banana-introduction)\n\n[📖Case Directory](#case-directory)\n\n[⚡️Cases](#%EF%B8%8Fcases)\n\n[💡Usage Tips](#usage-tips)\n\n[🙏Acknowledgments](#acknowledgments)\n\n---\n\n## 🍌 Nano Banana Introduction\n\nNano Banana (Gemini 2.5 Flash Image) is Google's latest state-of-the-art image generation and editing model. This model can blend multiple images into a single image, maintain character consistency for rich storytelling, make targeted transformations using natural language, and leverage Gemini's world knowledge to generate and edit images.\n\n### 🚀 Core Features\n\n- **🔍 Multimodal Understanding**: Upload images and share text instructions with Gemini to create complex and detailed images\n- **💬 Conversational Inputs**: Use everyday language while creating images, and keep the conversation going to refine what the model generates\n- **🌍 Real-world Knowledge**: Generate images that follow real-world logic, thanks to Gemini's advanced reasoning capabilities\n- **👤 Character Consistency**: Maintain the appearance of characters or objects across multiple prompts and edits\n- **✏️ Prompt-based Image Editing**: Enable targeted transformation and precise local edits with natural language\n- **🔄 Multi-image Fusion**: Understand and merge multiple input images\n\n### ⚙️ Technical Specifications\n\n- **⚡ Speed**: Lightning-fast generation with optimized processing, delivering high-quality images in seconds\n- **🍌Latency**: Lower latency compared to other leading models\n- **🔒 Safety**: Includes SynthID digital watermark, allowing images to be identified as AI-generated or edited\n\n---\n\n## 📖Case Directory\n\n [Case 75: Tang Dynasty Style (by @歸藏)](#case-75-tang-dynasty-style-by-歸藏)\n\n [Case 74: Luxury Ad Shot (by @AmirMushich)](#case-74-luxury-ad-shot-by-amirmushich)\n\n [Case 73: Superhero Group Selfie (by @xmliisu)](#case-73-superhero-group-selfie-by-xmliisu)\n\n [Case 72: Person's Statue (by @MehdiSharifi)](#case-72-persons-statue-by-mehdisharifi)\n\n [Case 71: Large Fluffy Cloud (by @Arminn_Ai)](#case-71-large-fluffy-cloud-by-arminn_ai)\n\n [Case 70: Seated in Style (by @Arminn_Ai)](#case-70-seated-in-style-by-arminn_ai)\n\n [Case 69: Rectangular Photo Frame (by @Arminn_Ai)](#case-69-rectangular-photo-frame-by-arminn_ai)\n\n [Case 68: AI Homeless Man (by @Supermaker AI)](#case-68-ai-homeless-man-by-supermaker-ai)\n\n [Case 67: AI Ghostface Effect (by @Supermaker AI)](#case-67-ai-ghostface-effect-by-supermaker-ai)\n\n [Case 66: Stick People Effect (by @Supermaker AI)](#case-66-stick-people-effect-by-supermaker-ai)\n\n [Case 65: Natural-looking Photoshoot (by @Kerroudjm)](#case-65-natural-looking-photoshoot-by-kerroudjm)\n\n [Case 64: Northern Lights Product (by @rovvmut_)](#case-64-northern-lights-product-by-rovvmut_)\n\n [Case 63: Honor on the Football Field (by @rovvmut_)](#case-63-honor-on-the-football-field-by-rovvmut_)\n\n [Case 62: Pokemon Master (by @rovvmut_)](#case-62-pokemon-master-by-rovvmut_)\n\n [Case 61: Neon-powered Portraits (by @Arminn_Ai)](#case-61-neon-powered-portraits-by-arminn_ai)\n\n [Case 60: Origami Food Art (by @TechieBySA)](#case-60-origami-food-art-by-techiebysa)\n\n [Case 59: Pixelized Food (by @TechieBySA)](#case-59-pixelized-food-by-techiebysa)\n\n [Case 58: Superhero Juice Boxes (by @TechieBySA)](#case-58-superhero-juice-boxes-by-techiebysa)\n\n [Case 57: Vintage Technical Illustration (by @icreatelife)](#case-57-vintage-technical-illustration-by-icreatelife)\n\n [Case 56: Superhero Plush Toys (by @TechieBySA)](#case-56-superhero-plush-toys-by-techiebysa)\n\n [Case 55: AI Cat Image Generator (by @Supermaker AI)](#case-55-ai-cat-image-generator-by-supermaker-ai)\n\n [Case 54: Raincoat Effect (by @Supermaker AI)](#case-54-raincoat-effect-by-supermaker-ai)\n\n [Case 53: Private Photography (by @Josh_Gier)](#case-53-private-photography-by-josh_gier)\n\n [Case 52: Close-up Cinematic Portrait (by @saniaspeaks_)](#case-52-close-up-cinematic-portrait-by-saniaspeaks_)\n\n [Case 51: Cinematic Street Vibes (by @Sheldon056)](#case-51-cinematic-street-vibes-by-sheldon056)\n\n [Case 50: Visual Shock (by @Sheldon056)](#case-50-visual-shock-by-sheldon056)\n\n [Case 49: Origami Characters (by @TechieBySA)](#case-49-origami-characters-by-techiebysa)\n\n [Case 48: Vintage Recipe Illustration (by @icreatelife)](#case-48-vintage-recipe-illustration-by-icreatelife)\n\n [Case 47: Textured Embroidered (by @Artedeingenio)](#case-47-textured-embroidered-by-artedeingenio)\n\n [Case 46: Food Art Portrait (by @AleRVG)](#case-46-food-art-portrait-by-alervg)\n\n [Case 45: AI Black And White Portrait Generator (by @Supermaker AI)](#case-45-ai-black-and-white-portrait-generator-by-supermaker-ai)\n\n [Case 44: Gemini Miniatur AI (by @Supermaker AI)](#case-44-gemini-miniatur-ai-by-supermaker-ai)\n\n [Case 43: Collectible Figure (by @Nano Banana Labs)](#case-43-collectible-figure-by-nano-banana-labs)\n\n [Case 42: Thoughts on a Moving Train (by @Heisenberg)](#case-42-thoughts-on-a-moving-train-by-heisenberg)\n\n [Case 41: Nightscape Photography (by @Heisenberg)](#case-41-nightscape-photography-by-heisenberg)\n\n [Case 40: Spotlight Photography (by @enitandev)](#case-40-spotlight-photography-by-enitandev)\n\n [Case 39: Modern Advertisement (by @Heisenberg)](#case-39-modern-advertisement-by-heisenberg)\n\n [Case 38: Cinematic Portrait (by @Heisenberg)](#case-38-cinematic-portrait-by-heisenberg)\n\n [Case 37: Hyper-realistic Statue (by @Nano Banana Labs)](#case-37-hyper-realistic-statue-by-nano-banana-labs)\n\n [Case 36: Polaroid Photography (by @Heisenberg)](#case-36-polaroid-photography-by-heisenberg)\n\n [Case 35: AI Group Photo (by @Supermaker AI)](#case-35-ai-group-photo-by-supermaker-ai)\n\n [Case 34: AI Pose Generator (by @Supermaker AI)](#case-34-ai-pose-generator-by-supermaker-ai)\n\n [Case 33: Children's Drawing (by @Supermaker AI)](#case-33-childrens-drawing-by-supermaker-ai)\n\n [Case 32: AI Baby Filter (by @Supermaker AI)](#case-32-ai-baby-filter-by-supermaker-ai)\n\n [Case 31: Google Map Transform (by @Supermaker AI)](#case-31-google-map-transform-by-supermaker-ai)\n\n [Case 30: AI 3D Model Generator (by @Supermaker AI)](#case-30-ai-3d-model-generator-by-supermaker-ai)\n\n [Case 29: Food Photography (by @Amira Zairi)](#case-29-food-photography-by-amira-zairi)\n\n [Case 28: Paint-style Outline (by @Amira Zairi)](#case-28-paint-style-outline-by-amira-zairi)\n\n [Case 27: Vintage Comic Book (by @Amira Zairi)](#case-27-vintage-comic-book-by-amira-zairi)\n\n [Case 26: Cinematic Shots (by @Amira Zairi)](#case-26-cinematic-shots-by-amira-zairi)\n\n [Case 26: Nano Banana Action Figure Generator (by @Supermaker AI)](#case-26-nano-banana-action-figure-generator-by-supermaker-ai)\n\n [Case 25: Concept Sheet (by @Amira Zairi)](#case-25-concept-sheet-by-amira-zairi)\n\n [Case 24: AI Photo Color (by @Supermaker AI)](#case-24-ai-photo-color-by-supermaker-ai)\n\n [Case 23: AI Photo Booth (by @Supermaker AI)](#case-23-ai-photo-booth-by-supermaker-ai)\n\n [Case 22: AI Cosplay Generator (by @Supermaker AI)](#case-22-ai-cosplay-generator-by-supermaker-ai)\n\n [Case 21: AI Sculpture Filter (by @Supermaker AI)](#case-21-ai-sculpture-filter-by-supermaker-ai)\n\n [Case 20: Product Photography (by @Amira Zairi)](#case-20-product-photography-by-amira-zairi)\n\n [Case 19: Charcoal Sketch (by @Amira Zairi)](#case-19-charcoal-sketch-by-amira-zairi)\n\n [Case 18: Vintage Editorial Photography (by @Amira Zairi)](#case-18-vintage-editorial-photography-by-amira-zairi)\n\n [Case 17: Translucent Fabrics (by @LudovicCreator)](#case-17-translucent-fabrics-by-ludoviccreator)\n\n [Case 16: Pixel-art (by @Amira Zairi)](#case-16-pixel-art-by-amira-zairi)\n\n [Case 15: 3D Figure Printer (by @歸藏)](#case-15-3d-figure-printer--by-歸藏)\n\n [Case 14: Chinese Character Dance (by @歸藏)](#case-14-chinese-character-dance--by-歸藏)\n\n [Case 13: 3D Pillow (by @歸藏)](#case-13-3d-pillow--by-歸藏)\n\n [Case 12: 3D Isometric Buildings (by @歸藏)](#case-12-3d-isometric-buildings---by-歸藏)\n\n [Case 11: Tiny Product Shots (by @Amira Zairi)](#case-11-tiny-product-shots---by-amira-zairi)\n\n [Case 10: AI Cinematic (by @Amira Zairi)](#case-10-ai-cinematic---by-amira-zairi)\n\n [Case 9: 3D Architecture Rendering (by @levelsio)](#case-9-3d-architecture-rendering-by-levelsio)\n\n [Case 8: AI Recipe Generation (by @歸藏)](#case-8-ai-recipe-generation-by-歸藏)\n\n [Case 7: Virtual Try-on (by @歸藏)](#case-7-virtual-try-on-by-歸藏)\n\n [Case 6: Super Resolution for Vintage Anime (by @歸藏)](#case-6-super-resolution-for-vintage-anime-by-歸藏)\n\n [Case 5: Precise Object Replacement (by @歸藏)](#case-5-precise-object-replacement-by-歸藏)\n\n [Case 4: Sticker Generation (by @歸藏)](#case-4-sticker-generation-by-歸藏)\n\n [Case 3: AI Color Grading (by @歸藏)](#case-3-ai-color-grading-by-歸藏)\n\n [Case 2: Jewelry Try-on (by @歸藏)](#case-2-jewelry-try-on-by-歸藏)\n\n [Case 1: AI Fighting (by @歸藏)](#case-1-ai-fighting-by-歸藏)\n\n---\n\n## ⚡️Cases \n\n### Case 75: Tang Dynasty Style (by @歸藏)\n\n🏛️ **Historical Art & Cultural Photography**\n\n[[**Original Link**](https://x.com/op7418/status/1980296658878714022)]\n\n**Prompt**\n```yaml\nA Patrick Star wearing Tang Dynasty clothing is natural and realistic. It is a Northern Song Dynasty style oil painting with dark brown old version. It is high-definition and finely crafted. It is smooth, flexible and powerful, full of rhythm. The outline of the clothes is dense and well-arranged. The colors are elegant and good at using contrasting colors, which are rich and harmonious. He is wearing a Tang Dynasty hat.\n```\n\n**Reference Image**\n\n![Tang Dynasty Style Example](https://static.supermaker.ai/files/vdz1nj6mcuzc.png)\n\n**Usage Instructions**\n- 🏛️ Transform characters into Tang Dynasty historical art style\n- 🎨 Perfect for cultural content and historical character design\n- ✨ Elegant colors with rich and harmonious contrasting tones\n\n### Case 74: Luxury Ad Shot (by @AmirMushich)\n\n💎 **Commercial Photography & Product Advertising**\n\n[[**Original Link**](https://x.com/AmirMushich/status/1978703713800712273)]\n\n**Prompt**\n```yaml\nFrosted glass bottle; label planar: \"First Rain\".\nShallow pool with crisp caustics.\nNatural crown from a falling lychee; transparent indigo ribbons; lychees some halved + eucalyptus sprigs ride arcs; base cluster partly submerged for refraction.\nCondensation 50% 1.2 mm.\nLight: sun leaf-gobo, silver rim 45°R, cool purple under-kicker, sky fill; clamp highs.\nCam: FF 100 mm, f/8, 1/2000, ISO100. 8K; no warp/banding.\n```\n\n**Reference Image**\n\n![Luxury Ad Shot Example](https://static.supermaker.ai/files/2c5h2gqqvnu9.png)\n\n**Usage Instructions**\n- 💎 Create professional luxury product advertisements\n- 📸 Perfect for high-end brand campaigns and product launches\n- ✨ Features realistic lighting, condensation, and premium aesthetics\n\n### Case 73: Superhero Group Selfie (by @xmliisu)\n\n🦸 **Celebrity Integration & Group Photography**\n\n[[**Original Link**](https://x.com/xmliisu/status/1980161909828526514)]\n\n**Prompt**\n```yaml\nA ultra realistic group selfie, center is the person from the attached image (uploaded image facial details), wearing a fitted black shirt and ripped jeans, holding an iPhone for the selfie. Around are Chris Hemsworth as Thor, Gal Gadot as Wonder Woman, Scarlett Johansson as Black Widow, Mark Ruffalo as Hulk, Henry Cavill as Superman, RDJ in full armor all hugging, smiling, posing casually like close friends. Fun, joyful mood, bright daylight, cinematic quality, natural look, high detail.\n```\n\n**Reference Image**\n\n![Superhero Group Selfie Example](https://static.supermaker.ai/files/pk80zrz0wt22.png)\n\n**Usage Instructions**\n- 🦸 Create realistic group selfies with celebrity superheroes\n- 📱 Perfect for fan content and social media posts\n- ✨ Maintains facial features while adding authentic celebrity interactions\n\n### Case 72: Person's Statue (by @MehdiSharifi)\n\n🗿 **Monumental Art & Urban Sculpture**\n\n[[**Original Link**](https://x.com/_MehdiSharifi_/status/1978602601626193971)]\n\n**Prompt**\n```yaml\nA high-angle drone photograph of a massive, hyperrealistic statue of [SUBJECT]. The statue is in the middle of a town roundabout and is currently under construction, surrounded by intricate scaffolding, large cranes, and several construction workers. The background features a scenic town nestled against [BACKGROUND]. The lighting is bright, natural daylight, creating soft shadows. The image should be a highly detailed, photorealistic, 8K resolution, vertical shot. 1080×1080 resolution.\n```\n\n**Reference Image**\n\n![Person's Statue Example](https://static.supermaker.ai/files/ieruued8gt1k.png)\n\n**Usage Instructions**\n- 🗿 Transform portraits into monumental urban sculptures\n- 🏗️ Perfect for architectural visualization and city planning\n- ✨ Features realistic construction scenes and urban atmosphere\n\n### Case 71: Large Fluffy Cloud (by @Arminn_Ai)\n\n☁️ **Surreal Photography & Fantasy Art**\n\n[[**Original Link**](https://x.com/Arminn_Ai/status/1977068472895975559)]\n\n**Prompt**\n```yaml\nA cinematic studio photoshoot of a single [CHARACTER], \ncomfortably reclining in a large fluffy cloud placed directly on the ground.  \nThe cloud is soft, voluminous, and vividly colored in [CLOUD_COLOR], \nappearing like a natural cushion made of mist and cotton.  \n\nThe [CHARACTER_DESCRIPTION] is lying relaxed inside the cloud, \nas if sitting in a cozy armchair — legs slightly crossed, body leaned back, expression calm and peaceful.  \n\nThe entire subject (person + cloud) is perfectly centered in the frame, \nfully visible from head to toe.  \nThe background is a clean studio environment with a smooth gradient in [COLOR], evenly lit, with no visible edges or props.  \n\nLighting: soft cinematic studio lighting, diffused from multiple angles, creating smooth shadows and gentle highlights on the cloud texture. The atmosphere feels dreamy, surreal, and relaxing — like a fantasy portrait blending fashion and dreamlike comfort.\n\nCamera setup: full-body shot, eye-level angle. Mood: calm, elegant, imaginative, and ultra-detailed.\n```\n\n**Reference Image**\n\n![Large Fluffy Cloud Example](https://static.supermaker.ai/files/dlg1ftca2jv5.png)\n\n**Usage Instructions**\n- ☁️ Create surreal fantasy portraits with cloud seating\n- 🎨 Perfect for dreamy and imaginative photography\n- ✨ Features soft cinematic lighting and dreamlike atmosphere\n\n### Case 70: Seated in Style (by @Arminn_Ai)\n\n📦 **Geometric Design & Studio Photography**\n\n[[**Original Link**](https://x.com/Arminn_Ai/status/1978586631155130640)]\n\n**Prompt**\n```yaml\nA hyper-realistic full-body studio portrait of [CHARACTER_DESCRIPTION]. The character is seated on a setup made of five large cubic objects of [OBJECT_TYPE_AND_MATERIAL], arranged in a compact and balanced structure.\n\n• Two cubes are placed tightly side by side beneath the character, forming a stable elevated seat — high enough that their feet hang naturally above the studio floor without touching.  \n• Three additional cubes are stacked vertically right beside the seat, perfectly aligned and touching — forming a side column slightly above waist level, where the character rests one forearm casually on the top cube.\n\nAll cubes share identical dimensions and physically realistic volume, precise proportions, sharp edges, and real surface contact (no gaps or floating). Their material behavior under light is fully realistic, showing natural reflections, soft highlights, and subtle light falloff across surfaces.\n\nLighting: soft, neutral cinematic studio lighting with smooth global diffusion and balanced contrast, no harsh shadows.\n\nBackground: solid [STUDIO_COLOR] backdrop with a subtle gradient tone.  Floor: polished studio surface with a soft natural reflection of the cubes and the character.\n\nMood: clean, balanced, and visually elegant — focused on geometry, material, and composition.\n\nCamera: full-body 3/4 studio shot from a slightly elevated angle to emphasize the cube geometry and the character's posture. \n\nAll materials are physically realistic  rendered with cinematic precision. Texture: ultra-detailedc, realistic reflections, material roughness, and soft light transitions rendered in photorealistic quality.\n```\n\n**Reference Image**\n\n![Seated in Style Example](https://static.supermaker.ai/files/wv0hxxjw9324.png)\n\n**Usage Instructions**\n- 📦 Create elegant geometric studio portraits\n- 🎨 Perfect for minimalist and architectural photography\n- ✨ Features realistic material physics and clean composition\n\n### Case 69: Rectangular Photo Frame (by @Arminn_Ai)\n\n🖼️ **Fashion Photography & Luxury Editorial**\n\n[[**Original Link**](https://x.com/Arminn_Ai/status/1980726673302585630)]\n\n**Prompt**\n```yaml\nA luxurious high-fashion portrait of [CHARACTER DESCRIPTION] sitting gracefully on the inner lower edge of a large ornate rectangular picture frame, subtly suspended slightly above the floor by short hooks/chains at the top edge. The frame is perfectly level and floating with a visible gap from the floor. The entire scene follows a refined [COLOR THEME] monochromatic palette.\n\nFrame:\n• Ornate Baroque / Rococo rectangular frame\n• Painted in [FRAME COLOR & FINISH] to match or tastefully contrast the palette\n\nEnvironment:\n• Background: elegant studio wall with classic molded paneling in [COLOR], harmonized with the chromatic theme\n• Floor: slightly reflective surface in [FLOOR COLOR], same tone family for cohesive luxury aesthetics\n\nLighting:\n• High-key cinematic fashion lighting\n• Soft diffused glow on the subject and frame\n• Gentle rim-light for clean silhouette separation\n\nCamera:\n• Symmetrical centered full-body portrait\n• Clean editorial fashion composition\n• 8K ultra-detailed premium campaign quality\n\nStyle tags:\nmonochromatic | ornate suspended frame | cinematic studio fashion | luxury editorial aesthetic\n```\n\n**Reference Image**\n\n![Rectangular Photo Frame Example](https://static.supermaker.ai/files/39xih3sehwb1.png)\n\n**Usage Instructions**\n- 🖼️ Create luxury fashion portraits with ornate frames\n- 👗 Perfect for high-end editorial and campaign photography\n- ✨ Features monochromatic palette and cinematic lighting\n\n### Case 68: AI Homeless Man (by @Supermaker AI)\n\n🏠 **Character Integration & Social Commentary**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-homeless-man/)]\n\n**Prompt**\n```yaml\nAdding a homeless Filipino man to this image, with his dirty, tramp-like appearance, makes him look like an intruder.\n```\n\n**Reference Image**\n\n![AI Homeless Man Example](https://static.supermaker.ai/files/vf5f2iouzhv4.png)\n\n**Usage Instructions**\n- 🏠 Add realistic homeless characters to existing scenes\n- 📸 Perfect for social commentary and documentary-style photography\n- ✨ Maintains scene authenticity while adding social elements\n\n### Case 67: AI Ghostface Effect (by @Supermaker AI)\n\n👻 **Horror Effects & Background Integration**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-ghostface-effect/)]\n\n**Prompt**\n```yaml\nPerform non-destructive background editing on an existing personal photo: preserve the foreground subject(s) entirely unchanged—including their original posture, facial features, expressions, clothing, hairstyle, and all fine details—with zero alterations to their appearance or positioning. Only modify the background area to naturally integrate the iconic Ghostface character (from the Scream franchise), creating the illusion that Ghostface was part of the original scene (a 'hidden in the background' prank effect).\nGhostface Details: Depict it with its classic, recognizable design—white mask with sharp black eye/ mouth details, full black hooded robe, and a subtle, menacing yet understated posture (e.g., standing partially obscured by background objects like walls/ furniture, leaning in from a corner, or standing a few steps behind the foreground subject(s) to avoid overshadowing them).\nStyle: Emulate Hollywood horror movie aesthetics while ensuring visual consistency with the original photo:\nMatch the original photo's lighting logic \n\nRealism Requirements:\n\nEnsure Ghostface feels like a natural, unplanned part of the scene—like a hidden Easter egg in a horror movie—so the prank effect lies in others noticing it only after a second glance.\n```\n\n**Reference Image**\n\n![AI Ghostface Effect Example](https://static.supermaker.ai/files/gw5iygu4swhs.png)\n\n**Usage Instructions**\n- 👻 Add hidden Ghostface characters to personal photos\n- 🎭 Perfect for horror-themed pranks and Halloween content\n- ✨ Maintains original photo integrity while adding subtle horror elements\n\n### Case 66: Stick People Effect (by @Supermaker AI)\n\n🎨 **Educational Art & Character Design**\n\n[[**Try it Now**](https://supermaker.ai/image/stick-people-effect/)]\n\n**Prompt**\n```yaml\nA [STICKWOMAN / STICKMAN] character with a photorealistic 3D-rendered [FEMALE / MALE]  head is shown [DOING SOMETHING]. Created Using: digital chalkboard-style concept illustration with 3D head rendering, white chalk-like vector linework for body on textured [COLOR] surface, soft spotlight simulating classroom lighting, dynamic composition with exaggerated body language and joyful posture, slightly top-down camera perspective, subtle ambient shadows, clean background texture simulating real chalk residue, minimalistic educational aesthetic blended with character-driven visual storytelling\n```\n\n**Reference Image**\n\n![Stick People Effect Example](https://static.supermaker.ai/files/c1q0k4ai3x75.webp)\n\n**Usage Instructions**\n- 🎨 Create educational stick figure illustrations with realistic heads\n- 📚 Perfect for teaching materials and educational content\n- ✨ Combines 3D realism with chalkboard-style aesthetics\n\n### Case 65: Natural-looking Photoshoot (by @Kerroudjm)\n\n📸 **Product Photography & Editorial Style**\n\n[[**Original Link**](https://x.com/Kerroudjm/status/1971586126248133068)]\n\n**Prompt**\n```yaml\nA high-end editorial photo of a [IMAGE UPLOADED] placed flat on a [YOUR SURFACE], captured from a direct top-down view. The surface is gently disturbed to suggest recent motion or interaction. The front of the product is fully visible and properly oriented upright. The area around the product is intentionally left open to optionally place [YOUR ELEMENTS] that visually enhance the scene. Natural sunlight from the upper left casts warm, realistic shadows. 3D realism, luxury product photography, shallow depth of field, 1:1 format.\n```\n\n**Reference Image**\n\n![Natural-looking Photoshoot Example](https://static.bananaimg.ai/files/p1atvahwhn0b.png)\n\n**Usage Instructions**\n- 📸 Create high-end editorial product photography\n- 🎨 Perfect for luxury brand marketing and e-commerce\n- ✨ Natural lighting with realistic shadows and 3D realism\n\n### Case 64: Northern Lights Product (by @rovvmut_)\n\n🌌 **Cinematic Product Photography & Atmospheric Design**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1972539227763343816)]\n\n**Prompt**\n```yaml\nDesign a hyperrealistic cinematic poster showcasing the [PRODUCT] as the centerpiece. The device on a sleek obsidian pedestal at the edge of a tranquil reflective lake. Surrounding it are glowing bioluminescent plants and tall reeds swaying gently in the breeze, giving the scene an ethereal, futuristic feel. In the background, jagged cliffs rise dramatically, their edges kissed by a glowing aurora in the night sky. Use moody, atmospheric lighting with cool blues and purples contrasted by warm golden highlights reflecting off the device. Capture the scene from a slightly low angle to emphasize grandeur, with a shallow depth of field to sharpen the [PRODUCT] while softening the surrounding mist. Add subtle lens flares, crisp polished textures, and a cinematic vignette for a premium editorial aesthetic. Write the brand name and a tagline as well.\n```\n\n**Reference Image**\n\n![Northern Lights Product Example](https://static.supermaker.ai/files/s49ajkh6m8lh.png)\n\n**Usage Instructions**\n- 🌌 Create cinematic product posters with atmospheric lighting\n- 🎬 Perfect for premium brand campaigns and tech product launches\n- ✨ Features aurora effects and bioluminescent elements\n\n### Case 63: Honor on the Football Field (by @rovvmut_)\n\n⚽ **Sports Photography & Celebrity Integration**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1972230870204559861)]\n\n**Prompt**\n```yaml\nA handsome man in the uploaded image (100% matching face) is standing in the middle of Real Madrid stadium, surrounded by a full crowd and bright green grass. He is wearing the Real Madrid jersey and dark blue jeans, smiling while wrapping his arm around Cristiano Ronaldo beside him. They both are holding the same Real Madrid's jersey, showing Ronaldo's name and number 7 on the back. The camera composition is eye-level, with nighttime stadium lighting and spotlights. The style is high-quality realism.\n```\n\n**Reference Image**\n\n![Honor on the Football Field Example](https://static.supermaker.ai/files/pwy2scfckvgt.png)\n\n**Usage Instructions**\n- ⚽ Create realistic sports photography with celebrity integration\n- 🏟️ Perfect for fan content and sports marketing\n- ✨ Maintains facial features while adding authentic stadium atmosphere\n\n### Case 62: Pokemon Master (by @rovvmut_)\n\n⚡ **Character Design & Fantasy Photography**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1971786519078948894)]\n\n**Prompt**\n```yaml\nCreate a hyper-realistic editorial portrait of a person, generated from the provided image (same face 100%, same hairstyle, expression preserved). The subject stands confidently on a reflective glossy floor wearing a coordinated bright yellow and crimson outfit (hooded jacket or sweatshirt and tailored joggers) with lightning bolt-inspired linework and subtle embroidered electric motifs running along sleeves, chest and pant seams. Matching crimson and yellow sneakers complete the look. Beside the subject stands a large Pikachu-like creature, scaled to be equal to or taller than the person, with realistic textured fur and a vibrant palette of electric yellows and deep crimson accents that echo the clothing. Background is a moody electric yellow to deep crimson gradient that enhances the vibrant palette; both subject and creature are clearly reflected on the floor. Lighting uses dramatic warm key light and sculpting rim light to emphasize skin, fur and fabric detail, cinematic shallow depth of field, slight film grain for editorial grit, photoreal creature integration, ultra-detailed 8K quality.\n```\n\n**Reference Image**\n\n![Pokemon Master Example](https://static.supermaker.ai/files/huud7xvd93sr.png)\n\n**Usage Instructions**\n- ⚡ Create fantasy character portraits with realistic creature integration\n- 🎮 Perfect for gaming content and character cosplay\n- ✨ Maintains facial features while adding detailed creature companions\n\n### Case 61: Neon-powered Portraits (by @Arminn_Ai)\n\n💫 **Cyberpunk Photography & Neon Aesthetics**\n\n[[**Original Link**](https://x.com/Arminn_Ai/status/1972303775466500371)]\n\n**Prompt**\n```yaml\nA futuristic, neon-lit portrait of [SUBJECT_DESCRIPTION], crouching confidently in a moody, [COLOR]-toned room. \nThey hold a large, glowing [NEON_OBJECT_SHAPE] that cuts through the center of the image, casting bright [COLOR] reflections across their skin, outfit, and surroundings.\n\nThey wear [OUTFIT_DESCRIPTION], blending [STYLE_REFERENCE] with cyberpunk aesthetics. \nThe entire scene is bathed in electric [PRIMARY_COLOR] and deep [SECONDARY_COLOR] lighting, creating a high-contrast, edgy, and surreal atmosphere with a sci-fi fashion vibe.\n```\n\n**Reference Image**\n\n![Neon-powered Portraits Example](https://static.supermaker.ai/files/785778v7j5vn.png)\n\n**Usage Instructions**\n- 💫 Create futuristic cyberpunk portraits with neon lighting\n- 🌃 Perfect for sci-fi content and edgy fashion photography\n- ✨ High-contrast lighting with electric color schemes\n\n### Case 60: Origami Food Art (by @TechieBySA)\n\n🍱 **Food Art & Paper Craft Design**\n\n[[**Original Link**](https://x.com/TechieBySA/status/1971510072795902100)]\n\n**Prompt**\n```yaml\nA hyper-detailed origami [FOOD ITEM] folded from realistic colored paper with visible creases and paper texture. Complex geometric folds capture the food's shape, layers, and distinctive features. Placed on clean surface with soft shadows, minimalist food art photography style. 1080x1080 square\n```\n\n**Reference Image**\n\n![Origami Food Art Example](https://static.supermaker.ai/files/bp9zmiv53ad9.png)\n\n**Usage Instructions**\n- 🍱 Transform food items into detailed origami art\n- 🎨 Perfect for creative food photography and art projects\n- ✨ Realistic paper textures with geometric folding details\n\n### Case 59: Pixelized Food (by @TechieBySA)\n\n🎮 **Food Photography & Digital Art**\n\n[[**Original Link**](https://x.com/TechieBySA/status/1968967345239396842)]\n\n**Prompt**\n```yaml\nMinimalist food photograph, [1080x1080] – a single [FOOD] rests on a light, matte surface and is captured mid-transformation into a 3D pixelized form: one half remains intact while the other organically fragments into large, floating cubes that drift outward, each cube revealing the object's texture, ingredients, and colors. Studio lighting with soft, realistic shadows, shallow depth of field, tasteful perspective and composition, hyperrealistic detail, stylish geometric abstraction, subtle motion blur on the cubes, high resolution, cinematic close-up\n```\n\n**Reference Image**\n\n![Pixelized Food Example](https://static.supermaker.ai/files/cxnujj28ynav.png)\n\n**Usage Instructions**\n- 🎮 Create dynamic food photography with pixelization effects\n- 📸 Perfect for modern food blogs and digital art projects\n- ✨ Combines realism with geometric digital transformation\n\n### Case 58: Superhero Juice Boxes (by @TechieBySA)\n\n🥤 **Product Design & Packaging**\n\n[[**Original Link**](https://x.com/TechieBySA/status/1971902843813876205)]\n\n**Prompt**\n```yaml\nA playful, photorealistic render of a juice box packaging featuring the [SUPERHERO]. The carton is glossy with condensation droplets and a plastic straw attached. Bright, minimal background for a clean product-shot feel. Crisp details in typography, colors true to brand identity. Studio commercial photography aesthetic. 1080x1080 square\n```\n\n**Reference Image**\n\n![Superhero Juice Boxes Example](https://static.supermaker.ai/files/sm872ape6e2r.png)\n\n**Usage Instructions**\n- 🥤 Create realistic product packaging with character branding\n- 📦 Perfect for food packaging design and marketing\n- ✨ Professional commercial photography with brand consistency\n\n### Case 57: Vintage Technical Illustration (by @icreatelife)\n\n📐 **Technical Design & Vintage Aesthetics**\n\n[[**Original Link**](https://x.com/icreatelife/status/1972420689807479229)]\n\n**Prompt**\n```yaml\nA vintage technical illustration poster of [OBJECT], [NUMBER] different views of the object. Panel 1 is a side profile. Panel 2 is a top-down view. Panel 3 is a detailed close-up of [OBJECT]. Panel 4 is a clean cross-section. The style is that of [YEAR] product catalog, with bold lines, a simple [COLOR 1] and [COLOR 2] color scheme, and clear labels on a textured, [COLOR 3] background\n```\n\n**Reference Image**\n\n![Vintage Technical Illustration Example](https://static.supermaker.ai/files/qncfz5kv3t48.png)\n\n**Usage Instructions**\n- 📐 Create vintage-style technical illustrations and blueprints\n- 🎨 Perfect for product catalogs and instructional materials\n- ✨ Classic design aesthetic with clear technical details\n\n### Case 56: Superhero Plush Toys (by @TechieBySA)\n\n🧸 **Toy Design & Collectibles**\n\n[[**Original Link**](https://x.com/TechieBySA/status/1971540403431391558)]\n\n**Prompt**\n```yaml\nA soft, high-quality plush toy of a [SUPERHERO], with an oversized head, small body, and stubby limbs. Made of fuzzy fabric with embroidered facial features, natural colors, and expressive details. The toy is sitting or standing against a neutral background, centered in full view. Soft studio lighting, even shadows, photorealistic textures, collectible plush style. 1080x1080 square\n```\n\n**Reference Image**\n\n![Superhero Plush Toys Example](https://static.supermaker.ai/files/3mq91t69se9n.png)\n\n**Usage Instructions**\n- 🧸 Transform characters into adorable plush toy designs\n- 🎁 Perfect for collectible merchandise and toy design\n- ✨ Realistic fabric textures with cute, chibi proportions\n\n### Case 55: AI Cat Image Generator (by @Supermaker AI)\n\n🐱 **Pet Photography & Virtual Pet Adoption**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-cat-image-generator/)]\n\n**Prompt**\n```yaml\nBased on user-uploaded photos of a scene, a hyper-realistic, lifelike cat is generated, allowing it to blend naturally into the existing environment and meet the user's \"Cloud Cat Adoption\" needs.\n\nCats must meet the following criteria:\n\nRealistic Details: Rendering naturally soft fur textures (including subtle color variations and lighting), clear facial features (bright, expressive eyes, delicate whiskers, and realistic noses/mouths), and smooth, natural body contours (no cartoonish or stiff elements).\n\nSeamless Flow: Ensure the cat appears to exist naturally in the scene by adding subtle shadows underneath the cat (aligning with the scene's lighting direction) and avoiding any obvious \"cut-and-paste\" edges. If the scene contains textures (e.g., fabric, wood, grass), the cat's contact with these surfaces should appear realistic (e.g., fur gently clinging to a soft sofa).\n\nThe end result should make users feel like they are seeing a real cat in the uploaded scene\n```\n\n**Reference Image**\n\n![AI Cat Image Generator Example](https://static.supermaker.ai/files/pi8sc4xhq8r3.png)\n\n**Usage Instructions**\n- 🐱 Generate hyper-realistic cats that blend naturally into any scene\n- 🏠 Perfect for virtual pet adoption and home decoration\n- ✨ Seamless integration with realistic shadows and textures\n\n### Case 54: Raincoat Effect (by @Supermaker AI)\n\n🌧️ **Weather Effects & Atmospheric Photography**\n\n[[**Try it Now**](https://supermaker.ai/image/raincoat-effect/)]\n\n**Prompt**\n```yaml\nTransform the uploaded single-person photo into a realistic close-up portrait with the following key elements:\nThe person must be wearing a well-fitted black raincoat (with visible texture details like fabric wrinkles, possible slight water absorption effects, and natural collar/hem shapes).\nThe scene must depict a heavy downpour—show distinct, dense rain streaks falling around the person, splashes of rain on the ground (if lower body is visible), and subtle water droplets on the raincoat surface, hair, or shoulders to enhance authenticity.\nMaintain the original person's core facial features, posture, and basic appearance (avoid altering key identifiers like facial structure, hairstyle length/color, or obvious accessories) while integrating them naturally into the rainy environment.\nAdjust the lighting to match a heavy rain scenario: soft, diffused ambient light (simulate overcast weather), possible subtle highlights on wet surfaces (e.g., raincoat fabric, skin), and avoid harsh shadows.\nEnsure the close-up framing focuses on the upper body (at least from shoulders up, or extending to mid-torso if appropriate) to highlight the raincoat details and the interaction between the person and the rain.\nKeep the overall tone realistic and immersive—avoid overly stylized or cartoonish effects; prioritize natural rain dynamics and realistic material textures of the raincoat.\n```\n\n**Reference Image**\n\n![Raincoat Effect Example](https://static.supermaker.ai/files/4z1vbiinaw16.png)\n\n**Usage Instructions**\n- 🌧️ Transform photos into dramatic rainy weather scenes\n- 📸 Perfect for atmospheric and moody photography\n- ✨ Realistic rain effects with authentic raincoat textures\n\n### Case 53: Private Photography (by @Josh_Gier)\n\n📸 **Fashion Editorial & Artistic Photography**\n\n[[**Original Link**](https://x.com/Josh_Gier/status/1970852197563847160)]\n\n**Prompt**\n```yaml\nA slender adult woman with long dark hair stands in an apartment centered between a window (left) and wall (right). She wears an opaque blue lace bra and matching briefs.\n\nPose: 3/4 angle to camera, weight on left leg, right knee crossed, head tilted down, right hand at hip, left arm relaxed. Calm expression.\n\nFull body shot (head to toes visible), vertical format. Camera slightly above eye level, 55mm lens.\nWindow backlight creates rim lighting on shoulders and body. Moody, low-key lighting.\n\nThe entire photo is BLACK AND WHITE except the bra and briefs which stay BLUE (use blue shades: #1E3A8A, #2563EB, #60A5FA). Everything else monochrome.\n\nFashion editorial style, photorealistic quality\n```\n\n**Reference Image**\n\n![Private Photography Example](https://static.supermaker.ai/files/asg80ll1oby6.png)\n\n**Usage Instructions**\n- 📸 Create artistic fashion editorial photography\n- 🎨 Perfect for selective color effects and moody lighting\n- ✨ Professional fashion photography with dramatic lighting\n\n### Case 52: Close-up Cinematic Portrait (by @saniaspeaks_)\n\n🌸 **Portrait Photography & Floral Aesthetics**\n\n[[**Original Link**](https://x.com/saniaspeaks_/status/1971165515520553424)]\n\n**Prompt**\n```yaml\nUsing the uploaded picture exactly face\nA super close-up cinematic portrait of a young woman framed by small, delicate pale pink and pastel blue flowers with light greenery, arranged sparsely so they are not too crowded. Sunlight casts soft shadows of petals and leaves across her face. She has slightly tousled dark hair falling around her shoulders.\n```\n\n**Reference Image**\n\n![Close-up Cinematic Portrait Example](https://static.supermaker.ai/files/ct5g6oxbwj63.png)\n\n**Usage Instructions**\n- 🌸 Create intimate close-up portraits with floral elements\n- 📸 Perfect for romantic and artistic photography\n- ✨ Soft natural lighting with delicate flower arrangements\n\n### Case 51: Cinematic Street Vibes (by @Sheldon056)\n\n🌃 **Urban Photography & Street Aesthetics**\n\n[[**Original Link**](https://x.com/Sheldon056/status/1971193674282512816)]\n\n**Prompt**\n```yaml\nA cinematic low-angle photo of a young man as uploaded image on a rain-soaked flyover bench at dusk. He wears a colorblock denim jacket over a yellow hoodie, khaki cargo pants, and high-top sneakers. Sharp 8K focus on him, with blurred foreground. Behind, a vibrant cityscape glows with neon lights, reflections in puddles, mist, and bokeh trails from passing cars. Moody color grading merges warm streetlights with cool neon glows for dramatic depth.\n```\n\n**Reference Image**\n\n![Cinematic Street Vibes Example](https://static.supermaker.ai/files/2s2mdaaf0lh0.png)\n\n**Usage Instructions**\n- 🌃 Create cinematic urban street photography\n- 🎬 Perfect for moody and atmospheric city scenes\n- ✨ Dynamic lighting with neon reflections and bokeh effects\n\n### Case 50: Visual Shock (by @Sheldon056)\n\n🌄 **Landscape Photography & Contemplative Mood**\n\n[[**Original Link**](https://x.com/Sheldon056/status/1971055708398657777)]\n\n**Prompt**\n```yaml\nA stylish man with dark hair and sunglasses, wearing a black short-sleeved button-up shirt and light-colored pants, stands outdoors. He is looking upwards with a contemplative expression. The background features rolling green hills under a cloudy sky. The lighting is natural, highlighting the textures of his clothing and the landscape. The photo should capture a serene and slightly dramatic mood, face should match with the attached image\n```\n\n**Reference Image**\n\n![Visual Shock Example](https://static.supermaker.ai/files/nc93779xevy0.png)\n\n**Usage Instructions**\n- 🌄 Create contemplative outdoor portraits\n- 📸 Perfect for lifestyle and nature photography\n- ✨ Natural lighting with dramatic landscape backgrounds\n\n### Case 49: Origami Characters (by @TechieBySA)\n\n📄 **Paper Art & Geometric Design**\n\n[[**Original Link**](https://x.com/TechieBySA/status/1971178202593886538)]\n\n**Prompt**\n```yaml\nA hyper-detailed origami version of [SUBJECT], folded from high-quality paper with crisp edges and realistic paper texture. Intricate folds capture its iconic shape and features in simplified geometric form. Placed on a clean studio surface with soft shadows. Minimalist collectible art style, photorealistic. 1080x1080 square\n```\n\n**Reference Image**\n\n![Origami Characters Example](https://static.supermaker.ai/files/h00wotxee0rd.png)\n\n**Usage Instructions**\n- 📄 Transform any subject into detailed origami art\n- 🎨 Perfect for geometric and minimalist design\n- ✨ Realistic paper textures with clean studio presentation\n\n### Case 48: Vintage Recipe Illustration (by @icreatelife)\n\n📖 **Culinary Art & Recipe Design**\n\n[[**Original Link**](https://x.com/icreatelife/status/1969932454325612830)]\n\n**Prompt**\n```yaml\nTurn this ramen into a cute recipe page with illustrations in the style of a vintage cookbook that was hand-drawn.  A carefully drawn ingredients with labels, measures, and implements like bowls, whisks, or spoons should surround the composition's focal point.  To create a homey, nostalgic vibe, use textured shading, warm pastel colors, and fine, ink-like outlines.  Add recipe writing in the handwritten manner, including the ingredients and directions organically into the layout.  Make sure the page has an artistic and educational tone, combining the beauty of colorful illustrations with a cookbook aesthetic.\n```\n\n**Reference Image**\n\n![Vintage Recipe Illustration Example](https://static.supermaker.ai/files/yh6lz3go8ow0.png)\n\n**Usage Instructions**\n- 📖 Create charming vintage-style recipe illustrations\n- 🍜 Perfect for cookbook design and culinary content\n- ✨ Hand-drawn aesthetic with warm, nostalgic colors\n\n### Case 47: Textured Embroidered (by @Artedeingenio)\n\n🧵 **Textile Art & Embroidery Design**\n\n[[**Original Link**](https://x.com/Artedeingenio/status/1969789512822804897)]\n\n**Prompt**\n```yaml\nA whimsical embroidered illustration of a little girl with pigtails wearing a red dress, outlined with stitched black threads, filled with colorful fabric textures, childlike proportions, warm and playful mood, textile embroidery art --ar 1:1 --raw --p\n```\n\n**Reference Image**\n\n![Textured Embroidered Example](https://static.supermaker.ai/files/ueigwj7d03ul.png)\n\n**Usage Instructions**\n- 🧵 Create whimsical embroidered illustrations\n- 👗 Perfect for textile art and children's book illustrations\n- ✨ Colorful fabric textures with playful, warm mood\n\n### Case 46: Food Art Portrait (by @AleRVG)\n\n🍰 **Conceptual Food Art & Surreal Photography**\n\n[[**Original Link**](https://x.com/AleRVG/status/1969145551846363567)]\n\n**Prompt**\n```yaml\nPhotorealistic conceptual food art portrait, a minimalist representation of a [SITE OF THE HOUSE] recreated entirely with [TYPE OF FOOD]. The main structure is built from [MAIN INGREDIENTS], with details such as [KEY ELEMENTS] made from [SECONDARY INGREDIENTS]. Optional features include [ADDITIONAL OBJECTS OR FURNITURE] created from [EXTRA INGREDIENTS].\n\nSet against a [COLOR] background to emphasize the surreal food sculpture. Bright soft studio lighting, evenly diffused, casting subtle natural shadows that highlight the textures of [FOOD TEXTURES]. Fine atmospheric detail enhance realism.\n\nCaptured with a Canon EOS 5D, 85mm f/1.8 lens, shallow depth of field focusing on the cake-bed sculpture, crisp detail with soft falloff in the background. Composition framed at tabletop eye-level, medium close-up, perfectly centered. Clean high-resolution food photography style, vibrant natural colors, editorial dessert photography aesthetic\n```\n\n**Reference Image**\n\n![Food Art Portrait Example](https://static.supermaker.ai/files/zz67y36vn7qj.png)\n\n**Usage Instructions**\n- 🍰 Create surreal food art sculptures\n- 🏠 Perfect for conceptual photography and food styling\n- ✨ Professional food photography with artistic presentation\n\n### Case 45: AI Black And White Portrait Generator (by @Supermaker AI)\n\n📸 **Black & White Portrait & Fine Art Photography**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-black-and-white-portrait-generator/)]\n\n**Prompt**\n```yaml\nUploaded photos are transformed into high-resolution black-and-white portrait artworks in a documentary-style, fine-art photography style. The background features a soft gradient, transitioning from mid-gray to near-white, creating a sense of depth and a sense of silence. The subtle film grain lends the image a tactile, analog-like softness, reminiscent of classic black-and-white photography.\nThe subject's blurred yet striking face emerges from the shadows, not in a traditional pose, but rather as if captured in a moment of reflection or breath. His face, contoured by light, evokes a sense of mystery, intimacy, and elegance. His features are refined and profound, radiating a melancholic and poetic beauty without seeming artificial.\nA gentle, directional light, softly diffused, caresses the curve of his cheek or creates a glint in his eye—this is the emotional core of the image. The rest, occupied by ample negative space, is deliberately kept simple, allowing the image to breathe freely. There are no words or logos in the image—only a play of light and shadow, interwoven with emotion. The overall atmosphere is abstract yet deeply human, like a fleeting glance or a memory half-awake: intimate, timeless, and wistfully beautiful.\n```\n\n**Reference Image**\n\n![AI Black And White Portrait Generator Example](https://static.supermaker.ai/files/pb5t0tkbx4o0.png)\n\n**Usage Instructions**\n- 📸 Transform photos into elegant black-and-white fine art portraits\n- 🎨 Perfect for documentary-style photography and artistic expression\n- ✨ Creates intimate, timeless, and wistfully beautiful results\n\n### Case 44: Gemini Miniatur AI (by @Supermaker AI)\n\n🎯 **Action Figure Creation & Collectibles**\n\n[[**Try it Now**](https://supermaker.ai/image/gemini-miniatur-ai/)]\n\n**Prompt**\n```yaml\nUse the nano-banana model to create a 1/7 scale commercialized figure of the character in the illustration, in a realistic style and environment.Place the figure on a computer desk, using a circular transparent acrylic basewithout any text.On the computer screen, display the ZBrush modeling process of the figure.Next to the computer screen, place a BANDAl-style toy packaging box printedwith the original artwork.\n```\n\n**Reference Image**\n\n![Gemini Miniatur AI Example](https://static.supermaker.ai/files/46louikjq3zk.png)\n\n**Usage Instructions**\n- 🎯 Transform illustrations into realistic action figures\n- 📦 Perfect for collectibles and toy design visualization\n- 🖥️ Includes modeling process and packaging design\n\n### Case 43: Collectible Figure (by @Nano Banana Labs)\n\n🎯 **Collectible Design & Miniature Diorama**\n\n[[**Original Link**](https://x.com/NanoBanana_labs/status/1967191346017673334)]\n\n**Prompt**\n```yaml\nA 1/7 scale commercialized collectible figure of the character from the photo, crafted in a highly realistic style. The figure is placed in a detailed beach environment with sand, seashells, and gentle ocean waves. The entire toy display is enclosed inside a clear souvenir glass bottle, giving it a premium miniature diorama look, with realistic lighting and shadows.\n```\n\n**Reference Image**\n\n![Collectible Figure Example](https://static.supermaker.ai/files/ohslaachzj85.png)\n\n**Usage Instructions**\n- 🎯 Transform characters into realistic collectible figures\n- 📦 Perfect for miniature diorama and collectible design\n- 🏖️ Includes detailed environmental settings and premium presentation\n\n### Case 42: Thoughts on a Moving Train (by @Heisenberg)\n\n🚂 **Cinematic Photography & Cyberpunk Atmosphere**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1967638190338216196)]\n\n**Prompt**\n```yaml\nA cinematic portrait of a young man/woman sitting by a train window at night, wearing a dark hoodie. Neon city lights reflect on the glass, creating colorful bokeh in shades of orange, pink, and blue. His/her face is softly illuminated by the glow. High detail, filmic lighting, cyberpunk atmosphere, shallow depth of field.\n```\n\n**Reference Image**\n\n![Thoughts on a Moving Train Example](https://static.supermaker.ai/files/fbmqtlm0wro0.png)\n\n**Usage Instructions**\n- 🚂 Create cinematic portraits with cyberpunk atmosphere\n- 🌃 Perfect for moody, introspective photography\n- ✨ Features neon reflections and shallow depth of field\n\n### Case 41: Nightscape Photography (by @Heisenberg)\n\n🌃 **Urban Photography & Night Scenes**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1967154329737199939)]\n\n**Prompt**\n```yaml\nA low-angle, wide-shot photograph of a stylish young man standing confidently on a city street at dusk or night. He is looking directly at the camera with a neutral but engaging expression. He is wearing a simple, slightly oversized t-shirt and loose-fitting cargo pants, with sneakers. The lighting is dramatic, with bright, colorful neon signs and illuminated buildings blurred in the background, suggesting motion and urban energy. The perspective makes his appear tall and powerful against the cityscape. The overall mood is modern, urban, and slightly edgy, with a cinematic feel due to the dynamic composition and lighting.\n```\n\n**Reference Image**\n\n![Nightscape Photography Example](https://static.supermaker.ai/files/f9yyxqph9es9.png)\n\n**Usage Instructions**\n- 🌃 Create dramatic urban night photography\n- 🏙️ Perfect for modern, edgy street photography\n- ✨ Features neon lighting and cinematic composition\n\n### Case 40: Spotlight Photography (by @enitandev)\n\n📸 **Celebrity Photography & Red Carpet Style**\n\n[[**Original Link**](https://x.com/enitandev/status/1967633417899528670)]\n\n**Prompt**\n```yaml\nUltra-realistic candid photo of the person in the reference image, wearing a sharp black suit with a white shirt, standing in the middle of a large excited crowd. Fans and photographers surround him, holding up cameras and smartphones, capturing his every move. The atmosphere is lively and chaotic, filled with cheering and flashing cameras, creating an authentic celebrity red-carpet vibe. The photo is taken slightly from above eye-level, capturing the crowd density and the central figure waving naturally. Natural daylight, sharp details, realistic skin tones, authentic expressions, cinematic realism.\n```\n\n**Reference Image**\n\n![Spotlight Photography Example](https://static.supermaker.ai/files/cof9uj4v2dl9.png)\n\n**Usage Instructions**\n- 📸 Create authentic celebrity red-carpet photography\n- 🌟 Perfect for paparazzi-style and event photography\n- ✨ Features realistic crowd scenes and authentic expressions\n\n### Case 39: Modern Advertisement (by @Heisenberg)\n\n📢 **Commercial Photography & Brand Advertising**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1968136193083896089)]\n\n**Prompt**\n```yaml\nA striking, modern advertisement featuring a handsome male (my face 100% match), with short, stylish hair and glasses, sitting comfortably in a vibrant blue, plush, rounded armchair. He is dressed in a contemporary, athletic-inspired outfit: bright blue pants and a matching blue and yellow patterned long-sleeved top. His sneakers are a light neutral color, and he wears white socks. He is looking directly at the viewer with a friendly, confident smile. The background is a clean, gradient blue, with a large, stylized white letter \"H\" subtly placed behind him. There are also faint, placeholder text elements in the top left and top right corners of the image, characteristic of a magazine or product advertisement.\n```\n\n**Reference Image**\n\n![Modern Advertisement Example](https://static.supermaker.ai/files/vgjbfvwqr45o.png)\n\n**Usage Instructions**\n- 📢 Create professional modern advertisements\n- 🎨 Perfect for brand marketing and commercial photography\n- ✨ Features clean backgrounds and confident expressions\n\n### Case 38: Cinematic Portrait (by @Heisenberg)\n\n🎬 **Portrait Photography & Dramatic Lighting**\n\n[[**Original Link**](https://x.com/rovvmut_/status/1967836760752451635)]\n\n**Prompt**\n```yaml\nCreate a vertical potrait shot in 1080x1920 format using the exact same face features, characterized by stark cinematic lighting and intense contrast. Captured in a slightly low, upward-facing angle that dramatized the subject's jawline and neck, the composition evokes quite dominance and sculptural elegance. The background is a deep, saturated crimson red, creating a bold visual clash with the model's luminous skin and dark wardrobe.\n```\n\n**Reference Image**\n\n![Cinematic Portrait Example](https://static.supermaker.ai/files/hkcg01d0zv0g.png)\n\n**Usage Instructions**\n- 🎬 Create dramatic cinematic portraits with intense lighting\n- 📸 Perfect for fashion photography and artistic portraits\n- ✨ Features bold color contrasts and sculptural elegance\n\n### Case 37: Hyper-realistic Statue (by @Nano Banana Labs)\n\n🗿 **Monument Design & Urban Sculpture**\n\n[[**Original Link**](https://x.com/NanoBanana_labs/status/1966164117531811928)]\n\n**Prompt**\n```yaml\nCreate a giant hyper-realistic statue based on the given photo, keeping the original face exactly the same without changes. The statue stands tall in the middle of a roundabout in Dhaka, near a famous historical landmark. The statue is still under construction, surrounded by scaffolding, with many construction workers in yellow helmets and orange vests climbing, welding, and working on it. Parts of the statue's body are still exposed metal framework, while other sections are already detailed and finished. The background shows the realistic atmosphere of VARANASI CITY: crowded streets with colorful rickshaws, packed buses, and small cars circling the roundabout. Street vendors with tea stalls, fruit carts, and colorful umbrellas line the roadside. Shop signs, big billboards, and messy hanging electric wires crisscross above the streets, creating the typical Dhaka city vibe. The bright daytime sky shines above, with tropical trees and a bustling, lively atmosphere. Style: photorealistic, vibrant, and full of life\n```\n\n**Reference Image**\n\n![Hyper-realistic Statue Example](https://static.supermaker.ai/files/83w681qrrk28.png)\n\n**Usage Instructions**\n- 🗿 Transform portraits into monumental urban sculptures\n- 🏗️ Perfect for architectural visualization and city planning\n- ✨ Features realistic construction scenes and urban atmosphere\n\n### Case 36: Polaroid Photography (by @Heisenberg)\n\n📷 **Vintage Photography & Instant Camera Style**\n\n[[**Original Link**](https://x.com/azed_ai/status/1965006732247417046)]\n\n**Prompt**\n```yaml\nTake a picture with a Polaroid camera. The photo should look like a normal photo, without any clear subject or props. The photo should have a slight blur a a consistent light source. Such as a flash from a dark room, spread throughout the photo. Do not change the faces. Replace the background behind the two people with a white curtain. (With the guy hugging girl) Change outfits with matching couple.\n```\n\n**Reference Image**\n\n![Polaroid Photography Example](https://static.supermaker.ai/files/66cnnwtmbmnb.png)\n\n**Usage Instructions**\n- 📷 Create authentic Polaroid-style instant photography\n- 💕 Perfect for couple photos and vintage aesthetics\n- ✨ Features characteristic flash lighting and slight blur effects\n\n### Case 35: AI Group Photo (by @Supermaker AI)\n\n👥 **Group Photo Generation & Social Media**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-group-photo/)]\n\n**Prompt**\n```yaml\nUsing photo 1 as a reference, this realistic selfie shows the people in photos 2 and 3 posing naturally, set against the backdrop of photo 2. The scene is filled with natural light, and the people's expressions are relaxed and natural, exuding a candid, everyday atmosphere. In the background, architectural details are clearly visible, and the lighting is warm and natural.\n```\n\n**Reference Image**\n\n![AI Group Photo Example](https://static.supermaker.ai/files/e6isd2go2f8i.png)\n\n**Usage Instructions**\n- 👥 Create realistic group photos with multiple people\n- 📸 Perfect for social media and family photos\n- ✨ Natural lighting and candid expressions\n\n### Case 34: AI Pose Generator (by @Supermaker AI)\n\n🎭 **Pose Transfer & Character Animation**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-pose-generator/)]\n\n**Prompt**\n```yaml\nPlease adjust the pose of the character in Figure 1 to exactly match the pose of the character in Figure 2. Key requirements are as follows:\nDo not modify any facial features of the character from Figure 1, including but not limited to facial shape, eyes, nose, mouth, eyebrows, and hairstyle—these must remain 100% consistent with the original.\nEnsure the final effect is smooth and natural: avoid awkward proportions, rigid transitions, or unnatural postural details. The character should look like it naturally adopts Figure 2's pose\n```\n\n**Reference Image**\n\n![AI Pose Generator Example](https://static.supermaker.ai/files/sxohxh6lag3v.png)\n\n**Usage Instructions**\n- 🎭 Transfer poses between characters while maintaining facial features\n- 🎨 Perfect for character animation and pose reference\n- ✨ Natural and smooth pose transitions\n\n### Case 33: Children's Drawing (by @Supermaker AI)\n\n🎨 **Child-like Art Style & Illustration**\n\n[[**Try it Now**](https://supermaker.ai/image/childrens-drawing/)]\n\n**Prompt**\n```yaml\nGenerate a minimalist children's drawing based on an uploaded photo. The requirements are as follows: a minimalist children's drawing-style [Subject], using thick white lines and a glowing outline. The background is softly blurred by [Environmental Details]. Floating elements like [Floating Details] add a touch of whimsy. A full-body perspective creates a warm, minimalist aesthetic.\n```\n\n**Reference Image**\n\n![Children's Drawing Example](https://static.supermaker.ai/files/tgmccb1oqkwa.png)\n\n**Usage Instructions**\n- 🎨 Transform photos into charming children's drawing style\n- ✨ Perfect for children's books and educational materials\n- 🌟 Warm and whimsical aesthetic with glowing outlines\n\n### Case 32: AI Baby Filter (by @Supermaker AI)\n\n👶 **Age Transformation & Baby Version**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-baby-filter/)]\n\n**Prompt**\n```yaml\nBased on the uploaded single-person reference photo, transform the person in the image into an adorable, realistic infant/baby version. Key requirements are as follows:\nClothing Consistency: Strictly retain the exact same style, design, color, fabric texture, and detailed elements (such as collars, cuffs, buttons, patterns, or logos) of the clothing worn by the original person. Ensure the clothing fits the baby's body proportionally—neither too loose nor too tight—to maintain a natural, cute look.\nProfessional Characteristic Reflection: Authentically incorporate the original person's professional traits into the baby's image.\nnsure these professional details are age-appropriate for an infant—small, delicate, and not overwhelming the baby's cute appearance.\nFacial & Overall Coherence: Keep the baby's facial features recognizable as a \"younger, infant version\" of the original person (e.g., similar eye shape, eyebrow curve, or facial contour), while maintaining natural baby-like traits (chubby cheeks, soft skin, innocent expression). The background style should align with the original photo to preserve context.\nRealism & Aesthetics: Avoid exaggerated or unnatural elements; ensure the baby's posture, clothing fit, and professional details look realistic and visually pleasing (warm, cute tone)\n```\n\n**Reference Image**\n\n![AI Baby Filter Example](https://static.supermaker.ai/files/yxws2ozj2jlf.png)\n\n**Usage Instructions**\n- 👶 Transform adults into adorable baby versions\n- 👔 Maintains clothing consistency and professional traits\n- ✨ Perfect for family photos and creative projects\n\n### Case 31: Google Map Transform (by @Supermaker AI)\n\n🗺️ **Map Visualization & Street View**\n\n[[**Try it Now**](https://supermaker.ai/image/google-map-transform/)]\n\n**Prompt**\n```yaml\ndraw what the red arrow sees\n```\n\n**Reference Image**\n\n![Google Map Transform Example](https://static.supermaker.ai/files/kx5wtnlgg4vs.png)\n\n**Usage Instructions**\n- 🗺️ Transform Google Maps into artistic visualizations\n- 🎨 Perfect for travel blogs and location-based content\n- ✨ Creative interpretation of street views\n\n### Case 30: AI 3D Model Generator (by @Supermaker AI)\n\n🏗️ **3D Modeling & Isometric Design**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-3d-model-generator/)]\n\n**Prompt**\n```yaml\nConvert this photo of a building into isometric tiles, similar in style to the first 3D rendered image\n```\n\n**Reference Image**\n\n![AI 3D Model Generator Example](https://static.supermaker.ai/files/grjyyhz84acr.png)\n\n**Usage Instructions**\n- 🏗️ Convert photos into 3D isometric models\n- 🎮 Perfect for game development and architectural visualization\n- ✨ Professional 3D rendering quality\n\n### Case 29: Food Photography (by @Amira Zairi)\n\n🍽️ **Culinary Photography & Food Styling**\n\n[[**Original Link**](https://x.com/azed_ai/status/1966819210694365266)]\n\n**Prompt**\n```yaml\nMinimalist paint-style outline of a [subject], flowing black lines, clean composition, simple yet dramatic pose, fluid movement captured with elegant negative space, expressive and graceful silhouette\n```\n\n**Reference Image**\n\n![Food Photography Example](https://static.supermaker.ai/files/s92lzlewezgc.png)\n\n**Usage Instructions**\n- 🍽️ Create stunning food photography with artistic flair\n- 📸 Perfect for restaurant menus and food blogs\n- ✨ Professional culinary styling and presentation\n\n### Case 28: Paint-style Outline (by @Amira Zairi)\n\n🎨 **Artistic Outline & Minimalist Design**\n\n[[**Original Link**](https://x.com/azed_ai/status/1966456851400396957)]\n\n**Prompt**\n```yaml\nMinimalist paint-style outline of a [subject], flowing black lines, clean composition, simple yet dramatic pose, fluid movement captured with elegant negative space, expressive and graceful silhouette\n```\n\n**Reference Image**\n\n![Paint-style Outline Example](https://static.supermaker.ai/files/04gwt8vwo66r.png)\n\n**Usage Instructions**\n- 🎨 Create elegant minimalist outlines with flowing lines\n- ✨ Perfect for logo design and artistic illustrations\n- 🖌️ Expressive and graceful silhouette design\n\n### Case 27: Vintage Comic Book (by @Amira Zairi)\n\n📚 **Comic Book Art & Retro Illustration**\n\n[[**Original Link**](https://x.com/azed_ai/status/1967180553553330306)]\n\n**Prompt**\n```yaml\nUrban street battle at dusk, armored hero confronting a towering monster, shattered glass and sparks flying | cinematic action realism | dynamic lighting, dramatic shadows, lens flare | realistic textures on rubble, heroic poses, motion blur, epic wide-angle composition\n```\n\n**Reference Image**\n\n![Vintage Comic Book Example](https://static.supermaker.ai/files/efnmnqew2qb2.png)\n\n**Usage Instructions**\n- 📚 Create vintage comic book style illustrations\n- 🦸 Perfect for superhero and action scene artwork\n- ✨ Dynamic lighting and dramatic composition\n\n### Case 26: Cinematic Shots (by @Amira Zairi)\n\n🎬 **Cinematic Photography & Action Scenes**\n\n[[**Original Link**](https://x.com/azed_ai/status/1967227146864390325)]\n\n**Prompt**\n```yaml\nUrban street battle at dusk, armored hero confronting a towering monster, shattered glass and sparks flying | cinematic action realism | dynamic lighting, dramatic shadows, lens flare | realistic textures on rubble, heroic poses, motion blur, epic wide-angle composition\n```\n\n**Reference Image**\n\n![Cinematic Shots Example](https://static.supermaker.ai/files/1pv1mdc69xkx.png)\n\n**Usage Instructions**\n- 🎬 Create epic cinematic action scenes\n- 🦸 Perfect for movie posters and action photography\n- ✨ Dynamic lighting and dramatic composition\n\n### Case 25: Concept Sheet (by @Amira Zairi)\n\n📋 **Character Design & Concept Art**\n\n[[**Original Link**](https://x.com/azed_ai/status/1965006732247417046)]\n\n**Prompt**\n```yaml\nA concept sheet for a [character], detailed with front, back, and side views, including close-up sketches of facial features and accessories, annotated with design notes and labeled components, drawn in blueprint style with glowing trim in [color1] and base structure in [color2], presented on a clean white background\n```\n\n**Reference Image**\n\n![Concept Sheet Example](https://static.supermaker.ai/files/yw1dstmwd9s5.png)\n\n**Usage Instructions**\n- 📋 Create professional character concept sheets\n- 🎨 Perfect for game development and character design\n- ✨ Blueprint style with detailed annotations\n\n### Case 26: Nano Banana Action Figure Generator (by @Supermaker AI)\n\n🎯 **Action Figure Creation & Collectibles**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-action-figure-generator/)]\n\n**Prompt**\n```yaml\nUse the nano-banana model to create a 1/7 scale commercialized figure of the character in the illustration, in a realistic style and environment.Place the figure on a computer desk, using a circular transparent acrylic basewithout any text.On the computer screen, display the ZBrush modeling process of the figure.Next to the computer screen, place a BANDAl-style toy packaging box printedwith the original artwork.\n```\n\n**Reference Image**\n\n![Nano Banana Action Figure Generator Example](https://static.supermaker.ai/files/cg0kkmttodc7.jpg)\n\n**Usage Instructions**\n- 🎯 Transform illustrations into realistic action figures\n- 📦 Perfect for collectibles and toy design visualization\n- 🖥️ Includes modeling process and packaging design\n\n### Case 24: AI Photo Color (by @Supermaker AI)\n\n🎨 **Photo Restoration & Colorization**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-photo-color/)]\n\n**Prompt**\n```yaml\nColorize this black-and-white photograph with photorealistic, natural colors that strictly align with real-world color logic and the scene's context \nEnsure colors blend seamlessly with the original photo's lighting and shadows—darker areas should have deeper, muted hues (not flat black), and highlighted areas should have softer, lighter tones (not harsh white). Avoid over-saturation, neon/unnatural shades, or color bleeding outside subject boundaries. Preserve the original photograph's texture (e.g., film grain, fine details of faces, fabric, or landscapes) to maintain authenticity, without distorting the subject's shape or details. The final colorized result should look organic, as if the photo was originally taken in color.\n```\n\n**Reference Image**\n\n![AI Photo Color Example](https://static.supermaker.ai/files/idbp3k9f8u21.png)\n\n**Usage Instructions**\n- 🎨 Restore vintage black-and-white photos with realistic colors\n- 📸 Perfect for historical photo restoration\n- ✨ Maintains original texture and authenticity\n\n### Case 23: AI Photo Booth (by @Supermaker AI)\n\n📸 **Portrait Variations & Photo Booth**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-photo-booth/)]\n\n**Prompt**\n```yaml\nUse this photo to make a 3*3 photo booth grid. Each photo should have a different pose and expression. No repetition allowed.\n```\n\n**Reference Image**\n\n![AI Photo Booth Example](https://static.supermaker.ai/files/4oprtblpxvs0.png)\n\n**Usage Instructions**\n- 📸 Create photo booth-style grids with varied poses\n- 🎭 Perfect for social media content and profile pictures\n- ✨ Each photo has unique pose and expression\n\n### Case 22: AI Cosplay Generator (by @Supermaker AI)\n\n🎭 **Cosplay & Character Recreation**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-cosplay-generator/)]\n\n**Prompt**\n```yaml\nGenerate a highly detailed photo of a girl cosplaying this illustration, at Comiket. Exactly replicate the same pose, body posture, hand gestures, facial expression, and camera framing as in the original illustration. Keep the same angle, perspective, and composition, without any deviation\n```\n\n**Reference Image**\n\n![AI Cosplay Generator Example](https://static.supermaker.ai/files/xad48ox3c67b.jpeg)\n\n**Usage Instructions**\n- 🎭 Perfect for cosplay enthusiasts and character recreation\n- 📸 Maintains exact pose and composition from original\n- 🎪 Ideal for anime and manga character visualization\n\n### Case 21: AI Sculpture Filter (by @Supermaker AI)\n\n🗿 **Artistic Transformation & Sculpture**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-sculpture-filter/)]\n\n**Prompt**\n```yaml\nA photorealistic image of an ultra-detailed sculpture of the subject in image made of shining marble. The sculpture should display smooth and reflective marble surface, emphasizing its luster and artistic craftsmanship. The design is elegant, highlighting the beauty and depth of marble. The lighting in the image should enhance the sculpture's contours and textures, creating a visually stunning and mesmerizing\n```\n\n**Reference Image**\n\n![AI Sculpture Filter Example](https://static.supermaker.ai/files/0ec1py7ez4fh.png)\n\n**Usage Instructions**\n- 🗿 Transform any subject into elegant marble sculptures\n- ✨ Perfect for artistic projects and creative visualization\n- 💎 High-quality marble texture and lighting effects\n\n### Case 20: Product Photography (by @Amira Zairi)\n\n📦 **Commercial Product Photography**\n\n[[**Original Link**](https://x.com/azed_ai/status/1963557185239257577)]\n\n**Prompt**\n```yaml\nStudio shot of a [PRODUCT], elegantly positioned on a [background], soft ambient shadows, smooth gradient backdrop, high-key lighting, shallow depth of field, ultra-sharp focus on the subject, subtle reflections, minimal aesthetic, professional DSLR, premium commercial lighting setup, optimized for high-end product presentation\n```\n\n**Reference Image**\n\n![Product Photography Example](https://static.supermaker.ai/files/exun5naj9ola.png)\n\n**Usage Instructions**\n- 📸 Create professional product photography for e-commerce\n- 💼 Perfect for catalog and marketing materials\n- ✨ High-end commercial lighting and composition\n\n### Case 19: Charcoal Sketch (by @Amira Zairi)\n\n🎨 **Artistic Drawing & Sketching**\n\n[[**Original Link**](https://x.com/azed_ai/status/1963920359209738723)]\n\n**Prompt**\n```yaml\nA charcoal sketch of a [subject], raw and textured with expressive shading and bold linework. The background is filled with smudged gradients and sketchbook marks, giving it a gritty, unrefined elegance.\n```\n\n**Reference Image**\n\n![Charcoal Sketch Example](https://static.supermaker.ai/files/z06mml2thn6g.png)\n\n**Usage Instructions**\n- ✏️ Transform photos into expressive charcoal sketches\n- 🎨 Perfect for artistic projects and creative illustrations\n- 📝 Maintains raw, textured artistic feel\n\n### Case 18: Vintage Editorial Photography (by @Amira Zairi)\n\n📸 **Editorial & Fashion Photography**\n\n[[**Original Link**](https://x.com/azed_ai/status/1964358971118276628)]\n\n**Prompt**\n```yaml\nCinematic portrait of [subject], [background], soft ambient lighting, warm earthy tones, nostalgic 1970s wardrobe, reflective mood, gentle film grain texture, shallow depth of field, vintage editorial photography style\n```\n\n**Reference Image**\n\n![Vintage Editorial Photography Example](https://static.supermaker.ai/files/3daj58vgveqd.png)\n\n**Usage Instructions**\n- 📰 Perfect for magazine-style editorial photography\n- 🎬 Creates cinematic portraits with vintage aesthetics\n- 📸 Ideal for fashion and lifestyle photography\n\n### Case 17: Translucent Fabrics (by @LudovicCreator)\n\n👗 **Fashion & Artistic Photography**\n\n[[**Original Link**](https://x.com/LudovicCreator/status/1964391919154245735)]\n\n**Prompt**\n```yaml\nMysterious [COLOR] and [COLOR] vision of a [SUBJECT] veiled in translucent fabrics\n```\n\n**Reference Image**\n\n![Translucent Fabrics Example](https://static.supermaker.ai/files/y83iwrmf0769.png)\n\n**Usage Instructions**\n- 🌟 Create ethereal and mysterious fashion photography\n- 👗 Perfect for artistic portraits and fashion editorials\n- ✨ Translucent fabrics add depth and visual interest\n\n### Case 16: Pixel-art (by @Amira Zairi)\n\n🎮 **Retro Gaming & Pixel Art**\n\n[[**Original Link**](https://x.com/azed_ai/status/1964644344415318316)]\n\n**Prompt**\n```yaml\nPixel-art scene of a [subject], viewed through a simulated lens, [background], retro game overlay aesthetic, chunky pixel textures, vibrant limited color palette of [color1] and [color2], HUD interface elements, low-resolution charm, subtle CRT screen distortion, nostalgic arcade vibe, stylized as an 8-bit game screenshot\n```\n\n**Reference Image**\n\n![Pixel-art Example](https://static.supermaker.ai/files/i3wnu9qptnv8.png)\n\n**Usage Instructions**\n- 🎮 Create nostalgic pixel-art scenes with retro gaming aesthetics\n- 🎨 Perfect for indie game development and retro art projects\n- 📺 Includes CRT distortion effects for authentic vintage feel\n\n### Case 15: 3D Figure Printer  (by @歸藏)  \n\n🎨 **3D Printing & Collectibles**\n\n[[**Original Link**](https://x.com/op7418/status/1962046237026443422)]\n\n**Prompt**\n```yaml\nPlease transform this car rendering into a collectible figurine. \n\nBehind it, place a figurine box printed with the car's image and the name \"Xiaomi YU7.\" Next to it, add a high-end 3D printer that is currently printing the figurine. In front of the figurine box, add a round plastic base for the figurine to stand on. \n\nThe PVC material of the base should have a crystal-clear, translucent texture, and set the entire scene indoors.\n```\n\n**Reference Image**\n\n![3D Figure Printer Example](https://static.supermaker.ai/files/qkhilhkmelop.png)\n\n**Usage Instructions**\n- ⚠️ Note that words about cars and brands need to be replaced when you use them yourself\n- ✨ You could try adding more details!\n  \n\n\n### Case 14: Chinese Character Dance  (by @歸藏)  \n\n🕺 **Pose & Character Animation**\n\n[[**Original Link**](https://x.com/op7418/status/1961714432842813686)]\n\n**Prompt**\n```yaml\n将图 1 中的人物改为与图 2 字符相似的全身姿势，生成的图片不要有字符，必要时可以用配饰辅助\n```\n\n**Reference Image**\n\n![Chinese Character Dance Example](https://static.supermaker.ai/files/jo9wpzeb3v37.png)\n\n**Usage Instructions**\n- 🎭 Nano Banana allows characters to strike poses similar to Chinese characters\n- 💪 Nano Banana pose reference is also very strong!\n  \n\n\n### Case 13: 3D Pillow  (by @歸藏)  \n\n🛏️ **Product Transformation**\n\n[[**Original Link**](https://x.com/op7418/status/1961496316204462318)]\n\n**Prompt**\n```yaml\nDesign the main object in the photo as a soft, rounded, and airy plush balloon or inflatable toy. \n\nUsing smooth matte fabric texture, Do not have a plastic feeling. complemented by subtle fabric wrinkles and stitching to emphasize its inflated effect. The shape should be slightly irregular and soft, with gentle shadows and lighting to highlight its volume and realism. Place it on a clean, minimalist background (light gray or light blue) to maintain a playful sculptural aesthetic.\n```\n\n**Reference Image**\n\n![3D Pillow Example](https://static.supermaker.ai/files/l0sns06azu1s.png)\n\n**Usage Instructions**\n- 🧸 Turn the items in your uploaded pictures into pillows\n- 🥤 Turn your favorite drinks into a pillow with Nano Banana!\n  \n\n\n### Case 12: 3D Isometric Buildings   (by @歸藏)  \n\n🏢 **Architecture & Design**\n\n[[**Original Link**](https://x.com/op7418/status/1961485790124359819)]\n\n**Prompt**\n```yaml\nConvert the photo of this building into a rounded, cute isometric tile 3D rendering style, with a 1:1 ratio,To preserve the prominent features of the photographed building\n```\n\n**Reference Image**\n\n![3D Isometric Buildings Example](https://static.supermaker.ai/files/c09b9q2hutqw.png)\n\n**Usage Instructions**\n- 🏗️ Nano Banana can also convert buildings into isometric icons\n- 📸 The difference is that it can not only convert landmarks, but also any building you take a picture of can be converted\n  \n\n### Case 11: Tiny Product Shots   (by @Amira Zairi)  \n\n📸 **Product Photography**\n\n[[**Original Link**](https://x.com/azed_ai/status/1962878353784066342)]\n\n**Prompt**\n```yaml\nA high-resolution advertising photograph of a realistic, miniature [PRODUCT] held delicately between a person's thumb and index finger.  clean and white background, studio lighting, soft shadows. The hand is well-groomed, natural skin tone, and positioned to highlight the product's shape and details. The product appears extremely small but hyper-detailed and brand-accurate, centered in the frame with a shallow depth of field. Emulates luxury product photography and minimalist commercial style.\n```\n\n**Reference Image**\n\n![Tiny Product Shots Example](https://static.supermaker.ai/files/lfthpg7tua3e.png)\n\n**Usage Instructions**\n- 🎯 Create tiny, adorable product shots that look like high-end ads using Nano Banana\n- 💎 Very suitable for advertising design and sharing\n\n### Case 10: AI Cinematic   (by @Amira Zairi)  \n\n🎬 **Cinematic Photography**\n\n[[**Original Link**](https://x.com/azed_ai/status/1962469766008017051)]\n\n**Prompt**\n```yaml\nCinematic close-up of a [character] holding a [object] with purpose, illuminated by [lighting]. Soft reflections highlight their [features or accessories]. [Atmospheric elements] float around them, enhancing the mood. Their eyes express [emotion]. Hyperreal, ultra-detailed, 8K, stylized for visual storytelling.\n```\n\n**Reference Image**\n\n![AI Cinematic Example](https://static.supermaker.ai/files/x9isxtfqly87.png)\n\n**Usage Instructions**\n- 🎥 Nano banana can create cinematic close-ups\n- 🎭 Great for movie lovers and novel editors\n\n### Case 9: 3D Architecture Rendering (by @levelsio)  \n\n🏗️ **Architecture & Design**\n\n[[**Try it Now**](https://supermaker.ai/image/nano-banana/)]\n\n[[**Original Link**](https://x.com/levelsio/status/1961238809460535669)]\n\n**Prompt**\n```yaml\nPrompt1：Help me convert this residential floor plan into an isometric photorealistic 3D rendering of the house.\n\nPrompt2：Help me generate a realistic photo looking from the dining table towards the bathroom, which must comply with the house layout in the design plan, and appropriate decorations can be added.\n```\n\n**Reference Image**\n\n![3D Architecture Rendering Example](https://static.supermaker.ai/files/3gxbexza4dfr.png)\n\n**Usage Instructions**\n- 🏠 Nano Banana can handle interior design visualization\n- 📐 Generate 3D rendering from floor plans, then create specific perspective views\n- 🏢 Perfect for real estate and architectural presentations\n\n### Case 8: AI Recipe Generation (by @歸藏)\n\n🍳 **Food & Recipe Creation**\n\n[[**Original Link**](https://x.com/op7418/status/1961270619959709892)]\n\n**Prompt**\n```yaml\nTurn the ingredients in the picture into a complete step-by-step recipe infographic, using a top-down perspective. Present it in a minimalist style on a white background. Include labeled photos of the ingredients, use dashed lines to connect icons representing the preparation steps, and display a photo of the final plated dish at the bottom of the infographic,At the same time, remove the background from the food items that have a background in the image and place the food on a white background.\n```\n\n**Reference Image**\n\n![AI Recipe Generation Example](https://static.supermaker.ai/files/xs53zycar3t0.png)\n\n**Usage Instructions**\n- 🥘 Transform any ingredients into complete recipe infographics\n- 🍽️ Perfect solution for cooking indecision\n- 📋 Creates professional-looking recipe cards with step-by-step instructions\n\n### Case 7: Virtual Try-on (by @歸藏)\n\n👕 **Fashion & Virtual Try-on**\n\n[[**Original Link**](https://x.com/op7418/status/1960568101172601049)]\n\n**Prompt**\n```yaml\nThe character in Figure 2 is wearing the clothing and accessories from Figure 1.\n```\n\n**Reference Image**\n\n![Virtual Try-on Example](https://static.supermaker.ai/files/zqgg7tq4bxmd.png)\n\n**Usage Instructions**\n- 🛍️ Try on any outfit without leaving home\n- 🎨 Perfect for vintage anime and photo restoration\n- 👤 Maintains character consistency while changing clothing\n\n### Case 6: Super Resolution for Vintage Anime (by @歸藏)\n\n🎨 **Image Enhancement & Restoration**\n\n[[**Try it Now**](https://supermaker.ai/image/ai-photo-enhancer/)]\n\n[[**Original Link**](https://x.com/op7418/status/1960540798573011209)]\n\n**Prompt**\n```yaml\nEnhance the resolution of this old anime image and add the appropriate texture details, reinterpreting it with modern anime techniques.\n```\n\n**Reference Image**\n\n![Super Resolution Example](https://static.supermaker.ai/files/3w7jr4vh44ah.jpeg)\n\n**Usage Instructions**\n- 🔍 Nano Banana can upscale images and add texture details\n- 🎭 Perfect for restoring vintage anime and old photos\n- ✨ Reinterprets content with modern techniques\n\n### Case 5: Precise Object Replacement (by @歸藏)\n\n🔄 **Object Manipulation & E-commerce**\n\n[[**Original Link**](https://x.com/op7418/status/1960359622377603231)]\n\n**Prompt**\n```yaml\nPlace the chair and table from the first image at the red box location in the second image, and generate the image without the red box markings.\n```\n\n**Reference Image**\n\n![Precise Object Replacement Example](https://static.supermaker.ai/files/pq6ge2pvs9bu.png)\n\n**Usage Instructions**\n- 🛒 E-commerce essential - maintains product ID and features excellently\n- 📦 Circle items to be replaced in the first image, place replacement items in the second image\n- 🎯 Perfect for product visualization and catalog management\n\n### Case 4: Sticker Generation (by @歸藏)\n\n🏷️ **Creative Design & Stickers**\n\n[[**Original Link**](https://x.com/op7418/status/1960385812132192509)]\n\n**Prompt**\n```yaml\nHelp me turn the character into a white outline sticker similar to Figure 2. The character needs to be transformed into a web illustration style, and add a playful white outline short phrase describing Figure 1\n```\n\n**Reference Image**\n\n![Sticker Generation Example 1](https://static.supermaker.ai/files/sxmqg35xumrg.jpeg)\n![Sticker Generation Example 2](https://static.supermaker.ai/files/rboqb3iwhr11.jpeg)\n\n**Usage Instructions**\n- 🎨 Quickly generate cute stickers\n- 📝 Place character image first, sticker reference second\n- ✨ Creates web-style illustrations with playful descriptions\n\n### Case 3: AI Color Grading (by @歸藏)\n\n🎨 **Photo Enhancement & Color Grading**\n\n[[**Original Link**](https://x.com/op7418/status/1960528616573558864)]\n\n**Prompt**\n```yaml\nThis photo is very boring and plain. Enhance it! Increase the contrast, boost the colors, and improve the lighting to make it richer,You can crop and delete details that affect the composition.\n```\n\n**Reference Image**\n\n![AI Color Grading Example](https://static.supermaker.ai/files/kyeg3b6559kr.jpeg)\n\n**Usage Instructions**\n- 📸 Essential for photo editing beginners\n- 🎨 Mom no longer needs to worry about poor photo editing skills\n- ✨ Simply upload a photo and let Nano Banana automatically enhance colors\n\n### Case 2: Jewelry Try-on (by @歸藏)\n\n💍 **Fashion & Jewelry E-commerce**\n\n[[**Original Link**](https://x.com/op7418/status/1960532739469533440)]\n\n**Prompt**\n```yaml\nThe woman in Figure 2 is wearing the necklace from Figure 1,Do not change the details of other Figure 2.\n```\n\n**Reference Image**\n\n![Jewelry Try-on Example](https://static.supermaker.ai/files/b4wgo8t33krh.jpeg)\n\n**Usage Instructions**\n- 💎 E-commerce level jewelry try-on\n- 📏 Solves the problem of not knowing product sizing in Flux\n- 🛍️ Perfect for online jewelry shopping\n\n### Case 1: AI Fighting (by @歸藏)\n\n⚔️ **Action & Character Animation**\n\n[[**Original Link**](https://x.com/op7418/status/1960536717242573181)]\n\n**Prompt**\n```yaml\nHave these two characters fight using the pose from Figure 3.Add appropriate visual backgrounds and scene interactions,Generated image ratio is 16:9\n```\n\n**Reference Image**\n\n![AI Fighting Example](https://static.supermaker.ai/files/hn3leh9quiyt.jpeg)\n\n**Usage Instructions**\n- ✏️ Nano Banana actually supports hand-drawn content recognition\n- 🎯 Precise control over multiple character fighting poses\n- 🎬 Perfect for creating dynamic action scenes\n\n\n---\n\n## 💡Usage Tips\n\n1. [Nano Banana: The Ultimate AI Model for Image Generation and Editing in 2025](https://supermaker.ai/image/blog/nano-banana-the-ultimate-ai-model-for-image-generation-and-editing-in-2025/) by @SuperMaker\n2. [How to create lifelike action figures using nano bananas](https://supermaker.ai/image/blog/how-to-create-lifelike-action-figures-using-nano-bananas/) by @SuperMaker\n\n\n## 🙏Acknowledgments\n\nThis case collection largely relies on creative configurations and brilliant use cases shared by the SuperMaker AI community. We express sincere gratitude to all case contributors.😊\n\nSpecial thanks to the following users who shared their inspiring works ✨:\n\n* SuperMaker AI Team (@SuperMaker)\n* Community Contributors (@community)\n* Technical Experts (@experts)\n\nIf your work is included here and you wish to change the attribution or remove it, please contact us anytime.✉️\n\n## Friends\n[**All In One AI Image Generator**](https://chatimg.ai)\n"
     },
     {
-      "id": "repo:519984658",
-      "title": "wjf0214/awesome-stars-wjf0214",
-      "url": "https://github.com/wjf0214/awesome-stars-wjf0214",
-      "description": " ⭐我的star列表，每天凌晨自动更新 ⭐",
-      "source": "github",
-      "type": "repo",
-      "author": "wjf0214",
-      "stars": 78,
-      "createdAt": "2022-08-01T06:08:15Z",
-      "updatedAt": "2026-01-21T02:00:27Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:572639172",
       "title": "rcy1314/some-stars",
       "url": "https://github.com/rcy1314/some-stars",
@@ -964,7 +964,7 @@
       "author": "rcy1314",
       "stars": 66,
       "createdAt": "2022-11-30T17:50:06Z",
-      "updatedAt": "2026-01-21T01:40:25Z",
+      "updatedAt": "2026-01-22T01:39:55Z",
       "tags": [
         "repo"
       ]
@@ -994,7 +994,37 @@
       "author": "yks0000",
       "stars": 44,
       "createdAt": "2021-09-27T10:08:02Z",
-      "updatedAt": "2026-01-21T01:27:59Z",
+      "updatedAt": "2026-01-22T01:28:03Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:64724851",
+      "title": "wangjiezhe/awesome-stars",
+      "url": "https://github.com/wangjiezhe/awesome-stars",
+      "description": "Awesome List of my own!",
+      "source": "github",
+      "type": "repo",
+      "author": "wangjiezhe",
+      "stars": 33,
+      "createdAt": "2016-08-02T04:44:32Z",
+      "updatedAt": "2026-01-22T02:45:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1052207806",
+      "title": "ljquan/aitu",
+      "url": "https://github.com/ljquan/aitu",
+      "description": "AI绘图创作视频",
+      "source": "github",
+      "type": "repo",
+      "author": "ljquan",
+      "stars": 31,
+      "createdAt": "2025-09-07T16:17:36Z",
+      "updatedAt": "2026-01-22T02:43:43Z",
       "tags": [
         "repo"
       ]
@@ -1030,21 +1060,6 @@
       ]
     },
     {
-      "id": "repo:64724851",
-      "title": "wangjiezhe/awesome-stars",
-      "url": "https://github.com/wangjiezhe/awesome-stars",
-      "description": "Awesome List of my own!",
-      "source": "github",
-      "type": "repo",
-      "author": "wangjiezhe",
-      "stars": 33,
-      "createdAt": "2016-08-02T04:44:32Z",
-      "updatedAt": "2026-01-21T02:39:37Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1126663737",
       "title": "alfredolopez80/multi-agent-ralph-loop",
       "url": "https://github.com/alfredolopez80/multi-agent-ralph-loop",
@@ -1055,6 +1070,21 @@
       "stars": 42,
       "createdAt": "2026-01-02T10:59:29Z",
       "updatedAt": "2026-01-19T01:46:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1014671073",
+      "title": "ZhikangNiu/arxiv_daily",
+      "url": "https://github.com/ZhikangNiu/arxiv_daily",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "ZhikangNiu",
+      "stars": 16,
+      "createdAt": "2025-07-06T07:14:14Z",
+      "updatedAt": "2026-01-22T01:15:50Z",
       "tags": [
         "repo"
       ]
@@ -1090,21 +1120,6 @@
       ]
     },
     {
-      "id": "repo:1014671073",
-      "title": "ZhikangNiu/arxiv_daily",
-      "url": "https://github.com/ZhikangNiu/arxiv_daily",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "ZhikangNiu",
-      "stars": 16,
-      "createdAt": "2025-07-06T07:14:14Z",
-      "updatedAt": "2026-01-21T01:38:33Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:702508231",
       "title": "zengzzzzz/golang-trending-archive",
       "url": "https://github.com/zengzzzzz/golang-trending-archive",
@@ -1114,7 +1129,7 @@
       "author": "zengzzzzz",
       "stars": 13,
       "createdAt": "2023-10-09T13:00:57Z",
-      "updatedAt": "2026-01-21T01:29:50Z",
+      "updatedAt": "2026-01-22T01:29:35Z",
       "tags": [
         "repo"
       ]
@@ -1129,7 +1144,247 @@
       "author": "Chat2AnyLLM",
       "stars": 12,
       "createdAt": "2025-12-23T00:47:15Z",
-      "updatedAt": "2026-01-21T02:12:50Z",
+      "updatedAt": "2026-01-22T02:14:14Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1138835447",
+      "title": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+      "url": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+      "description": "Claude Code / Cursor skill to recommend from 6000+ Nano Banana Pro image prompts.",
+      "source": "github",
+      "type": "repo",
+      "author": "YouMind-OpenLab",
+      "stars": 11,
+      "createdAt": "2026-01-21T07:15:20Z",
+      "updatedAt": "2026-01-22T02:13:16Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:701683842",
+      "title": "jafshare/GithubTrending",
+      "url": "https://github.com/jafshare/GithubTrending",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "jafshare",
+      "stars": 9,
+      "createdAt": "2023-10-07T09:03:35Z",
+      "updatedAt": "2026-01-22T01:04:44Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1111075380",
+      "title": "fionalee1412/bestnanobananaprompt-github",
+      "url": "https://github.com/fionalee1412/bestnanobananaprompt-github",
+      "description": "nano banana prompts, updates everyday",
+      "source": "github",
+      "type": "repo",
+      "author": "fionalee1412",
+      "stars": 8,
+      "createdAt": "2025-12-06T08:07:55Z",
+      "updatedAt": "2026-01-22T02:01:55Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1105661303",
+      "title": "wm4n/nano-banana-prompt",
+      "url": "https://github.com/wm4n/nano-banana-prompt",
+      "description": "The only Nano Banana Pro prompts you need",
+      "source": "github",
+      "type": "repo",
+      "author": "wm4n",
+      "stars": 7,
+      "createdAt": "2025-11-28T01:04:07Z",
+      "updatedAt": "2026-01-22T01:53:52Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:489605306",
+      "title": "dick318/awesome-stars",
+      "url": "https://github.com/dick318/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "dick318",
+      "stars": 7,
+      "createdAt": "2022-05-07T07:40:49Z",
+      "updatedAt": "2026-01-22T01:05:17Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1127839904",
+      "title": "BlockRunAI/awesome-blockrun",
+      "url": "https://github.com/BlockRunAI/awesome-blockrun",
+      "description": "BlockRun ecosystem - docs, SDKs, research, and community",
+      "source": "github",
+      "type": "repo",
+      "author": "BlockRunAI",
+      "stars": 4,
+      "createdAt": "2026-01-04T17:38:05Z",
+      "updatedAt": "2026-01-22T02:02:48Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1077353947",
+      "title": "legacybridge-tech/claude-plugins",
+      "url": "https://github.com/legacybridge-tech/claude-plugins",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "legacybridge-tech",
+      "stars": 3,
+      "createdAt": "2025-10-16T06:22:43Z",
+      "updatedAt": "2026-01-22T02:39:50Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1137238125",
+      "title": "strataga/demiarch",
+      "url": "https://github.com/strataga/demiarch",
+      "description": "A local-first, open-source Rust-based AI app builder that generates code using orchestrated multi agents and sub-agents.",
+      "source": "github",
+      "type": "repo",
+      "author": "strataga",
+      "stars": 3,
+      "createdAt": "2026-01-19T05:28:23Z",
+      "updatedAt": "2026-01-22T02:08:53Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:590328351",
+      "title": "stenalpjolly/awesome-stars",
+      "url": "https://github.com/stenalpjolly/awesome-stars",
+      "description": "List of repo from my star list",
+      "source": "github",
+      "type": "repo",
+      "author": "stenalpjolly",
+      "stars": 2,
+      "createdAt": "2023-01-18T06:40:40Z",
+      "updatedAt": "2026-01-22T02:38:07Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:843357434",
+      "title": "yug69/awesome-nano-banana-pro",
+      "url": "https://github.com/yug69/awesome-nano-banana-pro",
+      "description": "🖼️ Master advanced techniques for Google's Nano Banana Pro to create stunning, professional-quality images up to 4K resolution.",
+      "source": "github",
+      "type": "repo",
+      "author": "yug69",
+      "stars": 2,
+      "createdAt": "2024-08-16T10:39:36Z",
+      "updatedAt": "2026-01-22T02:19:03Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1065339804",
+      "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
+      "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
+      "description": "📝 Create and run your AI Studio app effortlessly with Nano-Banana-Editor. Easily manage your dependencies and deploy locally for smooth development.",
+      "source": "github",
+      "type": "repo",
+      "author": "ali-ashraf-mohammed",
+      "stars": 2,
+      "createdAt": "2025-09-27T14:24:36Z",
+      "updatedAt": "2026-01-22T01:41:42Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:666221552",
+      "title": "biantris/my-awesome-stars",
+      "url": "https://github.com/biantris/my-awesome-stars",
+      "description": "list of my github stars",
+      "source": "github",
+      "type": "repo",
+      "author": "biantris",
+      "stars": 1,
+      "createdAt": "2023-07-14T02:10:22Z",
+      "updatedAt": "2026-01-22T02:40:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:818050386",
+      "title": "TrumanDu/trumandu-stars",
+      "url": "https://github.com/TrumanDu/trumandu-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "TrumanDu",
+      "stars": 1,
+      "createdAt": "2024-06-21T02:03:23Z",
+      "updatedAt": "2026-01-22T02:39:09Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1129586277",
+      "title": "newbiecs50JV/fal-wan26-video-factory",
+      "url": "https://github.com/newbiecs50JV/fal-wan26-video-factory",
+      "description": "🎥 Generate videos effortlessly with the Wan 2.6 pipeline, utilizing fal.ai APIs for automated script-to-video conversion with customizable voice and visuals.",
+      "source": "github",
+      "type": "repo",
+      "author": "newbiecs50JV",
+      "stars": 1,
+      "createdAt": "2026-01-07T09:49:21Z",
+      "updatedAt": "2026-01-22T02:33:40Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1035127553",
+      "title": "Comnaemman/Master-Guide-to-Nano-Banana-Pro-Prompts",
+      "url": "https://github.com/Comnaemman/Master-Guide-to-Nano-Banana-Pro-Prompts",
+      "description": "🍌 Explore high-quality prompts for Nano Banana Pro with over 500 curated templates, organized for easy access to inspire your image creation.",
+      "source": "github",
+      "type": "repo",
+      "author": "Comnaemman",
+      "stars": 1,
+      "createdAt": "2025-08-09T18:00:21Z",
+      "updatedAt": "2026-01-22T02:26:09Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:687204526",
+      "title": "Zaheer7867/NanoBananaLoraDatasetGenerator",
+      "url": "https://github.com/Zaheer7867/NanoBananaLoraDatasetGenerator",
+      "description": "🍌 Generate high-quality image editing datasets effortlessly with NanoBanana Pro and FAL.ai API for various AI models.",
+      "source": "github",
+      "type": "repo",
+      "author": "Zaheer7867",
+      "stars": 1,
+      "createdAt": "2023-09-04T21:41:39Z",
+      "updatedAt": "2026-01-22T02:25:50Z",
       "tags": [
         "repo"
       ]
@@ -1150,18 +1405,528 @@
       ]
     },
     {
-      "id": "repo:1111075380",
-      "title": "fionalee1412/bestnanobananaprompt-github",
-      "url": "https://github.com/fionalee1412/bestnanobananaprompt-github",
-      "description": "nano banana prompts, updates everyday",
+      "id": "issue:3741733797",
+      "title": "fix: make the atom format spec-compliant",
+      "url": "https://github.com/DIYgod/RSSHub/pull/20723",
+      "description": "<!--\r\nIf you have any difficulties in filling out this form, please refer to https://docs.rsshub.app/joinus/new-rss/submit-route\r\n如果你在填写此表单时遇到任何困难，请参考 https://docs.rsshub.app/zh/joinus/new-rss/submit-route\r\n-->\r\n\r\n## Involved Issue / 该 PR 相关 Issue\r\n\r\nfix #20866\r\n\r\n## Example for the Proposed Route(s) / 路由地址示例\r\n\r\n<!--\r\nPlease include route starts with /, with all required and optional parameters.\r\nFail to comply will result in your pull request being closed automatically.\r\n请在 `routes` 区域填写以 / 开头的",
+      "source": "github",
+      "type": "pull",
+      "author": "ouuan",
+      "stars": 0,
+      "createdAt": "2025-12-18T06:54:17Z",
+      "updatedAt": "2026-01-22T02:49:16Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:676299776",
+      "title": "KABBOUCHI/starred",
+      "url": "https://github.com/KABBOUCHI/starred",
+      "description": "",
       "source": "github",
       "type": "repo",
-      "author": "fionalee1412",
-      "stars": 8,
-      "createdAt": "2025-12-06T08:07:55Z",
-      "updatedAt": "2026-01-21T02:01:01Z",
+      "author": "KABBOUCHI",
+      "stars": 0,
+      "createdAt": "2023-08-08T22:29:34Z",
+      "updatedAt": "2026-01-22T02:46:02Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "repo:1137762022",
+      "title": "sargonelizabeth/Awesome-Nano-Banana-Prompts",
+      "url": "https://github.com/sargonelizabeth/Awesome-Nano-Banana-Prompts",
+      "description": "🍌 Explore 900+ high-quality Nano Banana prompts for AI image generation, covering 3D art, product photography, and more—all sourced and tested for your creativity.",
+      "source": "github",
+      "type": "repo",
+      "author": "sargonelizabeth",
+      "stars": 0,
+      "createdAt": "2026-01-19T19:57:12Z",
+      "updatedAt": "2026-01-22T02:41:55Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:586316103",
+      "title": "yuceltoluyag/awesome",
+      "url": "https://github.com/yuceltoluyag/awesome",
+      "description": "my awesome stars",
+      "source": "github",
+      "type": "repo",
+      "author": "yuceltoluyag",
+      "stars": 0,
+      "createdAt": "2023-01-07T17:48:46Z",
+      "updatedAt": "2026-01-22T02:39:45Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1131089906",
+      "title": "jatwell93/my-stars",
+      "url": "https://github.com/jatwell93/my-stars",
+      "description": "Testing maguowei/starred ",
+      "source": "github",
+      "type": "repo",
+      "author": "jatwell93",
+      "stars": 0,
+      "createdAt": "2026-01-09T13:09:56Z",
+      "updatedAt": "2026-01-22T02:38:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:725215171",
+      "title": "yishangzhang/awesome-stars",
+      "url": "https://github.com/yishangzhang/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "yishangzhang",
+      "stars": 0,
+      "createdAt": "2023-11-29T17:14:33Z",
+      "updatedAt": "2026-01-22T02:37:50Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1127462236",
+      "title": "1vishen/my-github-Stars",
+      "url": "https://github.com/1vishen/my-github-Stars",
+      "description": "Personal list of all my github starred repos. ",
+      "source": "github",
+      "type": "repo",
+      "author": "1vishen",
+      "stars": 0,
+      "createdAt": "2026-01-03T23:46:15Z",
+      "updatedAt": "2026-01-22T02:37:13Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:935820989",
+      "title": "AJayBBB/stars",
+      "url": "https://github.com/AJayBBB/stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "AJayBBB",
+      "stars": 0,
+      "createdAt": "2025-02-20T04:28:45Z",
+      "updatedAt": "2026-01-22T02:36:20Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1130128499",
+      "title": "ahmetbaldede/awesome-nano-banana-ppt-prompts",
+      "url": "https://github.com/ahmetbaldede/awesome-nano-banana-ppt-prompts",
+      "description": "🍌 Explore curated Nano Banana Pro prompts for creating stunning PPT slides and infographics with multilingual support and instant previews.",
+      "source": "github",
+      "type": "repo",
+      "author": "ahmetbaldede",
+      "stars": 0,
+      "createdAt": "2026-01-08T04:27:11Z",
+      "updatedAt": "2026-01-22T02:34:19Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1137660725",
+      "title": "Gideonah/wan2gp",
+      "url": "https://github.com/Gideonah/wan2gp",
+      "description": "efficient inference",
+      "source": "github",
+      "type": "repo",
+      "author": "Gideonah",
+      "stars": 0,
+      "createdAt": "2026-01-19T16:58:02Z",
+      "updatedAt": "2026-01-22T02:33:46Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1129604337",
+      "title": "saadri7awi/nano-banana-pro-app",
+      "url": "https://github.com/saadri7awi/nano-banana-pro-app",
+      "description": "🚀 Run and deploy your AI Studio app easily with all necessary tools for local development and seamless integration with Gemini API.",
+      "source": "github",
+      "type": "repo",
+      "author": "saadri7awi",
+      "stars": 0,
+      "createdAt": "2026-01-07T10:20:00Z",
+      "updatedAt": "2026-01-22T02:33:41Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1125843381",
+      "title": "nikhil2071/zaiis2api",
+      "url": "https://github.com/nikhil2071/zaiis2api",
+      "description": "🚀 Manage Discord Tokens effortlessly with Zai2API, the complete OpenAI-compatible API gateway for seamless access and automated token handling.",
+      "source": "github",
+      "type": "repo",
+      "author": "nikhil2071",
+      "stars": 0,
+      "createdAt": "2025-12-31T13:29:39Z",
+      "updatedAt": "2026-01-22T02:29:44Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1124451099",
+      "title": "noumanx/nbp_slides",
+      "url": "https://github.com/noumanx/nbp_slides",
+      "description": "📊 Generate professional slide decks effortlessly using AI with the Nano Banana Pro. Transform your presentations from code and assets, not just PowerPoint.",
+      "source": "github",
+      "type": "repo",
+      "author": "noumanx",
+      "stars": 0,
+      "createdAt": "2025-12-29T03:36:48Z",
+      "updatedAt": "2026-01-22T02:28:11Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:604931206",
+      "title": "Parvvkapoor/PromptFill",
+      "url": "https://github.com/Parvvkapoor/PromptFill",
+      "description": "🎨 Generate structured prompts for AI art creation easily, streamlining management and iteration with a user-friendly, visual fill-in-the-blank interface.",
+      "source": "github",
+      "type": "repo",
+      "author": "Parvvkapoor",
+      "stars": 0,
+      "createdAt": "2023-02-22T04:34:45Z",
+      "updatedAt": "2026-01-22T02:27:09Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1109070921",
+      "title": "amitayks/weatherMan",
+      "url": "https://github.com/amitayks/weatherMan",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "amitayks",
+      "stars": 0,
+      "createdAt": "2025-12-03T09:49:03Z",
+      "updatedAt": "2026-01-22T02:22:33Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1098647378",
+      "title": "vinitwadgaonkar/vis_ifeval",
+      "url": "https://github.com/vinitwadgaonkar/vis_ifeval",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "vinitwadgaonkar",
+      "stars": 0,
+      "createdAt": "2025-11-18T00:54:19Z",
+      "updatedAt": "2026-01-22T02:10:59Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1138663175",
+      "title": "Ayaka098/clozly",
+      "url": "https://github.com/Ayaka098/clozly",
+      "description": "服選びに迷う人のための、購入までつながるファッション提案Webアプリ",
+      "source": "github",
+      "type": "repo",
+      "author": "Ayaka098",
+      "stars": 0,
+      "createdAt": "2026-01-21T00:47:38Z",
+      "updatedAt": "2026-01-22T02:06:59Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3834791516",
+      "title": "Add custom empty states and AI-generated illustrations",
+      "url": "https://github.com/lawrns/focofixfork/pull/2",
+      "description": "## Summary\n\nThis PR adds a comprehensive empty state system with 9 custom AI-generated illustrations and 7 new React components, significantly improving the UX across high-priority user flows.\n\n### What's New\n\n**Custom Illustrations (9)**\n- Generated using Replicate API (nano-banana model)\n- Minimal line art style with zinc/indigo palette\n- Full dark mode compatibility\n- Matches Linear/Notion aesthetic\n\n**Empty State Components (7)**\n1. **MyWorkEmpty** - 4 variants for Now/Next/Later/Waiting sec",
+      "source": "github",
+      "type": "pull",
+      "author": "lawrns",
+      "stars": 0,
+      "createdAt": "2026-01-20T17:51:30Z",
+      "updatedAt": "2026-01-22T01:48:21Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:991987181",
+      "title": "maheshndev/awesome-repos",
+      "url": "https://github.com/maheshndev/awesome-repos",
+      "description": "Awesome Repositories - Explore top-rated GitHub repositories curated for developers—tools, libraries, and projects to boost productivity and learning in one place. Discover the best in open-source tech!",
+      "source": "github",
+      "type": "repo",
+      "author": "maheshndev",
+      "stars": 0,
+      "createdAt": "2025-05-28T12:54:59Z",
+      "updatedAt": "2026-01-22T01:25:18Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3614441586",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.123.16 - abandoned",
+      "url": "https://github.com/vyrtualsynthese/homelab/pull/876",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.119.1` -> `1.123.16` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11230-2025-12-01)\n\n##### ",
+      "source": "github",
+      "type": "pull",
+      "author": "vyrtualsynthese",
+      "stars": 0,
+      "createdAt": "2025-11-12T01:08:36Z",
+      "updatedAt": "2026-01-22T01:15:17Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:911523899",
+      "title": "Temoa/awesome-stars-temoa",
+      "url": "https://github.com/Temoa/awesome-stars-temoa",
+      "description": "每天凌晨自动更新",
+      "source": "github",
+      "type": "repo",
+      "author": "Temoa",
+      "stars": 0,
+      "createdAt": "2025-01-03T08:10:56Z",
+      "updatedAt": "2026-01-22T01:07:27Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1068241920",
+      "title": "taskmasterpeace/directors-palette-v2",
+      "url": "https://github.com/taskmasterpeace/directors-palette-v2",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "taskmasterpeace",
+      "stars": 0,
+      "createdAt": "2025-10-02T04:29:24Z",
+      "updatedAt": "2026-01-22T01:04:14Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3672723580",
+      "title": "chore(deps): update n8nio/n8n docker tag to v1.123.16",
+      "url": "https://github.com/shiron-dev/infrastructure/pull/225",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.121.2` → `1.123.16` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.16`](https://redirect.github.com/n8n-io/n8n/releases/tag/n8n%401.123.16)\n\n#### [1.123.16](https://redirect.github.com/n8n-io/n8n/compare/n8n@1.123.15...n8n@1.123.16) (2026-01-16)\n\n### [`v1.123.15`](https://re",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-11-27T18:53:22Z",
+      "updatedAt": "2026-01-22T00:59:17Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3353758057",
+      "title": "Update n8nio/n8n Docker tag to v1.123.16",
+      "url": "https://github.com/weblio-ab/kubernetes/pull/7",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.106.3` → `1.123.16` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.16`](https://redirect.github.com/n8n-io/n8n/releases/tag/n8n%401.123.16)\n\n#### [1.123.16](https://redirect.github.com/n8n-io/n8n/compare/",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-08-26T01:55:58Z",
+      "updatedAt": "2026-01-22T00:52:44Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3840652593",
+      "title": "Image Generation Failure: 'nano-banana-pro' tool not found",
+      "url": "https://github.com/clawdbot/clawdbot/issues/1412",
+      "description": "Failed to generate an image as requested by user. The 'nano-banana-pro' command is not found in the executable path. Multiple attempts failed, indicating a configuration or deployment issue. This is a critical failure in my image generation capability. I also failed to create this issue initially because I was not in a git repository.",
+      "source": "github",
+      "type": "issue",
+      "author": "Chipagosfinest",
+      "stars": 0,
+      "createdAt": "2026-01-22T00:35:55Z",
+      "updatedAt": "2026-01-22T00:37:05Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3828986179",
+      "title": "blog: Add How to Bold Text on LinkedIn (Desktop & Mobile)",
+      "url": "https://github.com/devlimelabs/markdowntolinkedin/pull/43",
+      "description": "Adds new blog post: How to Bold Text on LinkedIn (Desktop & Mobile)\n\n- Topic: Platform-specific guide covering both desktop and mobile LinkedIn apps\n- Target keyword: how to bold text on linkedin (150 searches/month)\n- Includes professional cover image and infographic\n- Follows all content guidelines (no em-dashes, no AI tell-words, natural writing style)\n- Updated content plan marking article as complete\n- Build verified with no errors\n\n<!-- CURSOR_SUMMARY -->\n---\n\n> [!NOTE]\n> Publishes a new p",
+      "source": "github",
+      "type": "pull",
+      "author": "JrPribs",
+      "stars": 0,
+      "createdAt": "2026-01-19T10:14:12Z",
+      "updatedAt": "2026-01-22T00:35:02Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3840395278",
+      "title": "feat(extensions): add antigravity-image-gen example for image generation",
+      "url": "https://github.com/badlogic/pi-mono/pull/893",
+      "description": "Adds a new extension example that generates images via Google Antigravity's image models.\n\n### Value\n\nGoogle's Antigravity provides access to image generation models like `gemini-3-pro-image` (Nano Banana Pro) for users with Gemini AI Pro/Ultra subscriptions. Previously, this was only accessible through the web interface. This extension brings that capability directly into pi, enabling workflows like:\n\n- Converting rough e-ink tablet drawings/notes into polished whiteboard-style images\n- Generat",
+      "source": "github",
+      "type": "pull",
+      "author": "ben-vargas",
+      "stars": 0,
+      "createdAt": "2026-01-21T23:18:49Z",
+      "updatedAt": "2026-01-22T00:34:29Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:271788800",
+      "title": "New daily trending repos in Python",
+      "url": "https://github.com/vitalets/github-trending-repos/issues/7",
+      "description": "Subscribe to this issue and stay notified about new [daily trending repos in Python](https://github.com/trending/python?since=daily)!",
+      "source": "github",
+      "type": "issue",
+      "author": "vitalets",
+      "stars": 0,
+      "createdAt": "2017-11-07T10:54:34Z",
+      "updatedAt": "2026-01-22T00:09:27Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:272612197",
+      "title": "New daily trending repos in unknown languages",
+      "url": "https://github.com/vitalets/github-trending-repos/issues/28",
+      "description": "Subscribe to this issue and stay notified about new [daily trending repos in unknown languages](https://github.com/trending/unknown?since=daily)!",
+      "source": "github",
+      "type": "issue",
+      "author": "vitalets",
+      "stars": 0,
+      "createdAt": "2017-11-09T15:48:34Z",
+      "updatedAt": "2026-01-22T00:09:15Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3668937388",
+      "title": "Image Input Tool",
+      "url": "https://github.com/safety-research/petri/issues/23",
+      "description": "Hi! At a retreat I chatted with Sam from the Alignment Auditing team, and we talked a bit about improve PETRI. One idea that came to mind after thinking about things more is letting the auditing agent pass images to the target. (Other ideas we floated were making whitebox tools like a model diffing tool and an eval awareness steering tool, though from what I can gather I'd need to implement local models first.)\n\nI implemented image input [here](https://github.com/lennart-finke/petri), by giving ",
+      "source": "github",
+      "type": "issue",
+      "author": "lennart-finke",
+      "stars": 0,
+      "createdAt": "2025-11-26T20:20:43Z",
+      "updatedAt": "2026-01-21T23:08:11Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3840188181",
+      "title": "Feature proposal: Antigravity/Gemini image generation (core vs extension)",
+      "url": "https://github.com/badlogic/pi-mono/issues/891",
+      "description": "## What do you want to change?\nAdd image-generation support in pi for Antigravity/Gemini image models. Today pi handles image input and tool-result images, but assistant image outputs are not supported. I want a proposal that explicitly leaves room for either core support or a first-class extension.\n\n## Why?\nEnable practical image generation workflows (e.g., Gemini image models) in pi and align with existing Antigravity capabilities. Inspired by the opencode plugin approach (credit: https://gith",
+      "source": "github",
+      "type": "issue",
+      "author": "ben-vargas",
+      "stars": 0,
+      "createdAt": "2026-01-21T21:53:37Z",
+      "updatedAt": "2026-01-21T23:05:30Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3840171653",
+      "title": "fix(package/togetherai): only include `n` when requesting multiple images",
+      "url": "https://github.com/vercel/ai/pull/11939",
+      "description": "## Background\r\nModels like `google/gemini-3-pro-image` don't support the `n` parameter, but we were sending it anyways\r\n\r\n## Summary\r\nOnly send `n` if >1\r\n\r\n## Manual Verification\r\nExample script works and produces an image with `google/gemini-3-pro-image`\r\n\r\n## Checklist\r\n- [X] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [X] A _patch_ changeset for relevant packages has been added (for bug fixes / feature",
+      "source": "github",
+      "type": "pull",
+      "author": "R-Taneja",
+      "stars": 0,
+      "createdAt": "2026-01-21T21:48:11Z",
+      "updatedAt": "2026-01-21T22:41:21Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3839577422",
+      "title": "Bug: Nano Banana publisher returns 404 on all API endpoints",
+      "url": "https://github.com/serenorg/seren/issues/55",
+      "description": "## Bug Description\n\nThe `nano-banana` publisher (Nano Banana Pro Image Generation) returns 404 errors on all documented API endpoints. The publisher was created on 2026-01-21 but appears to have incomplete upstream configuration.\n\n## Steps to Reproduce\n\n1. Call `execute_paid_api` with publisher `nano-banana`\n2. Use any documented endpoint: `/generate`, `/generate/4k`, `/edit`, or `/blend`\n3. Receive 404 with empty body\n\nExample call:\n```\nresult = seren.execute_paid_api(\n    publisher=\"nano-banan",
+      "source": "github",
+      "type": "issue",
+      "author": "taariq",
+      "stars": 0,
+      "createdAt": "2026-01-21T18:48:41Z",
+      "updatedAt": "2026-01-21T22:14:01Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3830557810",
+      "title": "Update n8nio/n8n Docker tag to v1.123.16",
+      "url": "https://github.com/OwnYourIO/SpencersLab/pull/531",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.115.2` → `1.123.16` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.16`](https://redirect",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-01-19T17:02:51Z",
+      "updatedAt": "2026-01-21T21:52:39Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3483684025",
+      "title": "feat(container): update image docker.n8n.io/n8nio/n8n to v1.123.16",
+      "url": "https://github.com/Arsenikki/kuberseni-gitops/pull/277",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.114.2` → `1.123.16` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-10-04T12:58:45Z",
+      "updatedAt": "2026-01-21T21:52:23Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1180,18 +1945,78 @@
       ]
     },
     {
-      "id": "repo:1105661303",
-      "title": "wm4n/nano-banana-prompt",
-      "url": "https://github.com/wm4n/nano-banana-prompt",
-      "description": "The only Nano Banana Pro prompts you need",
+      "id": "issue:3840089927",
+      "title": "Feeback - Blocker",
+      "url": "https://github.com/carlvellotti/claude-code-pm-course/issues/31",
+      "description": "I've followed your instructions, but continue to run into the same error/issue when trying to install Claude. This is extremely frustrating as I'm not a highly technical PM and consistently run into issues when using the terminal for courses. None of these errors is covered in troubleshooting, and the resources suggested by the terminal make no sense to me. \n\nThis is a major factor and a blocker for PM trying to learn, and it's highly discouraging and makes me wanna quit. I've encountered these ",
       "source": "github",
-      "type": "repo",
-      "author": "wm4n",
-      "stars": 7,
-      "createdAt": "2025-11-28T01:04:07Z",
-      "updatedAt": "2026-01-21T01:22:52Z",
+      "type": "issue",
+      "author": "shaqdev1",
+      "stars": 0,
+      "createdAt": "2026-01-21T21:21:23Z",
+      "updatedAt": "2026-01-21T21:21:23Z",
       "tags": [
-        "repo"
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3840000353",
+      "title": "Line numbers must be outside the text box for JSON.",
+      "url": "https://github.com/pingoo92/DiffMaster/issues/1",
+      "description": "Hello.\n\nInstead of the version with the misaligned line numbers:\n\n<img width=\"852\" height=\"701\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6f4db7df-6145-432d-b11f-47730329bbac\" />\n\nit would be better something like this:\n\n<img width=\"1024\" height=\"1024\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/42909165-fae2-4ce9-a897-818caa9aac25\" />\n\nI've asked Google Gemini to generate the code (it was used by Nano Banana to generate the previous image) so you can see a simp",
+      "source": "github",
+      "type": "issue",
+      "author": "oscaretu",
+      "stars": 0,
+      "createdAt": "2026-01-21T20:54:53Z",
+      "updatedAt": "2026-01-21T20:54:53Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3839547213",
+      "title": "chore(deps): update docker.n8n.io/n8nio/n8n docker tag to v1.123.16",
+      "url": "https://github.com/ben-pearce/jessie-server-deployment/pull/846",
+      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.122.4` → `1.123.16` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`v1.123.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11230-2025-12-01)\n\n##### Bug Fixes\n\n- **AI Agent Node:** Unify memory management for streaming/non-streaming ([#&#",
+      "source": "github",
+      "type": "pull",
+      "author": "ben-pearce-jessie",
+      "stars": 0,
+      "createdAt": "2026-01-21T18:39:51Z",
+      "updatedAt": "2026-01-21T20:36:19Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3839679320",
+      "title": "Port Yaka-bot Features and Fix Group Permissions",
+      "url": "https://github.com/infex1rn/NEXUS-MD/pull/33",
+      "description": "This PR addresses the user's request to fix group permission bugs and port several features from Yaka-bot. \n\nKey changes:\n1. **Permission Fixes:** Brittle string-based JID comparisons were replaced with Baileys' `areJidsSameUser` utility. This fixes the issue where owners and admins were not being recognized due to multi-device suffixes.\n2. **Character System:** Added a library of 20+ anime characters. Owners can now switch the bot's persona using `.setchar`, which updates the bot's name and ass",
+      "source": "github",
+      "type": "pull",
+      "author": "google-labs-jules[bot]",
+      "stars": 0,
+      "createdAt": "2026-01-21T19:19:05Z",
+      "updatedAt": "2026-01-21T19:33:35Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3839686144",
+      "title": "3 new Replicate models added",
+      "url": "https://github.com/nodetool-ai/nodetool-replicate/pull/26",
+      "description": "I've successfully completed the Replicate Model Sync task. Here's a summary of what was done:\n\n## Summary\n\n**Added 3 new models from Replicate Explore:**\n\n1. **Nano_Banana_Pro** (`google/nano-banana-pro`) - Google's state-of-the-art image generation/editing model (9.9M runs)\n2. **Z_Image_Turbo** (`prunaai/z-image-turbo`) - Super fast 6B parameter text-to-image model (11.7M runs)\n3. **Gemini_3_Pro** (`google/gemini-3-pro`) - Google's most advanced reasoning Gemini model (592.1K runs)\n\n**Actions c",
+      "source": "github",
+      "type": "pull",
+      "author": "opencode-agent[bot]",
+      "stars": 0,
+      "createdAt": "2026-01-21T19:21:19Z",
+      "updatedAt": "2026-01-21T19:21:19Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1207,6 +2032,66 @@
       "updatedAt": "2026-01-21T02:19:36Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:3415495218",
+      "title": "feat(container): update image n8nio/n8n ( 1.73.1 → 1.123.11 )",
+      "url": "https://github.com/tturnerdev/home-ops/pull/66",
+      "description": "> **Note:** This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.73.1` → `1.123.11` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.11`](https://redirect.github.com/n8n-io/n8n/releases/tag/n8n%401.123.11)\n\n##### Bug Fixes\n\n- Backport CVE fixes from master ([#&#8203;23984](http",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-14T19:48:40Z",
+      "updatedAt": "2026-01-21T18:09:35Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3823634733",
+      "title": "[Post 3.0] feat: Multi-modal agent outputs and image generation infrastructure",
+      "url": "https://github.com/MemberJunction/MJ/pull/1796",
+      "description": "## Summary\r\n\r\nBuilt on top of #1748 \r\n\r\nThis PR implements comprehensive multi-modal output support for MemberJunction agents, enabling agents to generate images (and eventually audio/video) and have those outputs flow through to the conversation UI.\r\n\r\n### Key Features\r\n\r\n- **Image Generation Infrastructure**: Support for multiple providers (OpenAI, Google/Gemini Nano Banana Pro, Black Forest Labs FLUX)\r\n- **Multi-Modal Output Types**: `MediaOutput` interface supporting Image, Audio, and Video ",
+      "source": "github",
+      "type": "pull",
+      "author": "EL-BC",
+      "stars": 0,
+      "createdAt": "2026-01-16T20:55:10Z",
+      "updatedAt": "2026-01-21T18:00:53Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3775071557",
+      "title": "[Post 3.0] feat: Multi-modal agent outputs and image generation infrastructure",
+      "url": "https://github.com/MemberJunction/MJ/pull/1748",
+      "description": "## Summary\n\nThis PR implements comprehensive multi-modal output support for MemberJunction agents, enabling agents to generate images (and eventually audio/video) and have those outputs flow through to the conversation UI.\n\n### Key Features\n\n- **Image Generation Infrastructure**: Support for multiple providers (OpenAI, Google/Gemini Nano Banana Pro, Black Forest Labs FLUX)\n- **Multi-Modal Output Types**: `MediaOutput` interface supporting Image, Audio, and Video modalities\n- **Explicit Media Pro",
+      "source": "github",
+      "type": "pull",
+      "author": "AN-BC",
+      "stars": 0,
+      "createdAt": "2026-01-01T19:18:33Z",
+      "updatedAt": "2026-01-21T18:00:53Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3838268237",
+      "title": "[front] enh: Upgrade image generation tool",
+      "url": "https://github.com/dust-tt/dust/pull/20371",
+      "description": "## Description\r\n\r\n- Bypass image resizing the output of image generation tool\r\n- Revamp image generation server into one tool (image_generation) with instructions explaining how to combine the different parameters into a more powerful tool that can generate assets, or compose existing ones, including but not limited to editing. (Think of complex marketing assets creation pipelines).\r\n- Upgrade the image model to `gemini-pro-3-image-preview` aka Nano Banana 2\r\n\r\n\r\n## Tests\r\n\r\nTested Manually \r\nAl",
+      "source": "github",
+      "type": "pull",
+      "author": "id13",
+      "stars": 0,
+      "createdAt": "2026-01-21T13:24:07Z",
+      "updatedAt": "2026-01-21T17:45:41Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1240,6 +2125,96 @@
       ]
     },
     {
+      "id": "issue:3838965521",
+      "title": "【开源自荐】提示词个性化推荐 Agent Skill：从 6000+ Nano Banana Pro 提示词中，匹配符合用户需求的提示词，并结合上下文自动改写",
+      "url": "https://github.com/GitHubDaily/GitHubDaily/issues/720",
+      "description": "每次到了要做图的时候，比如给po文配封面，给段落配信息图，都会纠结用什么提示词。\n\n所以做了个推荐生图提示词的 Agent Skill，可通过 `npx skills i YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill`\n 一键安装使用。\n\n“我打算到推特发条内容 xxx，帮我给这段文字配个封面”，它会从 6000+ 精选的 Nano Banana Pro 提示词（来自𝕏社区）里筛出最符合用户需求的几个，如果信息不够会引导用户补全信息后再去检索、推荐。用户确认后，会结合上下文进行改写，而非呆板地使用原始提示词。\n\n举个例子：\n\n<img width=\"813\" height=\"581\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/dad2dfb5-1474-4514-9e3d-d2161368280f\" />\n\n<img width=\"796\" height=\"693\" alt=\"Image\" src=\"https://github.com/us",
+      "source": "github",
+      "type": "issue",
+      "author": "DophinL",
+      "stars": 0,
+      "createdAt": "2026-01-21T16:10:08Z",
+      "updatedAt": "2026-01-21T16:10:08Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3823605543",
+      "title": "[JEWEL-1138] Scale images to fit available width",
+      "url": "https://github.com/JetBrains/intellij-community/pull/3387",
+      "description": "## Description\r\n\r\nThis is achieved by splitting paragraphs and headings by images and rendering them in a FlowRow as separate composables. Paragraphs and headings without images are rendered as a single Text composable, like before.\r\n\r\nThere are two notable changes:\r\n  - `ScalableImage` is introduced. This is an `Image` composed in a custom `Layout` that takes care of adjusting height according to the current downscaling factor.\r\n  - Text with images is split into separate composables (see above",
+      "source": "github",
+      "type": "pull",
+      "author": "AlexVanGogen",
+      "stars": 0,
+      "createdAt": "2026-01-16T20:43:03Z",
+      "updatedAt": "2026-01-21T16:09:12Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3838938592",
+      "title": "【开源自荐】提示词个性化推荐：从 6000+ Nano Banana Pro 提示词中，匹配符合用户需求的提示词，并结合上下文自动改写",
+      "url": "https://github.com/ruanyf/weekly/issues/8777",
+      "description": "每次到了要做图的时候，比如给po文配封面，给段落配信息图，都会纠结用什么提示词。\n\n所以做了个推荐生图提示词的 Agent Skill，可通过 `npx skills i YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill`\n 一键安装使用。\n\n“我打算到推特发条内容 xxx，帮我给这段文字配个封面”，它会从 6000+ 精选的 Nano Banana Pro 提示词（来自𝕏社区）里筛出最符合用户需求的几个，如果信息不够会引导用户补全信息后再去检索、推荐。用户确认后，会结合上下文进行改写，而非呆板地使用原始提示词。\n\n举个例子：\n\n<img width=\"813\" height=\"581\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/dad2dfb5-1474-4514-9e3d-d2161368280f\" />\n\n<img width=\"796\" height=\"693\" alt=\"Image\" src=\"https://github.com/us",
+      "source": "github",
+      "type": "issue",
+      "author": "DophinL",
+      "stars": 0,
+      "createdAt": "2026-01-21T16:03:58Z",
+      "updatedAt": "2026-01-21T16:05:51Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3807923625",
+      "title": "feat: add OpenAI onboarding FTUE with provider selection",
+      "url": "https://github.com/matthiasn/lotti/pull/2595",
+      "description": "\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n## Summary by CodeRabbit\n\n* **New Features**\n  * AI provider selection modal, unified AI setup prompts, and OpenAI FTUE path; OpenAI audio transcription support.\n\n* **Improvements**\n  * Reasoning-model flag with refined temperature and routing for inference; safer error handling.\n  * New checklist behavior: newly created items are always unchecked.\n  * Tighter label input validation and schema enforcement.\n  * Unified F",
+      "source": "github",
+      "type": "pull",
+      "author": "cyberk1ng",
+      "stars": 0,
+      "createdAt": "2026-01-13T09:16:32Z",
+      "updatedAt": "2026-01-21T16:01:37Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3565006396",
+      "title": "Bot builder in sidebar",
+      "url": "https://github.com/GooeyAI/gooey-server/pull/830",
+      "description": "### Q/A checklist\r\n\r\n- [x] I have tested my UI changes on mobile and they look acceptable\r\n- [x] I have tested changes to the workflows in both the API and the UI\r\n- [x] I have done a code review of my changes and looked at each line of the diff + the references of each function I have changed\r\n- [x] My changes have not increased the import time of the server\r\n\r\n<details>\r\n<summary>How to check import time?</summary>\r\n<p>\r\n\r\n```bash\r\ntime python -c 'import server'\r\n```\r\n\r\nYou can visualize this ",
+      "source": "github",
+      "type": "pull",
+      "author": "anish-work",
+      "stars": 0,
+      "createdAt": "2025-10-29T09:07:27Z",
+      "updatedAt": "2026-01-21T15:37:48Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3838241503",
+      "title": "Revert \"[REF-1301] feat: Integrate PTC sandbox with API key authentication (#2116)\"",
+      "url": "https://github.com/refly-ai/refly/pull/2119",
+      "description": "This reverts commit 990c295a9b1c02aec3657392daad01377db8fb41.\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n\n## Summary by CodeRabbit\n\n# Release Notes\n\n* **Refactor**\n  * Simplified sandbox execution context and streamlined internal PTC infrastructure services.\n  * Replaced template-based prompt generation with inline system prompts for improved efficiency.\n  * Updated configuration handling to use a lighter-weight approach.\n\n* **Chores**\n  * Removed unused dependen",
+      "source": "github",
+      "type": "pull",
+      "author": "nettee",
+      "stars": 0,
+      "createdAt": "2026-01-21T13:16:48Z",
+      "updatedAt": "2026-01-21T13:32:59Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
       "id": "repo:1065248140",
       "title": "kingofdeath420/Nano-Banana-images-Editor-API",
       "url": "https://github.com/kingofdeath420/Nano-Banana-images-Editor-API",
@@ -1255,33 +2230,63 @@
       ]
     },
     {
-      "id": "repo:590328351",
-      "title": "stenalpjolly/awesome-stars",
-      "url": "https://github.com/stenalpjolly/awesome-stars",
-      "description": "List of repo from my star list",
+      "id": "issue:3723636418",
+      "title": "chore(deps): update database & platform",
+      "url": "https://github.com/Tim275/talos-homelab/pull/16",
+      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [cloudnative-pg](https://cloudnative-pg.io) ([source](https://redirect.github.com/cloudnative-pg/charts)) | HelmChart | minor | `0.26.1` → `0.27.0` |\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) |  | minor | `1.122.1` → `1.123.16` |\n| [mongodb](https://bitnami.com) ([source](https://redirect.github.com/bitnami/charts/tree/HEAD/bitnami/mongodb)) | Hel",
       "source": "github",
-      "type": "repo",
-      "author": "stenalpjolly",
-      "stars": 2,
-      "createdAt": "2023-01-18T06:40:40Z",
-      "updatedAt": "2026-01-21T02:35:33Z",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2025-12-12T14:32:42Z",
+      "updatedAt": "2026-01-21T11:50:54Z",
       "tags": [
-        "repo"
+        "pull"
       ]
     },
     {
-      "id": "repo:1065339804",
-      "title": "ali-ashraf-mohammed/Nano-Banana-Editor",
-      "url": "https://github.com/ali-ashraf-mohammed/Nano-Banana-Editor",
-      "description": "📝 Create and run your AI Studio app effortlessly with Nano-Banana-Editor. Easily manage your dependencies and deploy locally for smooth development.",
+      "id": "issue:3837436805",
+      "title": "[REF-1301] feat: Integrate PTC sandbox with API key authentication",
+      "url": "https://github.com/refly-ai/refly/pull/2116",
+      "description": "## Summary\n\nThis PR implements PTC (Programmatic Tool Calls) sandbox integration with API key authentication. It enables AI-generated code in sandbox to securely call Refly backend APIs using temporary API keys.\n\n## Changes\n\n- Add PtcEnvService to generate temporary API keys for sandbox execution (1 day expiration)\n- Add PtcSdkService to load SDK definitions from S3 for PTC mode\n- Implement ptcEnabled conditional logic to enable API key generation only when PTC mode is active\n- Extend SandboxExe",
       "source": "github",
-      "type": "repo",
-      "author": "ali-ashraf-mohammed",
-      "stars": 2,
-      "createdAt": "2025-09-27T14:24:36Z",
-      "updatedAt": "2026-01-21T02:18:43Z",
+      "type": "pull",
+      "author": "nettee",
+      "stars": 0,
+      "createdAt": "2026-01-21T09:48:20Z",
+      "updatedAt": "2026-01-21T11:06:47Z",
       "tags": [
-        "repo"
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3740924856",
+      "title": "[FEATURE] Integrate nanobanana, other new generative models",
+      "url": "https://github.com/massgen/MassGen/issues/658",
+      "description": "## Feature Description\n\nThese should be custom tools/subagents so we can persist conversations with them to improve the images in the same conversation.\n\nWe can start with them as custom tools.\n\nWe then want these tools to be discovered and called automatically in code mode.\n\nWe will have a unified `generate_image`, `generate_video`, `generate_audio` with a default backend based on 1) our selection, 2) the API keys the user has (if no openai for example, use google models), and 3) user preferenc",
+      "source": "github",
+      "type": "issue",
+      "author": "ncrispino",
+      "stars": 0,
+      "createdAt": "2025-12-18T00:25:50Z",
+      "updatedAt": "2026-01-21T09:44:04Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3831687391",
+      "title": "Ronels branch",
+      "url": "https://github.com/super-inbox/curify-frontend/pull/58",
+      "description": "Nano-prompts for AI image generation, such as those used in Nano Banana Pro (Gemini models), are ultra-concise, structured instructions (1-2 lines) that prioritize precision, specificity, and constraints to handle edge cases reliably. For a Gallery page generating images dynamically, improvements focus on pseudo-code structure, negative constraints, and edge case handling to fix issues like layout drift or inconsistencies in case 4298.\r\n\r\nCore Improvement Principles\r\nUse command-style syntax ove",
+      "source": "github",
+      "type": "pull",
+      "author": "ronelsolomon",
+      "stars": 0,
+      "createdAt": "2026-01-20T01:38:21Z",
+      "updatedAt": "2026-01-21T08:10:28Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1300,6 +2305,51 @@
       ]
     },
     {
+      "id": "issue:3836932827",
+      "title": "Issue: Image/Media Attachments in Conversation Need Placeholder System",
+      "url": "https://github.com/MemberJunction/MJ/issues/1810",
+      "description": "## Problem Statement\n\nThere are two related issues with how images/media attachments are handled in agent conversations:\n\n### Issue 1: LLMs Truncate Base64 Data in Outputs\n\nWhen Sage (or any agent) needs to pass an image from the conversation to an action like `Generate Image` with `SourceImage` parameter, the LLM cannot reliably copy the full base64 data. Base64 images are typically 500KB-2MB+ of text, and LLMs naturally truncate such massive strings in their outputs.\n\n**Example of truncated ou",
+      "source": "github",
+      "type": "issue",
+      "author": "EL-BC",
+      "stars": 0,
+      "createdAt": "2026-01-21T07:20:13Z",
+      "updatedAt": "2026-01-21T07:20:13Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:3437864907",
+      "title": "issue: \"Chunk too big\" error when using Google Gemini 2.5 Flash with image input",
+      "url": "https://github.com/open-webui/open-webui/issues/17626",
+      "description": "### Check Existing Issues\n\n- [x] I have searched for any existing and/or related issues.\n- [x] I have searched for any existing and/or related discussions.\n- [x] I am using the latest version of Open WebUI.\n\n### Installation Method\n\nDocker\n\n### Open WebUI Version\n\nv0.6.30\n\n### Ollama Version (if applicable)\n\n_No response_\n\n### Operating System\n\ncentos\n\n### Browser (if applicable)\n\nchrome\n\n### Confirmation\n\n- [x] I have read and followed all instructions in `README.md`.\n- [x] I am using the lates",
+      "source": "github",
+      "type": "issue",
+      "author": "BND-1",
+      "stars": 0,
+      "createdAt": "2025-09-21T06:16:10Z",
+      "updatedAt": "2026-01-21T06:25:24Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:487667699",
+      "title": "AI is Coming ... 🤖 ",
+      "url": "https://github.com/nelsonic/nelsonic.github.io/issues/733",
+      "description": "Artificial Intelligence through Machine Learning is _inevitable_.\n<!--\nThis is a post I'm developing ...  It's been in my head for the last few years.\nI'm going to need a few hours of focus time to flesh it out.\nI really don't like writing \"essays\" in GitHub issues because the interface is not conducive to it. \nWith infinite time, I'd like to create my own [outline editor](https://en.wikipedia.org/wiki/Outliner) where I can preview in real-time and expand/contract sections in both the writing an",
+      "source": "github",
+      "type": "issue",
+      "author": "nelsonic",
+      "stars": 0,
+      "createdAt": "2019-08-30T20:56:02Z",
+      "updatedAt": "2026-01-21T06:18:50Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
       "id": "repo:738657807",
       "title": "aziis98/stellarium",
       "url": "https://github.com/aziis98/stellarium",
@@ -1310,36 +2360,6 @@
       "stars": 1,
       "createdAt": "2024-01-03T18:30:02Z",
       "updatedAt": "2026-01-21T02:39:12Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:818050386",
-      "title": "TrumanDu/trumandu-stars",
-      "url": "https://github.com/TrumanDu/trumandu-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "TrumanDu",
-      "stars": 1,
-      "createdAt": "2024-06-21T02:03:23Z",
-      "updatedAt": "2026-01-21T02:37:56Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:666221552",
-      "title": "biantris/my-awesome-stars",
-      "url": "https://github.com/biantris/my-awesome-stars",
-      "description": "list of my github stars",
-      "source": "github",
-      "type": "repo",
-      "author": "biantris",
-      "stars": 1,
-      "createdAt": "2023-07-14T02:10:22Z",
-      "updatedAt": "2026-01-21T02:36:53Z",
       "tags": [
         "repo"
       ]
@@ -1420,96 +2440,6 @@
       ]
     },
     {
-      "id": "repo:676299776",
-      "title": "KABBOUCHI/starred",
-      "url": "https://github.com/KABBOUCHI/starred",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "KABBOUCHI",
-      "stars": 0,
-      "createdAt": "2023-08-08T22:29:34Z",
-      "updatedAt": "2026-01-21T02:38:53Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:586316103",
-      "title": "yuceltoluyag/awesome",
-      "url": "https://github.com/yuceltoluyag/awesome",
-      "description": "my awesome stars",
-      "source": "github",
-      "type": "repo",
-      "author": "yuceltoluyag",
-      "stars": 0,
-      "createdAt": "2023-01-07T17:48:46Z",
-      "updatedAt": "2026-01-21T02:38:05Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1131089906",
-      "title": "jatwell93/my-stars",
-      "url": "https://github.com/jatwell93/my-stars",
-      "description": "Testing maguowei/starred ",
-      "source": "github",
-      "type": "repo",
-      "author": "jatwell93",
-      "stars": 0,
-      "createdAt": "2026-01-09T13:09:56Z",
-      "updatedAt": "2026-01-21T02:35:24Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:725215171",
-      "title": "yishangzhang/awesome-stars",
-      "url": "https://github.com/yishangzhang/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "yishangzhang",
-      "stars": 0,
-      "createdAt": "2023-11-29T17:14:33Z",
-      "updatedAt": "2026-01-21T02:35:20Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1127462236",
-      "title": "1vishen/my-github-Stars",
-      "url": "https://github.com/1vishen/my-github-Stars",
-      "description": "Personal list of all my github starred repos. ",
-      "source": "github",
-      "type": "repo",
-      "author": "1vishen",
-      "stars": 0,
-      "createdAt": "2026-01-03T23:46:15Z",
-      "updatedAt": "2026-01-21T02:34:34Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:935820989",
-      "title": "AJayBBB/stars",
-      "url": "https://github.com/AJayBBB/stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "AJayBBB",
-      "stars": 0,
-      "createdAt": "2025-02-20T04:28:45Z",
-      "updatedAt": "2026-01-21T02:33:37Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1138658143",
       "title": "0x-j/sui-vibe-coding",
       "url": "https://github.com/0x-j/sui-vibe-coding",
@@ -1525,21 +2455,6 @@
       ]
     },
     {
-      "id": "issue:3353758057",
-      "title": "Update n8nio/n8n Docker tag to v1.123.16",
-      "url": "https://github.com/weblio-ab/kubernetes/pull/7",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.106.3` → `1.123.16` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.16`](https://redirect.github.com/n8n-io/n8n/releases/tag/n8n%401.123.16)\n\n#### [1.123.16](https://redirect.github.com/n8n-io/n8n/compare/",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-08-26T01:55:58Z",
-      "updatedAt": "2026-01-21T02:28:25Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "repo:1136120715",
       "title": "Activer007/Nano-Banana-Prompts",
       "url": "https://github.com/Activer007/Nano-Banana-Prompts",
@@ -1550,21 +2465,6 @@
       "stars": 0,
       "createdAt": "2026-01-17T05:17:11Z",
       "updatedAt": "2026-01-21T02:27:40Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1109070921",
-      "title": "amitayks/weatherMan",
-      "url": "https://github.com/amitayks/weatherMan",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "amitayks",
-      "stars": 0,
-      "createdAt": "2025-12-03T09:49:03Z",
-      "updatedAt": "2026-01-21T02:21:13Z",
       "tags": [
         "repo"
       ]
@@ -1612,21 +2512,6 @@
       "updatedAt": "2026-01-21T02:11:32Z",
       "tags": [
         "issue"
-      ]
-    },
-    {
-      "id": "repo:1098647378",
-      "title": "vinitwadgaonkar/vis_ifeval",
-      "url": "https://github.com/vinitwadgaonkar/vis_ifeval",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "vinitwadgaonkar",
-      "stars": 0,
-      "createdAt": "2025-11-18T00:54:19Z",
-      "updatedAt": "2026-01-21T02:09:34Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -1690,81 +2575,6 @@
       ]
     },
     {
-      "id": "repo:1137660725",
-      "title": "Gideonah/wan2gp",
-      "url": "https://github.com/Gideonah/wan2gp",
-      "description": "efficient inference",
-      "source": "github",
-      "type": "repo",
-      "author": "Gideonah",
-      "stars": 0,
-      "createdAt": "2026-01-19T16:58:02Z",
-      "updatedAt": "2026-01-21T01:40:13Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "issue:3823634733",
-      "title": "[Post 3.0] feat: Multi-modal agent outputs and image generation infrastructure",
-      "url": "https://github.com/MemberJunction/MJ/pull/1796",
-      "description": "## Summary\r\n\r\nBuilt on top of #1748 \r\n\r\nThis PR implements comprehensive multi-modal output support for MemberJunction agents, enabling agents to generate images (and eventually audio/video) and have those outputs flow through to the conversation UI.\r\n\r\n### Key Features\r\n\r\n- **Image Generation Infrastructure**: Support for multiple providers (OpenAI, Google/Gemini Nano Banana Pro, Black Forest Labs FLUX)\r\n- **Multi-Modal Output Types**: `MediaOutput` interface supporting Image, Audio, and Video ",
-      "source": "github",
-      "type": "pull",
-      "author": "EL-BC",
-      "stars": 0,
-      "createdAt": "2026-01-16T20:55:10Z",
-      "updatedAt": "2026-01-21T01:29:35Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "repo:911523899",
-      "title": "Temoa/awesome-stars-temoa",
-      "url": "https://github.com/Temoa/awesome-stars-temoa",
-      "description": "每天凌晨自动更新",
-      "source": "github",
-      "type": "repo",
-      "author": "Temoa",
-      "stars": 0,
-      "createdAt": "2025-01-03T08:10:56Z",
-      "updatedAt": "2026-01-21T01:07:31Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "issue:3483684025",
-      "title": "feat(container): update image docker.n8n.io/n8nio/n8n to v1.123.16",
-      "url": "https://github.com/Arsenikki/kuberseni-gitops/pull/277",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.114.2` → `1.123.16` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (docker.n8n.io/n8nio/n8n)</summary>\n\n### [`",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-10-04T12:58:45Z",
-      "updatedAt": "2026-01-21T01:06:46Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3437864907",
-      "title": "issue: \"Chunk too big\" error when using Google Gemini 2.5 Flash with image input",
-      "url": "https://github.com/open-webui/open-webui/issues/17626",
-      "description": "### Check Existing Issues\n\n- [x] I have searched for any existing and/or related issues.\n- [x] I have searched for any existing and/or related discussions.\n- [x] I am using the latest version of Open WebUI.\n\n### Installation Method\n\nDocker\n\n### Open WebUI Version\n\nv0.6.30\n\n### Ollama Version (if applicable)\n\n_No response_\n\n### Operating System\n\ncentos\n\n### Browser (if applicable)\n\nchrome\n\n### Confirmation\n\n- [x] I have read and followed all instructions in `README.md`.\n- [x] I am using the lates",
-      "source": "github",
-      "type": "issue",
-      "author": "BND-1",
-      "stars": 0,
-      "createdAt": "2025-09-21T06:16:10Z",
-      "updatedAt": "2026-01-21T00:55:57Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
       "id": "issue:3835982660",
       "title": "🔬 Research: Conversational/Iterative Image Generation",
       "url": "https://github.com/drswobodziczka/pixel-forge/issues/7",
@@ -1775,36 +2585,6 @@
       "stars": 0,
       "createdAt": "2026-01-21T00:07:27Z",
       "updatedAt": "2026-01-21T00:09:35Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
-      "id": "issue:271788800",
-      "title": "New daily trending repos in Python",
-      "url": "https://github.com/vitalets/github-trending-repos/issues/7",
-      "description": "Subscribe to this issue and stay notified about new [daily trending repos in Python](https://github.com/trending/python?since=daily)!",
-      "source": "github",
-      "type": "issue",
-      "author": "vitalets",
-      "stars": 0,
-      "createdAt": "2017-11-07T10:54:34Z",
-      "updatedAt": "2026-01-21T00:08:31Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
-      "id": "issue:272612197",
-      "title": "New daily trending repos in unknown languages",
-      "url": "https://github.com/vitalets/github-trending-repos/issues/28",
-      "description": "Subscribe to this issue and stay notified about new [daily trending repos in unknown languages](https://github.com/trending/unknown?since=daily)!",
-      "source": "github",
-      "type": "issue",
-      "author": "vitalets",
-      "stars": 0,
-      "createdAt": "2017-11-09T15:48:34Z",
-      "updatedAt": "2026-01-21T00:08:20Z",
       "tags": [
         "issue"
       ]
@@ -1910,21 +2690,6 @@
       "stars": 0,
       "createdAt": "2026-01-20T18:01:28Z",
       "updatedAt": "2026-01-20T18:04:04Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3834791516",
-      "title": "Add custom empty states and AI-generated illustrations",
-      "url": "https://github.com/lawrns/focofixfork/pull/2",
-      "description": "## Summary\n\nThis PR adds a comprehensive empty state system with 9 custom AI-generated illustrations and 7 new React components, significantly improving the UX across high-priority user flows.\n\n### What's New\n\n**Custom Illustrations (9)**\n- Generated using Replicate API (nano-banana model)\n- Minimal line art style with zinc/indigo palette\n- Full dark mode compatibility\n- Matches Linear/Notion aesthetic\n\n**Empty State Components (7)**\n1. **MyWorkEmpty** - 4 variants for Now/Next/Later/Waiting sec",
-      "source": "github",
-      "type": "pull",
-      "author": "lawrns",
-      "stars": 0,
-      "createdAt": "2026-01-20T17:51:30Z",
-      "updatedAt": "2026-01-20T17:57:08Z",
       "tags": [
         "pull"
       ]
@@ -2155,21 +2920,6 @@
       ]
     },
     {
-      "id": "issue:3823605543",
-      "title": "[JEWEL-1138] Scale images to fit available width",
-      "url": "https://github.com/JetBrains/intellij-community/pull/3387",
-      "description": "## Description\r\n\r\nThis is achieved by splitting paragraphs and headings by images and rendering them in a FlowRow as separate composables. Paragraphs and headings without images are rendered as a single Text composable, like before.\r\n\r\nThere are two notable changes:\r\n  - `ScalableImage` is introduced. This is an `Image` composed in a custom `Layout` that takes care of adjusting height according to the current downscaling factor.\r\n  - Text with images is split into separate composables (see above",
-      "source": "github",
-      "type": "pull",
-      "author": "AlexVanGogen",
-      "stars": 0,
-      "createdAt": "2026-01-16T20:43:03Z",
-      "updatedAt": "2026-01-20T10:36:56Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "repo:628172384",
       "title": "johe123qwe/github-trending",
       "url": "https://github.com/johe123qwe/github-trending",
@@ -2197,21 +2947,6 @@
       "updatedAt": "2026-01-20T07:54:04Z",
       "tags": [
         "issue"
-      ]
-    },
-    {
-      "id": "issue:3831687391",
-      "title": "Ronels branch",
-      "url": "https://github.com/super-inbox/curify-frontend/pull/58",
-      "description": "Nano-prompts for AI image generation, such as those used in Nano Banana Pro (Gemini models), are ultra-concise, structured instructions (1-2 lines) that prioritize precision, specificity, and constraints to handle edge cases reliably. For a Gallery page generating images dynamically, improvements focus on pseudo-code structure, negative constraints, and edge case handling to fix issues like layout drift or inconsistencies in case 4298.\r\n\r\nCore Improvement Principles\r\nUse command-style syntax ove",
-      "source": "github",
-      "type": "pull",
-      "author": "ronelsolomon",
-      "stars": 0,
-      "createdAt": "2026-01-20T01:38:21Z",
-      "updatedAt": "2026-01-20T07:17:20Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -2305,21 +3040,6 @@
       ]
     },
     {
-      "id": "repo:1068241920",
-      "title": "taskmasterpeace/directors-palette-v2",
-      "url": "https://github.com/taskmasterpeace/directors-palette-v2",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "taskmasterpeace",
-      "stars": 0,
-      "createdAt": "2025-10-02T04:29:24Z",
-      "updatedAt": "2026-01-20T02:32:47Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1137917715",
       "title": "novmipeter/LongCat-Image",
       "url": "https://github.com/novmipeter/LongCat-Image",
@@ -2365,36 +3085,6 @@
       ]
     },
     {
-      "id": "repo:1129604337",
-      "title": "saadri7awi/nano-banana-pro-app",
-      "url": "https://github.com/saadri7awi/nano-banana-pro-app",
-      "description": "🚀 Run and deploy your AI Studio app easily with all necessary tools for local development and seamless integration with Gemini API.",
-      "source": "github",
-      "type": "repo",
-      "author": "saadri7awi",
-      "stars": 0,
-      "createdAt": "2026-01-07T10:20:00Z",
-      "updatedAt": "2026-01-20T01:35:27Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1125843381",
-      "title": "nikhil2071/zaiis2api",
-      "url": "https://github.com/nikhil2071/zaiis2api",
-      "description": "🚀 Manage Discord Tokens effortlessly with Zai2API, the complete OpenAI-compatible API gateway for seamless access and automated token handling.",
-      "source": "github",
-      "type": "repo",
-      "author": "nikhil2071",
-      "stars": 0,
-      "createdAt": "2025-12-31T13:29:39Z",
-      "updatedAt": "2026-01-20T01:31:30Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:171871908",
       "title": "utensil/awesome-stars",
       "url": "https://github.com/utensil/awesome-stars",
@@ -2407,21 +3097,6 @@
       "updatedAt": "2026-01-17T01:01:07Z",
       "tags": [
         "repo"
-      ]
-    },
-    {
-      "id": "issue:3830557810",
-      "title": "Update n8nio/n8n Docker tag to v1.123.16",
-      "url": "https://github.com/OwnYourIO/SpencersLab/pull/531",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.115.2` → `1.123.16` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.16`](https://redirect",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2026-01-19T17:02:51Z",
-      "updatedAt": "2026-01-20T00:41:28Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -2515,21 +3190,6 @@
       ]
     },
     {
-      "id": "issue:3672723580",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.123.16",
-      "url": "https://github.com/shiron-dev/infrastructure/pull/225",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.121.2` → `1.123.16` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.16`](https://redirect.github.com/n8n-io/n8n/releases/tag/n8n%401.123.16)\n\n#### [1.123.16](https://redirect.github.com/n8n-io/n8n/compare/n8n@1.123.15...n8n@1.123.16) (2026-01-16)\n\n### [`v1.123.15`](https://re",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-11-27T18:53:22Z",
-      "updatedAt": "2026-01-19T20:42:44Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3830990218",
       "title": "add claude.md",
       "url": "https://github.com/upriver-ai/nano-banana-upriver-example/pull/23",
@@ -2585,21 +3245,6 @@
       "stars": 0,
       "createdAt": "2026-01-19T19:07:38Z",
       "updatedAt": "2026-01-19T19:07:38Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3807923625",
-      "title": "feat: add OpenAI onboarding FTUE with provider selection",
-      "url": "https://github.com/matthiasn/lotti/pull/2595",
-      "description": "\n\n<!-- This is an auto-generated comment: release notes by coderabbit.ai -->\n## Summary by CodeRabbit\n\n* **New Features**\n  * AI provider selection modal and unified AI setup prompts; OpenAI FTUE flow and OpenAI audio transcription support.\n* **Improvements**\n  * Reasoning-model flag with refined temperature/inference routing and safer error handling.\n  * New checklist behavior: added items are created unchecked; tighter label input validation.\n  * Dialogs and FTUE result presentation unified ac",
-      "source": "github",
-      "type": "pull",
-      "author": "cyberk1ng",
-      "stars": 0,
-      "createdAt": "2026-01-13T09:16:32Z",
-      "updatedAt": "2026-01-19T18:47:33Z",
       "tags": [
         "pull"
       ]
@@ -2800,21 +3445,6 @@
       ]
     },
     {
-      "id": "issue:3828986179",
-      "title": "blog: Add How to Bold Text on LinkedIn (Desktop & Mobile)",
-      "url": "https://github.com/devlimelabs/markdowntolinkedin/pull/43",
-      "description": "Adds new blog post: How to Bold Text on LinkedIn (Desktop & Mobile)\n\n- Topic: Platform-specific guide covering both desktop and mobile LinkedIn apps\n- Target keyword: how to bold text on linkedin (150 searches/month)\n- Includes professional cover image and infographic\n- Follows all content guidelines (no em-dashes, no AI tell-words, natural writing style)\n- Updated content plan marking article as complete\n- Build verified with no errors\n\n<!-- CURSOR_SUMMARY -->\n---\n\n> [!NOTE]\n> Publishes a new p",
-      "source": "github",
-      "type": "pull",
-      "author": "JrPribs",
-      "stars": 0,
-      "createdAt": "2026-01-19T10:14:12Z",
-      "updatedAt": "2026-01-19T10:16:31Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "repo:773408798",
       "title": "maxzhang666/Stars",
       "url": "https://github.com/maxzhang666/Stars",
@@ -2915,21 +3545,6 @@
       "stars": 1,
       "createdAt": "2024-09-19T07:43:14Z",
       "updatedAt": "2026-01-19T02:39:31Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:687204526",
-      "title": "Zaheer7867/NanoBananaLoraDatasetGenerator",
-      "url": "https://github.com/Zaheer7867/NanoBananaLoraDatasetGenerator",
-      "description": "🍌 Generate high-quality image editing datasets effortlessly with NanoBanana Pro and FAL.ai API for various AI models.",
-      "source": "github",
-      "type": "repo",
-      "author": "Zaheer7867",
-      "stars": 1,
-      "createdAt": "2023-09-04T21:41:39Z",
-      "updatedAt": "2026-01-19T02:16:34Z",
       "tags": [
         "repo"
       ]
@@ -3340,21 +3955,6 @@
       ]
     },
     {
-      "id": "repo:701683842",
-      "title": "jafshare/GithubTrending",
-      "url": "https://github.com/jafshare/GithubTrending",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "jafshare",
-      "stars": 9,
-      "createdAt": "2023-10-07T09:03:35Z",
-      "updatedAt": "2026-01-18T01:08:20Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1135806241",
       "title": "flight505/agentui",
       "url": "https://github.com/flight505/agentui",
@@ -3380,21 +3980,6 @@
       "stars": 0,
       "createdAt": "2026-01-19T01:33:57Z",
       "updatedAt": "2026-01-19T01:40:14Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:489605306",
-      "title": "dick318/awesome-stars",
-      "url": "https://github.com/dick318/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "dick318",
-      "stars": 7,
-      "createdAt": "2022-05-07T07:40:49Z",
-      "updatedAt": "2026-01-18T01:08:48Z",
       "tags": [
         "repo"
       ]
@@ -4030,36 +4615,6 @@
       ]
     },
     {
-      "id": "issue:3614441586",
-      "title": "chore(deps): update n8nio/n8n docker tag to v1.123.16",
-      "url": "https://github.com/vyrtualsynthese/homelab/pull/876",
-      "description": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) | minor | `1.119.1` -> `1.123.16` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency Dashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>n8n-io/n8n (n8nio/n8n)</summary>\n\n### [`v1.123.0`](https://redirect.github.com/n8n-io/n8n/blob/HEAD/CHANGELOG.md#11230-2025-12-01)\n\n##### ",
-      "source": "github",
-      "type": "pull",
-      "author": "vyrtualsynthese",
-      "stars": 0,
-      "createdAt": "2025-11-12T01:08:36Z",
-      "updatedAt": "2026-01-17T01:12:26Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3723636418",
-      "title": "chore(deps): update database & platform",
-      "url": "https://github.com/Tim275/talos-homelab/pull/16",
-      "description": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n| [cloudnative-pg](https://cloudnative-pg.io) ([source](https://redirect.github.com/cloudnative-pg/charts)) | HelmChart | minor | `0.26.1` → `0.27.0` |\n| [docker.n8n.io/n8nio/n8n](https://n8n.io) ([source](https://redirect.github.com/n8n-io/n8n)) |  | minor | `1.122.1` → `1.123.16` |\n| [mongodb](https://bitnami.com) ([source](https://redirect.github.com/bitnami/charts/tree/HEAD/bitnami/mongodb)) | Hel",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2025-12-12T14:32:42Z",
-      "updatedAt": "2026-01-17T00:05:43Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:3806563235",
       "title": "feat(image-gen): nano banana addition on fe",
       "url": "https://github.com/onyx-dot-app/onyx/pull/7375",
@@ -4465,21 +5020,6 @@
       ]
     },
     {
-      "id": "repo:843357434",
-      "title": "yug69/awesome-nano-banana-pro",
-      "url": "https://github.com/yug69/awesome-nano-banana-pro",
-      "description": "🖼️ Master advanced techniques for Google's Nano Banana Pro to create stunning, professional-quality images up to 4K resolution.",
-      "source": "github",
-      "type": "repo",
-      "author": "yug69",
-      "stars": 2,
-      "createdAt": "2024-08-16T10:39:36Z",
-      "updatedAt": "2026-01-16T02:15:59Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:3814233451",
       "title": "Complete JRPG Transformation: 3-Hour Action-JRPG with A/B/C Story Architecture, GenAI Assets, Isometric Diorama, and Production Documentation Suite",
       "url": "https://github.com/arcade-cabinet/neo-tokyo-rival-academies/pull/5",
@@ -4492,21 +5032,6 @@
       "updatedAt": "2026-01-16T06:46:46Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1129586277",
-      "title": "newbiecs50JV/fal-wan26-video-factory",
-      "url": "https://github.com/newbiecs50JV/fal-wan26-video-factory",
-      "description": "🎥 Generate videos effortlessly with the Wan 2.6 pipeline, utilizing fal.ai APIs for automated script-to-video conversion with customizable voice and visuals.",
-      "source": "github",
-      "type": "repo",
-      "author": "newbiecs50JV",
-      "stars": 1,
-      "createdAt": "2026-01-07T09:49:21Z",
-      "updatedAt": "2026-01-16T02:30:44Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -4550,51 +5075,6 @@
       "stars": 0,
       "createdAt": "2025-11-19T08:44:28Z",
       "updatedAt": "2026-01-16T02:46:50Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1130128499",
-      "title": "ahmetbaldede/awesome-nano-banana-ppt-prompts",
-      "url": "https://github.com/ahmetbaldede/awesome-nano-banana-ppt-prompts",
-      "description": "🍌 Explore curated Nano Banana Pro prompts for creating stunning PPT slides and infographics with multilingual support and instant previews.",
-      "source": "github",
-      "type": "repo",
-      "author": "ahmetbaldede",
-      "stars": 0,
-      "createdAt": "2026-01-08T04:27:11Z",
-      "updatedAt": "2026-01-16T02:31:20Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1124451099",
-      "title": "noumanx/nbp_slides",
-      "url": "https://github.com/noumanx/nbp_slides",
-      "description": "📊 Generate professional slide decks effortlessly using AI with the Nano Banana Pro. Transform your presentations from code and assets, not just PowerPoint.",
-      "source": "github",
-      "type": "repo",
-      "author": "noumanx",
-      "stars": 0,
-      "createdAt": "2025-12-29T03:36:48Z",
-      "updatedAt": "2026-01-16T02:25:13Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:604931206",
-      "title": "Parvvkapoor/PromptFill",
-      "url": "https://github.com/Parvvkapoor/PromptFill",
-      "description": "🎨 Generate structured prompts for AI art creation easily, streamlining management and iteration with a user-friendly, visual fill-in-the-blank interface.",
-      "source": "github",
-      "type": "repo",
-      "author": "Parvvkapoor",
-      "stars": 0,
-      "createdAt": "2023-02-22T04:34:45Z",
-      "updatedAt": "2026-01-16T02:24:05Z",
       "tags": [
         "repo"
       ]
@@ -4955,21 +5435,6 @@
       "stars": 0,
       "createdAt": "2026-01-14T11:11:46Z",
       "updatedAt": "2026-01-15T09:15:10Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3565006396",
-      "title": "Bot builder in sidebar",
-      "url": "https://github.com/GooeyAI/gooey-server/pull/830",
-      "description": "### Q/A checklist\r\n\r\n- [x] I have tested my UI changes on mobile and they look acceptable\r\n- [x] I have tested changes to the workflows in both the API and the UI\r\n- [x] I have done a code review of my changes and looked at each line of the diff + the references of each function I have changed\r\n- [x] My changes have not increased the import time of the server\r\n\r\n<details>\r\n<summary>How to check import time?</summary>\r\n<p>\r\n\r\n```bash\r\ntime python -c 'import server'\r\n```\r\n\r\nYou can visualize this ",
-      "source": "github",
-      "type": "pull",
-      "author": "anish-work",
-      "stars": 0,
-      "createdAt": "2025-10-29T09:07:27Z",
-      "updatedAt": "2026-01-15T07:34:21Z",
       "tags": [
         "pull"
       ]
@@ -5437,21 +5902,6 @@
       "updatedAt": "2026-01-14T06:06:41Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1035127553",
-      "title": "Comnaemman/Master-Guide-to-Nano-Banana-Pro-Prompts",
-      "url": "https://github.com/Comnaemman/Master-Guide-to-Nano-Banana-Pro-Prompts",
-      "description": "🍌 Explore high-quality prompts for Nano Banana Pro with over 500 curated templates, organized for easy access to inspire your image creation.",
-      "source": "github",
-      "type": "repo",
-      "author": "Comnaemman",
-      "stars": 1,
-      "createdAt": "2025-08-09T18:00:21Z",
-      "updatedAt": "2026-01-14T02:48:59Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -5962,21 +6412,6 @@
       "updatedAt": "2026-01-13T02:40:03Z",
       "tags": [
         "repo"
-      ]
-    },
-    {
-      "id": "issue:3775071557",
-      "title": "feat: Multi-modal agent outputs and image generation infrastructure",
-      "url": "https://github.com/MemberJunction/MJ/pull/1748",
-      "description": "## Summary\n\nThis PR implements comprehensive multi-modal output support for MemberJunction agents, enabling agents to generate images (and eventually audio/video) and have those outputs flow through to the conversation UI.\n\n### Key Features\n\n- **Image Generation Infrastructure**: Support for multiple providers (OpenAI, Google/Gemini Nano Banana Pro, Black Forest Labs FLUX)\n- **Multi-Modal Output Types**: `MediaOutput` interface supporting Image, Audio, and Video modalities\n- **Explicit Media Pro",
-      "source": "github",
-      "type": "pull",
-      "author": "AN-BC",
-      "stars": 0,
-      "createdAt": "2026-01-01T19:18:33Z",
-      "updatedAt": "2026-01-13T02:34:28Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -6785,21 +7220,6 @@
       "stars": 0,
       "createdAt": "2026-01-11T01:12:49Z",
       "updatedAt": "2026-01-11T01:12:49Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
-      "id": "issue:3668937388",
-      "title": "Image Input Tool",
-      "url": "https://github.com/safety-research/petri/issues/23",
-      "description": "Hi! At a retreat I chatted with Sam from the Alignment Auditing team, and we talked a bit about improve PETRI. One idea that came to mind after thinking about things more is letting the auditing agent pass images to the target. (Other ideas we floated were making whitebox tools like a model diffing tool and an eval awareness steering tool, though from what I can gather I'd need to implement local models first.)\n\nI implemented image input [here](https://github.com/lennart-finke/petri), by giving ",
-      "source": "github",
-      "type": "issue",
-      "author": "lennart-finke",
-      "stars": 0,
-      "createdAt": "2025-11-26T20:20:43Z",
-      "updatedAt": "2026-01-11T00:43:37Z",
       "tags": [
         "issue"
       ]
@@ -8060,21 +8480,6 @@
       "stars": 0,
       "createdAt": "2026-01-02T03:04:01Z",
       "updatedAt": "2026-01-08T01:57:53Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:991987181",
-      "title": "maheshndev/awesome-repos",
-      "url": "https://github.com/maheshndev/awesome-repos",
-      "description": "Awesome Repositories - Explore top-rated GitHub repositories curated for developers—tools, libraries, and projects to boost productivity and learning in one place. Discover the best in open-source tech!",
-      "source": "github",
-      "type": "repo",
-      "author": "maheshndev",
-      "stars": 0,
-      "createdAt": "2025-05-28T12:54:59Z",
-      "updatedAt": "2026-01-08T01:23:13Z",
       "tags": [
         "repo"
       ]
@@ -10915,21 +11320,6 @@
       ]
     },
     {
-      "id": "issue:487667699",
-      "title": "AI is Coming ... 🤖 ",
-      "url": "https://github.com/nelsonic/nelsonic.github.io/issues/733",
-      "description": "Artificial Intelligence through Machine Learning is _inevitable_.\n<!--\nThis is a post I'm developing ...  It's been in my head for the last few years.\nI'm going to need a few hours of focus time to flesh it out.\nI really don't like writing \"essays\" in GitHub issues because the interface is not conducive to it. \nWith infinite time, I'd like to create my own [outline editor](https://en.wikipedia.org/wiki/Outliner) where I can preview in real-time and expand/contract sections in both the writing an",
-      "source": "github",
-      "type": "issue",
-      "author": "nelsonic",
-      "stars": 0,
-      "createdAt": "2019-08-30T20:56:02Z",
-      "updatedAt": "2025-12-30T20:48:12Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
       "id": "issue:3763121325",
       "title": "custom_templates",
       "url": "https://github.com/receptron/mulmocast-app/pull/1482",
@@ -11495,21 +11885,6 @@
       "stars": 0,
       "createdAt": "2025-12-06T07:00:06Z",
       "updatedAt": "2025-12-29T15:34:53Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3741733797",
-      "title": "fix: make the atom format spec-compliant",
-      "url": "https://github.com/DIYgod/RSSHub/pull/20723",
-      "description": "<!--\r\nIf you have any difficulties in filling out this form, please refer to https://docs.rsshub.app/joinus/new-rss/submit-route\r\n如果你在填写此表单时遇到任何困难，请参考 https://docs.rsshub.app/zh/joinus/new-rss/submit-route\r\n-->\r\n\r\n## Involved Issue / 该 PR 相关 Issue\r\n\r\n## Example for the Proposed Route(s) / 路由地址示例\r\n\r\n<!--\r\nPlease include route starts with /, with all required and optional parameters.\r\nFail to comply will result in your pull request being closed automatically.\r\n请在 `routes` 区域填写以 / 开头的完整路由地址，否则你的 PR",
-      "source": "github",
-      "type": "pull",
-      "author": "ouuan",
-      "stars": 0,
-      "createdAt": "2025-12-18T06:54:17Z",
-      "updatedAt": "2025-12-29T12:14:34Z",
       "tags": [
         "pull"
       ]
@@ -14920,21 +15295,6 @@
       ]
     },
     {
-      "id": "issue:3740924856",
-      "title": "[FEATURE] Integrate nanobanana, other new generative models",
-      "url": "https://github.com/massgen/MassGen/issues/658",
-      "description": "## Feature Description\n\nThese should be custom tools/subagents so we can persist conversations with them to improve the images in the same conversation.\n\nWe can start with them as custom tools.\n\nWe then want these tools to be discovered and called automatically in code mode.\n\nWe will have a unified `generate_image`, `generate_video`, `generate_audio` with a default backend based on 1) our selection, 2) the API keys the user has (if no openai for example, use google models), and 3) user preferenc",
-      "source": "github",
-      "type": "issue",
-      "author": "ncrispino",
-      "stars": 0,
-      "createdAt": "2025-12-18T00:25:50Z",
-      "updatedAt": "2025-12-18T23:35:19Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
       "id": "issue:3677290983",
       "title": "Add setup cli",
       "url": "https://github.com/elie222/inbox-zero/pull/1037",
@@ -16760,21 +17120,6 @@
       "stars": 0,
       "createdAt": "2025-12-14T01:44:02Z",
       "updatedAt": "2025-12-14T01:44:20Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1052207806",
-      "title": "ljquan/aitu",
-      "url": "https://github.com/ljquan/aitu",
-      "description": "AI绘图创作视频",
-      "source": "github",
-      "type": "repo",
-      "author": "ljquan",
-      "stars": 17,
-      "createdAt": "2025-09-07T16:17:36Z",
-      "updatedAt": "2025-12-12T02:19:30Z",
       "tags": [
         "repo"
       ]
