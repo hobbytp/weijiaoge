@@ -61,6 +61,9 @@ function extractAuthorFromUrl(url) {
 
 // 从URL中提取简化的显示文本
 function getSimplifiedSourceText(url) {
+  if (!url || typeof url !== 'string') {
+    return '未知来源';
+  }
   try {
     const urlObj = new URL(url);
     const host = urlObj.hostname.toLowerCase();
@@ -96,13 +99,16 @@ function getSimplifiedSourceText(url) {
     const simplifiedHost = host.replace('www.', '');
     return simplifiedHost.length > 20 ? simplifiedHost.substring(0, 20) + '...' : simplifiedHost;
   } catch (e) {
-    // URL解析失败，返回简化版本
-    return url.length > 30 ? url.substring(0, 30) + '...' : url;
+    const safe = String(url);
+    return safe.length > 30 ? safe.substring(0, 30) + '...' : safe;
   }
 }
 
 // 从URL中提取路径作为分类依据
 function extractUrlPath(url) {
+  if (!url || typeof url !== 'string') {
+    return '未知来源';
+  }
   try {
     const urlObj = new URL(url);
     const host = urlObj.hostname.toLowerCase();
@@ -137,8 +143,8 @@ function extractUrlPath(url) {
     const simplifiedHost = host.replace('www.', '');
     return simplifiedHost.length > 20 ? simplifiedHost.substring(0, 20) + '...' : simplifiedHost;
   } catch (e) {
-    // URL解析失败，返回简化版本
-    return url.length > 30 ? url.substring(0, 30) + '...' : url;
+    const safe = String(url);
+    return safe.length > 30 ? safe.substring(0, 30) + '...' : safe;
   }
 }
 
