@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-02-22T15:25:07.542Z",
-  "total": 3478,
+  "generatedAt": "2026-02-22T15:42:47.983Z",
+  "total": 3521,
   "items": [
     {
       "id": "repo:793375104",
@@ -148,9 +148,9 @@
       "source": "github",
       "type": "repo",
       "author": "Anionex",
-      "stars": 12125,
+      "stars": 12126,
       "createdAt": "2025-11-29T17:37:26Z",
-      "updatedAt": "2026-02-22T15:18:00Z",
+      "updatedAt": "2026-02-22T15:30:12Z",
       "tags": [
         "repo"
       ]
@@ -208,9 +208,9 @@
       "source": "github",
       "type": "repo",
       "author": "YouMind-OpenLab",
-      "stars": 7766,
+      "stars": 7767,
       "createdAt": "2025-11-23T07:17:48Z",
-      "updatedAt": "2026-02-22T15:16:48Z",
+      "updatedAt": "2026-02-22T15:28:47Z",
       "tags": [
         "repo"
       ]
@@ -1193,6 +1193,21 @@
       ]
     },
     {
+      "id": "repo:997972968",
+      "title": "maha0525/SAIVerse",
+      "url": "https://github.com/maha0525/SAIVerse",
+      "description": "Living universe of Self-Aware-Inteligences.",
+      "source": "github",
+      "type": "repo",
+      "author": "maha0525",
+      "stars": 16,
+      "createdAt": "2025-06-07T15:43:56Z",
+      "updatedAt": "2026-02-22T15:36:53Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:1151905278",
       "title": "Yiling-J/forgery",
       "url": "https://github.com/Yiling-J/forgery",
@@ -1308,6 +1323,21 @@
       "stars": 8,
       "createdAt": "2025-12-06T08:07:55Z",
       "updatedAt": "2026-02-22T02:30:27Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1131730420",
+      "title": "DareDev256/Ultimate-Image-Video-Prompt-Generator",
+      "url": "https://github.com/DareDev256/Ultimate-Image-Video-Prompt-Generator",
+      "description": "AI prompt engineering tool for image/video generation — structured prompt builder for Nano Banana , Veo3 , DALL-E, Kling 01, Sora workflows",
+      "source": "github",
+      "type": "repo",
+      "author": "DareDev256",
+      "stars": 3,
+      "createdAt": "2026-01-10T15:33:44Z",
+      "updatedAt": "2026-02-22T15:28:59Z",
       "tags": [
         "repo"
       ]
@@ -1478,6 +1508,66 @@
       ]
     },
     {
+      "id": "issue:3974765238",
+      "title": "Add Nano Banana skill for AI image generation with Gemini 3 Pro",
+      "url": "https://github.com/danishi/claude-code-config/pull/4",
+      "description": "## Summary\n\nIntroduces the Nano Banana skill, a comprehensive image generation and editing toolkit powered by Google's Gemini 3 Pro Image model. The skill provides both single-image generation and batch processing capabilities, supporting multiple API backends (Gemini Developer API and Vertex AI).\n\n## Key Changes\n\n- **`scripts/generate.py`** - Core image generation script with support for:\n  - Text-to-image generation\n  - Image editing with reference images (up to 14 input images)\n  - Configurab",
+      "source": "github",
+      "type": "pull",
+      "author": "danishi",
+      "stars": 0,
+      "createdAt": "2026-02-22T15:09:13Z",
+      "updatedAt": "2026-02-22T15:42:16Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3974848004",
+      "title": "Add AI image generation for forms",
+      "url": "https://github.com/Navneet23/generate-forms/pull/1",
+      "description": "## Summary\n- Add AI-powered image generation using Gemini function calling — the form generation model (Gemini 3 Flash) decides whether images would enhance a form, writes prompts, and calls Nano Banana (`gemini-2.5-flash-image`) to generate them\n- Images (background, header, accent) are uploaded to Vercel Blob for permanent CDN URLs and embedded in the generated HTML with complementary color themes\n- \"Include images\" toggle chip in the chat toolbar lets users opt out for faster generation; syst",
+      "source": "github",
+      "type": "pull",
+      "author": "Navneet23",
+      "stars": 0,
+      "createdAt": "2026-02-22T15:41:16Z",
+      "updatedAt": "2026-02-22T15:41:39Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1157988703",
+      "title": "AxlandSlash/DrainYourKey",
+      "url": "https://github.com/AxlandSlash/DrainYourKey",
+      "description": "本项目用于最大化利用 Google Cloud 的 $300 试用赠金。通过 Nano Banana Pro 与 Veo 3.1 API 生成图片和视频，支持输出无   Gemini 水印的真 4K 图片",
+      "source": "github",
+      "type": "repo",
+      "author": "AxlandSlash",
+      "stars": 0,
+      "createdAt": "2026-02-14T16:12:37Z",
+      "updatedAt": "2026-02-22T15:40:34Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1157994161",
+      "title": "seilk/opensmi",
+      "url": "https://github.com/seilk/opensmi",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "seilk",
+      "stars": 0,
+      "createdAt": "2026-02-14T16:22:35Z",
+      "updatedAt": "2026-02-22T15:40:23Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:1136536853",
       "title": "DareDev256/DareDev256",
       "url": "https://github.com/DareDev256/DareDev256",
@@ -1488,6 +1578,66 @@
       "stars": 1,
       "createdAt": "2026-01-17T21:39:47Z",
       "updatedAt": "2026-02-22T12:45:52Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1098647378",
+      "title": "vinitwadgaonkar/vis_ifeval",
+      "url": "https://github.com/vinitwadgaonkar/vis_ifeval",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "vinitwadgaonkar",
+      "stars": 0,
+      "createdAt": "2025-11-18T00:54:19Z",
+      "updatedAt": "2026-02-22T15:31:20Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1154435495",
+      "title": "petteriTeikari/music-attribution-scaffold",
+      "url": "https://github.com/petteriTeikari/music-attribution-scaffold",
+      "description": "Research scaffold for multi-source music attribution with transparent confidence scoring. Companion code to Teikari, Petteri. 2026. “Governing Generative Music: Attribution Limits, Platform Incentives, and the Future of Creator Income.” SSRN Scholarly Paper No. 6109087. SSRN, https://dx.doi.org/10.2139/ssrn.6109087",
+      "source": "github",
+      "type": "repo",
+      "author": "petteriTeikari",
+      "stars": 0,
+      "createdAt": "2026-02-10T11:39:13Z",
+      "updatedAt": "2026-02-22T15:30:46Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1157930484",
+      "title": "AnthonyAlcaraz/pitchable",
+      "url": "https://github.com/AnthonyAlcaraz/pitchable",
+      "description": "Pitchable — AI-powered chat-driven presentation builder",
+      "source": "github",
+      "type": "repo",
+      "author": "AnthonyAlcaraz",
+      "stars": 0,
+      "createdAt": "2026-02-14T14:29:07Z",
+      "updatedAt": "2026-02-22T15:30:28Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1090122783",
+      "title": "neon-aiart/figure-aiart-maker",
+      "url": "https://github.com/neon-aiart/figure-aiart-maker",
+      "description": "元画像をフィギュア、アクスタ、ねんどろいど等、様々な形式の高品質なAIイラストに変換します。Google Gemini Canvas向けに設計された画像生成補助アプリ。",
+      "source": "github",
+      "type": "repo",
+      "author": "neon-aiart",
+      "stars": 0,
+      "createdAt": "2025-11-05T08:52:46Z",
+      "updatedAt": "2026-02-22T15:27:37Z",
       "tags": [
         "repo"
       ]
@@ -1520,21 +1670,6 @@
       "updatedAt": "2026-02-22T15:21:20Z",
       "tags": [
         "repo"
-      ]
-    },
-    {
-      "id": "issue:3974765238",
-      "title": "Add Nano Banana skill for AI image generation with Gemini 3 Pro",
-      "url": "https://github.com/danishi/claude-code-config/pull/4",
-      "description": "## Summary\n\nIntroduces the Nano Banana skill, a comprehensive image generation and editing toolkit powered by Google's Gemini 3 Pro Image model. The skill provides both single-image generation and batch processing capabilities, supporting multiple API backends (Gemini Developer API and Vertex AI).\n\n## Key Changes\n\n- **`scripts/generate.py`** - Core image generation script with support for:\n  - Text-to-image generation\n  - Image editing with reference images (up to 14 input images)\n  - Configurab",
-      "source": "github",
-      "type": "pull",
-      "author": "danishi",
-      "stars": 0,
-      "createdAt": "2026-02-22T15:09:13Z",
-      "updatedAt": "2026-02-22T15:20:46Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -1613,21 +1748,6 @@
       ]
     },
     {
-      "id": "repo:1157930484",
-      "title": "AnthonyAlcaraz/pitchable",
-      "url": "https://github.com/AnthonyAlcaraz/pitchable",
-      "description": "Pitchable — AI-powered chat-driven presentation builder",
-      "source": "github",
-      "type": "repo",
-      "author": "AnthonyAlcaraz",
-      "stars": 0,
-      "createdAt": "2026-02-14T14:29:07Z",
-      "updatedAt": "2026-02-22T15:09:50Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1164043800",
       "title": "hackikg/my-content-factory",
       "url": "https://github.com/hackikg/my-content-factory",
@@ -1698,21 +1818,6 @@
       "stars": 0,
       "createdAt": "2026-01-20T13:54:38Z",
       "updatedAt": "2026-02-22T14:45:57Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1098647378",
-      "title": "vinitwadgaonkar/vis_ifeval",
-      "url": "https://github.com/vinitwadgaonkar/vis_ifeval",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "vinitwadgaonkar",
-      "stars": 0,
-      "createdAt": "2025-11-18T00:54:19Z",
-      "updatedAt": "2026-02-22T14:31:37Z",
       "tags": [
         "repo"
       ]
@@ -1895,21 +2000,6 @@
       "updatedAt": "2026-02-22T12:40:44Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1154435495",
-      "title": "petteriTeikari/music-attribution-scaffold",
-      "url": "https://github.com/petteriTeikari/music-attribution-scaffold",
-      "description": "Research scaffold for multi-source music attribution with transparent confidence scoring. Companion code to Teikari, Petteri. 2026. “Governing Generative Music: Attribution Limits, Platform Incentives, and the Future of Creator Income.” SSRN Scholarly Paper No. 6109087. SSRN, https://dx.doi.org/10.2139/ssrn.6109087",
-      "source": "github",
-      "type": "repo",
-      "author": "petteriTeikari",
-      "stars": 0,
-      "createdAt": "2026-02-10T11:39:13Z",
-      "updatedAt": "2026-02-22T12:32:21Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -3875,21 +3965,6 @@
       "stars": 3,
       "createdAt": "2026-02-17T11:49:57Z",
       "updatedAt": "2026-02-20T02:31:20Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1131730420",
-      "title": "DareDev256/Ultimate-Image-Video-Prompt-Generator",
-      "url": "https://github.com/DareDev256/Ultimate-Image-Video-Prompt-Generator",
-      "description": "AI prompt engineering tool for image/video generation — structured prompt builder for Nano Banana , Veo3 , DALL-E, Kling 01, Sora workflows",
-      "source": "github",
-      "type": "repo",
-      "author": "DareDev256",
-      "stars": 3,
-      "createdAt": "2026-01-10T15:33:44Z",
-      "updatedAt": "2026-02-20T01:11:59Z",
       "tags": [
         "repo"
       ]
