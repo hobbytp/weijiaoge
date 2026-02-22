@@ -577,6 +577,13 @@ async function extractZHOFormat(fullText, item) {
       }
     }
     
+    if (images.length === 0) {
+      const relatedImages = extractCaseSpecificImages(sectionTitle, fullText);
+      if (relatedImages.length > 0) {
+        images = relatedImages;
+      }
+    }
+    
     // 创建每个章节一个案例
     if (prompts.length > 0) {
       const category = categorizeCase(sectionTitle, sectionContent, prompts);

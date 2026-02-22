@@ -147,27 +147,39 @@ class LangExtractExtractor {
       const cleanedContent = this.smartCleanText(content);
       const prompts = [];
       
-      // 使用多种模式提取prompt
+      // 使用多种模式提取prompt（严格模式优先，限制段落长度，避免整段说明被当作prompt）
       const promptPatterns = [
-        // 标准格式
-        /(?:prompt|提示词)[：:]\s*```\s*([^`]+?)\s*```/gis,
-        /(?:prompt|提示词)[：:]\s*([^\n]+(?:\n(?!\n)[^\n]+)*)/gis,
-        
-        // 代码块格式
-        /```(?:yaml|json|text|prompt)?\s*([^`]+?)\s*```/gis,
-        
+        // 严格：带 Prompt/提示词/输入 标签 + 代码块
+        /(?:^|\n)[^\n]{0,80}?(?:prompt|提示词|输入)[：:]\s*```[\s\S]*?```/gi,
+        // 严格：带 Prompt 标签 + 最多4行正文
+        /(?:^|\n)[^\n]{0,80}?(?:prompt|提示词|输入)[：:]\s*([^\n]+(?:\n(?!\n|^#{1,6}|\n\d+️⃣|\n\d+\.)[^\n]+){0,3})/gi,
+        // 针对 ZHO 风格：如 “1）xxx Prompt：...” 或 “1) xxx Prompt: ...”
+        /\d+\)\s*[^：:]*?(?:prompt|提示词|输入)[：:]\s*([^\n]+(?:\n(?!\n|^#{1,6}|\n\d+️⃣|\n\d+\.)[^\n]+){0,3})/gi,
+        // 代码块格式（保留，但后续质量校验会筛掉非prompt）
+        /```(?:yaml|json|text|prompt)?\s*([\s\S]*?)\s*```/gi,
         // 引号格式
-        /"(?:prompt|提示词)"[：:]\s*"([^"]+?)"/gis,
-        /'(?:prompt|提示词)'[：:]\s*'([^']+?)'/gis,
-        
-        // 段落格式
-        /(?:prompt|提示词)[：:]\s*([^\n]+(?:\n(?!\n)[^\n]+)*)/gis
+        /"(?:prompt|提示词)"[：:]\s*"([^"]+?)"/gi,
+        /'(?:prompt|提示词)'[：:]\s*'([^']+?)'/gi
       ];
       
       for (const pattern of promptPatterns) {
         let match;
         while ((match = pattern.exec(cleanedContent)) !== null) {
-          const promptText = this.smartCleanText(match[1]);
+          // 对于代码块匹配，组可能是整个块；对于标签匹配，组1是正文
+          const raw = match[1] ?? match[0];
+          let promptText = this.smartCleanText(raw);
+          
+          // 如果原始匹配包含代码块包裹，移除包裹只保留内容
+          promptText = promptText.replace(/^```[a-zA-Z0-9_-]*\s*/,'').replace(/```$/,'').trim();
+          
+          // 对“标签 + 全段”的情况做截断：仅保留前 4 句或 400 字符
+          const sentences = promptText.split(/(?<=[。！!？?\.\n])/).filter(s => s.trim());
+          if (sentences.length > 0) {
+            const limited = sentences.slice(0, 4).join(' ').trim();
+            promptText = limited.length > 400 ? limited.slice(0, 400) : limited;
+          } else {
+            promptText = promptText.slice(0, 400);
+          }
           
           if (this.validatePrompt(promptText)) {
             const categories = this.categorizeContent(promptText);
