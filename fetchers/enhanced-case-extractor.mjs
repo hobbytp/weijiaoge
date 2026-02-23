@@ -2,7 +2,7 @@
 // 增强的案例提取器，支持更多格式和智能解析
 
 import { categorizeCase } from './case-categorizer.mjs';
-import { extractCasesFromGitHubReadme } from './case-extractor.mjs';
+import { extractCasesFromGitHubReadme, normalizeCaseItems } from './case-extractor.mjs';
 
 // 清理标题，移除无意义的前缀和图片信息
 function cleanTitle(title) {
@@ -158,11 +158,15 @@ export async function extractEnhancedCases(content, sourceInfo = {}) {
     });
     
     // 转换格式以匹配增强提取器的格式
-    return githubCases.map(caseItem => ({
-      ...caseItem,
-      confidence: calculateConfidence(caseItem.prompt, caseItem.effects, caseItem.images),
-      extractedAt: new Date().toISOString()
-    }));
+    const normalizedCases = normalizeCaseItems(githubCases, sourceInfo);
+    return normalizedCases.map(caseItem => {
+      const promptText = caseItem.prompts?.[0]?.text || caseItem.prompt || '';
+      return {
+        ...caseItem,
+        confidence: calculateConfidence(promptText, caseItem.effects, caseItem.images),
+        extractedAt: new Date().toISOString()
+      };
+    });
   }
   
   const cleanedContent = smartCleanText(content);
@@ -225,7 +229,7 @@ export async function extractEnhancedCases(content, sourceInfo = {}) {
     }
   }
   
-  return cases;
+  return normalizeCaseItems(cases, sourceInfo);
 }
 
 // 生成案例标题

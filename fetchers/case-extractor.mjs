@@ -109,6 +109,32 @@ import { extractWithLangExtract } from './langextract-extractor.mjs';
 // 重新导出以保持向后兼容
 export { CASE_CATEGORIES };
 
+export function normalizeCaseItems(cases, sourceInfo = {}) {
+  if (!Array.isArray(cases)) return [];
+  return cases.map(caseItem => {
+    const prompts = Array.isArray(caseItem.prompts)
+      ? caseItem.prompts.map(prompt => typeof prompt === 'string' ? { text: prompt } : prompt)
+      : (caseItem.prompt ? [{ text: caseItem.prompt }] : []);
+
+    const titleFromPrompt = prompts[0]?.text ? `${prompts[0].text.substring(0, 50)}...` : '';
+    const title = caseItem.title || titleFromPrompt || sourceInfo.title || '未命名案例';
+    const effects = Array.isArray(caseItem.effects) ? caseItem.effects : [];
+    const images = Array.isArray(caseItem.images) ? caseItem.images : [];
+    const sourceUrl = caseItem.sourceUrl || caseItem.url || sourceInfo.url || sourceInfo.id || '';
+    const category = caseItem.category || sourceInfo.category || sourceInfo.categories?.[0];
+
+    return {
+      ...caseItem,
+      prompts,
+      effects,
+      images,
+      title,
+      sourceUrl,
+      category
+    };
+  });
+}
+
 // 提取prompt的正则表达式模式 - 更精确的匹配
 const PROMPT_PATTERNS = [
   // 明确的prompt标记
@@ -213,7 +239,7 @@ function extractPrompts(text) {
           
           // 排除技术描述和代码片段
           const isTechnicalDescription = /(built on|using|technology|model|api|function|code|typescript|react|javascript)/i.test(prompt);
-          const isCodeSnippet = /(gemini-2|generate-002|imagen|flash|preview)/i.test(prompt);
+          const isCodeSnippet = /(gemini-3|generate-002|imagen|flash|preview)/i.test(prompt);
           
           if (hasMeaningfulWords && !isTechnicalDescription && !isCodeSnippet) {
             prompts.push(prompt);
@@ -500,15 +526,15 @@ export async function extractCasesFromGitHubReadme(item) {
   // 检测README格式并相应处理 - 优先检查更具体的格式
   if (fullText.includes('### 例 1:') || fullText.includes('### 例 2:')) {
     // PicoTrex仓库格式：使用"### 例 X:"
-    return extractPicoTrexFormat(fullText, item);
+    return normalizeCaseItems(extractPicoTrexFormat(fullText, item), item);
   } else if (fullText.includes('Case 1:') || fullText.includes('Case 2:')) {
     // Super-Maker-AI仓库格式：使用"Case X:"
-    return extractSuperMakerFormat(fullText, item);
+    return normalizeCaseItems(extractSuperMakerFormat(fullText, item), item);
   } else if (fullText.includes('1️⃣') || fullText.includes('2️⃣')) {
     // ZHO仓库格式：使用数字emoji
-    return await extractZHOFormat(fullText, item);
+    return normalizeCaseItems(await extractZHOFormat(fullText, item), item);
   }
-  return cases;
+  return normalizeCaseItems(cases, item);
 }
 
 // 处理ZHO仓库格式
@@ -781,7 +807,8 @@ function extractPicoTrexFormat(fullText, item) {
     if (!section.trim()) continue;
     
     // 提取案例标题 - 匹配 ### 例 X: [标题](链接)（by 作者）格式
-    const titleMatch = section.match(/^### (例 \d+:[^）]*?)（by[^）]+）(.*)/s);
+    const trimmedSection = section.trimStart();
+    const titleMatch = trimmedSection.match(/^### (例 \d+:[^）]*?)（by[^）]+）(.*)/s);
     if (!titleMatch) continue;
     
     const sectionTitle = titleMatch[1].trim();
@@ -830,7 +857,8 @@ function extractSuperMakerFormat(fullText, item) {
     if (!section.trim()) continue;
     
     // 提取案例标题
-    const titleMatch = section.match(/^(Case \d+:[^(]+)(\(by[^)]+\))?(.*)/s);
+    const trimmedSection = section.trimStart();
+    const titleMatch = trimmedSection.match(/^(Case \d+:[^(]+)(\(by[^)]+\))?(.*)/s);
     if (!titleMatch) continue;
     
     let sectionTitle = titleMatch[1].trim();
@@ -926,7 +954,7 @@ export async function extractMultipleCasesFromArticle(item) {
     cases.push(caseData);
   }
   
-  return cases;
+  return normalizeCaseItems(cases, item);
 }
 
 export async function processItemsForCases(items) {
@@ -943,18 +971,19 @@ export async function processItemsForCases(items) {
           if (caseData.prompts.length > 0) {
             // 进一步验证prompt的质量
             const hasValidPrompts = caseData.prompts.some(prompt => {
+              const promptText = typeof prompt === 'string' ? prompt : prompt.text || '';
               // 检查是否包含具体的操作指令
-              const hasAction = /(create|make|turn|transform|generate|edit|change|convert|craft)/i.test(prompt);
+              const hasAction = /(create|make|turn|transform|generate|edit|change|convert|craft)/i.test(promptText);
               // 检查是否包含具体的目标对象
-              const hasTarget = /(figurine|character|scene|style|clothing|outfit|person|image|photo|picture|3d|model|portrait|Bollywood|retro|vintage)/i.test(prompt);
+              const hasTarget = /(figurine|character|scene|style|clothing|outfit|person|image|photo|picture|3d|model|portrait|Bollywood|retro|vintage)/i.test(promptText);
               // 检查长度是否足够描述性
-              const isDescriptive = prompt.length >= 30;
+              const isDescriptive = promptText.length >= 30;
               
               // 排除技术描述
-              const isNotTechnical = !/(built on|using|technology|model|api|function|code|typescript|react|javascript|gemini-2|generate-002|imagen|flash|preview)/i.test(prompt);
+              const isNotTechnical = !/(built on|using|technology|model|api|function|code|typescript|react|javascript|gemini-3|generate-002|imagen|flash|preview)/i.test(promptText);
               
               // 检查是否像真正的用户prompt（包含形容词、名词等自然语言）
-              const isNaturalLanguage = /(a|an|the|beautiful|stunning|amazing|cute|detailed|realistic|fantasy|anime|cartoon|full-length|photorealistic|moody|studio|golden|warm|vintage|retro|Bollywood|1970s)/i.test(prompt);
+              const isNaturalLanguage = /(a|an|the|beautiful|stunning|amazing|cute|detailed|realistic|fantasy|anime|cartoon|full-length|photorealistic|moody|studio|golden|warm|vintage|retro|Bollywood|1970s)/i.test(promptText);
               
               return hasAction && hasTarget && isDescriptive && isNotTechnical && isNaturalLanguage;
             });

@@ -39,6 +39,23 @@ function createCaseWithCategory(result, source) {
   };
 }
 
+function createCaseFromNormalizedCase(caseItem, result, source, item) {
+  const category = caseItem.category || result.result?.category || result.result?.categories?.[0] || DEFAULT_CATEGORY;
+  const title = caseItem.title || caseItem.prompts?.[0]?.text?.substring(0, TITLE_MAX_LENGTH) + '...' || DEFAULT_TITLE;
+  const sourceUrl = caseItem.sourceUrl || item?.url || item?.id || caseItem.url || '';
+
+  return {
+    ...caseItem,
+    category,
+    categoryName: CASE_CATEGORIES[category] || DEFAULT_CATEGORY_NAME,
+    title,
+    source: source,
+    sourceUrl,
+    extractor: result.extractor,
+    confidence: caseItem.confidence ?? result.confidence
+  };
+}
+
 /**
  * 处理单个页面的智能提取
  * @param {Object} item - 页面项目
@@ -57,10 +74,16 @@ async function processPageIntelligently(item, source, processedCases, skippedPag
   if (shouldProcess.shouldProcess) {
     console.log(`🔄 处理页面: ${item.title} (${shouldProcess.reason})`);
     try {
-      const result = await extractIntelligently(item.description, item.url || item.id, item);
+      const result = await extractIntelligently(item.description, item);
       if (result.result && result.confidence > 0.6) {
-        const caseWithCategory = createCaseWithCategory(result, source);
-        processedCases.push(caseWithCategory);
+        if (Array.isArray(result.result.cases) && result.result.cases.length > 0) {
+          for (const caseItem of result.result.cases) {
+            processedCases.push(createCaseFromNormalizedCase(caseItem, result, source, item));
+          }
+        } else {
+          const caseWithCategory = createCaseWithCategory(result, source);
+          processedCases.push(caseWithCategory);
+        }
       }
       // 更新缓存
       cacheManager.updateCache(item.url || item.id, item.description, result.result?.cases?.length || 0);

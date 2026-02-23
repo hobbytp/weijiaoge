@@ -1,8 +1,8 @@
 // fetchers/hybrid-extractor.mjs
 // 混合提取器：结合传统算法和LangExtract
 
-import { extractCaseFromContent } from './case-extractor.mjs';
-import { extractEnhancedCases } from './enhanced-case-extractor.mjs';
+import { extractCaseFromContent, normalizeCaseItems } from './case-extractor.mjs';
+import { SmartDiscoveryExtractor } from './smart-discovery.mjs';
 import { LangExtractExtractor } from './langextract-extractor.mjs';
 
 // 提取器配置
@@ -10,21 +10,21 @@ const EXTRACTOR_CONFIG = {
   // 置信度阈值
   confidenceThresholds: {
     traditional: 0.6,    // 传统算法置信度阈值
-    enhanced: 0.7,       // 增强算法置信度阈值
+    smart: 0.7,          // 智能/增强算法置信度阈值 (包含LLM)
     langextract: 0.8     // LangExtract置信度阈值
   },
   
   // 提取器优先级
   extractorPriority: [
     'traditional',
-    'enhanced', 
+    'smart', 
     'langextract'
   ],
   
   // 超时设置
   timeouts: {
     traditional: 5000,    // 5秒
-    enhanced: 10000,      // 10秒
+    smart: 30000,         // 30秒 (LLM可能会慢)
     langextract: 15000    // 15秒
   }
 };
@@ -32,11 +32,11 @@ const EXTRACTOR_CONFIG = {
 class HybridExtractor {
   constructor() {
     this.traditionalExtractor = null;
-    this.enhancedExtractor = null;
+    this.smartDiscovery = new SmartDiscoveryExtractor();
     this.langextractExtractor = new LangExtractExtractor();
     this.stats = {
       traditional: { success: 0, failure: 0, totalTime: 0 },
-      enhanced: { success: 0, failure: 0, totalTime: 0 },
+      smart: { success: 0, failure: 0, totalTime: 0 },
       langextract: { success: 0, failure: 0, totalTime: 0 }
     };
   }
@@ -44,11 +44,6 @@ class HybridExtractor {
   // 设置传统提取器
   setTraditionalExtractor(extractor) {
     this.traditionalExtractor = extractor;
-  }
-
-  // 设置增强提取器
-  setEnhancedExtractor(extractor) {
-    this.enhancedExtractor = extractor;
   }
 
   // 执行提取器
@@ -67,11 +62,19 @@ class HybridExtractor {
           }
           break;
           
-        case 'enhanced':
-          if (this.enhancedExtractor) {
-            result = await this.enhancedExtractor.extractEnhancedCases(content, sourceInfo);
-          } else {
-            result = await extractEnhancedCases(content, sourceInfo);
+        case 'smart':
+          // 使用 SmartDiscovery (Specific -> LLM -> Generic/Enhanced)
+          const cases = await this.smartDiscovery.extract(content, sourceInfo.url || sourceInfo.id, sourceInfo);
+          // SmartDiscovery 返回数组，需要包装成 result 对象格式以兼容
+          if (cases && cases.length > 0) {
+            const normalizedCases = normalizeCaseItems(cases, sourceInfo);
+            result = {
+              cases: normalizedCases,
+              // 使用第一个案例的标题作为页面标题
+              title: normalizedCases[0].title,
+              category: normalizedCases[0].category,
+              confidence: normalizedCases[0].confidence || 0.7
+            };
           }
           break;
           
@@ -133,9 +136,9 @@ class HybridExtractor {
         
         return Math.min(confidence, 1.0);
         
-      case 'enhanced':
-        // 增强算法使用内置置信度
-        return result.confidence || 0.5;
+      case 'smart':
+        // 智能算法使用结果中的置信度
+        return result.confidence || 0.7;
         
       case 'langextract':
         // LangExtract使用平均置信度
@@ -305,7 +308,7 @@ class HybridExtractor {
   resetStats() {
     this.stats = {
       traditional: { success: 0, failure: 0, totalTime: 0 },
-      enhanced: { success: 0, failure: 0, totalTime: 0 },
+      smart: { success: 0, failure: 0, totalTime: 0 },
       langextract: { success: 0, failure: 0, totalTime: 0 }
     };
   }

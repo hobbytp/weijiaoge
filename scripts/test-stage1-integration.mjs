@@ -2,6 +2,7 @@
 // 测试阶段1：LangExtract集成的完整功能
 
 import { extractIntelligently, getExtractionStats, resetExtractionStats } from '../fetchers/hybrid-extractor.mjs';
+import { extractCasesFromGitHubReadme, normalizeCaseItems } from '../fetchers/case-extractor.mjs';
 import { extractPromptsWithLangExtract } from '../fetchers/langextract-extractor.mjs';
 
 // 测试数据
@@ -67,6 +68,20 @@ Style the person in elegant, timeless fashion that complements the dramatic ligh
       url: 'https://example.com/low-quality',
       type: 'web'
     }
+  },
+  {
+    name: 'Smart 归一化格式',
+    content: `
+# Web 片段
+> A high-resolution studio portrait of the uploaded person in neon lighting with cinematic contrast and crisp detail. 
+> nano banana should preserve facial features and background lighting for a cohesive look.
+![result](https://example.com/result.png)
+    `,
+    sourceInfo: {
+      title: 'Smart 归一化测试',
+      url: 'https://example.com/smart-normalize',
+      type: 'web'
+    }
   }
 ];
 
@@ -96,6 +111,55 @@ async function testLangExtractDirectly() {
     
     console.log('\n' + '='.repeat(60) + '\n');
   }
+}
+
+async function testCaseNormalization() {
+  console.log('🧪 测试Case归一化...\n');
+  const normalized = normalizeCaseItems([
+    {
+      prompt: 'Create a cinematic portrait with nano banana lighting.',
+      effects: 'bad',
+      images: 'bad',
+      sourceUrl: 'https://example.com/demo'
+    }
+  ], {
+    title: 'Case归一化测试',
+    url: 'https://example.com/demo'
+  });
+
+  const item = normalized[0];
+  if (!Array.isArray(item.prompts) || !item.prompts[0]?.text) {
+    throw new Error('归一化prompts失败');
+  }
+  if (!Array.isArray(item.effects) || !Array.isArray(item.images)) {
+    throw new Error('归一化effects/images失败');
+  }
+  if (!item.title || !item.sourceUrl) {
+    throw new Error('归一化title/sourceUrl失败');
+  }
+  console.log('✅ Case归一化通过\n');
+}
+
+async function testReadmeNormalization() {
+  console.log('🧪 测试README归一化...\n');
+  const item = {
+    title: 'README测试',
+    url: 'https://github.com/example/repo',
+    description: `1️⃣ Demo:
+Prompt:
+\`\`\`
+Create a cinematic portrait of the uploaded person with nano banana lighting.
+\`\`\``
+  };
+  const cases = await extractCasesFromGitHubReadme(item);
+  if (!Array.isArray(cases) || cases.length === 0) {
+    throw new Error('README提取为空');
+  }
+  const first = cases[0];
+  if (!Array.isArray(first.prompts) || !first.prompts[0]?.text) {
+    throw new Error('README归一化prompts失败');
+  }
+  console.log('✅ README归一化通过\n');
 }
 
 async function testHybridExtraction() {
@@ -136,6 +200,20 @@ async function testHybridExtraction() {
         
         if (result.result.images && result.result.images.length > 0) {
           console.log(`   图片: ${result.result.images.length} 个`);
+        }
+
+        if (result.extractor === 'smart') {
+          if (!Array.isArray(result.result.cases) || result.result.cases.length === 0) {
+            throw new Error('smart结果缺少cases');
+          }
+          const firstCase = result.result.cases[0];
+          if (!Array.isArray(firstCase.prompts)) {
+            throw new Error('smart case prompts未归一化为数组');
+          }
+          if (firstCase.prompts.length > 0 && !firstCase.prompts[0].text) {
+            throw new Error('smart case prompts缺少text字段');
+          }
+          console.log('   Smart归一化: ✅');
         }
         
       } else {
@@ -204,6 +282,10 @@ async function main() {
   
   // 测试LangExtract直接提取
   await testLangExtractDirectly();
+
+  await testCaseNormalization();
+
+  await testReadmeNormalization();
   
   // 测试混合智能提取
   await testHybridExtraction();
