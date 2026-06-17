@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-16T03:19:31.459Z",
-  "total": 8431,
+  "generatedAt": "2026-06-17T03:19:15.938Z",
+  "total": 8474,
   "items": [
     {
       "id": "repo:589831718",
@@ -11,9 +11,9 @@
       "source": "github",
       "type": "repo",
       "author": "Comfy-Org",
-      "stars": 116878,
+      "stars": 117276,
       "createdAt": "2023-01-17T03:15:56Z",
-      "updatedAt": "2026-06-14T02:54:39Z",
+      "updatedAt": "2026-06-17T03:15:05Z",
       "tags": [
         "repo"
       ]
@@ -161,9 +161,9 @@
       "source": "github",
       "type": "repo",
       "author": "PicoTrex",
-      "stars": 22996,
+      "stars": 23006,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2026-06-16T01:05:30Z",
+      "updatedAt": "2026-06-17T02:43:35Z",
       "tags": [
         "repo"
       ]
@@ -176,9 +176,9 @@
       "source": "github",
       "type": "readme",
       "author": "PicoTrex",
-      "stars": 22996,
+      "stars": 23006,
       "createdAt": "2025-08-28T17:03:09Z",
-      "updatedAt": "2026-06-16T01:05:30Z",
+      "updatedAt": "2026-06-17T02:43:35Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -373,9 +373,9 @@
       "source": "github",
       "type": "repo",
       "author": "ai-collection",
-      "stars": 8994,
+      "stars": 8995,
       "createdAt": "2023-01-03T06:02:03Z",
-      "updatedAt": "2026-06-16T03:01:15Z",
+      "updatedAt": "2026-06-17T03:01:08Z",
       "tags": [
         "repo"
       ]
@@ -418,9 +418,9 @@
       "source": "github",
       "type": "repo",
       "author": "YouMind-OpenLab",
-      "stars": 7511,
+      "stars": 7559,
       "createdAt": "2026-04-16T13:57:42Z",
-      "updatedAt": "2026-06-16T03:11:20Z",
+      "updatedAt": "2026-06-17T03:00:05Z",
       "tags": [
         "repo"
       ]
@@ -433,9 +433,9 @@
       "source": "github",
       "type": "repo",
       "author": "enricoros",
-      "stars": 6989,
+      "stars": 7003,
       "createdAt": "2023-03-19T04:50:47Z",
-      "updatedAt": "2026-06-10T01:49:55Z",
+      "updatedAt": "2026-06-17T02:53:31Z",
       "tags": [
         "repo"
       ]
@@ -508,9 +508,9 @@
       "source": "github",
       "type": "repo",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 3705,
+      "stars": 3703,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2026-06-15T10:58:18Z",
+      "updatedAt": "2026-06-17T02:07:00Z",
       "tags": [
         "repo"
       ]
@@ -523,9 +523,9 @@
       "source": "github",
       "type": "readme",
       "author": "ZHO-ZHO-ZHO",
-      "stars": 3705,
+      "stars": 3703,
       "createdAt": "2025-08-28T13:09:00Z",
-      "updatedAt": "2026-06-15T10:58:18Z",
+      "updatedAt": "2026-06-17T02:07:00Z",
       "tags": [
         "readme",
         "prompt-examples"
@@ -938,6 +938,21 @@
       ]
     },
     {
+      "id": "repo:1132602643",
+      "title": "BlockRunAI/blockrun-mcp",
+      "url": "https://github.com/BlockRunAI/blockrun-mcp",
+      "description": "Live data for AI agents — search, research, markets, crypto, X/Twitter. Pay-per-call via x402 micropayments.",
+      "source": "github",
+      "type": "repo",
+      "author": "BlockRunAI",
+      "stars": 466,
+      "createdAt": "2026-01-12T07:37:08Z",
+      "updatedAt": "2026-06-17T03:06:15Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:1051924923",
       "title": "T8mars/Comfyui-zhenzhen",
       "url": "https://github.com/T8mars/Comfyui-zhenzhen",
@@ -1148,6 +1163,21 @@
       ]
     },
     {
+      "id": "repo:1171534917",
+      "title": "YouMind-OpenLab/ai-image-prompts-skill",
+      "url": "https://github.com/YouMind-OpenLab/ai-image-prompts-skill",
+      "description": "AI Image Prompts — 10,000+ curated prompts for any model. Works with Nano Banana Pro, Nano Banana 2, Seedream 5.0, GPT Image 1.5, Midjourney, DALL-E, Flux, Stable Diffusion, and more.",
+      "source": "github",
+      "type": "repo",
+      "author": "YouMind-OpenLab",
+      "stars": 142,
+      "createdAt": "2026-03-03T10:38:21Z",
+      "updatedAt": "2026-06-17T02:38:57Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:536030907",
       "title": "SethRobinson/aitools_client",
       "url": "https://github.com/SethRobinson/aitools_client",
@@ -1178,21 +1208,6 @@
       ]
     },
     {
-      "id": "repo:1171534917",
-      "title": "YouMind-OpenLab/ai-image-prompts-skill",
-      "url": "https://github.com/YouMind-OpenLab/ai-image-prompts-skill",
-      "description": "AI Image Prompts — 10,000+ curated prompts for any model. Works with Nano Banana Pro, Nano Banana 2, Seedream 5.0, GPT Image 1.5, Midjourney, DALL-E, Flux, Stable Diffusion, and more.",
-      "source": "github",
-      "type": "repo",
-      "author": "YouMind-OpenLab",
-      "stars": 140,
-      "createdAt": "2026-03-03T10:38:21Z",
-      "updatedAt": "2026-06-16T02:40:57Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:628264551",
       "title": "Eternaldeath/AIProductHome",
       "url": "https://github.com/Eternaldeath/AIProductHome",
@@ -1218,6 +1233,21 @@
       "stars": 1344,
       "createdAt": "2024-11-13T01:10:23Z",
       "updatedAt": "2026-01-26T02:23:27Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1168982444",
+      "title": "AIPMAndy/awesome-openclaw-skills-CN",
+      "url": "https://github.com/AIPMAndy/awesome-openclaw-skills-CN",
+      "description": "🇨🇳 中文开发者友好的 OpenClaw Skills 精选 | 含国产模型接入指南（DeepSeek/Qwen/GLM/Moonshot）| 2868+ Skills 分类整理",
+      "source": "github",
+      "type": "repo",
+      "author": "AIPMAndy",
+      "stars": 116,
+      "createdAt": "2026-02-28T02:49:15Z",
+      "updatedAt": "2026-06-17T03:11:28Z",
       "tags": [
         "repo"
       ]
@@ -1307,9 +1337,24 @@
       "source": "github",
       "type": "repo",
       "author": "YouMind-OpenLab",
-      "stars": 48,
+      "stars": 49,
       "createdAt": "2025-11-30T07:58:09Z",
-      "updatedAt": "2026-06-16T02:35:45Z",
+      "updatedAt": "2026-06-17T02:32:53Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:917416797",
+      "title": "zhuozhiyongde/Stargazer",
+      "url": "https://github.com/zhuozhiyongde/Stargazer",
+      "description": "我在梦河边浣洗星星。",
+      "source": "github",
+      "type": "repo",
+      "author": "zhuozhiyongde",
+      "stars": 41,
+      "createdAt": "2025-01-16T00:04:43Z",
+      "updatedAt": "2026-06-17T02:58:05Z",
       "tags": [
         "repo"
       ]
@@ -1325,6 +1370,21 @@
       "stars": 165,
       "createdAt": "2025-12-02T14:22:32Z",
       "updatedAt": "2026-06-02T02:53:18Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:171871908",
+      "title": "utensil/awesome-stars",
+      "url": "https://github.com/utensil/awesome-stars",
+      "description": "A curated list of my GitHub stars!",
+      "source": "github",
+      "type": "repo",
+      "author": "utensil",
+      "stars": 34,
+      "createdAt": "2019-02-21T12:56:56Z",
+      "updatedAt": "2026-06-17T01:46:24Z",
       "tags": [
         "repo"
       ]
@@ -1360,16 +1420,16 @@
       ]
     },
     {
-      "id": "repo:171871908",
-      "title": "utensil/awesome-stars",
-      "url": "https://github.com/utensil/awesome-stars",
-      "description": "A curated list of my GitHub stars!",
+      "id": "repo:702508231",
+      "title": "zengzzzzz/golang-trending-archive",
+      "url": "https://github.com/zengzzzzz/golang-trending-archive",
+      "description": "track golang trending in github",
       "source": "github",
       "type": "repo",
-      "author": "utensil",
-      "stars": 34,
-      "createdAt": "2019-02-21T12:56:56Z",
-      "updatedAt": "2026-06-16T01:56:01Z",
+      "author": "zengzzzzz",
+      "stars": 22,
+      "createdAt": "2023-10-09T13:00:57Z",
+      "updatedAt": "2026-06-17T01:46:28Z",
       "tags": [
         "repo"
       ]
@@ -1385,6 +1445,21 @@
       "stars": 1810,
       "createdAt": "2019-04-27T04:49:56Z",
       "updatedAt": "2025-11-22T01:10:16Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1117960346",
+      "title": "YouMind-OpenLab/awesome-gpt-image-1.5",
+      "url": "https://github.com/YouMind-OpenLab/awesome-gpt-image-1.5",
+      "description": "🎨 100+ selected GPT Image 1.5 prompts with images, multilingual support, and instant gallery preview. Open-source prompt engineering library",
+      "source": "github",
+      "type": "repo",
+      "author": "YouMind-OpenLab",
+      "stars": 21,
+      "createdAt": "2025-12-17T04:14:57Z",
+      "updatedAt": "2026-06-17T02:14:08Z",
       "tags": [
         "repo"
       ]
@@ -1435,6 +1510,21 @@
       ]
     },
     {
+      "id": "repo:1149474318",
+      "title": "Quriosity-agent/articles",
+      "url": "https://github.com/Quriosity-agent/articles",
+      "description": "My article collection",
+      "source": "github",
+      "type": "repo",
+      "author": "Quriosity-agent",
+      "stars": 17,
+      "createdAt": "2026-02-04T06:39:42Z",
+      "updatedAt": "2026-06-17T03:08:51Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:572639172",
       "title": "rcy1314/some-stars",
       "url": "https://github.com/rcy1314/some-stars",
@@ -1445,6 +1535,21 @@
       "stars": 85,
       "createdAt": "2022-11-30T17:50:06Z",
       "updatedAt": "2026-06-09T02:52:17Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1137194658",
+      "title": "alfredang/AI-LMS-TMS",
+      "url": "https://github.com/alfredang/AI-LMS-TMS",
+      "description": "Self-hosted AI-powered Learning & Training Management System for Singapore's SkillsFuture ecosystem. Features SSG API integration, multi-role access, OTP login, and embedded AI agent.",
+      "source": "github",
+      "type": "repo",
+      "author": "alfredang",
+      "stars": 16,
+      "createdAt": "2026-01-19T03:37:48Z",
+      "updatedAt": "2026-06-17T02:31:19Z",
       "tags": [
         "repo"
       ]
@@ -1465,61 +1570,91 @@
       ]
     },
     {
-      "id": "repo:917416797",
-      "title": "zhuozhiyongde/Stargazer",
-      "url": "https://github.com/zhuozhiyongde/Stargazer",
-      "description": "我在梦河边浣洗星星。",
-      "source": "github",
-      "type": "repo",
-      "author": "zhuozhiyongde",
-      "stars": 41,
-      "createdAt": "2025-01-16T00:04:43Z",
-      "updatedAt": "2026-06-14T02:55:34Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1132602643",
-      "title": "BlockRunAI/blockrun-mcp",
-      "url": "https://github.com/BlockRunAI/blockrun-mcp",
-      "description": "Live data for AI agents — search, research, markets, crypto, X/Twitter. Pay-per-call via x402 micropayments.",
+      "id": "repo:1127839904",
+      "title": "BlockRunAI/awesome-blockrun",
+      "url": "https://github.com/BlockRunAI/awesome-blockrun",
+      "description": "BlockRun ecosystem - docs, SDKs, research, and community",
       "source": "github",
       "type": "repo",
       "author": "BlockRunAI",
-      "stars": 464,
-      "createdAt": "2026-01-12T07:37:08Z",
-      "updatedAt": "2026-04-26T02:46:01Z",
+      "stars": 15,
+      "createdAt": "2026-01-04T17:38:05Z",
+      "updatedAt": "2026-06-17T03:12:53Z",
       "tags": [
         "repo"
       ]
     },
     {
-      "id": "repo:702508231",
-      "title": "zengzzzzz/golang-trending-archive",
-      "url": "https://github.com/zengzzzzz/golang-trending-archive",
-      "description": "track golang trending in github",
+      "id": "repo:600185777",
+      "title": "svg153/awesome-stars",
+      "url": "https://github.com/svg153/awesome-stars",
+      "description": "",
       "source": "github",
       "type": "repo",
-      "author": "zengzzzzz",
-      "stars": 22,
-      "createdAt": "2023-10-09T13:00:57Z",
-      "updatedAt": "2026-06-16T01:49:19Z",
+      "author": "svg153",
+      "stars": 12,
+      "createdAt": "2023-02-10T19:25:18Z",
+      "updatedAt": "2026-06-17T01:42:08Z",
       "tags": [
         "repo"
       ]
     },
     {
-      "id": "repo:1117960346",
-      "title": "YouMind-OpenLab/awesome-gpt-image-1.5",
-      "url": "https://github.com/YouMind-OpenLab/awesome-gpt-image-1.5",
-      "description": "🎨 100+ selected GPT Image 1.5 prompts with images, multilingual support, and instant gallery preview. Open-source prompt engineering library",
+      "id": "repo:1238862919",
+      "title": "TGYD-helige/pi",
+      "url": "https://github.com/TGYD-helige/pi",
+      "description": "Shared TypeScript packages for Pi runtime applications — runtime contracts, persistence adapters, and extensions (telemetry, scheduling, browser/computer use, channels, memory).",
       "source": "github",
       "type": "repo",
-      "author": "YouMind-OpenLab",
-      "stars": 20,
-      "createdAt": "2025-12-17T04:14:57Z",
-      "updatedAt": "2026-06-16T02:29:45Z",
+      "author": "TGYD-helige",
+      "stars": 11,
+      "createdAt": "2026-05-14T14:23:50Z",
+      "updatedAt": "2026-06-17T02:59:29Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1271332229",
+      "title": "boogu-project/Boogu-Image",
+      "url": "https://github.com/boogu-project/Boogu-Image",
+      "description": "Boogu-Image-0.1 is a competitive Apache-2.0 open-source   image generation and editing model family, with Base,   Turbo, and Edit variants supporting text-to-image, fast   generation, image editing, and bilingual   (Chinese/English) text rendering.",
+      "source": "github",
+      "type": "repo",
+      "author": "boogu-project",
+      "stars": 7,
+      "createdAt": "2026-06-16T14:59:20Z",
+      "updatedAt": "2026-06-17T03:13:48Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1174995813",
+      "title": "giarld/skills",
+      "url": "https://github.com/giarld/skills",
+      "description": "My skills",
+      "source": "github",
+      "type": "repo",
+      "author": "giarld",
+      "stars": 6,
+      "createdAt": "2026-03-07T04:50:07Z",
+      "updatedAt": "2026-06-17T03:10:33Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1123804298",
+      "title": "BlockRunAI/blockrun-llm",
+      "url": "https://github.com/BlockRunAI/blockrun-llm",
+      "description": "Python SDK for BlockRun — 41+ AI models, pay-per-call with USDC. OpenAI-compatible. Zero rate limits.",
+      "source": "github",
+      "type": "repo",
+      "author": "BlockRunAI",
+      "stars": 5,
+      "createdAt": "2025-12-27T16:55:11Z",
+      "updatedAt": "2026-06-17T03:18:17Z",
       "tags": [
         "repo"
       ]
@@ -1540,6 +1675,21 @@
       ]
     },
     {
+      "id": "repo:1003323544",
+      "title": "linzeliang1222/awesome-stars",
+      "url": "https://github.com/linzeliang1222/awesome-stars",
+      "description": "关于 GitHub 项目的精彩内容合集",
+      "source": "github",
+      "type": "repo",
+      "author": "linzeliang1222",
+      "stars": 4,
+      "createdAt": "2025-06-17T01:22:30Z",
+      "updatedAt": "2026-06-17T02:47:02Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
       "id": "repo:1047714981",
       "title": "zhongweili/nanobanana-mcp-server",
       "url": "https://github.com/zhongweili/nanobanana-mcp-server",
@@ -1550,21 +1700,6 @@
       "stars": 340,
       "createdAt": "2025-08-31T03:56:30Z",
       "updatedAt": "2026-05-09T02:43:54Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:600185777",
-      "title": "svg153/awesome-stars",
-      "url": "https://github.com/svg153/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "svg153",
-      "stars": 12,
-      "createdAt": "2023-02-10T19:25:18Z",
-      "updatedAt": "2026-06-16T01:42:52Z",
       "tags": [
         "repo"
       ]
@@ -1585,6 +1720,876 @@
       ]
     },
     {
+      "id": "repo:981754715",
+      "title": "IndieMinimalist/awesome-stars",
+      "url": "https://github.com/IndieMinimalist/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "IndieMinimalist",
+      "stars": 2,
+      "createdAt": "2025-05-11T20:10:48Z",
+      "updatedAt": "2026-06-17T01:52:28Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1247944595",
+      "title": "VW3st/halo",
+      "url": "https://github.com/VW3st/halo",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "VW3st",
+      "stars": 1,
+      "createdAt": "2026-05-24T01:42:18Z",
+      "updatedAt": "2026-06-17T03:12:54Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1246855411",
+      "title": "reiTavares/ContextDevKit",
+      "url": "https://github.com/reiTavares/ContextDevKit",
+      "description": "Portable, level-based AI-assisted development platform for Claude Code — hooks, slash commands, sub-agents, and durable project memory for any stack.",
+      "source": "github",
+      "type": "repo",
+      "author": "reiTavares",
+      "stars": 1,
+      "createdAt": "2026-05-22T16:21:27Z",
+      "updatedAt": "2026-06-17T03:00:42Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1264701348",
+      "title": "vibecodersph/carousel-app",
+      "url": "https://github.com/vibecodersph/carousel-app",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "vibecodersph",
+      "stars": 1,
+      "createdAt": "2026-06-10T05:34:26Z",
+      "updatedAt": "2026-06-17T02:57:48Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1230638833",
+      "title": "wenjianghai123-eth/archai-revit-expression-engine",
+      "url": "https://github.com/wenjianghai123-eth/archai-revit-expression-engine",
+      "description": "烛照AI设计助手",
+      "source": "github",
+      "type": "repo",
+      "author": "wenjianghai123-eth",
+      "stars": 1,
+      "createdAt": "2026-05-06T07:20:28Z",
+      "updatedAt": "2026-06-17T02:52:07Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1163925095",
+      "title": "alisadikinma/ai-image-carousel-prompt-gen",
+      "url": "https://github.com/alisadikinma/ai-image-carousel-prompt-gen",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "alisadikinma",
+      "stars": 1,
+      "createdAt": "2026-02-22T11:20:13Z",
+      "updatedAt": "2026-06-17T02:47:30Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1150338797",
+      "title": "thindery/awesome-openclaw",
+      "url": "https://github.com/thindery/awesome-openclaw",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "thindery",
+      "stars": 1,
+      "createdAt": "2026-02-05T06:48:33Z",
+      "updatedAt": "2026-06-17T02:03:03Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1235506491",
+      "title": "poweredbyai-directory/best-ai-tools-poweredbyai",
+      "url": "https://github.com/poweredbyai-directory/best-ai-tools-poweredbyai",
+      "description": "Curated directory of the best AI tools, AI agents, and AI websites to discover, compare, and submit tools — by PoweredbyAI.",
+      "source": "github",
+      "type": "repo",
+      "author": "poweredbyai-directory",
+      "stars": 1,
+      "createdAt": "2026-05-11T11:46:04Z",
+      "updatedAt": "2026-06-17T02:00:12Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1112825356",
+      "title": "creatorrr/awesome-stars",
+      "url": "https://github.com/creatorrr/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "creatorrr",
+      "stars": 1,
+      "createdAt": "2025-12-09T06:37:22Z",
+      "updatedAt": "2026-06-17T01:50:55Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1064977642",
+      "title": "maddawik/starred",
+      "url": "https://github.com/maddawik/starred",
+      "description": "Maddawiks starred repos categorized by language and topic",
+      "source": "github",
+      "type": "repo",
+      "author": "maddawik",
+      "stars": 1,
+      "createdAt": "2025-09-26T21:14:41Z",
+      "updatedAt": "2026-06-17T01:41:10Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1002101609",
+      "title": "jeremy-feng/starred",
+      "url": "https://github.com/jeremy-feng/starred",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "jeremy-feng",
+      "stars": 1,
+      "createdAt": "2025-06-14T18:05:03Z",
+      "updatedAt": "2026-06-17T01:38:09Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1058505481",
+      "title": "Data-Driven-LM-Collaboration-Team/WXD",
+      "url": "https://github.com/Data-Driven-LM-Collaboration-Team/WXD",
+      "description": "wu xudong",
+      "source": "github",
+      "type": "repo",
+      "author": "Data-Driven-LM-Collaboration-Team",
+      "stars": 0,
+      "createdAt": "2025-09-17T07:19:08Z",
+      "updatedAt": "2026-06-17T03:17:07Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1170341657",
+      "title": "aGROWLz/Banana_Hub_Api",
+      "url": "https://github.com/aGROWLz/Banana_Hub_Api",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "aGROWLz",
+      "stars": 0,
+      "createdAt": "2026-03-02T02:35:43Z",
+      "updatedAt": "2026-06-17T03:15:38Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:4657587870",
+      "title": "Update ghcr.io/berriai/litellm Docker tag to v1.89.1",
+      "url": "https://github.com/nint8835/ops/pull/763",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/berriai/litellm](https://images.chainguard.dev/directory/image/wolfi-base/overview) ([source](https://redirect.github.com/BerriAI/litellm)) | minor | `v1.88.1` → `v1.89.1` |\n\n---\n\n### Release Notes\n\n<details>\n<summary>BerriAI/litellm (ghcr.io/berriai/litellm)</summary>\n\n### [`v1.89.1`](https://redirect.github.com/BerriAI/litellm/re",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-14T01:49:22Z",
+      "updatedAt": "2026-06-17T03:12:10Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1114130872",
+      "title": "sleepyseamonster/ShortPulse",
+      "url": "https://github.com/sleepyseamonster/ShortPulse",
+      "description": "For creators who want to scale",
+      "source": "github",
+      "type": "repo",
+      "author": "sleepyseamonster",
+      "stars": 0,
+      "createdAt": "2025-12-11T00:13:56Z",
+      "updatedAt": "2026-06-17T03:11:08Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1215583498",
+      "title": "nao7sep/imagequeue",
+      "url": "https://github.com/nao7sep/imagequeue",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "nao7sep",
+      "stars": 0,
+      "createdAt": "2026-04-20T04:01:06Z",
+      "updatedAt": "2026-06-17T03:10:52Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1104248430",
+      "title": "krasnoperov/inventory",
+      "url": "https://github.com/krasnoperov/inventory",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "krasnoperov",
+      "stars": 0,
+      "createdAt": "2025-11-26T00:41:37Z",
+      "updatedAt": "2026-06-17T03:07:21Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1235674419",
+      "title": "santiagovz-within/within-glide",
+      "url": "https://github.com/santiagovz-within/within-glide",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "santiagovz-within",
+      "stars": 0,
+      "createdAt": "2026-05-11T14:46:26Z",
+      "updatedAt": "2026-06-17T03:07:15Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:4669315547",
+      "title": "chore(deps): update ghcr.io/berriai/litellm docker tag to v1.89.1",
+      "url": "https://github.com/timmyb824/homelab-kubernetes-apps/pull/671",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [ghcr.io/berriai/litellm](https://images.chainguard.dev/directory/image/wolfi-base/overview) ([source](https://redirect.github.com/BerriAI/litellm)) | minor | `v1.88.0` → `v1.89.1` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency Dashboard](../issues/9) for more information.\n\n---\n\n### Release Notes\n\n<de",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-15T22:14:25Z",
+      "updatedAt": "2026-06-17T03:05:01Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1265227419",
+      "title": "Longwind1984/ricksi.com",
+      "url": "https://github.com/Longwind1984/ricksi.com",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "Longwind1984",
+      "stars": 0,
+      "createdAt": "2026-06-10T15:24:31Z",
+      "updatedAt": "2026-06-17T03:04:29Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:4679629998",
+      "title": "[beta] resolve 0.1.0: Media input sockets: Incorrect behavior when switching video models",
+      "url": "https://github.com/davidgidali/gencanvas-dist/issues/67",
+      "description": "### What happened / steps to reproduce\n\nStill noticing bugs with media input sockets when switching between video models Kling 3.0 and Seedance 2.0 (which have different input types).\n\n### Environment\n- **App version:** 0.1.0\n- **Host:** resolve 20.3.1.6 (mode: resolve)\n- **OS:** Windows\n- **Screen/panel:** 2560x1440 / 2560x1344\n- **UA:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.115 Electron/36.3.2 Safari/537.36\n\n### Recent fal request ID",
+      "source": "github",
+      "type": "issue",
+      "author": "davidgidali",
+      "stars": 0,
+      "createdAt": "2026-06-17T03:04:00Z",
+      "updatedAt": "2026-06-17T03:04:00Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "repo:1271041558",
+      "title": "raffiihza/free-llm-coding-credits",
+      "url": "https://github.com/raffiihza/free-llm-coding-credits",
+      "description": "A regularly updated list of LLM inference platforms offering free credits — usable as cheap/free AI coding models.",
+      "source": "github",
+      "type": "repo",
+      "author": "raffiihza",
+      "stars": 0,
+      "createdAt": "2026-06-16T09:25:11Z",
+      "updatedAt": "2026-06-17T03:03:22Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1254777846",
+      "title": "tguless/agent-forge",
+      "url": "https://github.com/tguless/agent-forge",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "tguless",
+      "stars": 0,
+      "createdAt": "2026-05-31T01:52:36Z",
+      "updatedAt": "2026-06-17T03:03:16Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1258866927",
+      "title": "vcons002-ship-it/Illustrator-App",
+      "url": "https://github.com/vcons002-ship-it/Illustrator-App",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "vcons002-ship-it",
+      "stars": 0,
+      "createdAt": "2026-06-04T01:56:51Z",
+      "updatedAt": "2026-06-17T03:03:06Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1271080192",
+      "title": "behaviodd/gen-emoji",
+      "url": "https://github.com/behaviodd/gen-emoji",
+      "description": "Emoji Studio — Fluent 3D emoji generator (browser-direct BYOK, Gemini)",
+      "source": "github",
+      "type": "repo",
+      "author": "behaviodd",
+      "stars": 0,
+      "createdAt": "2026-06-16T10:09:27Z",
+      "updatedAt": "2026-06-17T03:02:23Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:4274267254",
+      "title": "fix(deps): update all non-major dependencies",
+      "url": "https://github.com/moeru-ai/velin/pull/28",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [@antfu/eslint-config](https://redirect.github.com/antfu/eslint-config) | [`^8.2.0` → `^8.3.0`](https://renovatebot.com/diffs/npm/@antfu%2feslint-config/8.2.0/8.3.0) | ![age](https://developer.mend.io/api/mc/badges/age/npm/@antf",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-04-16T08:30:36Z",
+      "updatedAt": "2026-06-17T02:55:28Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:1241900972",
+      "title": "raisenomega/Omega",
+      "url": "https://github.com/raisenomega/Omega",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "raisenomega",
+      "stars": 0,
+      "createdAt": "2026-05-18T00:22:43Z",
+      "updatedAt": "2026-06-17T02:53:09Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:911523899",
+      "title": "Temoa/awesome-stars-temoa",
+      "url": "https://github.com/Temoa/awesome-stars-temoa",
+      "description": "每天凌晨自动更新",
+      "source": "github",
+      "type": "repo",
+      "author": "Temoa",
+      "stars": 0,
+      "createdAt": "2025-01-03T08:10:56Z",
+      "updatedAt": "2026-06-17T02:50:41Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:4632923931",
+      "title": "chore(deps): update all dependencies (minor)",
+      "url": "https://github.com/theepicsaxguy/homelab/pull/2679",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Adoption](https://docs.renovatebot.com/merge-confidence/) | [Passing](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|---|---|---|---|\n| [errata-ai/vale](https://redirect.github.com/errata-ai/vale) | repository |",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-10T16:10:54Z",
+      "updatedAt": "2026-06-17T02:49:40Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:357477258",
+      "title": "pjmartorell/pjmartorell",
+      "url": "https://github.com/pjmartorell/pjmartorell",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "pjmartorell",
+      "stars": 0,
+      "createdAt": "2021-04-13T08:21:37Z",
+      "updatedAt": "2026-06-17T02:31:24Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "repo:1259646794",
+      "title": "Solizardking/solana-clawd",
+      "url": "https://github.com/Solizardking/solana-clawd",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "Solizardking",
+      "stars": 0,
+      "createdAt": "2026-06-04T18:05:07Z",
+      "updatedAt": "2026-06-17T01:59:48Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:4281423822",
+      "title": "Agent sending random pictures in the middle of the day (ghost cron?)",
+      "url": "https://github.com/openclaw/openclaw/issues/68054",
+      "description": "User reported: 'in the past few days this openclaw started to behave differently, cron jobbing to me random pics in the middle of the day!'\n\nInvestigation results:\n- `openclaw cron list` reports **No cron jobs**.\n- `~/.openclaw/cron/jobs.json` is empty.\n- Looking at `journalctl --user -u openclaw-gateway`, we can see anomalous activity where the agent attempts to process images autonomously. For example:\n  - `[agents/tool-images] Image resized to fit limits: 1280x960px 133.8KB -> 135.8KB`\n  - `[",
+      "source": "github",
+      "type": "issue",
+      "author": "palladius",
+      "stars": 0,
+      "createdAt": "2026-04-17T09:06:52Z",
+      "updatedAt": "2026-06-17T01:49:48Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4646277468",
+      "title": "Update dependency litellm to v1.89.0",
+      "url": "https://github.com/arthur-ai/arthur-common/pull/148",
+      "description": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [litellm](https://redirect.github.com/BerriAI/litellm) | `==1.88.0` → `==1.89.0` | ![age](https://developer.mend.io/api/mc/badges/age/pypi/litellm/1.89.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/pypi/litellm/1.88.0/1.89.0?slim=true) |\n\n---\n\n### Release Notes\n\n<d",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-12T04:26:46Z",
+      "updatedAt": "2026-06-17T01:46:07Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "repo:590048966",
+      "title": "jfdelarosa/awesome-stars",
+      "url": "https://github.com/jfdelarosa/awesome-stars",
+      "description": "",
+      "source": "github",
+      "type": "repo",
+      "author": "jfdelarosa",
+      "stars": 0,
+      "createdAt": "2023-01-17T14:48:00Z",
+      "updatedAt": "2026-06-17T01:39:03Z",
+      "tags": [
+        "repo"
+      ]
+    },
+    {
+      "id": "issue:3454301021",
+      "title": "Update dependency litellm to v1.89.0",
+      "url": "https://github.com/red-hat-data-services/llama-stack-provider-trustyai-garak/pull/35",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [litellm](https://redirect.github.com/BerriAI/litellm) | `==1.77.0` → `==1.89.0` | ![age](https://developer.mend.io/api/mc/badges/age/pypi/litellm/1.89.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confide",
+      "source": "github",
+      "type": "pull",
+      "author": "konflux-internal-p02[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-25T16:14:11Z",
+      "updatedAt": "2026-06-17T01:22:48Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3460892690",
+      "title": "Update dependency litellm to v1.89.0",
+      "url": "https://github.com/red-hat-data-services/llama-stack-provider-trustyai-garak/pull/51",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [litellm](https://redirect.github.com/BerriAI/litellm) | `==1.80.0` → `==1.89.0` | ![age](https://developer.mend.io/api/mc/badges/age/pypi/litellm/1.89.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confide",
+      "source": "github",
+      "type": "pull",
+      "author": "konflux-internal-p02[bot]",
+      "stars": 0,
+      "createdAt": "2025-09-28T00:32:52Z",
+      "updatedAt": "2026-06-17T01:17:48Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4654353256",
+      "title": "Update dependency litellm to v1.89.0",
+      "url": "https://github.com/arthur-ai/arthur-engine/pull/1789",
+      "description": "This PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [litellm](https://redirect.github.com/BerriAI/litellm) | `==1.88.0` → `==1.89.0` | ![age](https://developer.mend.io/api/mc/badges/age/pypi/litellm/1.89.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confidence/pypi/litellm/1.88.0/1.89.0?slim=true) |\n\n---\n\n> [!WARNING]\n> Some d",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-13T04:29:44Z",
+      "updatedAt": "2026-06-17T01:04:14Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4679052803",
+      "title": "[beta] resolve 0.1.0: Seedance 2.0: Input sockets missing/inactive",
+      "url": "https://github.com/davidgidali/gencanvas-dist/issues/66",
+      "description": "### What happened / steps to reproduce\n\nSeedance 2.0 input sockets seem funky (missing reference image / video imputs, and First frame socket is inactive)\n\n### Environment\n- **App version:** 0.1.0\n- **Host:** resolve 20.3.1.6 (mode: resolve)\n- **OS:** Windows\n- **Screen/panel:** 2560x1440 / 2560x1344\n- **UA:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.115 Electron/36.3.2 Safari/537.36\n\n### Recent fal request IDs\n_(reconcile against fal.ai ",
+      "source": "github",
+      "type": "issue",
+      "author": "davidgidali",
+      "stars": 0,
+      "createdAt": "2026-06-17T00:56:09Z",
+      "updatedAt": "2026-06-17T00:56:09Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4390757112",
+      "title": "fix(blocks): add media generation fallback guidance",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/13015",
+      "description": "### Why / What / How\n\nMedia generation blocks can fail with provider outages, empty outputs, polling timeouts, or unavailable models, but the resulting errors do not consistently guide the agent/user toward selecting another suitable model.\n\nThis PR adds shared image/video generation guidance, applies it to relevant image and video blocks, and keeps non-retryable failures such as moderation, auth, billing, quota, and validation errors from suggesting fallback models.\n\nThe implementation centrali",
+      "source": "github",
+      "type": "pull",
+      "author": "Swiftyos",
+      "stars": 0,
+      "createdAt": "2026-05-06T10:54:13Z",
+      "updatedAt": "2026-06-17T00:37:22Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678941762",
+      "title": "Studio: multi-photo product fidelity + delete references",
+      "url": "https://github.com/farmerscreed/leiko/pull/43",
+      "description": "## Why\nAfter the first fix, a **Real Cuff** generation still drifted — the brand-check flagged \"generic smartwatch / silicone strap / on-screen 120/79\". Verified: the reference *was* attached and the fidelity prompt *was* sent — but we fed Nano only **one** photo and didn't explicitly bar the failure modes. Per fal's docs, Nano Banana Pro edit takes **up to 14 images** and has **no fidelity slider**, so the only levers are more reference images + sharper prompt wording.\n\n## What changed\n- **`gen",
+      "source": "github",
+      "type": "pull",
+      "author": "farmerscreed",
+      "stars": 0,
+      "createdAt": "2026-06-17T00:31:12Z",
+      "updatedAt": "2026-06-17T00:33:07Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:272612197",
+      "title": "New daily trending repos in unknown languages",
+      "url": "https://github.com/vitalets/github-trending-repos/issues/28",
+      "description": "Subscribe to this issue and stay notified about new [daily trending repos in unknown languages](https://github.com/trending/unknown?since=daily)!",
+      "source": "github",
+      "type": "issue",
+      "author": "vitalets",
+      "stars": 0,
+      "createdAt": "2017-11-09T15:48:34Z",
+      "updatedAt": "2026-06-17T00:08:28Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:272612693",
+      "title": "New daily trending repos in C++",
+      "url": "https://github.com/vitalets/github-trending-repos/issues/29",
+      "description": "Subscribe to this issue and stay notified about new [daily trending repos in C++](https://github.com/trending/c++?since=daily)!",
+      "source": "github",
+      "type": "issue",
+      "author": "vitalets",
+      "stars": 0,
+      "createdAt": "2017-11-09T15:49:53Z",
+      "updatedAt": "2026-06-17T00:08:24Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4678794504",
+      "title": "Studio: anchor product ads to the real watch photo",
+      "url": "https://github.com/farmerscreed/leiko/pull/42",
+      "description": "## Why\nConfirmed in the DB: **all 11 generated image ads were text-to-image** (`reference_id` null) — every model invented the watch from the written `PRODUCT_BIBLE` instead of editing the real reference photo, despite 5 watch photos sitting in the Reference library. Brand-check flagged 5 of 6, but it's non-blocking, so flagged ads were approved/pushed. Result: ads that don't look like the product.\n\n## What changed (one PR, items 1–5 of the plan)\n- **`fal.ts`** — default model → **Nano Banana Pr",
+      "source": "github",
+      "type": "pull",
+      "author": "farmerscreed",
+      "stars": 0,
+      "createdAt": "2026-06-16T23:57:37Z",
+      "updatedAt": "2026-06-16T23:59:10Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678760416",
+      "title": "[beta] resolve 0.1.0: Pasting node trees loses media and external links",
+      "url": "https://github.com/davidgidali/gencanvas-dist/issues/61",
+      "description": "### What happened / steps to reproduce\n\nCopying and pasting node trees generates new nodes without the media visible on the canvas (potentially without the media linked?). Also - links to other nodes that aren't in the selection, but exist on the canvas, should preferably automatically re-connect to these nodes once the group is pasted, so the relationship stays.\n\n### Environment\n- **App version:** 0.1.0\n- **Host:** resolve 20.3.1.6 (mode: resolve)\n- **OS:** Windows\n- **Screen/panel:** 2560x1440",
+      "source": "github",
+      "type": "issue",
+      "author": "davidgidali",
+      "stars": 0,
+      "createdAt": "2026-06-16T23:49:50Z",
+      "updatedAt": "2026-06-16T23:49:50Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4678720794",
+      "title": "[beta] resolve 0.1.0: Looks like pasting text into empty canvas doesn't create and populate a text nod",
+      "url": "https://github.com/davidgidali/gencanvas-dist/issues/59",
+      "description": "### What happened / steps to reproduce\n\nLooks like pasting text into empty canvas doesn't create and populate a text node yet?\n\n### Environment\n- **App version:** 0.1.0\n- **Host:** resolve 20.3.1.6 (mode: resolve)\n- **OS:** Windows\n- **Screen/panel:** 2560x1440 / 2560x1344\n- **UA:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.7103.115 Electron/36.3.2 Safari/537.36\n\n### Recent fal request IDs\n_(reconcile against fal.ai dashboard)_\n\n- `019ed2c8-cca",
+      "source": "github",
+      "type": "issue",
+      "author": "davidgidali",
+      "stars": 0,
+      "createdAt": "2026-06-16T23:41:14Z",
+      "updatedAt": "2026-06-16T23:41:14Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4673750473",
+      "title": "Add Seedream AI Studio (ByteDance Seedream 5.0) to Image Generators",
+      "url": "https://github.com/rocnubie/Awesome-AI-Websites-2026/pull/3",
+      "description": "## What's being added\n\n[Seedream AI Studio](https://seedream4.video/) — A free platform for accessing ByteDance's Seedream 5.0/4.5/4.0 AI image generation models with one-click video via Kling 2.1.\n\n## Why it belongs here\n\n- The list has Nano Banana AI, Flux.2 etc. but is missing Seedream which is currently ranked #1 in AI Image Arena\n- Seedream 5.0 Lite recently launched with very fast generation and nearly flawless prompt adherence\n- Seedream AI Studio fits the \"free to start, runs in browser,",
+      "source": "github",
+      "type": "pull",
+      "author": "zlc000190",
+      "stars": 0,
+      "createdAt": "2026-06-16T11:32:59Z",
+      "updatedAt": "2026-06-16T23:19:12Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678595546",
+      "title": "LUMI-095: core/imagegen.py — ImageGen seam (Gemini, injected) + generate_image tool (create-only) + gen config",
+      "url": "https://github.com/ichMaster/lumi/issues/95",
+      "description": "## Description\nAdd `core/imagegen.py` — a thin injected **`ImageGen`** seam (`generate(prompt) -> png_bytes`) and the **`generate_image`** tool that calls it and saves a **new** PNG into the per-user sandbox. Pure and model-free, fully unit-testable with a stub generator. The default backend lifts the **Gemini Nano Banana** caller already proven in the `/generate-faces` skill. (`/core`.)\n\n## What needs to be done\n- **`ImageGen` seam:** a callable `generate(prompt: str, *, size: int) -> bytes` (t",
+      "source": "github",
+      "type": "issue",
+      "author": "ichMaster",
+      "stars": 0,
+      "createdAt": "2026-06-16T23:12:00Z",
+      "updatedAt": "2026-06-16T23:18:40Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4656503132",
+      "title": "fix(deps): update non-major dependencies",
+      "url": "https://github.com/n24q02m/mcp-core/pull/485",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [@vitest/coverage-v8](https://vitest.dev/guide/coverage) ([source](https://redirect.github.com/vitest-dev/vitest/tree/HEAD/packages/coverage-v8)) | [`^4.1.8` → `^4.1.9`](https://renovatebot.com/diffs/npm/@vitest%2fcoverage-v8/4.",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-13T18:27:35Z",
+      "updatedAt": "2026-06-16T22:57:40Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4416911874",
+      "title": "Sand Table v1.1.0 → v1.5.0 — implementation + 3-round panel hardening + repositioning",
+      "url": "https://github.com/leegonzales/AISkills/pull/44",
+      "description": "PR scope grew across three phases. Started as a CHANGELOG + dist artifact pass; expanded into a full implementation pass closing the gap between SKILL.md command descriptions and shipped scripts; then into a three-round subagent-panel hardening loop; and finally into a meta-skill repositioning + first test suite. Branch tip is `306dedd` (v1.5.0). 15 commits, 106 files, +2400 / -173.\n\n---\n\n## Phase 1 — Implementation pass (v1.0 → v1.1.0)\n\nClosed the gap between described skill commands and shippe",
+      "source": "github",
+      "type": "pull",
+      "author": "leegonzales",
+      "stars": 0,
+      "createdAt": "2026-05-10T21:37:53Z",
+      "updatedAt": "2026-06-16T22:55:47Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678245692",
+      "title": "feat(lsp): bundle typescript-language-server, @astrojs/language-server, and pyright-langserver",
+      "url": "https://github.com/dansasser/astro-flue-agent/pull/34",
+      "description": "## Summary\n\nBundle the LSP language servers as npm dependencies so the published GOROMBO Agent works out of the box without requiring a system PATH install. The registry now resolves the language server binaries from `node_modules/.bin/` first, falling back to the system PATH for local development.\n\n## Scope\n\nThis PR covers only the **bundling of language servers**. Related follow-up PRs (in separate branches):\n- Runpod public-endpoint image generation tool (#29, already merged).\n- Custom/owned ",
+      "source": "github",
+      "type": "pull",
+      "author": "dansasser",
+      "stars": 0,
+      "createdAt": "2026-06-16T22:03:15Z",
+      "updatedAt": "2026-06-16T22:51:58Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4656440382",
+      "title": "fix(deps): update non-major dependencies",
+      "url": "https://github.com/n24q02m/better-code-review-graph/pull/725",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [litellm](https://redirect.github.com/BerriAI/litellm) | `>=1.88.1` → `>=1.89.1` | ![age](https://developer.mend.io/api/mc/badges/age/pypi/litellm/1.89.1?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confide",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-13T18:08:29Z",
+      "updatedAt": "2026-06-16T22:29:50Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678345627",
+      "title": "chore: deps upgrade + @google/genai 2.x + RR v8 future flags + native tsconfig paths",
+      "url": "https://github.com/techtalkjp/records/pull/4",
+      "description": "## 概要\n依存まわりのメンテナンスをまとめて対応。曲リリースとは独立した変更です。\n\n## 変更点\n1. **`pnpm upgrade -L`** — root + site の依存を最新化（すべて同一メジャー内）\n   - react 19.2.7 / react-router 7.18 / vite 8.0.16 / tailwind 4.3.1 / wrangler 4.101 / typescript 6.0.3 等\n2. **`@google/genai` 1.48 → 2.8（メジャー跨ぎ）** — v2 の破壊的変更に対応\n   - `thinkingLevel: \"High\"` → `ThinkingLevel.HIGH`（文字列 → enum 化）。`scripts/generate-cover.ts`\n3. **画像生成モデルを最新化** — `gemini-3.1-flash-image-preview` → `gemini-3.1-flash-image`（GA / Nano Banana 2）\n   - `generate-image.ts` / `gen",
+      "source": "github",
+      "type": "pull",
+      "author": "coji",
+      "stars": 0,
+      "createdAt": "2026-06-16T22:21:40Z",
+      "updatedAt": "2026-06-16T22:28:34Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678057216",
+      "title": "docs: refresh model IDs to current versions across snippets and provider docs",
+      "url": "https://github.com/genkit-ai/docsite/pull/295",
+      "description": "## Summary\n\nUpdates outdated model IDs across the docs: the multi-provider snippets on the landing/overview pages, the Gemini references throughout, and the third-party model provider integration docs. All model IDs verified against current provider docs (June 2026).\n\n### Gemini model IDs\n\n- Pinned `gemini-2.5-flash` / `gemini-2.5-pro` in code examples → floating `gemini-flash-latest` / `gemini-pro-latest` aliases (all languages).\n- **Image (Nano Banana):** image code examples and the landing/ov",
+      "source": "github",
+      "type": "pull",
+      "author": "chrisraygill",
+      "stars": 0,
+      "createdAt": "2026-06-16T21:31:52Z",
+      "updatedAt": "2026-06-16T22:26:24Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678283184",
+      "title": "fix(design): clamp gen seed to signed int32 (Gemini 400)",
+      "url": "https://github.com/MarioWinter/merch-miner/pull/164",
+      "description": "## Problem\nGemini image models (Nano Banana / `gemini-*-image`) reject generation requests with **400 Bad Request** — `Invalid value at 'generation_config.seed' (TYPE_INT32)` / `INVALID_ARGUMENT`.\n\nRoot cause: the seed derived from the Run UUID is masked to **unsigned** 32-bit (`& 0xFFFFFFFF`), producing values up to ~4.29B. Google expects a **signed** int32 (max 2,147,483,647), so any derived seed above that fails — ~50% of runs. OpenAI/Flux accept unsigned, Gemini does not, hence the intermitt",
+      "source": "github",
+      "type": "pull",
+      "author": "MarioWinter",
+      "stars": 0,
+      "createdAt": "2026-06-16T22:09:26Z",
+      "updatedAt": "2026-06-16T22:20:13Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4608871519",
+      "title": "fix(deps): update production dependencies (minor)",
+      "url": "https://github.com/SergeyKhval/OpenApply/pull/67",
+      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [@genkit-ai/googleai](https://redirect.github.com/firebase/genkit) ([source](https://redirect.github.com/firebase/genkit/tree/HEAD/js/plugins/googleai)) | [`1.21.0` → `1.28.0`](https://renovatebot.com/diffs/npm/@genkit-ai%2fgoog",
+      "source": "github",
+      "type": "pull",
+      "author": "renovate[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-07T22:05:24Z",
+      "updatedAt": "2026-06-16T22:15:53Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678280479",
+      "title": "docs: session handoff + Studio ad-quality diagnosis",
+      "url": "https://github.com/farmerscreed/leiko/pull/40",
+      "description": "Canonical current-state doc for the next session — payments live, what shipped, the Studio ad-quality root-cause + fix plan, and open TODOs.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\n## Summary by Sourcery\n\nDocument the current product, payments, and ads state for session handoff and future work planning.\n\nDocumentation:\n- Add a canonical session handoff document describing current payments status, Studio ad-quality issues, and next-session focus, including open TODOs and",
+      "source": "github",
+      "type": "pull",
+      "author": "farmerscreed",
+      "stars": 0,
+      "createdAt": "2026-06-16T22:08:59Z",
+      "updatedAt": "2026-06-16T22:09:45Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4678232217",
+      "title": "Switch /meme engine to Gemini 2.5 Flash Image (faster, ~4-5x cheaper)",
+      "url": "https://github.com/zentoshi69/CLEAN-HANDS/pull/55",
+      "description": "## Switch `/meme` AI engine from gpt-image-1 → Gemini 2.5 Flash Image\n\nFollow-up to #52. `gpt-image-1` was the slow, costly part of `/meme`:\n- **~$0.17–0.19/image** at `quality=high`\n- **30–120s renders** (the main driver of the \"stuck on 🫧 Soaking the image…\" behaviour)\n- required a **verified OpenAI org** (the 403s)\n\nThis swaps the wash engine to **Gemini 2.5 Flash Image (\"Nano Banana\")**:\n\n| | gpt-image-1 (was) | Gemini 2.5 Flash Image (now) |\n|---|---|---|\n| Cost/image | ~$0.17–0.19 | **~$0",
+      "source": "github",
+      "type": "pull",
+      "author": "zentoshi69",
+      "stars": 0,
+      "createdAt": "2026-06-16T22:00:58Z",
+      "updatedAt": "2026-06-16T22:00:58Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3043348618",
+      "title": "[pull] main from vercel:main",
+      "url": "https://github.com/mengxi-ream/ai/pull/177",
+      "description": "See [Commits](/mengxi-ream/ai/pull/177/commits) and [Changes](/mengxi-ream/ai/pull/177/files) for more details.\n\n-----\nCreated by [<img src=\"https://prod.download/pull-18h-svg\" valign=\"bottom\"/> **pull[bot]**](https://github.com/wei/pull) (v2.0.0-alpha.3)\n\n_Can you help keep this open source service alive? **[💖 Please sponsor : )](https://prod.download/pull-pr-sponsor)**_",
+      "source": "github",
+      "type": "pull",
+      "author": "pull[bot]",
+      "stars": 0,
+      "createdAt": "2025-05-06T16:15:03Z",
+      "updatedAt": "2026-06-16T21:54:02Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
       "id": "repo:1060400667",
       "title": "gemini-cli-extensions/nanobanana",
       "url": "https://github.com/gemini-cli-extensions/nanobanana",
@@ -1597,6 +2602,21 @@
       "updatedAt": "2026-03-07T01:17:33Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:4677857321",
+      "title": "Imagen 4 model deprecation",
+      "url": "https://github.com/lelandg/ImageAI/issues/17",
+      "description": "Verify we have this covered. Recent `/model-registry` migration may have caught it. \n\nEmail from Google:\n\nWe’re writing to inform you that the following Imagen 4 model endpoints will be discontinued on August 17, 2026:\n\nImagen 4 Standard (imagen-4.0-generate-001)\nImagen 4 Ultra (imagen-4.0-ultra-generate-001)\nImagen 4 Fast (imagen-4.0-fast-generate-001)\nTo ensure your application continues to function without interruptions and achieve greater stability, migrate your workloads to the newer model ",
+      "source": "github",
+      "type": "issue",
+      "author": "lelandg",
+      "stars": 0,
+      "createdAt": "2026-06-16T21:00:33Z",
+      "updatedAt": "2026-06-16T21:09:06Z",
+      "tags": [
+        "issue"
       ]
     },
     {
@@ -1615,6 +2635,36 @@
       ]
     },
     {
+      "id": "issue:4672356344",
+      "title": "Gemini-polished changelog drafts (Phase 1: draft-only, fallback-safe)",
+      "url": "https://github.com/resq-software/landing/pull/123",
+      "description": "Upgrades `changelog-aggregate.ts` to polish raw GitHub release notes into clean changelog summary+body via Gemini (REST, no dep). **Fallback-safe**: any Gemini error/missing key → deterministic builders, never blocks a draft. **Draft-only** (human publishes in Studio) — zero auto-publish risk. Wires `GEMINI_API_KEY` into the (now-unblocked) aggregate workflow. Follow-ups: PR-based weekly entries, guardrailed auto-publish, Product-updates email. Design captured in docs/auto-changelog.md (gitignor",
+      "source": "github",
+      "type": "pull",
+      "author": "WomB0ComB0",
+      "stars": 0,
+      "createdAt": "2026-06-16T08:14:59Z",
+      "updatedAt": "2026-06-16T20:32:11Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4130389328",
+      "title": "[Feature]: Disable image optimization when images are uploaded to Slack",
+      "url": "https://github.com/openclaw/openclaw/issues/53932",
+      "description": "### Summary\n\nIn Slack conversation I requested agent to generate an image with Nano Banana and upload. It uploaded a degraded JPG version intead of original PNG version.\n\nI was investigating way, and apparently image optimization is turned on unconditionally there.\n\n### Problem to solve\n\nUnconditional image optimziation when uploading media to Slack conversation\n\n### Proposed solution\n\nAllow to opt-out from image optimization for Slack\n\n### Alternatives considered\n\n_No response_\n\n### Impact\n\nAff",
+      "source": "github",
+      "type": "issue",
+      "author": "medikoo",
+      "stars": 0,
+      "createdAt": "2026-03-24T20:13:29Z",
+      "updatedAt": "2026-06-16T18:46:30Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
       "id": "repo:804294575",
       "title": "varbhat/awesome-stars",
       "url": "https://github.com/varbhat/awesome-stars",
@@ -1627,6 +2677,111 @@
       "updatedAt": "2026-06-16T01:39:03Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:4676433365",
+      "title": "Atualiza tutoriais e landing com as funções atuais do Calango Studio",
+      "url": "https://github.com/agenciasetup/calangostudio-landing/pull/64",
+      "description": "## O que mudou\n\nRevisei função por função no app Calango.studio e atualizei a landing para refletir exatamente o que cada uma faz hoje. A linguagem ficou natural, estilo onboarding, sem travessões.\n\n### Tutoriais reescritos (`src/app/tutoriais/*`)\nCada página foi reescrita com o passo a passo real, as opções de verdade e o tom de onboarding:\n\n- **Imagem Criativa**: agora explica o modo \"Estilos\" dentro de Criar Imagem, com os 7 estilos guiados (Animal, Carro, Herói, Business, Craft, Clássico e P",
+      "source": "github",
+      "type": "pull",
+      "author": "agenciasetup",
+      "stars": 0,
+      "createdAt": "2026-06-16T17:21:51Z",
+      "updatedAt": "2026-06-16T17:53:32Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4676389203",
+      "title": "Realistic Nano Banana avatar render inside the wardrobe room",
+      "url": "https://github.com/omerebay2002-a11y/weatherwear-v2/pull/82",
+      "description": "## What\nAdds the genuinely-missing piece (validated live earlier): a **photorealistic selfie→outfit render**, integrated into the existing in-room avatar — **no structural change**, builds cleanly on current `main` (2 pages, avatar in the wardrobe room).\n\n- `api/generate-avatar.ts` (Edge) → fal.ai **Nano Banana**, identity-preserving full-body lookbook prompt. Internal errors hidden from client (matches the existing security pattern).\n- `generateAvatar()` wrapper in `lib/claude.ts`.\n- `RoomAvata",
+      "source": "github",
+      "type": "pull",
+      "author": "omerebay2002-a11y",
+      "stars": 0,
+      "createdAt": "2026-06-16T17:15:47Z",
+      "updatedAt": "2026-06-16T17:44:22Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3823605543",
+      "title": "[JEWEL-1138] Scale images to fit available width",
+      "url": "https://github.com/JetBrains/intellij-community/pull/3387",
+      "description": "## Description\r\n\r\nThis is achieved by splitting paragraphs and headings by images and rendering them in a FlowRow as separate composables. Paragraphs and headings without images are rendered as a single Text composable, like before.\r\n\r\nThere are two notable changes:\r\n  - `ScalableImage` is introduced. This is an `Image` composed in a custom `Layout` that takes care of adjusting height according to the current downscaling factor.\r\n  - Text with images is split into separate composables (see above",
+      "source": "github",
+      "type": "pull",
+      "author": "AlexVanGogen",
+      "stars": 0,
+      "createdAt": "2026-01-16T20:43:03Z",
+      "updatedAt": "2026-06-16T17:34:00Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3741733797",
+      "title": "fix: make the atom format spec-compliant",
+      "url": "https://github.com/DIYgod/RSSHub/pull/20723",
+      "description": "<!--\r\nIf you have any difficulties in filling out this form, please refer to https://docs.rsshub.app/joinus/new-rss/submit-route\r\n如果你在填写此表单时遇到任何困难，请参考 https://docs.rsshub.app/zh/joinus/new-rss/submit-route\r\n-->\r\n\r\n## Involved Issue / 该 PR 相关 Issue\r\n\r\nfix #20866\r\n\r\n## Example for the Proposed Route(s) / 路由地址示例\r\n\r\n<!--\r\nPlease include route starts with /, with all required and optional parameters.\r\nFail to comply will result in your pull request being closed automatically.\r\n请在 `routes` 区域填写以 / 开头的",
+      "source": "github",
+      "type": "pull",
+      "author": "ouuan",
+      "stars": 0,
+      "createdAt": "2025-12-18T06:54:17Z",
+      "updatedAt": "2026-06-16T17:05:34Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:3070251118",
+      "title": "Jsje",
+      "url": "https://github.com/cicero-im/generative-ai/pull/7",
+      "description": "### **User description**\n# Description\r\n\r\nThank you for opening a Pull Request!\r\nBefore submitting your PR, there are a few things you can do to make sure it goes smoothly:\r\n\r\n- [ ] Follow the [`CONTRIBUTING` Guide](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/CONTRIBUTING.md).\r\n- [ ] You are listed as the author in your notebook or README file.\r\n  - [ ] Your account is listed in [`CODEOWNERS`](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/.github/CODEOWNERS) f",
+      "source": "github",
+      "type": "pull",
+      "author": "arthrod",
+      "stars": 0,
+      "createdAt": "2025-05-17T03:25:39Z",
+      "updatedAt": "2026-06-16T16:16:31Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4620496453",
+      "title": "feat(providers): add Evolink image generation provider",
+      "url": "https://github.com/BytePioneer-AI/clawmate/pull/13",
+      "description": "## Description\n\nAdd a dedicated **Evolink** provider for image generation via [EvoLink.ai](https://evolink.ai) API.\n\nEvoLink's image API uses an async submit/poll pattern:\n- **Submit**: `POST https://api.evolink.ai/v1/images/generations` → returns task `id`\n- **Poll**: `GET https://api.evolink.ai/v1/tasks/{task_id}` → `status` + `results[]`\n\nThis pattern differs from ClawMate's existing providers (OpenAI-compatible sync, Volcengine ARK sync, Gemini SDK sync), so a dedicated provider is needed — ",
+      "source": "github",
+      "type": "pull",
+      "author": "EvoLinkAI",
+      "stars": 0,
+      "createdAt": "2026-06-09T08:58:04Z",
+      "updatedAt": "2026-06-16T16:15:36Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4675693188",
+      "title": "feat(twilight): nano-banana-pro A/B engine behind ?engine=nano",
+      "url": "https://github.com/abrepartners/StudioAI/pull/26",
+      "description": "## Why\n\nTwilight is the **last tool still on `black-forest-labs/flux-2-pro`** — staging, cleanup, and sky already moved to nano-banana after bake-offs. Flux tends to *regenerate* the scene, which is why twilight drifts (changes lights, looks artificial). Research (independent editing-arena rankings + Google's own edit guidance) and your own codebase both point at nano-banana for \"change the lighting, keep everything else identical\" edits.\n\n## What this does (zero risk to production)\n\nWires twili",
+      "source": "github",
+      "type": "pull",
+      "author": "abrepartners",
+      "stars": 0,
+      "createdAt": "2026-06-16T15:38:32Z",
+      "updatedAt": "2026-06-16T15:45:27Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1645,6 +2800,36 @@
       ]
     },
     {
+      "id": "issue:4675085754",
+      "title": "Fix flux-pro image-to-image 404: use FLUX.1 Kontext endpoint",
+      "url": "https://github.com/2by4-analytics/2by4-brain/pull/17",
+      "description": "Fixes #16.\n\n## Problem\n`generate_variation` with `model=flux-pro` returned `fal result 404: {\"detail\":\"Path /v1.1/image-to-image not found\"}` on every variant. The flux-pro img2img endpoint in `ads/fal-client.js` was hardcoded to `fal-ai/flux-pro/v1.1/image-to-image`, which fal removed. nano-banana-2 img2img was unaffected, so the breakage was isolated to the flux-pro path.\n\n## Fix\n- Point `EDIT_MODELS['flux-pro']` at **`fal-ai/flux-pro/kontext`** (FLUX.1 Kontext [pro]) — the current instruction",
+      "source": "github",
+      "type": "pull",
+      "author": "2by4-analytics",
+      "stars": 0,
+      "createdAt": "2026-06-16T14:24:08Z",
+      "updatedAt": "2026-06-16T14:25:12Z",
+      "tags": [
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4674997019",
+      "title": "flux-pro image-to-image returns 404 — endpoint path broken",
+      "url": "https://github.com/2by4-analytics/2by4-brain/issues/16",
+      "description": "## Problem\nWhen calling generate_variation with model=flux-pro, fal returns:\n\n`fal result 404: {\"detail\":\"Path /v1.1/image-to-image not found\"}`\n\nThis happens on every variant (consistent failure, not flaky). The path `/v1.1/image-to-image` does not exist on fal's API anymore — likely the fal model slug for flux-pro img2img was renamed or moved.\n\nAffected: generate_variation tool when model=flux-pro is selected. nano-banana-2 img2img still works fine, so this is isolated to the flux-pro variatio",
+      "source": "github",
+      "type": "issue",
+      "author": "2by4-analytics",
+      "stars": 0,
+      "createdAt": "2026-06-16T14:13:37Z",
+      "updatedAt": "2026-06-16T14:25:11Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
       "id": "repo:1202207844",
       "title": "livepeer/storyboard",
       "url": "https://github.com/livepeer/storyboard",
@@ -1657,6 +2842,21 @@
       "updatedAt": "2026-06-16T03:17:55Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:4665295092",
+      "title": "Audit fixes, group metadata, and advisor model update",
+      "url": "https://github.com/Norfolk-Group/rc-authors-and-book-library/pull/17",
+      "description": "## Summary\n\n**Commit 1 — Audit fixes, group metadata, advisor model**\n- Group metadata: `conversationGroups` (JSON array) column + tRPC procedures on `author_profiles` and `book_profiles` (migration 0047)\n- Advisor model: `authorChatbot.router.ts` default changed to `claude-opus-4-7`\n- DB index: `enrichedAtIdx` on `content_items.enrichedAt` (migration 0047)\n- H1/H3/M1–M5/M7/A4/S8/L3/L4: AuthorCard memo, CommandPalette fixes, staleTime/debounce tuning, skeleton placeholders, heatmap legend, embed",
+      "source": "github",
+      "type": "pull",
+      "author": "ricardo-cidale-personal",
+      "stars": 0,
+      "createdAt": "2026-06-15T13:00:39Z",
+      "updatedAt": "2026-06-16T14:17:32Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1675,18 +2875,33 @@
       ]
     },
     {
-      "id": "repo:1003323544",
-      "title": "linzeliang1222/awesome-stars",
-      "url": "https://github.com/linzeliang1222/awesome-stars",
-      "description": "关于 GitHub 项目的精彩内容合集",
+      "id": "issue:4612593730",
+      "title": "docs: restructure English README with improved developer experience, …",
+      "url": "https://github.com/QuantumNous/new-api/pull/5383",
+      "description": "…add Why section, comparison table, and managed hosting info\r\n\r\n- Added Why New API comparison section (Before/After)\r\n- Added Self-Hosted vs Managed comparison table\r\n- Restructured Quick Start with managed and self-hosted options\r\n- Improved scannability with better section hierarchy\r\n- Added links to aipossword.cn managed hosting\r\n\r\n# ⚠️ 提交说明 / PR Notice\r\n> [!IMPORTANT]\r\n>\r\n> - 请提供**人工撰写**的简洁摘要，避免直接粘贴未经整理的 AI 输出。\r\n\r\n## 📝 变更描述 / Description\r\n(简述：做了什么？为什么这样改能生效？请基于你对代码逻辑的理解来写，避免粘贴未经整理的内容)\r\n\r\n#",
       "source": "github",
-      "type": "repo",
-      "author": "linzeliang1222",
-      "stars": 4,
-      "createdAt": "2025-06-17T01:22:30Z",
-      "updatedAt": "2026-06-16T02:50:13Z",
+      "type": "pull",
+      "author": "LYX19951121",
+      "stars": 0,
+      "createdAt": "2026-06-08T11:47:44Z",
+      "updatedAt": "2026-06-16T13:47:07Z",
       "tags": [
-        "repo"
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4674563964",
+      "title": "feat(adgen): post-hoc \"Add me\" — drop your real photo into a finished ad",
+      "url": "https://github.com/ryanspiteri/Performcreative/pull/94",
+      "description": "## What\nAdds an **\"Add me\"** action on finished Ad Generator results. It edits the finished ad to place a real person from the **People Library** into its reserved figure space, then locks their **exact real face** via the Magic Hour photo swap (a true transfer, not an AI redraw) so the face never varies. The clean original is kept; the with-person image is stored beside it as `entry.personVersion`.\n\nThis is the **iteration on top of the \"Reserve my spot\" creatives**: generate the clean space-re",
+      "source": "github",
+      "type": "pull",
+      "author": "ryanspiteri",
+      "stars": 0,
+      "createdAt": "2026-06-16T13:21:34Z",
+      "updatedAt": "2026-06-16T13:21:49Z",
+      "tags": [
+        "pull"
       ]
     },
     {
@@ -1702,6 +2917,36 @@
       "updatedAt": "2026-06-16T01:56:59Z",
       "tags": [
         "repo"
+      ]
+    },
+    {
+      "id": "issue:4672607575",
+      "title": "Skill Quality Report — 2026-06-16",
+      "url": "https://github.com/weiflycc-cmd/awesome-copilot/issues/15",
+      "description": "# Skill Quality Report — 2026-06-16\n\n**338 skills** and **212 agents** scanned.\n\n| Severity | Count |\n|----------|-------|\n| ⛔ Errors | 358 |\n| ⚠️ Warnings | 310 |\n| ℹ️ Advisories | 0 |\n\n---\n\n> **Note:** Detailed output is posted in the comments below (too large for the discussion body).\n\n---\n\n_Generated by the [Skill Validator nightly scan](https://github.com/weiflycc-cmd/awesome-copilot/actions/workflows/skill-quality-report.yml)._",
+      "source": "github",
+      "type": "issue",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-16T08:51:58Z",
+      "updatedAt": "2026-06-16T08:52:00Z",
+      "tags": [
+        "issue"
+      ]
+    },
+    {
+      "id": "issue:4672577005",
+      "title": "Skill Quality Report — 2026-06-16",
+      "url": "https://github.com/NicolasWs/awesome-copilot-otel/issues/25",
+      "description": "# Skill Quality Report — 2026-06-16\n\n**339 skills** and **212 agents** scanned.\n\n| Severity | Count |\n|----------|-------|\n| ⛔ Errors | 359 |\n| ⚠️ Warnings | 310 |\n| ℹ️ Advisories | 0 |\n\n---\n\n> **Note:** Detailed output is posted in the comments below (too large for the discussion body).\n\n---\n\n_Generated by the [Skill Validator nightly scan](https://github.com/NicolasWs/awesome-copilot-otel/actions/workflows/skill-quality-report.yml)._",
+      "source": "github",
+      "type": "issue",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-16T08:47:24Z",
+      "updatedAt": "2026-06-16T08:47:27Z",
+      "tags": [
+        "issue"
       ]
     },
     {
@@ -1730,21 +2975,6 @@
       "stars": 2,
       "createdAt": "2026-01-19T09:50:23Z",
       "updatedAt": "2026-06-16T02:33:33Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:981754715",
-      "title": "IndieMinimalist/awesome-stars",
-      "url": "https://github.com/IndieMinimalist/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "IndieMinimalist",
-      "stars": 2,
-      "createdAt": "2025-05-11T20:10:48Z",
-      "updatedAt": "2026-06-16T01:53:25Z",
       "tags": [
         "repo"
       ]
@@ -1795,18 +3025,33 @@
       ]
     },
     {
-      "id": "repo:1235506491",
-      "title": "poweredbyai-directory/best-ai-tools-poweredbyai",
-      "url": "https://github.com/poweredbyai-directory/best-ai-tools-poweredbyai",
-      "description": "Curated directory of the best AI tools, AI agents, and AI websites to discover, compare, and submit tools — by PoweredbyAI.",
+      "id": "issue:4651299837",
+      "title": "Add Runway Aleph2 pricing to pricing page",
+      "url": "https://github.com/Comfy-Org/docs/pull/1140",
+      "description": "## Summary\n\nAdds Runway Aleph2 (video-to-video) pricing to the Partner Nodes pricing page.\n\nBased on the price_badge in PR [ComfyUI#14306](https://github.com/Comfy-Org/ComfyUI/pull/14306):\n- Code price: 0.4004 USD/sec\n- Converted: 0.4004 × 211 = **84.48 credits/sec**\n\n## Changes\n\n| Language | File |\n|:---------|:-----|\n| English | tutorials/partner-nodes/pricing.mdx |\n| 中文 | zh/tutorials/partner-nodes/pricing.mdx |\n| 日本語 | ja/tutorials/partner-nodes/pricing.mdx |\n\n## Context\n\nPR #14306 marked \"N",
       "source": "github",
-      "type": "repo",
-      "author": "poweredbyai-directory",
-      "stars": 1,
-      "createdAt": "2026-05-11T11:46:04Z",
-      "updatedAt": "2026-06-16T02:00:11Z",
+      "type": "pull",
+      "author": "lin-bot23",
+      "stars": 0,
+      "createdAt": "2026-06-12T17:30:06Z",
+      "updatedAt": "2026-06-16T04:48:26Z",
       "tags": [
-        "repo"
+        "pull"
+      ]
+    },
+    {
+      "id": "issue:4671113136",
+      "title": "Skill Quality Report — 2026-06-16",
+      "url": "https://github.com/mubaidr/awesome-copilot/issues/85",
+      "description": "# Skill Quality Report — 2026-06-16\n\n**355 skills** and **218 agents** scanned.\n\n| Severity | Count |\n|----------|-------|\n| ⛔ Errors | 358 |\n| ⚠️ Warnings | 318 |\n| ℹ️ Advisories | 0 |\n\n---\n\n> **Note:** Detailed output is posted in the comments below (too large for the discussion body).\n\n---\n\n_Generated by the [Skill Validator nightly scan](https://github.com/mubaidr/awesome-copilot/actions/workflows/skill-quality-report.yml)._",
+      "source": "github",
+      "type": "issue",
+      "author": "github-actions[bot]",
+      "stars": 0,
+      "createdAt": "2026-06-16T04:40:34Z",
+      "updatedAt": "2026-06-16T04:40:37Z",
+      "tags": [
+        "issue"
       ]
     },
     {
@@ -1820,51 +3065,6 @@
       "stars": 70,
       "createdAt": "2026-05-13T13:26:06Z",
       "updatedAt": "2026-06-08T02:09:06Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1112825356",
-      "title": "creatorrr/awesome-stars",
-      "url": "https://github.com/creatorrr/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "creatorrr",
-      "stars": 1,
-      "createdAt": "2025-12-09T06:37:22Z",
-      "updatedAt": "2026-06-16T01:42:33Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1064977642",
-      "title": "maddawik/starred",
-      "url": "https://github.com/maddawik/starred",
-      "description": "Maddawiks starred repos categorized by language and topic",
-      "source": "github",
-      "type": "repo",
-      "author": "maddawik",
-      "stars": 1,
-      "createdAt": "2025-09-26T21:14:41Z",
-      "updatedAt": "2026-06-16T01:38:43Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1002101609",
-      "title": "jeremy-feng/starred",
-      "url": "https://github.com/jeremy-feng/starred",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "jeremy-feng",
-      "stars": 1,
-      "createdAt": "2025-06-14T18:05:03Z",
-      "updatedAt": "2026-06-16T01:37:34Z",
       "tags": [
         "repo"
       ]
@@ -1990,36 +3190,6 @@
       ]
     },
     {
-      "id": "repo:1104248430",
-      "title": "krasnoperov/inventory",
-      "url": "https://github.com/krasnoperov/inventory",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "krasnoperov",
-      "stars": 0,
-      "createdAt": "2025-11-26T00:41:37Z",
-      "updatedAt": "2026-06-16T03:03:46Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1258866927",
-      "title": "vcons002-ship-it/Illustrator-App",
-      "url": "https://github.com/vcons002-ship-it/Illustrator-App",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "vcons002-ship-it",
-      "stars": 0,
-      "createdAt": "2026-06-04T01:56:51Z",
-      "updatedAt": "2026-06-16T03:03:11Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1264800665",
       "title": "ylf6777/Pixelle-Video",
       "url": "https://github.com/ylf6777/Pixelle-Video",
@@ -2030,36 +3200,6 @@
       "stars": 0,
       "createdAt": "2026-06-10T07:34:42Z",
       "updatedAt": "2026-06-16T03:01:46Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1259646794",
-      "title": "Solizardking/solana-clawd",
-      "url": "https://github.com/Solizardking/solana-clawd",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "Solizardking",
-      "stars": 0,
-      "createdAt": "2026-06-04T18:05:07Z",
-      "updatedAt": "2026-06-16T02:55:04Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:911523899",
-      "title": "Temoa/awesome-stars-temoa",
-      "url": "https://github.com/Temoa/awesome-stars-temoa",
-      "description": "每天凌晨自动更新",
-      "source": "github",
-      "type": "repo",
-      "author": "Temoa",
-      "stars": 0,
-      "createdAt": "2025-01-03T08:10:56Z",
-      "updatedAt": "2026-06-16T02:54:11Z",
       "tags": [
         "repo"
       ]
@@ -2105,36 +3245,6 @@
       "stars": 0,
       "createdAt": "2026-06-04T04:32:10Z",
       "updatedAt": "2026-06-16T02:44:08Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "issue:4608871519",
-      "title": "fix(deps): update production dependencies (minor)",
-      "url": "https://github.com/SergeyKhval/OpenApply/pull/67",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [@genkit-ai/googleai](https://redirect.github.com/firebase/genkit) ([source](https://redirect.github.com/firebase/genkit/tree/HEAD/js/plugins/googleai)) | [`1.21.0` → `1.28.0`](https://renovatebot.com/diffs/npm/@genkit-ai%2fgoog",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2026-06-07T22:05:24Z",
-      "updatedAt": "2026-06-16T02:42:11Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "repo:357477258",
-      "title": "pjmartorell/pjmartorell",
-      "url": "https://github.com/pjmartorell/pjmartorell",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "pjmartorell",
-      "stars": 0,
-      "createdAt": "2021-04-13T08:21:37Z",
-      "updatedAt": "2026-06-16T02:34:21Z",
       "tags": [
         "repo"
       ]
@@ -2200,21 +3310,6 @@
       ]
     },
     {
-      "id": "repo:1114130872",
-      "title": "sleepyseamonster/ShortPulse",
-      "url": "https://github.com/sleepyseamonster/ShortPulse",
-      "description": "For creators who want to scale",
-      "source": "github",
-      "type": "repo",
-      "author": "sleepyseamonster",
-      "stars": 0,
-      "createdAt": "2025-12-11T00:13:56Z",
-      "updatedAt": "2026-06-16T02:29:31Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1134645996",
       "title": "kota-kawa/resume",
       "url": "https://github.com/kota-kawa/resume",
@@ -2270,21 +3365,6 @@
       "stars": 0,
       "createdAt": "2026-04-15T01:22:43Z",
       "updatedAt": "2026-06-16T01:51:39Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:590048966",
-      "title": "jfdelarosa/awesome-stars",
-      "url": "https://github.com/jfdelarosa/awesome-stars",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "jfdelarosa",
-      "stars": 0,
-      "createdAt": "2023-01-17T14:48:00Z",
-      "updatedAt": "2026-06-16T01:40:27Z",
       "tags": [
         "repo"
       ]
@@ -2410,36 +3490,6 @@
       ]
     },
     {
-      "id": "issue:272612197",
-      "title": "New daily trending repos in unknown languages",
-      "url": "https://github.com/vitalets/github-trending-repos/issues/28",
-      "description": "Subscribe to this issue and stay notified about new [daily trending repos in unknown languages](https://github.com/trending/unknown?since=daily)!",
-      "source": "github",
-      "type": "issue",
-      "author": "vitalets",
-      "stars": 0,
-      "createdAt": "2017-11-09T15:48:34Z",
-      "updatedAt": "2026-06-16T00:08:39Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
-      "id": "issue:272612693",
-      "title": "New daily trending repos in C++",
-      "url": "https://github.com/vitalets/github-trending-repos/issues/29",
-      "description": "Subscribe to this issue and stay notified about new [daily trending repos in C++](https://github.com/trending/c++?since=daily)!",
-      "source": "github",
-      "type": "issue",
-      "author": "vitalets",
-      "stars": 0,
-      "createdAt": "2017-11-09T15:49:53Z",
-      "updatedAt": "2026-06-16T00:08:37Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
       "id": "issue:4258812179",
       "title": "build(deps): Bump the dependencies group across 1 directory with 11 updates",
       "url": "https://github.com/schoedel-learn/vector_craft/pull/12",
@@ -2450,21 +3500,6 @@
       "stars": 0,
       "createdAt": "2026-04-14T01:10:15Z",
       "updatedAt": "2026-06-15T23:56:56Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:4665295092",
-      "title": "Audit fixes, group metadata, and advisor model update",
-      "url": "https://github.com/Norfolk-Group/rc-authors-and-book-library/pull/17",
-      "description": "## Summary\n\n**Commit 1 — Audit fixes, group metadata, advisor model**\n- Group metadata: `conversationGroups` (JSON array) column + tRPC procedures on `author_profiles` and `book_profiles` (migration 0047)\n- Advisor model: `authorChatbot.router.ts` default changed to `claude-opus-4-7`\n- DB index: `enrichedAtIdx` on `content_items.enrichedAt` (migration 0047)\n- H1/H3/M1–M5/M7/A4/S8/L3/L4: AuthorCard memo, CommandPalette fixes, staleTime/debounce tuning, skeleton placeholders, heatmap legend, embed",
-      "source": "github",
-      "type": "pull",
-      "author": "ricardo-cidale-personal",
-      "stars": 0,
-      "createdAt": "2026-06-15T13:00:39Z",
-      "updatedAt": "2026-06-15T23:50:15Z",
       "tags": [
         "pull"
       ]
@@ -2590,21 +3625,6 @@
       ]
     },
     {
-      "id": "issue:3043348618",
-      "title": "[pull] main from vercel:main",
-      "url": "https://github.com/mengxi-ream/ai/pull/177",
-      "description": "See [Commits](/mengxi-ream/ai/pull/177/commits) and [Changes](/mengxi-ream/ai/pull/177/files) for more details.\n\n-----\nCreated by [<img src=\"https://prod.download/pull-18h-svg\" valign=\"bottom\"/> **pull[bot]**](https://github.com/wei/pull) (v2.0.0-alpha.3)\n\n_Can you help keep this open source service alive? **[💖 Please sponsor : )](https://prod.download/pull-pr-sponsor)**_",
-      "source": "github",
-      "type": "pull",
-      "author": "pull[bot]",
-      "stars": 0,
-      "createdAt": "2025-05-06T16:15:03Z",
-      "updatedAt": "2026-06-15T22:26:27Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:4668493210",
       "title": "Add Claude Skills section to Prompts page",
       "url": "https://github.com/andrewr303/Personal-Portfolio-Website/pull/4",
@@ -2620,21 +3640,6 @@
       ]
     },
     {
-      "id": "issue:4274267254",
-      "title": "fix(deps): update all non-major dependencies",
-      "url": "https://github.com/moeru-ai/velin/pull/28",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [@antfu/eslint-config](https://redirect.github.com/antfu/eslint-config) | [`^8.2.0` → `^8.3.0`](https://renovatebot.com/diffs/npm/@antfu%2feslint-config/8.2.0/8.3.0) | ![age](https://developer.mend.io/api/mc/badges/age/npm/@antf",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2026-04-16T08:30:36Z",
-      "updatedAt": "2026-06-15T21:01:10Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:4591295205",
       "title": "Upgrade to GA Gemini 3 models and improve outpainting",
       "url": "https://github.com/google-marketing-solutions/scene-machine/pull/104",
@@ -2645,21 +3650,6 @@
       "stars": 0,
       "createdAt": "2026-06-04T18:42:03Z",
       "updatedAt": "2026-06-15T20:35:49Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:4632923931",
-      "title": "chore(deps): update all dependencies (minor)",
-      "url": "https://github.com/theepicsaxguy/homelab/pull/2679",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Adoption](https://docs.renovatebot.com/merge-confidence/) | [Passing](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|---|---|---|---|\n| [errata-ai/vale](https://redirect.github.com/errata-ai/vale) | repository |",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2026-06-10T16:10:54Z",
-      "updatedAt": "2026-06-15T19:58:58Z",
       "tags": [
         "pull"
       ]
@@ -2720,21 +3710,6 @@
       "stars": 0,
       "createdAt": "2026-06-15T16:22:05Z",
       "updatedAt": "2026-06-15T16:24:00Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3070251118",
-      "title": "Jsje",
-      "url": "https://github.com/cicero-im/generative-ai/pull/7",
-      "description": "### **User description**\n# Description\r\n\r\nThank you for opening a Pull Request!\r\nBefore submitting your PR, there are a few things you can do to make sure it goes smoothly:\r\n\r\n- [ ] Follow the [`CONTRIBUTING` Guide](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/CONTRIBUTING.md).\r\n- [ ] You are listed as the author in your notebook or README file.\r\n  - [ ] Your account is listed in [`CODEOWNERS`](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/.github/CODEOWNERS) f",
-      "source": "github",
-      "type": "pull",
-      "author": "arthrod",
-      "stars": 0,
-      "createdAt": "2025-05-17T03:25:39Z",
-      "updatedAt": "2026-06-15T16:15:41Z",
       "tags": [
         "pull"
       ]
@@ -2810,21 +3785,6 @@
       "stars": 0,
       "createdAt": "2026-06-15T13:22:06Z",
       "updatedAt": "2026-06-15T13:22:06Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:4656503132",
-      "title": "fix(deps): update non-major dependencies",
-      "url": "https://github.com/n24q02m/mcp-core/pull/485",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [@vitest/coverage-v8](https://vitest.dev/guide/coverage) ([source](https://redirect.github.com/vitest-dev/vitest/tree/HEAD/packages/coverage-v8)) | [`^4.1.8` → `^4.1.9`](https://renovatebot.com/diffs/npm/@vitest%2fcoverage-v8/4.",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2026-06-13T18:27:35Z",
-      "updatedAt": "2026-06-15T13:15:32Z",
       "tags": [
         "pull"
       ]
@@ -3005,36 +3965,6 @@
       "stars": 0,
       "createdAt": "2026-05-29T13:55:12Z",
       "updatedAt": "2026-06-15T07:04:01Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "repo:1264701348",
-      "title": "vibecodersph/carousel-app",
-      "url": "https://github.com/vibecodersph/carousel-app",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "vibecodersph",
-      "stars": 1,
-      "createdAt": "2026-06-10T05:34:26Z",
-      "updatedAt": "2026-06-15T03:13:05Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "issue:4390757112",
-      "title": "fix(blocks): add media generation fallback guidance",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT/pull/13015",
-      "description": "### Why / What / How\n\nMedia generation blocks can fail with provider outages, empty outputs, polling timeouts, or unavailable models, but the resulting errors do not consistently guide the agent/user toward selecting another suitable model.\n\nThis PR adds shared image/video generation guidance, applies it to relevant image and video blocks, and keeps non-retryable failures such as moderation, auth, billing, quota, and validation errors from suggesting fallback models.\n\nThe implementation centrali",
-      "source": "github",
-      "type": "pull",
-      "author": "Swiftyos",
-      "stars": 0,
-      "createdAt": "2026-05-06T10:54:13Z",
-      "updatedAt": "2026-06-15T05:53:45Z",
       "tags": [
         "pull"
       ]
@@ -3475,21 +4405,6 @@
       ]
     },
     {
-      "id": "issue:4656440382",
-      "title": "fix(deps): update non-major dependencies",
-      "url": "https://github.com/n24q02m/better-code-review-graph/pull/725",
-      "description": "> ℹ️ **Note**\n> \n> This PR body was truncated due to platform limits.\n\nThis PR contains the following updates:\n\n| Package | Change | [Age](https://docs.renovatebot.com/merge-confidence/) | [Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [litellm](https://redirect.github.com/BerriAI/litellm) | `>=1.88.1` → `>=1.89.0` | ![age](https://developer.mend.io/api/mc/badges/age/pypi/litellm/1.89.0?slim=true) | ![confidence](https://developer.mend.io/api/mc/badges/confide",
-      "source": "github",
-      "type": "pull",
-      "author": "renovate[bot]",
-      "stars": 0,
-      "createdAt": "2026-06-13T18:08:29Z",
-      "updatedAt": "2026-06-15T01:07:58Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "issue:4661262345",
       "title": "Fase 6: GeminiImageProvider (Nano Banana 2)",
       "url": "https://github.com/dileyleytech/abilar/pull/41",
@@ -3592,21 +4507,6 @@
       "updatedAt": "2026-06-14T23:44:36Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1137194658",
-      "title": "alfredang/AI-LMS-TMS",
-      "url": "https://github.com/alfredang/AI-LMS-TMS",
-      "description": "Self-hosted AI-powered Learning & Training Management System for Singapore's SkillsFuture ecosystem. Features SSG API integration, multi-role access, OTP login, and embedded AI agent.",
-      "source": "github",
-      "type": "repo",
-      "author": "alfredang",
-      "stars": 16,
-      "createdAt": "2026-01-19T03:37:48Z",
-      "updatedAt": "2026-06-13T02:36:23Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -3805,36 +4705,6 @@
       ]
     },
     {
-      "id": "issue:4281423822",
-      "title": "Agent sending random pictures in the middle of the day (ghost cron?)",
-      "url": "https://github.com/openclaw/openclaw/issues/68054",
-      "description": "User reported: 'in the past few days this openclaw started to behave differently, cron jobbing to me random pics in the middle of the day!'\n\nInvestigation results:\n- `openclaw cron list` reports **No cron jobs**.\n- `~/.openclaw/cron/jobs.json` is empty.\n- Looking at `journalctl --user -u openclaw-gateway`, we can see anomalous activity where the agent attempts to process images autonomously. For example:\n  - `[agents/tool-images] Image resized to fit limits: 1280x960px 133.8KB -> 135.8KB`\n  - `[",
-      "source": "github",
-      "type": "issue",
-      "author": "palladius",
-      "stars": 0,
-      "createdAt": "2026-04-17T09:06:52Z",
-      "updatedAt": "2026-06-14T13:22:45Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
-      "id": "issue:4612593730",
-      "title": "docs: restructure English README with improved developer experience, …",
-      "url": "https://github.com/QuantumNous/new-api/pull/5383",
-      "description": "…add Why section, comparison table, and managed hosting info\r\n\r\n- Added Why New API comparison section (Before/After)\r\n- Added Self-Hosted vs Managed comparison table\r\n- Restructured Quick Start with managed and self-hosted options\r\n- Improved scannability with better section hierarchy\r\n- Added links to aipossword.cn managed hosting\r\n\r\n# ⚠️ 提交说明 / PR Notice\r\n> [!IMPORTANT]\r\n>\r\n> - 请提供**人工撰写**的简洁摘要，避免直接粘贴未经整理的 AI 输出。\r\n\r\n## 📝 变更描述 / Description\r\n(简述：做了什么？为什么这样改能生效？请基于你对代码逻辑的理解来写，避免粘贴未经整理的内容)\r\n\r\n#",
-      "source": "github",
-      "type": "pull",
-      "author": "LYX19951121",
-      "stars": 0,
-      "createdAt": "2026-06-08T11:47:44Z",
-      "updatedAt": "2026-06-14T13:21:54Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
       "id": "repo:1245871732",
       "title": "T8mars/T8-penguin-canvas",
       "url": "https://github.com/T8mars/T8-penguin-canvas",
@@ -3920,21 +4790,6 @@
       "stars": 0,
       "createdAt": "2026-06-13T11:53:45Z",
       "updatedAt": "2026-06-14T11:26:38Z",
-      "tags": [
-        "issue"
-      ]
-    },
-    {
-      "id": "issue:4130389328",
-      "title": "[Feature]: Disable image optimization when images are uploaded to Slack",
-      "url": "https://github.com/openclaw/openclaw/issues/53932",
-      "description": "### Summary\n\nIn Slack conversation I requested agent to generate an image with Nano Banana and upload. It uploaded a degraded JPG version intead of original PNG version.\n\nI was investigating way, and apparently image optimization is turned on unconditionally there.\n\n### Problem to solve\n\nUnconditional image optimziation when uploading media to Slack conversation\n\n### Proposed solution\n\nAllow to opt-out from image optimization for Slack\n\n### Alternatives considered\n\n_No response_\n\n### Impact\n\nAff",
-      "source": "github",
-      "type": "issue",
-      "author": "medikoo",
-      "stars": 0,
-      "createdAt": "2026-03-24T20:13:29Z",
-      "updatedAt": "2026-06-14T09:39:22Z",
       "tags": [
         "issue"
       ]
@@ -4072,21 +4927,6 @@
       "updatedAt": "2026-06-14T05:49:03Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1246855411",
-      "title": "reiTavares/ContextDevKit",
-      "url": "https://github.com/reiTavares/ContextDevKit",
-      "description": "Portable, level-based AI-assisted development platform for Claude Code — hooks, slash commands, sub-agents, and durable project memory for any stack.",
-      "source": "github",
-      "type": "repo",
-      "author": "reiTavares",
-      "stars": 1,
-      "createdAt": "2026-05-22T16:21:27Z",
-      "updatedAt": "2026-06-14T02:58:46Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -5920,21 +6760,6 @@
       ]
     },
     {
-      "id": "repo:1163925095",
-      "title": "alisadikinma/ai-image-carousel-prompt-gen",
-      "url": "https://github.com/alisadikinma/ai-image-carousel-prompt-gen",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "alisadikinma",
-      "stars": 1,
-      "createdAt": "2026-02-22T11:20:13Z",
-      "updatedAt": "2026-06-12T03:00:53Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:4646332384",
       "title": "Skill Quality Report — 2026-06-12",
       "url": "https://github.com/mubaidr/awesome-copilot/issues/81",
@@ -6685,21 +7510,6 @@
       ]
     },
     {
-      "id": "repo:1150338797",
-      "title": "thindery/awesome-openclaw",
-      "url": "https://github.com/thindery/awesome-openclaw",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "thindery",
-      "stars": 1,
-      "createdAt": "2026-02-05T06:48:33Z",
-      "updatedAt": "2026-06-11T02:03:58Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:4637256913",
       "title": "Skill Quality Report — 2026-06-11",
       "url": "https://github.com/mubaidr/awesome-copilot/issues/80",
@@ -6800,21 +7610,6 @@
       "stars": 0,
       "createdAt": "2026-06-05T17:43:47Z",
       "updatedAt": "2026-06-11T02:59:40Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1241900972",
-      "title": "raisenomega/Omega",
-      "url": "https://github.com/raisenomega/Omega",
-      "description": "",
-      "source": "github",
-      "type": "repo",
-      "author": "raisenomega",
-      "stars": 0,
-      "createdAt": "2026-05-18T00:22:43Z",
-      "updatedAt": "2026-06-11T02:57:03Z",
       "tags": [
         "repo"
       ]
@@ -8077,21 +8872,6 @@
       "updatedAt": "2026-06-09T10:27:55Z",
       "tags": [
         "issue"
-      ]
-    },
-    {
-      "id": "issue:4620496453",
-      "title": "feat(providers): add Evolink image generation provider",
-      "url": "https://github.com/BytePioneer-AI/clawmate/pull/13",
-      "description": "## Description\n\nAdd a dedicated **Evolink** provider for image generation via [EvoLink.ai](https://evolink.ai) API.\n\nEvoLink's image API uses an async submit/poll pattern:\n- **Submit**: `POST https://api.evolink.ai/v1/images/generations` → returns task `id`\n- **Poll**: `GET https://api.evolink.ai/v1/tasks/{task_id}` → `status` + `results[]`\n\nThis pattern differs from ClawMate's existing providers (OpenAI-compatible sync, Volcengine ARK sync, Gemini SDK sync), so a dedicated provider is needed — ",
-      "source": "github",
-      "type": "pull",
-      "author": "EvoLinkAI",
-      "stars": 0,
-      "createdAt": "2026-06-09T08:58:04Z",
-      "updatedAt": "2026-06-09T09:05:03Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -10255,21 +11035,6 @@
       ]
     },
     {
-      "id": "repo:1149474318",
-      "title": "Quriosity-agent/articles",
-      "url": "https://github.com/Quriosity-agent/articles",
-      "description": "My article collection",
-      "source": "github",
-      "type": "repo",
-      "author": "Quriosity-agent",
-      "stars": 16,
-      "createdAt": "2026-02-04T06:39:42Z",
-      "updatedAt": "2026-06-04T02:59:05Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "issue:4600722826",
       "title": "LiteLLM issue summary - 2026-06-05",
       "url": "https://github.com/arielb1-sun-security/copilot-studio-test/issues/1741",
@@ -10595,21 +11360,6 @@
       "stars": 0,
       "createdAt": "2026-06-03T02:47:41Z",
       "updatedAt": "2026-06-05T13:45:00Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3823605543",
-      "title": "[JEWEL-1138] Scale images to fit available width",
-      "url": "https://github.com/JetBrains/intellij-community/pull/3387",
-      "description": "## Description\r\n\r\nThis is achieved by splitting paragraphs and headings by images and rendering them in a FlowRow as separate composables. Paragraphs and headings without images are rendered as a single Text composable, like before.\r\n\r\nThere are two notable changes:\r\n  - `ScalableImage` is introduced. This is an `Image` composed in a custom `Layout` that takes care of adjusting height according to the current downscaling factor.\r\n  - Text with images is split into separate composables (see above",
-      "source": "github",
-      "type": "pull",
-      "author": "AlexVanGogen",
-      "stars": 0,
-      "createdAt": "2026-01-16T20:43:03Z",
-      "updatedAt": "2026-06-05T12:37:11Z",
       "tags": [
         "pull"
       ]
@@ -13040,21 +13790,6 @@
       "stars": 0,
       "createdAt": "2026-06-02T00:56:33Z",
       "updatedAt": "2026-06-02T01:01:58Z",
-      "tags": [
-        "pull"
-      ]
-    },
-    {
-      "id": "issue:3741733797",
-      "title": "fix: make the atom format spec-compliant",
-      "url": "https://github.com/DIYgod/RSSHub/pull/20723",
-      "description": "<!--\r\nIf you have any difficulties in filling out this form, please refer to https://docs.rsshub.app/joinus/new-rss/submit-route\r\n如果你在填写此表单时遇到任何困难，请参考 https://docs.rsshub.app/zh/joinus/new-rss/submit-route\r\n-->\r\n\r\n## Involved Issue / 该 PR 相关 Issue\r\n\r\nfix #20866\r\n\r\n## Example for the Proposed Route(s) / 路由地址示例\r\n\r\n<!--\r\nPlease include route starts with /, with all required and optional parameters.\r\nFail to comply will result in your pull request being closed automatically.\r\n请在 `routes` 区域填写以 / 开头的",
-      "source": "github",
-      "type": "pull",
-      "author": "ouuan",
-      "stars": 0,
-      "createdAt": "2025-12-18T06:54:17Z",
-      "updatedAt": "2026-06-02T00:51:40Z",
       "tags": [
         "pull"
       ]
@@ -17005,21 +17740,6 @@
       ]
     },
     {
-      "id": "repo:1058505481",
-      "title": "Data-Driven-LM-Collaboration-Team/WXD",
-      "url": "https://github.com/Data-Driven-LM-Collaboration-Team/WXD",
-      "description": "wu xudong",
-      "source": "github",
-      "type": "repo",
-      "author": "Data-Driven-LM-Collaboration-Team",
-      "stars": 0,
-      "createdAt": "2025-09-17T07:19:08Z",
-      "updatedAt": "2026-05-27T03:01:39Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1202095508",
       "title": "avakero/zukai-prompt-builder",
       "url": "https://github.com/avakero/zukai-prompt-builder",
@@ -17557,21 +18277,6 @@
       "updatedAt": "2026-05-26T09:32:11Z",
       "tags": [
         "issue"
-      ]
-    },
-    {
-      "id": "repo:1230638833",
-      "title": "wenjianghai123-eth/archai-revit-expression-engine",
-      "url": "https://github.com/wenjianghai123-eth/archai-revit-expression-engine",
-      "description": "烛照AI设计助手",
-      "source": "github",
-      "type": "repo",
-      "author": "wenjianghai123-eth",
-      "stars": 1,
-      "createdAt": "2026-05-06T07:20:28Z",
-      "updatedAt": "2026-05-26T03:05:43Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -19342,21 +20047,6 @@
       "updatedAt": "2026-05-23T20:13:53Z",
       "tags": [
         "pull"
-      ]
-    },
-    {
-      "id": "repo:1123804298",
-      "title": "BlockRunAI/blockrun-llm",
-      "url": "https://github.com/BlockRunAI/blockrun-llm",
-      "description": "Python SDK for BlockRun — 41+ AI models, pay-per-call with USDC. OpenAI-compatible. Zero rate limits.",
-      "source": "github",
-      "type": "repo",
-      "author": "BlockRunAI",
-      "stars": 6,
-      "createdAt": "2025-12-27T16:55:11Z",
-      "updatedAt": "2026-05-23T03:09:33Z",
-      "tags": [
-        "repo"
       ]
     },
     {
@@ -28012,21 +28702,6 @@
       "updatedAt": "2026-05-11T00:16:52Z",
       "tags": [
         "issue"
-      ]
-    },
-    {
-      "id": "issue:4416911874",
-      "title": "Sand Table v1.1.0 — full implementation pass",
-      "url": "https://github.com/leegonzales/AISkills/pull/44",
-      "description": "Originally a CHANGELOG + dist artifact PR. Expanded into a full implementation pass that closes the gap between SKILL.md command descriptions and shipped scripts, plus the doc/portability/packager fixes surfaced during a top-to-bottom walkthrough.\n\n## Summary\n\n- **Scripts: 4 new** — `narrative_check.py`, `validate_full.py`, `reliability_report.py`, `scaffold.py` (all stdlib-only, ~1,250 lines total). `validate`, `reliability`, and `scaffold` commands in `SKILL.md` now correspond to actual code i",
-      "source": "github",
-      "type": "pull",
-      "author": "leegonzales",
-      "stars": 0,
-      "createdAt": "2026-05-10T21:37:53Z",
-      "updatedAt": "2026-05-10T23:19:27Z",
-      "tags": [
-        "pull"
       ]
     },
     {
@@ -62695,21 +63370,6 @@
       ]
     },
     {
-      "id": "repo:1127839904",
-      "title": "BlockRunAI/awesome-blockrun",
-      "url": "https://github.com/BlockRunAI/awesome-blockrun",
-      "description": "BlockRun ecosystem - docs, SDKs, research, and community",
-      "source": "github",
-      "type": "repo",
-      "author": "BlockRunAI",
-      "stars": 9,
-      "createdAt": "2026-01-04T17:38:05Z",
-      "updatedAt": "2026-03-12T02:59:21Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
       "id": "repo:1180421582",
       "title": "HiDream-ai/hidream-api-gen",
       "url": "https://github.com/HiDream-ai/hidream-api-gen",
@@ -70010,21 +70670,6 @@
       "stars": 0,
       "createdAt": "2026-02-28T02:14:00Z",
       "updatedAt": "2026-02-28T02:54:13Z",
-      "tags": [
-        "repo"
-      ]
-    },
-    {
-      "id": "repo:1168982444",
-      "title": "AIPMAndy/awesome-openclaw-skills-CN",
-      "url": "https://github.com/AIPMAndy/awesome-openclaw-skills-CN",
-      "description": "中文开发者友好的 OpenClaw Skills 精选与安装指南（基于 VoltAgent/awesome-openclaw-skills 翻译）",
-      "source": "github",
-      "type": "repo",
-      "author": "AIPMAndy",
-      "stars": 0,
-      "createdAt": "2026-02-28T02:49:15Z",
-      "updatedAt": "2026-02-28T02:51:53Z",
       "tags": [
         "repo"
       ]
@@ -118678,10 +119323,10 @@
       ]
     },
     {
-      "id": "web:6",
+      "id": "web:5",
       "title": "5 things to build with Google's new Nano Banana image editing ...",
       "url": "https://medium.com/around-the-prompt/5-things-to-build-with-googles-new-nano-banana-image-editing-generation-model-ddfb0d167715",
-      "description": "This model, which excels at targeted edits, can be used for some pretty wild use cases. Nano Banana model is exceptionally good at character ...",
+      "description": "... use cases. In this blog, we will explore 5 simple ideas of how you can start using Nano Banana right now to solve actual problems people have.",
       "source": "web",
       "type": "article",
       "author": "",
@@ -118694,10 +119339,10 @@
       ]
     },
     {
-      "id": "web:8",
+      "id": "web:4",
       "title": "Nano-Banana prompting guide for Gemini 2.5 - Reddit",
       "url": "https://www.reddit.com/r/Bard/comments/1n3wn70/official_nanobanana_prompting_guide_and/",
-      "description": "Official Nano-Banana Prompting Guide and strategies for Mastering Gemini 2.5 Flash Image Generation and Editing can generate Nano Banana ...",
+      "description": "Official Nano-Banana Prompting Guide and strategies for Mastering Gemini 2.5 Flash Image Generation and Editing. Other · r/Bard - Official Nano ...",
       "source": "web",
       "type": "article",
       "author": "",
@@ -118711,7 +119356,7 @@
     },
     {
       "id": "web:2",
-      "title": "50+ INSANE Ways To Use Nano Banana (For FREE)",
+      "title": "50+ INSANE Ways To Use Nano Banana (For FREE) - YouTube",
       "url": "https://www.youtube.com/watch?v=exWEkRHmhKU&vl=en-US",
       "description": "In this video I break down the BEST prompts for Nano Banana that help you level-up your image editing game.",
       "source": "web",
@@ -118790,8 +119435,8 @@
       ]
     },
     {
-      "id": "web:3",
-      "title": "Introducing Gemini 2.5 Flash Image, our state-of-the-art image model",
+      "id": "web:4",
+      "title": "Introducing Gemini 2.5 Flash Image, our state-of-the-art ...",
       "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
       "description": "Gemini 2.5 Flash Image can understand and merge multiple input images. You can put an object into a scene, restyle a room with a color scheme or ...",
       "source": "web",
@@ -119047,7 +119692,7 @@
     },
     {
       "id": "web:10",
-      "title": "How to Use Nano Banana for Image Generation",
+      "title": "How to Use Nano Banana for Image Generation - freeCodeCamp",
       "url": "https://www.freecodecamp.org/news/nano-banana-for-image-generation/",
       "description": "Table of Contents · Step 1: Get an API key from Google Gemini · Step 2: Install the SDK and Other Dependencies · Step 3: Set Up Your Environment.",
       "source": "web",
@@ -119190,10 +119835,10 @@
       ]
     },
     {
-      "id": "web:7",
+      "id": "web:8",
       "title": "Gemini API: image generation (Nano Banana)",
       "url": "https://ai.google.dev/gemini-api/docs/image-generation",
-      "description": "Keep generating and editing images conversationally. Chat or multi-turn conversation is the recommended way to iterate on images. The following ...",
+      "description": "gemini-2.5-flash-image works best with up to 3 images as input, while gemini-3-pro-image supports 5 images with high fidelity, and up to 14 images in total.",
       "source": "web",
       "type": "article",
       "author": "",
@@ -119351,9 +119996,9 @@
     },
     {
       "id": "web:1",
-      "title": "Nano Banana - Beginner Tutorial 2026: Best Al Image Generator",
+      "title": "Nano Banana - Beginner Tutorial 2026: Best Al Image ...",
       "url": "https://www.youtube.com/watch?v=vZMB-Lagg9Y",
-      "description": "Use Nano Banana without watermarks https://youricreates.com/nano-banana and then access all AI video models in one place to turn your ...",
+      "description": "Use Nano Banana without watermarks https://youricreates.c... and then access all AI video models in one place to turn your image into ...",
       "source": "web",
       "type": "article",
       "author": "",
@@ -119383,7 +120028,7 @@
     },
     {
       "id": "web:5",
-      "title": "Gemini 2.5 Flash Image Preview releases with a huge lead ... - Reddit",
+      "title": "Gemini 2.5 Flash Image Preview releases with a huge lead ...",
       "url": "https://www.reddit.com/r/singularity/comments/1n0n3mb/gemini_25_flash_image_preview_releases_with_a/",
       "description": "Google improves Gemini AI image editing with “nano banana” model | Gemini 2.5 Flash Image is currently atop LMArena's image-editing leaderboard.",
       "source": "web",
@@ -119447,9 +120092,9 @@
     },
     {
       "id": "web:1",
-      "title": "Nano Banana AI Tutorial | How to Use Google's Free Tool ...",
+      "title": "Nano Banana AI Tutorial | How to Use Google's Free Tool (Step-by ...",
       "url": "https://www.youtube.com/watch?v=lfE-csUyPF4&vl=en",
-      "description": "0:00 - Intro: Wild AI examples with Nano Banana ; 0:30 - What Nano Banana is and why it's different ; 1:12 - Get Nano Banana ; 1:42 - Generate ...",
+      "description": "... examples with Nano Banana 0:30 - What Nano Banana is and why it's different 1:12 - Get Nano Banana 1:42 - Generate images from text prompts ...",
       "source": "web",
       "type": "article",
       "author": "",
@@ -119526,7 +120171,7 @@
       ]
     },
     {
-      "id": "web:6",
+      "id": "web:9",
       "title": "How to build with Nano Banana: Complete Developer Tutorial",
       "url": "https://dev.to/googleai/how-to-build-with-nano-banana-complete-developer-tutorial-646",
       "description": "This guide will cover: Using Nano Banana in AI Studio; Project setup; Image creation; Image editing; Photo restoration; Multiple input images ...",
@@ -119591,7 +120236,7 @@
     },
     {
       "id": "web:6",
-      "title": "Gemini 3.1 Flash Image – Nano Banana 2 - Google DeepMind",
+      "title": "Gemini 3.1 Flash Image – Nano Banana 2",
       "url": "https://deepmind.google/models/gemini-image/flash/",
       "description": "Powerful image generation, advanced intelligence, and enhanced creative precision – with the speed you expect from Flash.",
       "source": "web",
@@ -119638,7 +120283,7 @@
       ]
     },
     {
-      "id": "web:3",
+      "id": "web:2",
       "title": "What real use cases do you have for Gemini Nano Banana images ...",
       "url": "https://www.reddit.com/r/GeminiAI/comments/1pkkgnf/what_real_use_cases_do_you_have_for_gemini_nano/",
       "description": "I've been experimenting with Gemini Nano Banana image generation, but I'm confused about the real-world use cases.",
@@ -119702,13 +120347,13 @@
       ]
     },
     {
-      "id": "web:6",
-      "title": "I Tested Gemini's Nano Banana AI Image Editor—and ...",
+      "id": "web:9",
+      "title": "I Tested Gemini's Nano Banana AI Image Editor—and These 7 ...",
       "url": "https://www.pcmag.com/explainers/i-tested-geminis-nano-banana-ai-image-editor-and-these-tricks-impress",
       "description": "Nano Banana is better than ever at editing images with AI. I show you how to do everything from creating custom filters to removing ...",
       "source": "web",
       "type": "article",
-      "author": "PCMag",
+      "author": "",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -119718,8 +120363,8 @@
       ]
     },
     {
-      "id": "web:8",
-      "title": "24 Mind-Blowing Nano Banana Pro Use Cases - ImagineArt",
+      "id": "web:10",
+      "title": "24 Mind-Blowing Nano Banana Pro Use Cases - Imagine.Art",
       "url": "https://www.imagine.art/blogs/nano-banana-pro-use-cases",
       "description": "Nano Banana Pro excels in generating marketing assets that juggles text and images: business cards, print advertisements, wedding invitations, ...",
       "source": "web",
@@ -119798,10 +120443,10 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:3",
       "title": "Nano Banana 2 - Gemini AI image generator & photo editor",
       "url": "https://gemini.google/overview/image-generation/",
-      "description": "With our image editing model you can take control of your images by telling Gemini to change the background, replace an object, or add an element",
+      "description": "With Nano Banana 2, Gemini's AI image generator and photo editor, you can create high-quality images and edit photos into countless new creations.",
       "source": "web",
       "type": "article",
       "author": "",
@@ -119830,8 +120475,8 @@
       ]
     },
     {
-      "id": "web:6",
-      "title": "Nano Banana Pro Tutorial: Create & Edit Images",
+      "id": "web:5",
+      "title": "Nano Banana Pro Tutorial: Create & Edit Images - Codecademy",
       "url": "https://www.codecademy.com/article/nano-banana-pro-tutorial",
       "description": "Here's a simple example of how we ask Gemini to combine a banana with jeans and print bananas on them. Here's the prompt that we used: Merge the banana image ...",
       "source": "web",
@@ -119961,7 +120606,7 @@
       "id": "web:1",
       "title": "Introducing Nano Banana Pro - Google Blog",
       "url": "https://blog.google/innovation-and-ai/products/nano-banana-pro/",
-      "description": "Nano Banana Pro, a new image generation and editing model. You can use it to create accurate visuals with legible text in multiple languages.",
+      "description": "Google DeepMind introduces Nano Banana Pro, a new image generation and editing model built on Gemini 3 Pro. You can use it to create accurate ...",
       "source": "web",
       "type": "article",
       "author": "",
@@ -120006,7 +120651,7 @@
       ]
     },
     {
-      "id": "web:7",
+      "id": "web:6",
       "title": "16 Awesome Use Cases With Google Gemini (Nano Banana Use ...",
       "url": "https://www.facebook.com/groups/aiimagesworld/posts/813523357910360/",
       "description": "This shows strong visual reasoning and the ability to understand context from a map to generate a corresponding real-world image. Prompt: \"Show ...",
@@ -120150,7 +120795,7 @@
       ]
     },
     {
-      "id": "web:3",
+      "id": "web:2",
       "title": "Nano Banana PRO tips! and 40 Creative Prompts You Have To Try",
       "url": "https://www.youtube.com/watch?v=tzzF9cC4qBM",
       "description": "... Gemini 2.5 Flash Image model nano banana. #google #aivideo # ... Nano banana examples #1-10 6:15 Examples #11-20 9:35 Examples #21-30 ...",
@@ -120214,13 +120859,13 @@
       ]
     },
     {
-      "id": "web:7",
-      "title": "How do I train Nano Banana Pro to generate images that ...",
+      "id": "web:9",
+      "title": "How do I train Nano Banana Pro to generate images that look like me",
       "url": "https://www.reddit.com/r/Bard/comments/1pc6asd/how_do_i_train_nano_banana_pro_to_generate_images/",
-      "description": "I have been experimenting with Nano Banana Pro for image generation and I want to get more consistent results when I ask it to create images ...",
+      "description": "For example, can I upload around ten reference photos and tell it something like This is me. Use these as the base when generating future images ...",
       "source": "web",
       "type": "article",
-      "author": "Reddit · r/Bard",
+      "author": "",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -120374,7 +121019,7 @@
       ]
     },
     {
-      "id": "web:7",
+      "id": "web:6",
       "title": "Google Nano Banana: 9 Mind-Blowing Use Cases - LinkedIn",
       "url": "https://www.linkedin.com/posts/varunmayya_here-are-9-google-nano-banana-use-cases-that-activity-7366880814728404992-BWTN",
       "description": "First, you can edit images, swap actors from any film, turn them into a video with Video 3 and Cling 2.1 and make characters talk on Higgs field ...",
@@ -120486,10 +121131,10 @@
       ]
     },
     {
-      "id": "web:9",
-      "title": "Generate ANYTHING with Nano Banana | 2 Min Tutorial",
+      "id": "web:6",
+      "title": "Generate ANYTHING with Nano Banana | 2 Min Tutorial - YouTube",
       "url": "https://www.youtube.com/shorts/Ejih2FsG24E",
-      "description": "Dive deep into the world of Photoshop's new AI partner model Gemini 2.5 Nano Banana. This is just a glimpse! Get the complete step-by-step ...",
+      "description": "Generate ANYTHING with Nano Banana | 2 Min Tutorial | FREE 10 Day of AI Series ... This content isn't available. Skip video.",
       "source": "web",
       "type": "article",
       "author": "",
@@ -120502,10 +121147,10 @@
       ]
     },
     {
-      "id": "web:4",
-      "title": "Gemini 2.5 Image (Nano Banana) Beats All Image Editors! - YouTube",
+      "id": "web:3",
+      "title": "Gemini 2.5 Image (Nano Banana) Beats All Image Editors!",
       "url": "https://www.youtube.com/watch?v=Zu6YBeU_31c",
-      "description": "Gemini 2.5 Flash Image Editor - The PHOTOSHOP KILLER? Complete Tutorial & App Build Google just dropped Gemini 2.5 Flash Image Nano Banana ...",
+      "description": "Gemini 2.5 flash image nano banana is out it's the best image editor compared to any other previous image editor.",
       "source": "web",
       "type": "article",
       "author": "",
@@ -120614,13 +121259,13 @@
       ]
     },
     {
-      "id": "web:8",
+      "id": "web:9",
       "title": "Building with Gemini 2.5 Flash Image (nano banana) in ...",
       "url": "https://www.youtube.com/watch?v=Bi-wi2q_Xog",
       "description": "Explore the powerful new Gemini 2.5 Image Gen model (aka nano banana) and its integration with AI Studio in this in-depth live demonstration ...",
       "source": "web",
       "type": "article",
-      "author": "YouTube · Google for Developers",
+      "author": "",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -120791,7 +121436,7 @@
     },
     {
       "id": "web:7",
-      "title": "Nano Banana Pro image generation in Gemini: Prompt tips",
+      "title": "7 tips to get the most out of Nano Banana Pro - Google Blog",
       "url": "https://blog.google/products-and-platforms/products/gemini/prompting-tips-nano-banana-pro/",
       "description": "Use specific details in your prompts: subject, composition, action, location, and style. Refine prompts with camera angles, lighting, text ...",
       "source": "web",
@@ -120902,7 +121547,7 @@
       ]
     },
     {
-      "id": "web:6",
+      "id": "web:4",
       "title": "Gemini 3 Pro Image – Nano Banana Pro - Google DeepMind",
       "url": "https://deepmind.google/models/gemini-image/pro/",
       "description": "Create several images at once to help you explore and review creative options quickly and efficiently. Or use this capability to help sketch out entire stories ...",
@@ -122278,8 +122923,8 @@
       ]
     },
     {
-      "id": "web:6",
-      "title": "Image Generation with Nano Banana - Python Tutorial - YouTube",
+      "id": "web:9",
+      "title": "Image Generation with Nano Banana - Python Tutorial",
       "url": "https://www.youtube.com/watch?v=-49iPdhyZFQ",
       "description": "This is an image generation tutorial with Google's new model Gemini 2.5 Flash (aka “Nano Banana”). We will learn how to set up the ...",
       "source": "web",
@@ -122327,7 +122972,7 @@
     },
     {
       "id": "web:8",
-      "title": "Nano Banana Tutorials: AI Image Editing, Films & Viral ...",
+      "title": "Nano Banana Tutorials: AI Image Editing, Films & Viral Content",
       "url": "https://www.youtube.com/playlist?list=PLHM_l9cKmKaMvFCrWsoY5_cU-aoolAfCX",
       "description": "Learn how to use Nano Banana step by step, from setup to advanced workflows. This playlist covers core features, real use cases, best prompts, ...",
       "source": "web",
@@ -122567,7 +123212,7 @@
     },
     {
       "id": "web:3",
-      "title": "Ultimate prompting guide for Nano Banana",
+      "title": "Ultimate prompting guide for Nano Banana | Google Cloud Blog",
       "url": "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana",
       "description": "Nano Banana + Veo: Create keyframes with Nano Banana to direct an animation, then use Veo to generate the video between them. Check out our Veo ...",
       "source": "web",
@@ -122694,7 +123339,7 @@
       ]
     },
     {
-      "id": "web:2",
+      "id": "web:1",
       "title": "Gemini 2.5 Flash Image is Insane... (Nano Banana Released!)",
       "url": "https://www.youtube.com/watch?v=-gPL9EA2pP8",
       "description": "... Example 0:57 3D, Multiview and Composition 4:37 Sponsor 5:46 Overview 6:31 Image Editing 9:41 Style Swap 10:22 Raw Image Generation 11:56 ...",
@@ -124038,7 +124683,7 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:3",
       "title": "I tested 100+ Nano Banana Pro prompts and narrowed it ... - Reddit",
       "url": "https://www.reddit.com/r/GeminiAI/comments/1q2puu2/i_tested_100_nano_banana_pro_prompts_and_narrowed/",
       "description": "Food photography. 3D billboard mockups. Fashion collages. Passport/ID photos. Pop art viral content. Full prompts, examples, and sources here.",
@@ -124182,10 +124827,10 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:6",
       "title": "Awesome Nano Banana Images - GitHub",
       "url": "https://github.com/jimmylv/awesome-nano-banana",
-      "description": "This is a curated collection of Gemini-2.5-Flash-Image (also known as Nano Banana) generated images and prompts.",
+      "description": "This is a curated collection of Gemini-2.5-Flash-Image (also known as Nano Banana) generated images and prompts. Leveraging Google's cutting- ...",
       "source": "web",
       "type": "article",
       "author": "",
@@ -124438,7 +125083,7 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:7",
       "title": "How It Works With Gemini Nano Banana AI Model",
       "url": "https://ai.tekrevol.com/blogs/nano-banana-ai-model-explained-how-it-works-with-gemini/",
       "description": "Imagine this: you take a selfie and in a matter of seconds, you're turned into a classic movie star, a cartoon figure, ...",
@@ -125686,7 +126331,7 @@
       ]
     },
     {
-      "id": "web:9",
+      "id": "web:10",
       "title": "Google Gemini 2.5 Flash Image | Text to Image - Replicate",
       "url": "https://replicate.com/google/gemini-2.5-flash-image",
       "description": "Gemini 2.5 Flash Image is Google's state-of-the-art image generation and editing model. Text to Image model on Replicate, fast inference.",
@@ -125782,10 +126427,10 @@
       ]
     },
     {
-      "id": "web:5",
+      "id": "web:6",
       "title": "Nano Banana - How to Use Google AI Image Generator",
       "url": "https://www.youtube.com/playlist?list=PLHmEk7iRj6dtoHtvv0iKkEUMQEsj1jbsy",
-      "description": "In this complete 32-minute guide, I'll show you the exact workflow I use to create brand-consistent visuals, maintain character references across multiple ...",
+      "description": "In this complete 32-minute guide, I'll show you the exact workflow I use to create brand-consistent visuals, maintain character references across multiple",
       "source": "web",
       "type": "article",
       "author": "YouTube · AI Master",
@@ -125814,13 +126459,13 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:7",
       "title": "Nano Banana: Free Online AI Image Editor",
       "url": "https://nanobanana.io/",
       "description": "Nano Banana is an AI image editor that lets you edit images with text. Achieve natural edits, consistent results, and creative transformations.",
       "source": "web",
       "type": "article",
-      "author": "NanoBanana.io",
+      "author": "",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -125846,13 +126491,13 @@
       ]
     },
     {
-      "id": "web:4",
+      "id": "web:6",
       "title": "How to Use Nano Banana Pro For Free AI Image Generation",
       "url": "https://www.youtube.com/watch?v=2y33UYcM7iM",
       "description": "Get my list of prompts including for generating high-quality images with nano banana for free: ...",
       "source": "web",
       "type": "article",
-      "author": "YouTube · LoverFighterWriter",
+      "author": "",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -125993,7 +126638,7 @@
       "id": "web:2",
       "title": "Gemini 2.5 Flash Image | Gemini Enterprise Agent Platform",
       "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image",
-      "description": "Gemini 2.5 Flash Image is optimized for image understanding and generation and offers a balance of price and performance. Gemini 2.5 Flash Image ...",
+      "description": "Gemini 2.5 Flash Image uses the speed and cost-effectiveness of Gemini 2.5 Flash to provide fast and efficient image generation and editing capabilities.",
       "source": "web",
       "type": "article",
       "author": "",
@@ -126182,13 +126827,13 @@
       ]
     },
     {
-      "id": "web:9",
-      "title": "Gemini 2.5 Flash Image (Nano Banana) - Google AI for Developers",
+      "id": "web:7",
+      "title": "Gemini 2.5 Flash Image (Nano Banana)",
       "url": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-image",
       "description": "Gemini 2.5 Flash Image, also known as Nano Banana, is best for high-volume generation, conversational image editing, and low-latency creative workflows that ...",
       "source": "web",
       "type": "article",
-      "author": "",
+      "author": "Google AI for Developers",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -126262,8 +126907,8 @@
       ]
     },
     {
-      "id": "web:7",
-      "title": "Banana Prompts: Free AI Image Prompt Library",
+      "id": "web:8",
+      "title": "Free AI Image Prompt Library - Banana Pro AI",
       "url": "https://bananaproai.com/banana-prompts/",
       "description": "Discover amazing Banana image generation prompts with example images. Get inspired and create stunning images with these carefully curated prompts.",
       "source": "web",
@@ -126342,13 +126987,13 @@
       ]
     },
     {
-      "id": "web:9",
-      "title": "How to Use Google Nano Banana for AI Image Editing - YouTube",
+      "id": "web:8",
+      "title": "How to Use Google Nano Banana for AI Image Editing ...",
       "url": "https://www.youtube.com/watch?v=tKjflHAJzqs",
-      "description": "Learn how to edit images with Google's new Nano Banana model using AI prompts in Google AI Studio. This tutorial walks you through the ...",
+      "description": "In this video we're going to take a look at the announcement go over some of the details and see ton of examples of how you can use the new nano banana model.",
       "source": "web",
       "type": "article",
-      "author": "",
+      "author": "YouTube · Ultralytics",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
@@ -126710,7 +127355,7 @@
       ]
     },
     {
-      "id": "web:9",
+      "id": "web:8",
       "title": "8 Insane Nano Banana Use Cases! (create anything) - YouTube",
       "url": "https://www.youtube.com/watch?v=-bGcMAqE6jQ&vl=en",
       "description": "... Nano Banana (Gemini Flash 2.5 Image) AI model to transform your image workflows! In this comprehensive tutorial, Jan walks you through 8 ...",
@@ -126918,13 +127563,13 @@
       ]
     },
     {
-      "id": "web:8",
+      "id": "web:6",
       "title": "Nano Banana Prompt Guide",
       "url": "https://nanobanana.io/prompt-guide",
-      "description": "A practical guide to writing prompts for image generation and image editing, with reusable templates and examples. What this guide helps you do. Think of a ...",
+      "description": "A practical guide to writing prompts for image generation and image editing, with reusable templates and examples.",
       "source": "web",
       "type": "article",
-      "author": "",
+      "author": "NanoBanana.io",
       "stars": 0,
       "createdAt": null,
       "updatedAt": null,
