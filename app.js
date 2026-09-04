@@ -17,8 +17,8 @@ function fmtDate(s) {
 }
 
 function showLoading() {
-  list.innerHTML = '<div class="loading">正在加载资源数据...</div>';
-  stats.textContent = '加载中...';
+  list.innerHTML = '<li class="loading">正在载入资源数据…</li>';
+  stats.textContent = '加载中…';
 }
 
 function render(items) {
@@ -27,7 +27,7 @@ function render(items) {
     const emptyMessage = hasFilters ? 
       '没有找到匹配的项目，请尝试调整搜索条件' : 
       '暂无资源数据';
-    list.innerHTML = `<div class="empty">${emptyMessage}</div>`;
+    list.innerHTML = `<li class="empty">${emptyMessage}</li>`;
     stats.textContent = `共 0 条（生成时间：${data.generatedAt ? fmtDate(data.generatedAt) : '未知'}）`;
     return;
   }
@@ -72,15 +72,18 @@ function render(items) {
     
     return `
       <li class="card">
-        <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${highlightedTitle}</a></h3>
-        <div class="meta">
-          <span class="type-badge">${t}</span>
-          <span class="source-badge">${s}</span>
-          ${star ? `<span class="stars">${star}</span>` : ''}
-          ${up ? `<span class="update">${up}</span>` : ''}
-          ${it.author ? `<span class="author">作者: ${it.author}</span>` : ''}
+        <span class="card-accent-bar"></span>
+        <div class="card-main">
+          <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${highlightedTitle}</a></h3>
+          <div class="meta">
+            <span class="badge type-badge">${t}</span>
+            <span class="badge source-badge">${s}</span>
+            ${star ? `<span class="badge stars">${star}</span>` : ''}
+            ${up ? `<span class="badge update">${up}</span>` : ''}
+            ${it.author ? `<span class="badge author">作者: ${it.author}</span>` : ''}
+          </div>
+          ${descHtml}
         </div>
-        ${descHtml}
       </li>
     `;
   }).join('');

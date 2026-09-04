@@ -1,513 +1,122 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微蕉阁 (WeiJiaoGe) - Gemini 2.5 Flash Image Preview 资源收集</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 50px 30px;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            pointer-events: none;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            font-weight: 300;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .nav-buttons {
-            text-align: center;
-            margin-bottom: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            font-size: 14px;
-        }
-        
-        .nav-btn.active {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-        }
-        
-        .nav-btn:not(.active) {
-            background: white;
-            color: #FFA500;
-        }
-        
-        .nav-btn:not(.active):hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-        
-        .filters {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 20px;
-            align-items: end;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-        }
-        
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        label {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #555;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        input, select {
-            padding: 12px 16px;
-            border: 2px solid #e8ecef;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            background: #fafbfc;
-        }
-        
-        input:focus, select:focus {
-            outline: none;
-            border-color: #FFD700;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
-        }
-        
-        input::placeholder {
-            color: #a0a6b1;
-        }
-        
-        .stats {
-            text-align: center;
-            margin-bottom: 25px;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            color: #666;
-            font-size: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-left: 4px solid #FFD700;
-        }
-        
-        .list {
-            display: grid;
-            gap: 24px;
-        }
-        
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        
-        .card:hover::before {
-            transform: scaleY(1);
-        }
-        
-        .title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
-        .title a {
-            color: #2c3e50;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .title a:hover {
-            color: #667eea;
-        }
-        
-        .meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-            font-size: 12px;
-        }
-        
-        .meta span {
-            background: #f8f9fa;
-            padding: 6px 12px;
-            border-radius: 20px;
-            color: #6c757d;
-            font-size: 11px;
-            font-weight: 500;
-            border: 1px solid #e9ecef;
-            transition: all 0.2s ease;
-        }
-        
-        .meta span:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .type-badge {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
-            color: #1565c0 !important;
-            border-color: #90caf9 !important;
-        }
-        
-        .source-badge {
-            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%) !important;
-            color: #6a1b9a !important;
-            border-color: #ce93d8 !important;
-        }
-        
-        .stars {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%) !important;
-            color: #e65100 !important;
-            border-color: #ffb74d !important;
-            font-weight: 600;
-        }
-        
-        .update {
-            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%) !important;
-            color: #2e7d32 !important;
-            border-color: #a5d6a7 !important;
-        }
-        
-        .author {
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%) !important;
-            color: #c2185b !important;
-            border-color: #f48fb1 !important;
-        }
-        
-        mark {
-            background: linear-gradient(135deg, #fff59d 0%, #ffeb3b 100%);
-            color: #f57f17;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-weight: 600;
-            box-shadow: 0 1px 3px rgba(255, 235, 59, 0.3);
-        }
-        
-        .desc {
-            color: #5a6c7d;
-            line-height: 1.6;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        
-        .desc-container {
-            margin-top: 5px;
-        }
-        
-        .toggle-desc {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-        }
-        
-        .toggle-desc:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-        
-        .toggle-desc:active {
-            transform: translateY(0);
-        }
-        
-        .empty {
-            text-align: center;
-            padding: 80px 20px;
-            color: #8e9aaf;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        
-        .empty::before {
-            content: '🔍';
-            display: block;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            opacity: 0.5;
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 80px 20px;
-            color: #8e9aaf;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        
-        .loading::before {
-            content: '⏳';
-            display: block;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-        
-        /* 搜索框增强 */
-        .search-wrapper {
-            position: relative;
-        }
-        
-        .search-wrapper::before {
-            content: '🔍';
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #a0a6b1;
-            z-index: 1;
-        }
-        
-        .search-wrapper input {
-            padding-left: 40px;
-        }
-        
-        /* 响应式设计优化 */
-        @media (max-width: 1024px) {
-            .filters {
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
-            }
-            
-            .filter-group:first-child {
-                grid-column: 1 / -1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            header {
-                padding: 40px 20px;
-                margin-bottom: 30px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .filters {
-                grid-template-columns: 1fr;
-                padding: 20px;
-                gap: 15px;
-            }
-            
-            .filter-group:first-child {
-                grid-column: auto;
-            }
-            
-            .nav-buttons {
-                margin-bottom: 25px;
-            }
-            
-            .nav-btn {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-            
-            .card {
-                padding: 20px;
-            }
-            
-            .title {
-                font-size: 1.2rem;
-            }
-            
-            .meta {
-                gap: 6px;
-            }
-            
-            .meta span {
-                padding: 4px 8px;
-                font-size: 10px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-            }
-            
-            .nav-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .nav-btn {
-                width: 200px;
-                justify-content: center;
-            }
-        }
-    </style>
+    <title>微蕉阁 (WeiJiaoGe) — Gemini Flash Image Preview 资源收集</title>
+    <meta name="description" content="持续收集与展示 Gemini Flash Image Preview（Nano Banana）的资源与使用案例。">
+    <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🍌 微蕉阁 (WeiJiaoGe)</h1>
-            <p class="subtitle">Gemini 2.5 Flash Image Preview (Nano Banana) 资源收集</p>
-        </header>
-        
-        <div style="text-align: center; margin-bottom: 30px;">
-            <a href="index.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">📚 资源列表</a>
-            <a href="cases.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">🎯 使用案例</a>
-        </div>
-        
-        <div class="filters">
-            <div class="filter-group">
-                <label for="q">搜索关键词</label>
-                <div class="search-wrapper">
-                    <input type="text" id="q" placeholder="搜索标题、描述或作者...">
-                </div>
-            </div>
-            <div class="filter-group">
-                <label for="type">类型</label>
-                <select id="type">
-                    <option value="">全部类型</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="source">来源</label>
-                <select id="source">
-                    <option value="">全部来源</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="sort">排序</label>
-                <select id="sort">
-                    <option value="score">综合排序</option>
-                    <option value="recent">最新更新</option>
-                    <option value="stars">星标数</option>
-                </select>
-            </div>
-        </div>
-        
-        <div class="stats" id="stats">加载中...</div>
-        
-        <div class="list" id="list">
-            <div class="empty">正在加载数据...</div>
+
+<div class="page-progress" id="progress-bar"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="关闭">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="放大查看">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<!-- Nav -->
+<nav class="site-nav">
+    <a href="index.html" class="nav-logo">微蕉阁 <span>·</span> WeiJiaoGe</a>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">资源列表</a></li>
+        <li><a href="cases.html">使用案例</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1 class="hero-title">The Archive of<br><em>Nano Banana</em></h1>
+        <p class="hero-subtitle">Gemini Flash Image Preview · 资源聚合与案例展示</p>
+    </div>
+    <div class="hero-stats">
+        <div class="hero-stat-num" id="hero-count">—</div>
+        <div class="hero-stat-label">件资源</div>
+    </div>
+</section>
+
+<!-- Filters -->
+<div class="filters">
+    <div class="filter-group">
+        <label for="q">搜索资源</label>
+        <div class="search-wrapper">
+            <input type="text" id="q" placeholder="标题、描述或作者…">
         </div>
     </div>
-    
-    <script src="app.js"></script>
+    <div class="filter-group">
+        <label for="type">类型</label>
+        <select id="type">
+            <option value="">全部类型</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="source">来源</label>
+        <select id="source">
+            <option value="">全部来源</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="sort">排序</label>
+        <select id="sort">
+            <option value="score">综合排序</option>
+            <option value="recent">最新更新</option>
+            <option value="stars">星标数</option>
+        </select>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="stats-bar" id="stats">加载中…</div>
+
+<!-- List -->
+<ul class="gallery-list" id="list">
+    <li class="loading">正在载入资源数据…</li>
+</ul>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <span>微蕉阁 · WeiJiaoGe</span>
+    <span>数据每日自动更新</span>
+</footer>
+
+<script src="app.js"></script>
+<script>
+// Progress bar on scroll
+(function() {
+    const bar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docHeight > 0 ? (scrollTop / docHeight * 100) : 0) + '%';
+    }, { passive: true });
+
+    // Update hero count after data loads
+    const observer = new MutationObserver(function() {
+        const stats = document.getElementById('stats');
+        const text = stats.textContent;
+        const match = text.match(/共\s*([\d,]+)\s*条/);
+        if (match) {
+            document.getElementById('hero-count').textContent = parseInt(match[1]).toLocaleString();
+        }
+    });
+    observer.observe(document.getElementById('stats'), { childList: true, characterData: true, subtree: true });
+
+    // Lightbox (for any future image in cards)
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCaption = document.getElementById('lightbox-caption');
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+    function closeLightbox() { lb.classList.remove('open'); lbImg.src = ''; }
+    window.openLightbox = function(src, caption) {
+        lbImg.src = src; lbCaption.textContent = caption || ''; lb.classList.add('open');
+    };
+})();
+</script>
 </body>
 </html>

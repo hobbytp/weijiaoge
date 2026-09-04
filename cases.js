@@ -172,39 +172,31 @@ function renderCase(caseItem) {
   }).join('');
   
   // 效果部分主要显示图片，文字描述作为补充
-  const effectsAndImagesHtml = (() => {
-    let html = '';
-    
-    // 优先显示效果图片
-    if (caseItem.images.length > 0) {
-      html += `
-        <div class="images-section">
-          <div class="image-grid">
-            ${caseItem.images.map(img => 
-              `<img src="${img}" alt="效果图" class="case-image" onerror="this.style.display='none'">`
-            ).join('')}
-          </div>
-        </div>
-      `;
-    }
+  const imagesHtml = (() => {
+    if (caseItem.images.length === 0) return '';
+    // 主图是第一张
+    const primary = caseItem.images[0];
+    const countBadge = caseItem.images.length > 1
+      ? `<span class="img-count-badge">${caseItem.images.length} 张</span>` : '';
+    return `
+      <div class="case-image-wrap" onclick="openLightbox('${primary.replace(/'/g, "&apos;")}', '')">
+        <img src="${primary}" alt="效果图" onerror="this.parentElement.style.display='none'">
+        ${countBadge}
+      </div>
+    `;
+  })();
 
-    // 如果有图片，只显示简短的效果描述；如果没有图片，显示完整描述
-    if (caseItem.effects.length > 0) {
-      if (caseItem.images.length > 0) {
-        // 有图片时，只显示第一个简短的效果描述
-        const shortEffect = caseItem.effects[0].length > 50 ? 
-          caseItem.effects[0].substring(0, 50) + '...' : 
-          caseItem.effects[0];
-        html += `<div class="effect-text effect-summary">${shortEffect}</div>`;
-      } else {
-        // 没有图片时，显示所有效果描述
-        html += caseItem.effects.map(effect => 
-          `<div class="effect-text">${effect}</div>`
-        ).join('');
-      }
+  const effectsHtml = (() => {
+    if (caseItem.effects.length === 0) return '';
+    if (caseItem.images.length > 0) {
+      const shortEffect = caseItem.effects[0].length > 60
+        ? caseItem.effects[0].substring(0, 60) + '…'
+        : caseItem.effects[0];
+      return `<div class="effect-text effect-summary">${shortEffect}</div>`;
     }
-    
-    return html;
+    return caseItem.effects.map(effect =>
+      `<div class="effect-text">${effect}</div>`
+    ).join('');
   })();
   
   // 解析标题，移除中括号并提取链接
@@ -255,24 +247,29 @@ function renderCase(caseItem) {
   
   return `
     <div class="case-card">
-      <div class="case-title">${titleHtml}</div>
-      <div class="case-category">${caseItem.categoryName}</div>
-      
-      ${caseItem.prompts.length > 0 ? `
-        <div class="prompt-section">
-          <div class="prompt-label">🎯 Prompt:</div>
-          ${promptsHtml}
+      ${imagesHtml}
+      <div class="case-body">
+        <div class="case-header">
+          <div class="case-title">${titleHtml}</div>
+          <div class="case-category">${caseItem.categoryName}</div>
         </div>
-      ` : ''}
-      
-      ${(caseItem.effects.length > 0 || caseItem.images.length > 0) ? `
-        <div class="effect-section">
-          <div class="effect-label">✨ 效果:</div>
-          ${effectsAndImagesHtml}
-        </div>
-      ` : ''}
-      
-      ${sourceLinkHtml}
+
+        ${caseItem.prompts.length > 0 ? `
+          <div class="prompt-section">
+            <div class="prompt-label">Prompt</div>
+            ${promptsHtml}
+          </div>
+        ` : ''}
+
+        ${(effectsHtml || (!imagesHtml && caseItem.effects.length > 0)) ? `
+          <div class="effect-section">
+            <div class="effect-label">效果</div>
+            ${effectsHtml}
+          </div>
+        ` : ''}
+
+        ${sourceLinkHtml}
+      </div>
     </div>
   `;
 }

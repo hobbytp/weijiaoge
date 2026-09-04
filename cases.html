@@ -1,324 +1,151 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nano Banana 使用案例 - 微蕉阁</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 40px 0;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: white;
-            border-radius: 12px;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .nav {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .nav a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 10px 20px;
-            background: white;
-            color: #FFA500;
-            text-decoration: none;
-            border-radius: 6px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        
-        .nav a:hover {
-            transform: translateY(-2px);
-        }
-        
-        .filters {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 15px;
-            align-items: end;
-        }
-        
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        label {
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #555;
-        }
-        
-        input, select {
-            padding: 10px;
-            border: 2px solid #e1e5e9;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-        
-        input:focus, select:focus {
-            outline: none;
-            border-color: #FFD700;
-        }
-        
-        .stats {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 20px;
-        }
-        
-        .case-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .case-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        }
-        
-        .case-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        
-        .case-category {
-            display: inline-block;
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
-        
-        .prompt-section {
-            margin-bottom: 15px;
-        }
-        
-        .prompt-label {
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 5px;
-        }
-        
-        .prompt-container {
-            margin-bottom: 10px;
-        }
-        
-        .prompt-text {
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 4px;
-            border-left: 4px solid #667eea;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            line-height: 1.4;
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        }
-        
-        .prompt-truncated {
-            max-height: 120px;
-            overflow: hidden;
-        }
-        
-        .prompt-expanded {
-            max-height: none;
-            overflow: visible;
-        }
-        
-        .expand-btn {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 8px;
-            transition: background-color 0.2s;
-        }
-        
-        .expand-btn:hover {
-            background: #5a6fd8;
-        }
-        
-        .effect-section {
-            margin-bottom: 15px;
-        }
-        
-        .effect-label {
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 5px;
-        }
-        
-        .effect-text {
-            color: #666;
-            line-height: 1.5;
-        }
-        
-        .images-section {
-            margin-bottom: 15px;
-        }
-        
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .case-image {
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 4px;
-            border: 2px solid #e1e5e9;
-        }
-        
-        .source-link {
-            text-align: right;
-            margin-top: 15px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .source-link a {
-            color: #FFA500;
-            text-decoration: none;
-            font-size: 12px;
-        }
-        
-        .source-link a:hover {
-            text-decoration: underline;
-        }
-        
-        .source-link .separator {
-            color: #ccc;
-            font-size: 12px;
-        }
-        
-        .empty {
-            text-align: center;
-            padding: 60px 20px;
-            color: #999;
-        }
-        
-        @media (max-width: 768px) {
-            .filters {
-                grid-template-columns: 1fr;
-            }
-            
-            .cases-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <title>Nano Banana 使用案例 — 微蕉阁</title>
+    <meta name="description" content="Gemini Flash Image Preview Nano Banana 的具体 Prompt、效果与生成图片展示。">
+    <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🍌 Nano Banana 使用案例</h1>
-            <p class="subtitle">具体的 Prompt 和效果展示</p>
-        </header>
-        
-        <div class="nav">
-            <a href="index.html">📚 资源列表</a>
-            <a href="cases.html">🎯 使用案例</a>
-        </div>
-        
-        <div class="filters">
-            <div class="filter-group">
-                <label for="search">搜索案例</label>
-                <input type="text" id="search" placeholder="搜索标题、prompt或效果...">
-            </div>
-            <div class="filter-group">
-                <label for="category">分类</label>
-                <select id="category">
-                    <option value="">全部分类</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="path">来源路径</label>
-                <select id="path">
-                    <option value="">全部来源</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="sort">排序</label>
-                <select id="sort">
-                    <option value="category">按分类</option>
-                    <option value="title">按标题</option>
-                    <option value="path">按来源</option>
-                </select>
-            </div>
-        </div>
-        
-        <div class="stats" id="stats">加载中...</div>
-        
-        <div class="cases-grid" id="cases-grid">
-            <div class="empty">正在加载案例...</div>
+
+<div class="page-progress" id="progress-bar"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="关闭">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="放大查看">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<!-- Nav -->
+<nav class="site-nav">
+    <a href="index.html" class="nav-logo">微蕉阁 <span>·</span> WeiJiaoGe</a>
+    <ul class="nav-links">
+        <li><a href="index.html">资源列表</a></li>
+        <li><a href="cases.html" class="active">使用案例</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1 class="hero-title"><em>Cases</em> Gallery</h1>
+        <p class="hero-subtitle">Nano Banana · Prompt · 效果 · 生成图像</p>
+    </div>
+    <div class="hero-stats">
+        <div class="hero-stat-num" id="hero-count">—</div>
+        <div class="hero-stat-label">件案例</div>
+    </div>
+</section>
+
+<!-- Filters -->
+<div class="filters">
+    <div class="filter-group">
+        <label for="search">搜索案例</label>
+        <div class="search-wrapper">
+            <input type="text" id="search" placeholder="标题、Prompt 或效果描述…">
         </div>
     </div>
-    
-    <script src="cases.js"></script>
+    <div class="filter-group">
+        <label for="category">分类</label>
+        <select id="category">
+            <option value="">全部分类</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="path">来源路径</label>
+        <select id="path">
+            <option value="">全部来源</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="sort">排序</label>
+        <select id="sort">
+            <option value="category">按分类</option>
+            <option value="title">按标题</option>
+            <option value="path">按来源</option>
+        </select>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="stats-bar" id="stats">加载中…</div>
+
+<!-- Cases Grid -->
+<div class="cases-grid" id="cases-grid">
+    <div class="loading">正在载入案例数据…</div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <span>微蕉阁 · WeiJiaoGe</span>
+    <span>数据每日自动更新</span>
+</footer>
+
+<script>
+/* ── Gallery image enhancements injected before cases.js ── */
+(function() {
+    // Progress bar
+    const bar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docHeight > 0 ? (scrollTop / docHeight * 100) : 0) + '%';
+    }, { passive: true });
+
+    // Lightbox
+    const lb    = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCap = document.getElementById('lightbox-caption');
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLb);
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLb(); });
+
+    function closeLb() { lb.classList.remove('open'); lbImg.src = ''; }
+
+    window.openLightbox = function(src, caption) {
+        lbImg.src = src;
+        lbCap.textContent = caption || '';
+        lb.classList.add('open');
+    };
+
+    // Lazy-load images + fade-in after cases.js renders
+    function enhanceImages() {
+        document.querySelectorAll('.case-image-wrap img:not([data-enhanced])').forEach(function(img) {
+            img.setAttribute('data-enhanced', '1');
+            if (img.complete) { img.classList.add('loaded'); } else {
+                img.addEventListener('load',  function() { img.classList.add('loaded'); });
+                img.addEventListener('error', function() { img.style.display = 'none'; });
+            }
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openLightbox(img.src, img.alt || '');
+            });
+        });
+    }
+
+    // Update hero count
+    function updateHeroCount() {
+        const stats = document.getElementById('stats');
+        const match = stats.textContent.match(/共\s*([\d,]+)\s*个/);
+        if (match) document.getElementById('hero-count').textContent = parseInt(match[1]).toLocaleString();
+    }
+
+    // Observe cases-grid for mutations (cases.js re-renders on filter)
+    const grid = document.getElementById('cases-grid');
+    const obs = new MutationObserver(function() {
+        enhanceImages();
+        updateHeroCount();
+    });
+    obs.observe(grid, { childList: true, subtree: true });
+
+    const statsEl = document.getElementById('stats');
+    const statsObs = new MutationObserver(updateHeroCount);
+    statsObs.observe(statsEl, { childList: true, characterData: true, subtree: true });
+})();
+</script>
+<script src="cases.js"></script>
 </body>
 </html>
