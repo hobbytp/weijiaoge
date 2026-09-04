@@ -1,17 +1,53 @@
 # 微蕉阁 (WeiJiaoGe)
 
-持续收集与展示 Gemini Flash Image Preview（Nano Banana）的资源与使用案例，并提供自动化的 Prompt/效果/图片提取、筛选与展示。
+<p align="center">
+  <a href="https://hobbytp.github.io/weijiaoge/">
+    <img src="https://img.shields.io/badge/🌐_在线预览-Live_Demo-4285F4?style=for-the-badge" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/hobbytp/weijiaoge/actions/workflows/fetch.yml">
+    <img src="https://github.com/hobbytp/weijiaoge/actions/workflows/fetch.yml/badge.svg" alt="Fetch and Deploy" />
+  </a>
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhobbytp%2Fweijiaoge">
+    <img src="https://vercel.com/button" alt="Deploy with Vercel" />
+  </a>
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/hobbytp/weijiaoge">
+    <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
+  </a>
+</p>
+
+> 持续收集与展示 Gemini Flash Image Preview（Nano Banana）的资源与使用案例，并提供自动化的 Prompt/效果/图片提取、筛选与展示。
+>
+> 🔗 **在线访问地址**：[https://hobbytp.github.io/weijiaoge/](https://hobbytp.github.io/weijiaoge/)
+
+## 一键部署与托管
+
+### 方案 1：GitHub Pages 原生自动部署（推荐，支持定时自动更新）
+本仓库已配置 GitHub Actions 自动更新与发布工作流：
+1. **Fork 本仓库** 到你的 GitHub 账号。
+2. 进入仓库 **Settings** -> **Pages**，在 **Build and deployment** 下将 **Source** 设置为 **GitHub Actions**。
+3. （可选）配置 API 密钥以启用每日自动抓取与大模型案例提取，详细步骤参见 [GitHub Secrets 配置说明](GITHUB_SECRETS_SETUP.md)。
+4. 工作流将在每天定时运行，或在 Actions 页面手动点击 **Run workflow** 触发，完成后将自动发布到你的专属 GitHub Pages：`https://<你的用户名>.github.io/weijiaoge/`。
+
+### 方案 2：Vercel 一键部署（静态网页极速托管）
+点击下方按钮，一键克隆并托管到 Vercel：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhobbytp%2Fweijiaoge)
+
+### 方案 3：Netlify 一键部署
+点击下方按钮，一键克隆并托管到 Netlify：
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hobbytp/weijiaoge)
 
 ## 项目概述
-- 资源列表页：聚合 GitHub 仓库与文章，支持搜索与排序（见 [app.js](file:///f:/AI/src/weijiaoge/app.js)）。
-- 使用案例页：按来源与分类展示具体 Prompt、效果与图片（见 [cases.js](file:///f:/AI/src/weijiaoge/cases.js)、[cases.html](file:///f:/AI/src/weijiaoge/cases.html)）。
+- 资源列表页：聚合 GitHub 仓库与文章，支持搜索与排序（见 [app.js](app.js)）。
+- 使用案例页：按来源与分类展示具体 Prompt、效果与图片（见 [cases.js](cases.js)、[cases.html](cases.html)）。
 - 数据来源：
-  - GitHub 特定仓库的 README 与元信息（见 [github.mjs](file:///f:/AI/src/weijiaoge/fetchers/github.mjs)）。
-  - 重要文章与网页（见 [article-extractor.mjs](file:///f:/AI/src/weijiaoge/fetchers/article-extractor.mjs)）。
+  - GitHub 特定仓库的 README 与元信息（见 [github.mjs](fetchers/github.mjs)）。
+  - 重要文章与网页（见 [article-extractor.mjs](fetchers/article-extractor.mjs)）。
 - 提取与分类：
-  - 混合提取器（传统 + LangExtract + 增强）：[hybrid-extractor.mjs](file:///f:/AI/src/weijiaoge/fetchers/hybrid-extractor.mjs)。
-  - LangExtract 集成（严格 Prompt 识别与截断、效果/图片提取）：[langextract-extractor.mjs](file:///f:/AI/src/weijiaoge/fetchers/langextract-extractor.mjs)。
-  - 针对 ZHO 仓库的章节解析与全局图片关联增强：见 [case-extractor.mjs](file:///f:/AI/src/weijiaoge/fetchers/case-extractor.mjs#L515-L599)。
+  - 混合提取器（传统 + LangExtract + 增强）：[hybrid-extractor.mjs](fetchers/hybrid-extractor.mjs)。
+  - LangExtract 集成（严格 Prompt 识别与截断、效果/图片提取）：[langextract-extractor.mjs](fetchers/langextract-extractor.mjs)。
+  - 针对 ZHO 仓库的章节解析与全局图片关联增强：见 [case-extractor.mjs](fetchers/case-extractor.mjs)。
 
 ## 功能特性
 - 自动抓取：定期更新 `public/data.json` 与 `public/cases.json`。
@@ -39,11 +75,11 @@
 - 本地预览（静态服务）：`npm run preview`
 
 ## 数据与页面
-- 资源列表数据：`public/data.json`（由 [github.mjs](file:///f:/AI/src/weijiaoge/fetchers/github.mjs) 等生成）
-- 使用案例数据：`public/cases.json`（由 [scripts/update.mjs](file:///f:/AI/src/weijiaoge/scripts/update.mjs) 汇总生成）
+- 资源列表数据：`public/data.json`（由 [github.mjs](fetchers/github.mjs) 等生成）
+- 使用案例数据：`public/cases.json`（由 [scripts/update.mjs](scripts/update.mjs) 汇总生成）
 - 页面入口：
-  - 资源列表：`index.html`（脚本 [app.js](file:///f:/AI/src/weijiaoge/app.js)）
-  - 使用案例：`cases.html`（脚本 [cases.js](file:///f:/AI/src/weijiaoge/cases.js)）
+  - 资源列表：`index.html`（脚本 [app.js](app.js)）
+  - 使用案例：`cases.html`（脚本 [cases.js](cases.js)）
 
 ## 核心提取逻辑
 - LangExtract 集成：
@@ -55,7 +91,7 @@
 
 ## 常用测试与验证
 - 阶段 1 集成测试：`npm run test:stage1`（日志型验证）
-- ZHO README 专项测试：在项目根运行 `node test-zho-langextract.mjs`，输出案例与图片统计，便于核查提取效果（见 [test-zho-langextract.mjs](file:///f:/AI/src/weijiaoge/test-zho-langextract.mjs)）。
+- ZHO README 专项测试：在项目根运行 `node test-zho-langextract.mjs`，输出案例与图片统计，便于核查提取效果（见 [test-zho-langextract.mjs](test-zho-langextract.mjs)）。
 
 ## 贡献与工作流
 - 建议使用独立分支开发，发起 GitHub PR 进行代码 Review 与合并。
