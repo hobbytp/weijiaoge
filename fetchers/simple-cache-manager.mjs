@@ -143,7 +143,7 @@ class SimpleCacheManager {
    * 检查缓存大小
    */
   checkCacheSize() {
-    const maxCacheSize = 500; // 最大缓存500个页面
+    const maxCacheSize = 5000; // 提升至5000条，避免频繁淘汰有效页面缓存
     if (this.cache.size > maxCacheSize) {
       console.log(`🧹 缓存大小超限 (${this.cache.size} > ${maxCacheSize})，开始清理...`);
       this.cleanupOldCache();
@@ -157,8 +157,8 @@ class SimpleCacheManager {
     const entries = Array.from(this.cache.entries())
       .sort((a, b) => a[1].lastProcessed - b[1].lastProcessed);
     
-    // 删除最旧的50%缓存
-    const deleteCount = Math.floor(entries.length * 0.5);
+    // 仅删除最旧的20%缓存
+    const deleteCount = Math.floor(entries.length * 0.2);
     for (let i = 0; i < deleteCount; i++) {
       this.cache.delete(entries[i][0]);
     }
