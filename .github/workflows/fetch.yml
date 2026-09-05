@@ -45,6 +45,7 @@ jobs:
           GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
           GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_SEARCH_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NODE_TLS_REJECT_UNAUTHORIZED: 0
         run: |
@@ -56,6 +57,7 @@ jobs:
           echo "  GOOGLE_CSE_ID: ${GOOGLE_CSE_ID:+已设置}"
           echo "  GOOGLE_SEARCH_API_KEY: ${GOOGLE_SEARCH_API_KEY:+已设置}"
           echo "  GEMINI_API_KEY: ${GEMINI_API_KEY:+已设置}"
+          echo "  DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:+已设置}"
           echo "  OPENAI_API_KEY: ${OPENAI_API_KEY:+已设置}"
           echo ""
           node scripts/update.mjs
