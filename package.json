@@ -25,6 +25,7 @@
     "test:batch": "node scripts/test-batch-and-circuit-breaker.mjs",
     "test:clean": "node scripts/test-prompt-display-clean.mjs",
     "test:zho": "node scripts/test-zho-extraction.mjs",
+    "test:google-blog": "node scripts/test-google-blog-extraction.mjs",
     "help": "echo '🍌 微蕉阁项目管理命令: make help'"
   },
   "dependencies": {

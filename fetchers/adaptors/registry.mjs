@@ -1,8 +1,9 @@
 
 import { GenericAdaptor } from './generic.mjs';
+import { GoogleBlogAdaptor } from './google-blog.mjs';
 
 const adaptors = [
-  // Add specific adaptors here, e.g. RedditAdaptor
+  GoogleBlogAdaptor
 ];
 
 export function getAdaptor(url) {
