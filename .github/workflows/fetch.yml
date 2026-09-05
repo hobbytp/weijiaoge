@@ -3,7 +3,7 @@ name: Fetch and Deploy
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 2 * * *" # 每天凌晨2点
+    - cron: "0 2 * * 0" # 每周日凌晨2点 (UTC)
   push:
     branches:
       - master
