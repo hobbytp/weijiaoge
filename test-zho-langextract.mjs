@@ -18,6 +18,17 @@ async function testZHOExtraction() {
       console.error('❌ 未找到ZHO仓库数据');
       return;
     }
+
+    // 如果 public/data.json 中是精简后的描述（<=300字符），读取完整 README 测试内容
+    if (zhoItem.description && zhoItem.description.length <= 300) {
+      const scratchReadme = 'scratch/zho_readme.md';
+      if (fs.existsSync(scratchReadme)) {
+        zhoItem.description = fs.readFileSync(scratchReadme, 'utf8');
+      } else {
+        const res = await fetch('https://raw.githubusercontent.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation/main/README.md');
+        zhoItem.description = await res.text();
+      }
+    }
     
     console.log(`📊 开始提取ZHO仓库案例...`);
     console.log(`   - 仓库: ${zhoItem.title}`);
@@ -82,7 +93,8 @@ async function testZHOExtraction() {
       if (caseItem.prompts.length > 0) {
         console.log(`   📝 第一个Prompt:`);
         const firstPrompt = caseItem.prompts[0];
-        console.log(`     ${firstPrompt.substring(0, 100)}${firstPrompt.length > 100 ? '...' : ''}`);
+        const promptText = typeof firstPrompt === 'string' ? firstPrompt : firstPrompt?.text || '';
+        console.log(`     ${promptText.substring(0, 100)}${promptText.length > 100 ? '...' : ''}`);
       }
     });
     
