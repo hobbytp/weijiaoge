@@ -180,7 +180,7 @@ function renderCase(caseItem) {
       ? `<span class="img-count-badge">${caseItem.images.length} 张</span>` : '';
     return `
       <div class="case-image-wrap" onclick="openLightbox('${primary.replace(/'/g, "&apos;")}', '')">
-        <img src="${primary}" alt="效果图" onerror="this.parentElement.style.display='none'">
+        <img src="${primary}" alt="效果图" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'">
         ${countBadge}
       </div>
     `;
@@ -340,10 +340,7 @@ function filterAndSort() {
   
   // 路径过滤
   if (selectedPath) {
-    filteredCases = filteredCases.filter(caseItem => {
-      const urlPath = extractUrlPath(caseItem.sourceUrl);
-      return urlPath === selectedPath;
-    });
+    filteredCases = filteredCases.filter(caseItem => caseItem.urlPath === selectedPath);
   }
   
   // 排序
@@ -358,8 +355,8 @@ function filterAndSort() {
     });
   } else if (sortBy === 'path') {
     filteredCases.sort((a, b) => {
-      const pathA = extractUrlPath(a.sourceUrl);
-      const pathB = extractUrlPath(b.sourceUrl);
+      const pathA = a.urlPath || '';
+      const pathB = b.urlPath || '';
       if (pathA !== pathB) {
         return pathA.localeCompare(pathB);
       }
@@ -371,38 +368,59 @@ function filterAndSort() {
 }
 
 function populateFilters() {
-  // 获取所有唯一的分类
-  const categories = [...new Set(casesData.cases.map(c => c.category))];
-  
+  // P3优化：单次遍历预计算分类和路径频次 (O(N) 复杂度，避免重复 map + filter + URL 解析)
+  const categoryCounts = {};
+  const categoryNames = {};
+  const pathCounts = {};
+
+  for (const c of casesData.cases) {
+    if (c.category) {
+      categoryCounts[c.category] = (categoryCounts[c.category] || 0) + 1;
+      if (!categoryNames[c.category]) categoryNames[c.category] = c.categoryName || c.category;
+    }
+    const p = c.urlPath || '';
+    if (p) {
+      pathCounts[p] = (pathCounts[p] || 0) + 1;
+    }
+  }
+
   // 清空并重新填充分类选项
   categorySelect.innerHTML = '<option value="">全部分类</option>';
-  categories.forEach(category => {
-    const caseItem = casesData.cases.find(c => c.category === category);
+  Object.keys(categoryCounts).forEach(category => {
     const option = document.createElement('option');
     option.value = category;
-    option.textContent = `${caseItem.categoryName} (${casesData.cases.filter(c => c.category === category).length})`;
+    option.textContent = `${categoryNames[category]} (${categoryCounts[category]})`;
     categorySelect.appendChild(option);
   });
-  
-  // 获取所有唯一的路径
-  const paths = [...new Set(casesData.cases.map(c => extractUrlPath(c.sourceUrl)))];
-  
+
   // 清空并重新填充路径选项
   pathSelect.innerHTML = '<option value="">全部来源</option>';
-  paths.sort().forEach(path => {
-    const count = casesData.cases.filter(c => extractUrlPath(c.sourceUrl) === path).length;
+  Object.keys(pathCounts).sort().forEach(path => {
     const option = document.createElement('option');
     option.value = path;
-    option.textContent = `${path} (${count})`;
+    option.textContent = `${path} (${pathCounts[path]})`;
     pathSelect.appendChild(option);
   });
 }
 
+function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), ms);
+  };
+}
+
 async function loadCases() {
   try {
-    const response = await fetch('./public/cases.json', { cache: 'no-store' });
+    const response = await fetch('./public/cases.json');
     casesData = await response.json();
     console.log(`加载了 ${casesData.cases.length} 个案例`);
+    
+    // P3 优化：加载时预先计算 urlPath，消除后续筛选/排序中重复的数百次 URL 解析
+    casesData.cases.forEach(c => {
+      c.urlPath = extractUrlPath(c.sourceUrl);
+    });
     
     // 填充筛选选项
     populateFilters();
@@ -416,8 +434,10 @@ async function loadCases() {
   }
 }
 
-// 事件监听
-[searchInput, categorySelect, pathSelect, sortSelect].forEach(element => {
+// 事件监听：搜索输入使用 200ms 防抖，下拉菜单保持即时响应
+const debouncedCasesFilter = debounce(filterAndSort, 200);
+searchInput.addEventListener('input', debouncedCasesFilter);
+[categorySelect, pathSelect, sortSelect].forEach(element => {
   element.addEventListener('input', filterAndSort);
 });
 

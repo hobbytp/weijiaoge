@@ -9,6 +9,12 @@ const stats = $('#stats');
 
 let data = { items: [] };
 
+// ── Pagination state ──
+const PAGE_SIZE = 50;
+let filteredItems = [];
+let displayedCount = 0;
+let loadMoreObserver = null;
+
 function fmtDate(s) {
   if (!s) return '';
   const d = new Date(s);
@@ -21,7 +27,122 @@ function showLoading() {
   stats.textContent = '加载中…';
 }
 
+// ── Debounce utility ──
+function debounce(fn, ms) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), ms);
+  };
+}
+
+// ── Escape HTML to prevent XSS ──
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// ── Highlight search term only (not fixed keywords) ──
+function highlightTerm(text, term) {
+  if (!term) return escapeHtml(text);
+  const escaped = escapeHtml(text);
+  // Escape regex special characters in the search term
+  const safeRegex = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return escaped.replace(new RegExp(`(${safeRegex})`, 'gi'), '<mark>$1</mark>');
+}
+
+function renderCard(it, searchTerm) {
+  const star = it.stars ? `⭐ ${it.stars}` : '';
+  const t = it.type || '';
+  const s = it.source || '';
+  const up = it.updatedAt ? `更新: ${fmtDate(it.updatedAt)}` : '';
+  
+  const highlightedTitle = highlightTerm(it.title, searchTerm);
+  const rawDesc = it.description || '';
+  
+  // 处理描述内容截断
+  let descHtml = '';
+  if (rawDesc) {
+    const maxLength = 200;
+    const escapedDesc = highlightTerm(rawDesc, searchTerm);
+    
+    if (rawDesc.length > maxLength) {
+      const truncatedDesc = highlightTerm(rawDesc.substring(0, maxLength), searchTerm);
+      const cardId = `card-${Math.random().toString(36).substr(2, 9)}`;
+      descHtml = `
+        <div class="desc-container">
+          <p class="desc" id="${cardId}-short">${truncatedDesc}...</p>
+          <p class="desc" id="${cardId}-full" style="display: none;">${escapedDesc}</p>
+          <button class="toggle-desc" onclick="toggleDescription('${cardId}')">展开</button>
+        </div>
+      `;
+    } else {
+      descHtml = `<p class="desc">${escapedDesc}</p>`;
+    }
+  }
+  
+  return `
+    <li class="card">
+      <span class="card-accent-bar"></span>
+      <div class="card-main">
+        <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${highlightedTitle}</a></h3>
+        <div class="meta">
+          <span class="badge type-badge">${t}</span>
+          <span class="badge source-badge">${s}</span>
+          ${star ? `<span class="badge stars">${star}</span>` : ''}
+          ${up ? `<span class="badge update">${up}</span>` : ''}
+          ${it.author ? `<span class="badge author">作者: ${escapeHtml(it.author)}</span>` : ''}
+        </div>
+        ${descHtml}
+      </div>
+    </li>
+  `;
+}
+
+// ── Render a batch of items and append to list ──
+function renderBatch(startIndex, count) {
+  const searchTerm = q.value.trim().toLowerCase();
+  const end = Math.min(startIndex + count, filteredItems.length);
+  const fragment = document.createDocumentFragment();
+  
+  for (let i = startIndex; i < end; i++) {
+    const wrapper = document.createElement('template');
+    wrapper.innerHTML = renderCard(filteredItems[i], searchTerm);
+    fragment.appendChild(wrapper.content);
+  }
+  
+  // Remove existing sentinel before appending
+  const oldSentinel = document.getElementById('load-more-sentinel');
+  if (oldSentinel) oldSentinel.remove();
+  
+  list.appendChild(fragment);
+  displayedCount = end;
+  
+  // Add sentinel for next batch if there are more items
+  if (displayedCount < filteredItems.length) {
+    const sentinel = document.createElement('li');
+    sentinel.id = 'load-more-sentinel';
+    sentinel.className = 'loading';
+    sentinel.textContent = `加载更多… (已显示 ${displayedCount} / ${filteredItems.length})`;
+    list.appendChild(sentinel);
+    observeSentinel(sentinel);
+  }
+}
+
+// ── IntersectionObserver for infinite scroll ──
+function observeSentinel(sentinel) {
+  if (loadMoreObserver) loadMoreObserver.disconnect();
+  loadMoreObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && displayedCount < filteredItems.length) {
+      renderBatch(displayedCount, PAGE_SIZE);
+    }
+  }, { rootMargin: '200px' });
+  loadMoreObserver.observe(sentinel);
+}
+
 function render(items) {
+  filteredItems = items;
+  displayedCount = 0;
+  
   if (items.length === 0) {
     const hasFilters = q.value || type.value || source.value;
     const emptyMessage = hasFilters ? 
@@ -32,61 +153,8 @@ function render(items) {
     return;
   }
 
-  list.innerHTML = items.map(it => {
-    const star = it.stars ? `⭐ ${it.stars}` : '';
-    const t = it.type || '';
-    const s = it.source || '';
-    const up = it.updatedAt ? `更新: ${fmtDate(it.updatedAt)}` : '';
-    
-    // 高亮显示使用案例相关的关键词
-    const highlightKeywords = ['tutorial', 'example', 'use case', 'guide', 'figurine', '3d', 'editing'];
-    let highlightedTitle = it.title;
-    let highlightedDesc = it.description || '';
-    
-    highlightKeywords.forEach(keyword => {
-      const regex = new RegExp(`(${keyword})`, 'gi');
-      highlightedTitle = highlightedTitle.replace(regex, '<mark>$1</mark>');
-      highlightedDesc = highlightedDesc.replace(regex, '<mark>$1</mark>');
-    });
-    
-    // 处理描述内容截断
-    let descHtml = '';
-    if (highlightedDesc) {
-      const maxLength = 200; // 最大显示字符数
-      const escapedDesc = highlightedDesc.replace(/</g, '&lt;');
-      
-      if (escapedDesc.length > maxLength) {
-        const truncatedDesc = escapedDesc.substring(0, maxLength);
-        const cardId = `card-${Math.random().toString(36).substr(2, 9)}`;
-        descHtml = `
-          <div class="desc-container">
-            <p class="desc" id="${cardId}-short">${truncatedDesc}...</p>
-            <p class="desc" id="${cardId}-full" style="display: none;">${escapedDesc}</p>
-            <button class="toggle-desc" onclick="toggleDescription('${cardId}')">展开</button>
-          </div>
-        `;
-      } else {
-        descHtml = `<p class="desc">${escapedDesc}</p>`;
-      }
-    }
-    
-    return `
-      <li class="card">
-        <span class="card-accent-bar"></span>
-        <div class="card-main">
-          <h3 class="title"><a href="${it.url}" target="_blank" rel="noopener noreferrer">${highlightedTitle}</a></h3>
-          <div class="meta">
-            <span class="badge type-badge">${t}</span>
-            <span class="badge source-badge">${s}</span>
-            ${star ? `<span class="badge stars">${star}</span>` : ''}
-            ${up ? `<span class="badge update">${up}</span>` : ''}
-            ${it.author ? `<span class="badge author">作者: ${it.author}</span>` : ''}
-          </div>
-          ${descHtml}
-        </div>
-      </li>
-    `;
-  }).join('');
+  list.innerHTML = '';
+  renderBatch(0, PAGE_SIZE);
   stats.textContent = `共 ${items.length} 条（生成时间：${data.generatedAt ? fmtDate(data.generatedAt) : '未知'}）`;
 }
 
@@ -98,28 +166,9 @@ function score(it) {
   return stars * 1000 + recencyScore;
 }
 
-// 检查内容是否与 nano banana 相关
-function isRelevantContent(item) {
-  // 对于 repo 和 readme 类型，通常都是相关的
-  if (item.type === 'repo' || item.type === 'readme') {
-    return true;
-  }
-  
-  // 完全排除所有 PR 和 Issue 类型
-  if (item.type === 'pull' || item.type === 'issue') {
-    return false;
-  }
-  
-  // 其他类型默认保留
-  return true;
-}
-
 function filterAndSort() {
   const kw = q.value.toLowerCase();
   let items = data.items.slice();
-
-  // 首先过滤内容相关性
-  items = items.filter(isRelevantContent);
 
   if (kw) {
     items = items.filter(it => {
@@ -144,10 +193,8 @@ function filterAndSort() {
 }
 
 function populateFilters() {
-  // 只基于过滤后的相关内容获取类型和来源
-  const relevantItems = data.items.filter(isRelevantContent);
-  const types = [...new Set(relevantItems.map(item => item.type).filter(Boolean))];
-  const sources = [...new Set(relevantItems.map(item => item.source).filter(Boolean))];
+  const types = [...new Set(data.items.map(item => item.type).filter(Boolean))];
+  const sources = [...new Set(data.items.map(item => item.source).filter(Boolean))];
   
   // 清空并重新填充类型选项
   type.innerHTML = '<option value="">全部类型</option>';
@@ -173,7 +220,7 @@ async function boot() {
   showLoading();
   
   try {
-    const res = await fetch('./public/data.json', { cache: 'no-store' });
+    const res = await fetch('./public/data.json');
     data = await res.json();
     console.log(`加载了 ${data.items.length} 个项目`);
   } catch (error) {
@@ -210,6 +257,9 @@ window.toggleDescription = function(cardId) {
   }
 };
 
-[q, type, source, sortSel].forEach(el => el.addEventListener('input', filterAndSort));
+// 搜索框使用 debounce，下拉菜单立即响应
+const debouncedFilter = debounce(filterAndSort, 200);
+q.addEventListener('input', debouncedFilter);
+[type, source, sortSel].forEach(el => el.addEventListener('input', filterAndSort));
 boot();
 
