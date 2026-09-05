@@ -23,7 +23,7 @@ export class LLMScanner {
   constructor() {
     this.geminiKey = process.env.GEMINI_API_KEY;
     this.openaiKey = process.env.OPENAI_API_KEY;
-    this.geminiModel = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+    this.geminiModel = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
     this.openaiModel = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 
     this.lastCallTime = 0;
