@@ -8,9 +8,9 @@ const VALIDATOR_CONFIG = {
   // 支持的模型
   models: {
     gemini: {
-      name: 'gemini-3-flash-preview',
+      name: 'gemini-3.8-flash',
       apiKey: process.env.GEMINI_API_KEY,
-      baseUrl: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent',
+      baseUrl: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent',
       maxTokens: 8192,
       temperature: 0.1
     },

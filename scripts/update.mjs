@@ -16,6 +16,11 @@ const DEFAULT_CATEGORY_NAME = '其他';
 const DEFAULT_TITLE = '未命名案例';
 const TITLE_MAX_LENGTH = 50;
 
+// 前端展示的类型白名单（pull/issue 前端不展示，不需要输出）
+const FRONTEND_TYPES = new Set(['repo', 'readme', 'article']);
+// 前端描述最大长度（readme 类型的 description 可能是完整全文，需要截断）
+const FRONTEND_DESC_MAX_LENGTH = 300;
+
 /**
  * 创建带有分类信息的案例对象
  * @param {Object} result - 提取结果
@@ -238,16 +243,36 @@ async function main() {
   items = mergeOld(old, items);
   items = sortItems(items);
 
-  const payload = {
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+
+  // 保存完整数据至 .cache/（用于本地调试备份，不污染 public/ 目录与 git）
+  const cacheDir = path.join(root, '.cache');
+  if (!fs.existsSync(cacheDir)) fs.mkdirSync(cacheDir, { recursive: true });
+  const fullPayload = {
     version: 1,
     generatedAt: new Date().toISOString(),
     total: items.length,
     items
   };
+  fs.writeFileSync(path.join(cacheDir, 'data-full.json'), JSON.stringify(fullPayload), 'utf-8');
 
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(outFile, JSON.stringify(payload, null, 2), 'utf-8');
-  console.log(`Wrote ${items.length} items to ${path.relative(root, outFile)}`);
+  // 保存精简数据（供前端使用：过滤 pull/issue，剥离未使用字段，截断长描述）
+  const frontendItems = items
+    .filter(it => FRONTEND_TYPES.has(it.type))
+    .map(({ id, createdAt, tags, fullContent, ...rest }) => {
+      if (rest.description && rest.description.length > FRONTEND_DESC_MAX_LENGTH) {
+        rest.description = rest.description.substring(0, FRONTEND_DESC_MAX_LENGTH);
+      }
+      return rest;
+    });
+  const payload = {
+    version: 1,
+    generatedAt: new Date().toISOString(),
+    total: frontendItems.length,
+    items: frontendItems
+  };
+  fs.writeFileSync(outFile, JSON.stringify(payload), 'utf-8');
+  console.log(`Wrote ${frontendItems.length} items to ${path.relative(root, outFile)} (slim, for frontend, filtered from ${items.length})`);
 
   // 智能处理每个页面
   console.log('🧠 开始智能处理页面...');
@@ -278,19 +303,21 @@ async function main() {
   const deduplicatedCases = deduplicateCases(allCases);
   console.log(`📊 去重前: ${allCases.length} 个案例，去重后: ${deduplicatedCases.length} 个案例，去除了 ${allCases.length - deduplicatedCases.length} 个重复案例`);
   
+  // 精简案例数据：剥离前端不使用的 originalItem（占 76% 体积）、id、source、extractedAt
+  const slimCases = deduplicatedCases.map(({ originalItem, id, extractedAt, ...rest }) => rest);
   const casesPayload = {
     version: 1,
     generatedAt: new Date().toISOString(),
-    total: deduplicatedCases.length,
-    categories: Object.keys(deduplicatedCases.reduce((acc, c) => {
+    total: slimCases.length,
+    categories: Object.keys(slimCases.reduce((acc, c) => {
       acc[c.category] = (acc[c.category] || 0) + 1;
       return acc;
     }, {})),
-    cases: deduplicatedCases
+    cases: slimCases
   };
   
-  fs.writeFileSync(casesFile, JSON.stringify(casesPayload, null, 2), 'utf-8');
-  console.log(`📝 Wrote ${allCases.length} cases to ${path.relative(root, casesFile)} (${cases.length} from general sources + ${importantCases.length} from important articles + ${processedCases.length} from intelligent extraction)`);
+  fs.writeFileSync(casesFile, JSON.stringify(casesPayload), 'utf-8');
+  console.log(`📝 Wrote ${slimCases.length} cases to ${path.relative(root, casesFile)} (${cases.length} from general sources + ${importantCases.length} from important articles + ${processedCases.length} from intelligent extraction)`);
   
   // 保存缓存
   cacheManager.saveCache();
