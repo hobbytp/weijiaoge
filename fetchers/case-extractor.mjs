@@ -1,7 +1,7 @@
 // fetchers/case-extractor.mjs
 // 从网页内容中提取Nano Banana使用案例
 
-import { normalizePromptSimple } from './text-utils.mjs';
+import { cleanPromptText, normalizePromptSimple } from './text-utils.mjs';
 
 // 智能Prompt提取函数 - 多层级策略
 function extractPromptsIntelligently(content) {
@@ -19,7 +19,7 @@ function extractPromptsIntelligently(content) {
   for (const pattern of strictPatterns) {
     let match;
     while ((match = pattern.exec(content)) !== null) {
-      const promptText = match[1].trim();
+      const promptText = cleanPromptText(match[1]);
       const normalizedPrompt = normalizePromptSimple(promptText);
       if (promptText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
         prompts.push(promptText);
@@ -34,7 +34,7 @@ function extractPromptsIntelligently(content) {
     const codeBlocks = content.match(/```([^`]+?)```/gs);
     if (codeBlocks) {
       for (const block of codeBlocks) {
-        const codeContent = block.replace(/```/g, '').trim();
+        const codeContent = cleanPromptText(block);
         const normalizedPrompt = normalizePromptSimple(codeContent);
         // 过滤掉明显不是prompt的内容
         if (codeContent.length > 20 && 
@@ -59,7 +59,7 @@ function extractPromptsIntelligently(content) {
       // 提取第一个代码块或长文本
       const codeMatch = section.match(/```([^`]+?)```/s);
       if (codeMatch) {
-        const promptText = codeMatch[1].trim();
+        const promptText = cleanPromptText(codeMatch[1]);
         const normalizedPrompt = normalizePromptSimple(promptText);
         if (promptText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
           prompts.push(promptText);
@@ -67,7 +67,7 @@ function extractPromptsIntelligently(content) {
         }
       } else {
         // 如果没有代码块，提取前几行文本
-        const lines = section.split('\n').slice(0, 5).join('\n').trim();
+        const lines = cleanPromptText(section.split('\n').slice(0, 5).join('\n'));
         const normalizedPrompt = normalizePromptSimple(lines);
         if (lines.length > 20 && !seenPrompts.has(normalizedPrompt)) {
           prompts.push(lines);
@@ -88,7 +88,7 @@ function extractPromptsIntelligently(content) {
            paragraph.includes('transform') ||
            paragraph.includes('make') ||
            paragraph.includes('convert'))) {
-        const cleanText = paragraph.replace(/```/g, '').trim();
+        const cleanText = cleanPromptText(paragraph);
         const normalizedPrompt = normalizePromptSimple(cleanText);
         if (cleanText.length > 20 && !seenPrompts.has(normalizedPrompt)) {
           prompts.push(cleanText);
@@ -113,8 +113,12 @@ export function normalizeCaseItems(cases, sourceInfo = {}) {
   if (!Array.isArray(cases)) return [];
   return cases.map(caseItem => {
     const prompts = Array.isArray(caseItem.prompts)
-      ? caseItem.prompts.map(prompt => typeof prompt === 'string' ? { text: prompt } : prompt)
-      : (caseItem.prompt ? [{ text: caseItem.prompt }] : []);
+      ? caseItem.prompts.map(prompt => {
+          const raw = typeof prompt === 'string' ? prompt : prompt.text || '';
+          const cleaned = cleanPromptText(raw);
+          return typeof prompt === 'string' ? { text: cleaned } : { ...prompt, text: cleaned };
+        }).filter(p => p.text)
+      : (caseItem.prompt ? [{ text: cleanPromptText(caseItem.prompt) }].filter(p => p.text) : []);
 
     const titleFromPrompt = prompts[0]?.text ? `${prompts[0].text.substring(0, 50)}...` : '';
     const title = caseItem.title || titleFromPrompt || sourceInfo.title || '未命名案例';
