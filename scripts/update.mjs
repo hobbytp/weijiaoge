@@ -12,6 +12,7 @@ import { fetchFromWeb } from '../fetchers/web.mjs';
 import { SmartDiscoveryExtractor } from '../fetchers/smart-discovery.mjs';
 import { getAdaptor } from '../fetchers/adaptors/registry.mjs';
 import { GenericAdaptor } from '../fetchers/adaptors/generic.mjs';
+import { cleanPromptText } from '../fetchers/text-utils.mjs';
 
 // 常量定义
 const DEFAULT_CATEGORY = 'other';
@@ -446,8 +447,17 @@ async function main() {
   const deduplicatedCases = deduplicateCases(allCases);
   console.log(`📊 去重前: ${allCases.length} 个案例，去重后: ${deduplicatedCases.length} 个案例，去除了 ${allCases.length - deduplicatedCases.length} 个重复案例`);
   
-  // 精简案例数据：剥离前端不使用的 originalItem（占 76% 体积）、id、source、extractedAt
-  const slimCases = deduplicatedCases.map(({ originalItem, id, extractedAt, ...rest }) => rest);
+  // 精简案例数据：剥离前端不使用的 originalItem（占 76% 体积）、id、source、extractedAt，并规范清理 prompt
+  const slimCases = deduplicatedCases.map(({ originalItem, id, extractedAt, ...rest }) => {
+    if (Array.isArray(rest.prompts)) {
+      rest.prompts = rest.prompts.map(p => {
+        const raw = typeof p === 'string' ? p : p.text || '';
+        const text = cleanPromptText(raw);
+        return typeof p === 'string' ? { text } : { ...p, text };
+      }).filter(p => p.text);
+    }
+    return rest;
+  });
   const casesPayload = {
     version: 1,
     generatedAt: new Date().toISOString(),

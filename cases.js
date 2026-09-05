@@ -148,19 +148,58 @@ function extractUrlPath(url) {
   }
 }
 
+// HTML 实体转义函数
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// 清理 prompt 开头的空格、Prompt:、代码块标记等无关前缀
+function cleanPrompt(text) {
+  if (!text || typeof text !== 'string') return '';
+  let cleaned = text.trim();
+  
+  let prev;
+  do {
+    prev = cleaned;
+    cleaned = cleaned
+      // 1. 移除开头的代码块标记，如 ```markdown\n, ```text\n, 或 ```
+      .replace(/^```(?:[a-zA-Z0-9_-]+\r?\n|\s*)/, '')
+      // 2. 移除开头的单反引号或多个反引号
+      .replace(/^`+\s*/, '')
+      // 3. 移除各种 Prompt / 提示词 前缀，支持中文或英文冒号、序号、修饰词等
+      // 如: 'Prompt:', 'Prompt：', 'prompt:', 'Prompt 1:', 'Prompt1：', 'Img Prompt:', '1) 变手办 Prompt：'
+      .replace(/^(?:\d+[\.\)）]\s*)?(?:[^\n：:]{0,20}?\s*)?(?:prompt\s*\d*|提示词?|咒语|输入)\s*[：:]\s*/i, '')
+      // 4. 再次移除可能紧随在 Prompt: 后的代码块标记
+      .replace(/^```(?:[a-zA-Z0-9_-]+\r?\n|\s*)/, '')
+      .trim();
+  } while (cleaned !== prev);
+
+  // 5. 移除末尾多余的代码块标记
+  cleaned = cleaned.replace(/\s*```+$/, '').trim();
+
+  return cleaned;
+}
+
 function renderCase(caseItem) {
-  const promptsHtml = caseItem.prompts.map((prompt, index) => {
+  const promptsHtml = caseItem.prompts.map((prompt) => {
     // 处理prompt可能是字符串或对象的情况
-    const promptText = typeof prompt === 'string' ? prompt : prompt.text || '';
+    const rawText = typeof prompt === 'string' ? prompt : prompt.text || '';
+    const promptText = cleanPrompt(rawText);
+    if (!promptText) return '';
     const isLongPrompt = promptText.length > 200;
     const displayPrompt = isLongPrompt ? promptText.substring(0, 200) + '...' : promptText;
     const fullPrompt = promptText;
     
+    // 注意：.prompt-text 设置了 white-space: pre-wrap; 标签与内容之间严禁出现换行和缩进空格
     return `
       <div class="prompt-container">
-        <div class="prompt-text ${isLongPrompt ? 'prompt-truncated' : ''}" data-full="${fullPrompt.replace(/"/g, '&quot;')}">
-          ${displayPrompt}
-        </div>
+        <div class="prompt-text ${isLongPrompt ? 'prompt-truncated' : ''}" data-full="${escapeHtml(fullPrompt)}">${escapeHtml(displayPrompt)}</div>
         ${isLongPrompt ? `
           <button class="expand-btn" onclick="togglePrompt(this)">
             <span class="expand-text">展开完整prompt</span>
@@ -169,7 +208,7 @@ function renderCase(caseItem) {
         ` : ''}
       </div>
     `;
-  }).join('');
+  }).filter(Boolean).join('');
   
   // 效果部分主要显示图片，文字描述作为补充
   const imagesHtml = (() => {
@@ -254,7 +293,7 @@ function renderCase(caseItem) {
           <div class="case-category">${caseItem.categoryName}</div>
         </div>
 
-        ${caseItem.prompts.length > 0 ? `
+        ${promptsHtml ? `
           <div class="prompt-section">
             <div class="prompt-label">Prompt</div>
             ${promptsHtml}
@@ -328,7 +367,8 @@ function filterAndSort() {
   // 搜索过滤
   if (searchTerm) {
     filteredCases = filteredCases.filter(caseItem => {
-      const searchText = `${caseItem.title} ${caseItem.prompts.join(' ')} ${caseItem.effects.join(' ')}`.toLowerCase();
+      const promptsText = (caseItem.prompts || []).map(p => typeof p === 'string' ? p : p.text || '').join(' ');
+      const searchText = `${caseItem.title} ${promptsText} ${caseItem.effects.join(' ')}`.toLowerCase();
       return searchText.includes(searchTerm);
     });
   }

@@ -26,6 +26,37 @@ export function normalizePromptSimple(text) {
 }
 
 /**
+ * 清理 prompt 文本开头和结尾的无关标记（如 Prompt:、``` 代码块、提示词: 等）及首尾空格
+ * @param {string} text - 原始 prompt 文本
+ * @returns {string} 清理后的 prompt 文本
+ */
+export function cleanPromptText(text) {
+  if (!text || typeof text !== 'string') return '';
+  let cleaned = text.trim();
+
+  let prev;
+  do {
+    prev = cleaned;
+    cleaned = cleaned
+      // 1. 移除开头的代码块标记，如 ```markdown\n, ```text\n, 或 ```
+      .replace(/^```(?:[a-zA-Z0-9_-]+\r?\n|\s*)/, '')
+      // 2. 移除开头的单反引号或多个反引号
+      .replace(/^`+\s*/, '')
+      // 3. 移除各种 Prompt / 提示词 前缀，支持中文或英文冒号、序号、修饰词等
+      // 如: 'Prompt:', 'Prompt：', 'prompt:', 'Prompt 1:', 'Prompt1：', 'Img Prompt:', '1) 变手办 Prompt：'
+      .replace(/^(?:\d+[\.\)）]\s*)?(?:[^\n：:]{0,20}?\s*)?(?:prompt\s*\d*|提示词?|咒语|输入)\s*[：:]\s*/i, '')
+      // 4. 再次移除可能紧随在 Prompt: 后的代码块标记
+      .replace(/^```(?:[a-zA-Z0-9_-]+\r?\n|\s*)/, '')
+      .trim();
+  } while (cleaned !== prev);
+
+  // 5. 移除末尾多余的代码块标记
+  cleaned = cleaned.replace(/\s*```+$/, '').trim();
+
+  return cleaned;
+}
+
+/**
  * 检查是否为截断的prompt
  * @param {string} prompt1 - 第一个prompt
  * @param {string} prompt2 - 第二个prompt

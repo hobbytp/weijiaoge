@@ -2,7 +2,7 @@
 // LangExtract集成提取器
 
 import { categorizeCase } from './case-categorizer.mjs';
-import { normalizePrompt, isTruncatedPrompt } from './text-utils.mjs';
+import { normalizePrompt, isTruncatedPrompt, cleanPromptText } from './text-utils.mjs';
 
 
 // LangExtract配置
@@ -167,10 +167,7 @@ class LangExtractExtractor {
         while ((match = pattern.exec(cleanedContent)) !== null) {
           // 对于代码块匹配，组可能是整个块；对于标签匹配，组1是正文
           const raw = match[1] ?? match[0];
-          let promptText = this.smartCleanText(raw);
-          
-          // 如果原始匹配包含代码块包裹，移除包裹只保留内容
-          promptText = promptText.replace(/^```[a-zA-Z0-9_-]*\s*/,'').replace(/```$/,'').trim();
+          let promptText = cleanPromptText(this.smartCleanText(raw));
           
           // 对“标签 + 全段”的情况做截断：仅保留前 4 句或 400 字符
           const sentences = promptText.split(/(?<=[。！!？?\.\n])/).filter(s => s.trim());
@@ -180,6 +177,7 @@ class LangExtractExtractor {
           } else {
             promptText = promptText.slice(0, 400);
           }
+          promptText = cleanPromptText(promptText);
           
           if (this.validatePrompt(promptText)) {
             const categories = this.categorizeContent(promptText);
