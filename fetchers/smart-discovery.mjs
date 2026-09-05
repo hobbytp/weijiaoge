@@ -45,18 +45,30 @@ export class SmartDiscoveryExtractor {
   }
 
   /**
-   * 启发式初筛：判断页面内容是否具备 AI 生图 / Prompt 提取价值
+   * 严格双维度启发式初筛：判断页面内容是否具备 AI 生图 / Prompt 提取价值
    * 避免对纯技术文档、普通资讯、无关仓库做无意义的 LLM 调用
    * @param {string} text - 清理后的文本
    * @returns {boolean}
    */
   isCandidateForLLM(text) {
-    if (!text || text.length < 40) return false;
+    if (!text || text.length < 30) return false;
 
-    // 匹配生图、Prompt、模型或相关风格特征
-    const candidateRegex = /(?:prompt|nano\s*banana|gemini|imagen|text-to-image|t2i|generate|style\s*transfer|figurine|character|portrait|photorealistic|cinematic|lighting|midjourney|flux|提示词|生图|微蕉|画风|风格迁移|手办|人像|文生图|出图|咒语)/i;
+    // 维度 1：直接主题强关联（明确提及微蕉或 Nano Banana 或 Gemini 图像）
+    const directTopicRegex = /(?:nano\s*banana|微蕉|gemini\s*(?:flash\s*)?image)/i;
+    if (directTopicRegex.test(text)) {
+      return true;
+    }
 
-    return candidateRegex.test(text);
+    // 维度 2：生图模型/视觉场景关键词 (必须满足其一)
+    const imageDomainRegex = /(?:text-to-image|t2i|image\s*generation|diffusion|midjourney|flux|sdxl|stable\s*diffusion|imagen|文生图|生图|图生图|画风|风格迁移|手办化|AI\s*(?:绘画|作画|生图))/i;
+    const hasImageDomain = imageDomainRegex.test(text);
+
+    // 维度 3：Prompt 或用例结构特征 (必须满足其一)
+    const promptStructureRegex = /(?:prompt[：:]|prompts|negative\s*prompt|提示词|咒语|参数设置|cfg\s*scale|seed[：:]|```[\s\S]*?```|\bworkflow\b)/i;
+    const hasPromptStructure = promptStructureRegex.test(text);
+
+    // 必须同时具备生图领域特征与 Prompt 结构特征，才视为具备 LLM 扫描价值
+    return hasImageDomain && hasPromptStructure;
   }
 
   /**

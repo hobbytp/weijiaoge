@@ -5,6 +5,8 @@ on:
   schedule:
     - cron: "0 2 * * *" # 每天凌晨2点
   push:
+    branches:
+      - master
     paths:
       - "scripts/**"
       - "fetchers/**"

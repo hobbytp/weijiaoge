@@ -4,11 +4,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractCasesFromImportantArticles } from '../fetchers/article-extractor.mjs';
-import { CASE_CATEGORIES, processItemsForCases } from '../fetchers/case-extractor.mjs';
+import { CASE_CATEGORIES, extractCaseFromContent, processItemsForCases } from '../fetchers/case-extractor.mjs';
 import { fetchFromGitHub } from '../fetchers/github.mjs';
 import { extractIntelligently, getExtractionStats } from '../fetchers/hybrid-extractor.mjs';
 import { SimpleCacheManager } from '../fetchers/simple-cache-manager.mjs';
 import { fetchFromWeb } from '../fetchers/web.mjs';
+import { SmartDiscoveryExtractor } from '../fetchers/smart-discovery.mjs';
+import { getAdaptor } from '../fetchers/adaptors/registry.mjs';
+import { GenericAdaptor } from '../fetchers/adaptors/generic.mjs';
 
 // 常量定义
 const DEFAULT_CATEGORY = 'other';
@@ -102,7 +105,7 @@ async function processPageIntelligently(item, source, processedCases, skippedPag
 }
 
 /**
- * 批量处理页面项目
+ * 批量高效处理页面项目（结合缓存机制、本地快速正则提取、严格启发式初筛与多页面 LLM 批量打包）
  * @param {Array} items - 页面项目数组
  * @param {string} source - 数据源 ('github' 或 'web')
  * @param {Array} processedCases - 已处理的案例数组
@@ -110,9 +113,149 @@ async function processPageIntelligently(item, source, processedCases, skippedPag
  * @param {Object} cacheManager - 缓存管理器
  */
 async function processItemsBatch(items, source, processedCases, skippedPages, cacheManager) {
+  const smartDiscovery = new SmartDiscoveryExtractor();
+  const llmQueue = [];
+
   for (const item of items) {
-    if (item.description) {
-      await processPageIntelligently(item, source, processedCases, skippedPages, cacheManager);
+    if (!item.description && !item.title) continue;
+
+    const pageId = item.url || item.id;
+    const shouldProcess = cacheManager.shouldProcess(
+      pageId, 
+      item.description, 
+      item.caseCount || 0
+    );
+
+    if (!shouldProcess.shouldProcess) {
+      console.log(`⏭️ 跳过页面: ${item.title} (${shouldProcess.reason})`);
+      skippedPages.push(item.title);
+      continue;
+    }
+
+    console.log(`🔄 检查页面: ${item.title} (${shouldProcess.reason})`);
+
+    // 1. 本地快速提取：如果本地规则已明确识别出 prompt 与效果，直接采纳，耗时 < 1ms，无需调用任何大模型
+    try {
+      const tradResult = extractCaseFromContent(item);
+      const hasPrompts = Array.isArray(tradResult?.prompts) && tradResult.prompts.length > 0;
+      if (hasPrompts) {
+        console.log(`⚡ [Traditional] 本地规则直接命中: ${item.title} (${tradResult.prompts.length} 个 Prompt)`);
+        const caseWithCategory = createCaseWithCategory({
+          result: tradResult,
+          extractor: 'traditional',
+          confidence: 0.8
+        }, source);
+        processedCases.push(caseWithCategory);
+        cacheManager.updateCache(pageId, item.description, 1);
+        continue;
+      }
+    } catch (e) {
+      // 忽略本地提取异常，继续后续流程
+    }
+
+    // 2. 检查站点专用 Adaptor（如 civitai / huggingface 等）
+    const adaptor = getAdaptor(item.url || '');
+    if (!(adaptor instanceof GenericAdaptor)) {
+      console.log(`🔌 [Adaptor] 使用专用站点适配器: ${item.title}`);
+      try {
+        const fullContent = await smartDiscovery.ensureFullContent(item.url, item.description);
+        const adaptorCases = await adaptor.extract(fullContent, item.url, item);
+        if (adaptorCases && adaptorCases.length > 0) {
+          for (const c of adaptorCases) {
+            processedCases.push(createCaseFromNormalizedCase(c, { extractor: adaptor.constructor.name, confidence: 0.85 }, source, item));
+          }
+          cacheManager.updateCache(pageId, item.description, adaptorCases.length);
+          continue;
+        }
+      } catch (err) {
+        console.warn(`专用适配器提取失败: ${err.message}`);
+      }
+    }
+
+    // 3. 准备清洗降噪文本，进行严格双维度初筛
+    const fullContent = await smartDiscovery.ensureFullContent(item.url, item.description);
+    const cleanText = smartDiscovery.cleanHtmlToText(fullContent);
+
+    // 4. 严格启发式初筛：是否具备生图特征及 Prompt 案例价值
+    const isCandidate = smartDiscovery.isCandidateForLLM(cleanText);
+
+    if (isCandidate && smartDiscovery.llmScanner.isAvailable) {
+      // 进入 LLM 批量打包队列
+      llmQueue.push({
+        id: pageId,
+        url: item.url || item.id,
+        title: item.title,
+        content: cleanText,
+        item,
+        source
+      });
+    } else {
+      if (!isCandidate) {
+        console.log(`⏭️ [Heuristic Filter] 初筛排除（非生图/Prompt页面，节省大模型额度）: ${item.title}`);
+      }
+      // 通用增强算法快速兜底
+      try {
+        const genericCases = await adaptor.extract(cleanText, item.url, item);
+        const validCases = Array.isArray(genericCases) ? genericCases : [];
+        for (const c of validCases) {
+          processedCases.push(createCaseFromNormalizedCase(c, { extractor: 'generic', confidence: 0.5 }, source, item));
+        }
+        cacheManager.updateCache(pageId, item.description, validCases.length);
+      } catch {
+        cacheManager.updateCache(pageId, item.description, 0);
+      }
+    }
+  }
+
+  // 第二阶段：LLM 批量打包扫描 (3~4 个网页合并打包为 1 次请求)
+  if (llmQueue.length > 0) {
+    const BATCH_SIZE = 3;
+    console.log(`\n🚀 [LLM Batch Queue] 共有 ${llmQueue.length} 个候选网页进入批量打包队列（每批 ${BATCH_SIZE} 个）...`);
+
+    for (let i = 0; i < llmQueue.length; i += BATCH_SIZE) {
+      const batch = llmQueue.slice(i, i + BATCH_SIZE);
+      const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+      const totalBatches = Math.ceil(llmQueue.length / BATCH_SIZE);
+
+      console.log(`📦 正在处理批次 ${batchNum}/${totalBatches} (${batch.map(b => b.title).join(' | ')})`);
+
+      try {
+        const batchResults = await smartDiscovery.llmScanner.scanBatch(batch.map(b => ({
+          id: b.id,
+          url: b.url,
+          title: b.title,
+          content: b.content
+        })));
+
+        for (const queued of batch) {
+          const cases = batchResults[queued.id] || [];
+          if (cases.length > 0) {
+            console.log(`✅ [LLM Batch] ${queued.title} 成功提取 ${cases.length} 个案例`);
+            for (const c of cases) {
+              processedCases.push(createCaseFromNormalizedCase(c, { extractor: 'llm-batch', confidence: 0.9 }, queued.source, queued.item));
+            }
+            cacheManager.updateCache(queued.id, queued.item.description, cases.length);
+          } else {
+            console.log(`ℹ️ [LLM Batch] ${queued.title} 未提取到有效案例，执行通用兜底`);
+            const adaptor = getAdaptor(queued.url);
+            const fallbackCases = await adaptor.extract(queued.content, queued.url, queued.item);
+            const count = Array.isArray(fallbackCases) ? fallbackCases.length : 0;
+            if (count > 0) {
+              for (const c of fallbackCases) {
+                processedCases.push(createCaseFromNormalizedCase(c, { extractor: 'generic-fallback', confidence: 0.5 }, queued.source, queued.item));
+              }
+            }
+            cacheManager.updateCache(queued.id, queued.item.description, count);
+          }
+        }
+      } catch (err) {
+        console.error(`❌ 批次 ${batchNum} 处理失败: ${err.message}，降级回退处理`);
+        for (const queued of batch) {
+          const adaptor = getAdaptor(queued.url);
+          const fallbackCases = await adaptor.extract(queued.content, queued.url, queued.item).catch(() => []);
+          cacheManager.updateCache(queued.id, queued.item.description, fallbackCases?.length || 0);
+        }
+      }
     }
   }
 }

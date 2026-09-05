@@ -5,9 +5,10 @@ node_modules
 # 缓存目录（临时数据，不需要版本控制）
 .cache/
 
-# Cursor IDE 配置文件
+# IDE 配置文件
 .cursorrules
 .trae
+.agents/
 
 # 测试/调试截图
 *.png
