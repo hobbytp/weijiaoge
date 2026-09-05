@@ -282,20 +282,23 @@ function extractEffects(text) {
 function cleanTitle(title) {
   if (!title) return title;
   
-  // 移除数字emoji前缀 (如 ⑥、1️⃣、2️⃣等)
-  let cleaned = title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣\s]*/, '');
+  // 移除数字emoji前缀 (如 ⑥、1️⃣、2️⃣、3️⃣7️⃣等)
+  let cleaned = title.replace(/^[①②③④⑤⑥⑦⑧⑨⑩0-9\uFE0F\u20E3#\s*️⃣]+/g, '');
   
   // 移除常见的无意义前缀
-  cleaned = cleaned.replace(/^(例\s*\d+[:：]\s*|Case\s*\d+[:：]\s*|案例\s*\d+[:：]\s*)/i, '');
+  cleaned = cleaned.replace(/^(?:例\s*\d+[:：]\s*|Case\s*\d+[:：]\s*|案例\s*\d+[:：]\s*)/i, '');
   
-  // 移除图片相关后缀
-  cleaned = cleaned.replace(/\s*image[^a-zA-Z]*$/i, '');
-  cleaned = cleaned.replace(/\s*图片[^a-zA-Z]*$/i, '');
+  // 移除末尾图片相关序号后缀（如 图片 1、image 2）
+  cleaned = cleaned.replace(/\s*(?:image|图片)\s*[\d\(\)（）\-_]*$/i, '');
   cleaned = cleaned.replace(/\s*艺术相关.*$/i, '');
   
   // 移除HTML标签（包括不完整的标签）
   cleaned = cleaned.replace(/<[^>]*$/g, '');
   cleaned = cleaned.replace(/<[^>]*>/g, '');
+  
+  // 移除尾部无用的URL遗留 (如 "https") 或冒号
+  cleaned = cleaned.replace(/https?$/i, '');
+  cleaned = cleaned.replace(/[:：\s]+$/g, '');
   
   // 移除多余的空格
   cleaned = cleaned.replace(/\s+/g, ' ').trim();
@@ -545,86 +548,106 @@ export async function extractCasesFromGitHubReadme(item) {
 async function extractZHOFormat(fullText, item) {
   const cases = [];
   
-  // 按章节分割内容（以数字开头的章节），并增加多种备选分割策略
-  let sections = fullText.split(/(?=\d+️⃣)/);
+  // 1. 定位“（3）原创玩法 + 提示词”主体部分，排除前置的目录（1）和软件三件套（2），彻底避免目录列表与顶部的合集封面大图干扰各个案例
+  const sec3Match = fullText.match(/#+\s*(?:（[0-9]+）|\d+[\.、\)]\s*)?(?:原创玩法|玩法\s*\+\s*提示词|提示词)/i);
+  const bodyText = sec3Match ? fullText.substring(sec3Match.index) : fullText;
+  
+  // 2. 按 Markdown 二级/三级标题分割章节
+  let sections = bodyText.split(/(?=^#{2,3}\s+)/m);
   if (!sections || sections.length <= 1) {
-    // 兼容 "### 1️⃣" 标题 或 "1. 标题" 的写法
-    sections = fullText.split(/(?=^#{1,6}\s*\d+️⃣)|(?=^\s*\d+\.\s+)/m);
-  }
-  if (!sections || sections.length <= 1) {
-    // 兼容中文编号样式：一、二、三、 或 1）
-    sections = fullText.split(/(?=^[一二三四五六七八九十]+、)|(?=^\s*\d+\))/m);
+    sections = bodyText.split(/(?=^[①②③④⑤⑥⑦⑧⑨⑩0-9\uFE0F\u20E3#\s*️⃣]+[\.、\s])/m);
   }
   
   for (const section of sections) {
     if (!section.trim()) continue;
     
-    // 提取章节标题
-    const titleMatch = section.match(/^(\d+️⃣[^：:]+[：:]?)(.*)/s);
-    if (!titleMatch) continue;
+    // 严格按首行拆分标题与正文（绝不能用带有 /s 的跨行贪婪匹配，否则会吞掉标题下方的 <img src="https: 导致标签破损、无法识别图片）
+    const firstNewlineIdx = section.indexOf('\n');
+    const headingLine = firstNewlineIdx !== -1 ? section.substring(0, firstNewlineIdx).trim() : section.trim();
+    const sectionContent = firstNewlineIdx !== -1 ? section.substring(firstNewlineIdx + 1).trim() : '';
     
-    let sectionTitle = titleMatch[1].replace(/[：:]/g, '').trim();
-    const sectionContent = titleMatch[2];
+    const rawTitle = headingLine.replace(/^#+\s*/, '').trim();
     
-    // 保持原始标题，不在单个文章内部进行重复检测
-    // 真正的去重应该在全局级别基于prompt内容进行
+    // 过滤非案例的标题（如更新日志、Stars、关于我、Credits、或纯数字emoji占位符）
+    if (/^(?:更新日志|Stars|关于我|About|Credits|赞赏|交流群)/i.test(rawTitle)) continue;
+    if (/^[0-9\uFE0F\u20E3\s*️⃣]+$/i.test(rawTitle)) continue;
+    if (rawTitle.length < 2) continue;
     
-    // 尝试LangExtract提取
+    const sectionTitle = cleanTitle(rawTitle);
+    if (!sectionTitle) continue;
+    
+    // 3. 严格从当前章节内容提取图片（绝不跨章节或跨全文回退，杜绝把顶部大合集封面图赋给具体案例）
+    const images = extractSectionImages(sectionContent);
+    
+    // 4. 提取当前章节的 Prompts
     let prompts = [];
-    let images = [];
-    let effects = [];
-    let langExtractSuccess = false;
+    const seenPrompts = new Set();
     
-    try {
-      const langExtractResult = await extractWithLangExtract(sectionContent);
-      if (langExtractResult.prompts && langExtractResult.prompts.length > 0) {
-        prompts = langExtractResult.prompts.map(p => p.text);
-        images = langExtractResult.images.map(img => img.url);
-        effects = langExtractResult.effects.map(e => e.text);
-        langExtractSuccess = true;
-        console.log(`✅ LangExtract成功提取章节: ${sectionTitle}`);
+    // 策略A：匹配带标签的代码块 Prompt (支持 1）变手办 Prompt: ```...``` 或 Img Prompt: ```...``` 或 提示词: ```...```)
+    const codeBlockPromptRegex = /(?:(?:\d+[\)）]\s*)?(?:[^\n：:]{0,25}?\s*)?(?:Prompt|prompt|提示词|咒语|输入)\s*[：:])\s*```(?:[a-zA-Z0-9_-]*\r?\n)?([\s\S]*?)```/gi;
+    let m;
+    while ((m = codeBlockPromptRegex.exec(sectionContent)) !== null) {
+      const pText = cleanPromptText(m[1]);
+      const normalized = normalizePromptSimple(pText);
+      if (pText.length >= 5 && !seenPrompts.has(normalized)) {
+        prompts.push(pText);
+        seenPrompts.add(normalized);
       }
-    } catch (error) {
-      console.log(`⚠️ LangExtract失败，使用传统方法: ${sectionTitle} - ${error.message}`);
     }
     
-    // 回退到传统提取方法
-    if (!langExtractSuccess) {
-      prompts = extractPromptsIntelligently(sectionContent);
-      if (!prompts || prompts.length === 0) {
-        const fallback = extractFallbackPrompt(sectionContent, sectionTitle);
-        if (fallback) {
-          prompts = [fallback];
+    // 策略B：如果没有显式标签的代码块，提取章节内所有规范代码块 (排除包含 github 链接的非 prompt 块)
+    if (prompts.length === 0) {
+      const genericCodeRegex = /```(?:[a-zA-Z0-9_-]*\r?\n)?([\s\S]*?)```/gi;
+      while ((m = genericCodeRegex.exec(sectionContent)) !== null) {
+        const pText = cleanPromptText(m[1]);
+        const normalized = normalizePromptSimple(pText);
+        if (pText.length >= 5 && !pText.includes('github.com') && !seenPrompts.has(normalized)) {
+          prompts.push(pText);
+          seenPrompts.add(normalized);
         }
       }
-      
-      if (images.length === 0) {
-        images = extractSectionImages(sectionContent);
-      }
-      
-      if (effects.length === 0) {
-        effects = extractEffects(sectionContent);
+    }
+    
+    // 策略C：若仍无代码块，提取 Prompt 标签后的紧随文本行
+    if (prompts.length === 0) {
+      const looseRegex = /(?:(?:\d+[\)）]\s*)?(?:[^\n：:]{0,25}?\s*)?(?:Prompt|prompt|提示词|咒语|输入)\s*[：:])\s*([^\n]+(?:\n(?!\n|^#{1,6}|\n[0-9\uFE0F\u20E3]+)[^\n]+){0,4})/gi;
+      while ((m = looseRegex.exec(sectionContent)) !== null) {
+        const pText = cleanPromptText(m[1].replace(/```/g, ''));
+        const normalized = normalizePromptSimple(pText);
+        if (pText.length >= 5 && !seenPrompts.has(normalized)) {
+          prompts.push(pText);
+          seenPrompts.add(normalized);
+        }
       }
     }
     
-    if (images.length === 0) {
-      const relatedImages = extractCaseSpecificImages(sectionTitle, fullText);
-      if (relatedImages.length > 0) {
-        images = relatedImages;
+    // 策略D：回退至 extractPromptsIntelligently
+    if (prompts.length === 0) {
+      prompts = extractPromptsIntelligently(sectionContent);
+    }
+
+    // 策略E：回退至 extractFallbackPrompt
+    if (prompts.length === 0) {
+      const fallback = extractFallbackPrompt(sectionContent, sectionTitle);
+      if (fallback) {
+        prompts = [fallback];
       }
     }
     
-    // 创建每个章节一个案例
+    // 5. 提取效果
+    const effects = extractEffects(sectionContent);
+    
+    // 6. 构建案例对象
     if (prompts.length > 0) {
       const category = categorizeCase(sectionTitle, sectionContent, prompts);
       cases.push({
         id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        title: cleanTitle(sectionTitle),
+        title: sectionTitle,
         category: category,
         categoryName: CASE_CATEGORIES[category],
         prompts: prompts.slice(0, 3), // 最多3个prompt
         effects: effects.slice(0, 3),
-        images: images.slice(0, 6), // 最多6张图片
+        images: images.slice(0, 6), // 严格属于本案例的图片，最多6张
         sourceUrl: item.url,
         source: item.source || 'github',
         extractedAt: new Date().toISOString(),
@@ -636,7 +659,7 @@ async function extractZHOFormat(fullText, item) {
   return cases;
 }
 
-// 新增：当智能提取失败时的 Prompt 回退推断
+// 当智能提取失败时的 Prompt 回退推断
 function extractFallbackPrompt(content, sectionTitle = '') {
   // 1) 直接查找“Prompt/输入/提示词”标记后的文本段
   const labelPattern = /(Prompt|提示词|输入)[：:]+\s*([^\n`]{20,})/i;
@@ -665,92 +688,17 @@ function extractFallbackPrompt(content, sectionTitle = '') {
   
   return null;
 }
-// 新增：提取案例特定图片的函数
-function extractCaseSpecificImages(caseTitle, caseContent) {
-  const images = [];
-  
-  // 清理标题，用于匹配
-  const cleanTitle = caseTitle
-    .replace(/[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣\s]/g, '') // 移除数字emoji
-    .replace(/[（(].*?[）)]/g, '') // 移除括号内容
-    .replace(/\s+/g, ' ') // 合并空格
-    .trim();
-  
-  // 根据案例标题提取相关图片
-  const titleKeywords = cleanTitle.split(/\s+/).filter(word => word.length > 1);
-  
-  // 查找包含案例标题关键词的图片
-  const imgPattern = /<img[^>]+src="([^"]+)"[^>]*>/g;
-  let match;
-  
-  while ((match = imgPattern.exec(caseContent)) !== null) {
-    const imgUrl = match[1];
-    const imgTag = match[0];
-    
-    // 检查图片是否与当前案例相关
-    let isRelevant = false;
-    
-    // 方法1: 检查图片周围的文本是否包含案例关键词
-    const contextStart = Math.max(0, match.index - 500);
-    const contextEnd = Math.min(caseContent.length, match.index + 500);
-    const context = caseContent.substring(contextStart, contextEnd).toLowerCase();
-    
-    // 检查上下文是否包含案例关键词
-    for (const keyword of titleKeywords) {
-      if (context.includes(keyword.toLowerCase())) {
-        isRelevant = true;
-        break;
-      }
-    }
-    
-    // 方法2: 检查图片alt属性
-    const altMatch = imgTag.match(/alt="([^"]*)"/);
-    if (altMatch) {
-      const altText = altMatch[1].toLowerCase();
-      for (const keyword of titleKeywords) {
-        if (altText.includes(keyword.toLowerCase())) {
-          isRelevant = true;
-          break;
-        }
-      }
-    }
-    
-    // 方法3: 对于ZHO仓库，使用案例编号匹配
-    const caseNumberPattern = /[①②③④⑤⑥⑦⑧⑨⑩\d+️⃣]/;
-    const caseNumberMatch = caseTitle.match(caseNumberPattern);
-    
-    if (caseNumberMatch) {
-      const caseNumber = caseNumberMatch[0];
-      // 查找包含该案例编号的图片
-      const numberContextStart = Math.max(0, match.index - 200);
-      const numberContextEnd = Math.min(caseContent.length, match.index + 200);
-      const numberContext = caseContent.substring(numberContextStart, numberContextEnd);
-      
-      if (numberContext.includes(caseNumber)) {
-        isRelevant = true;
-      }
-    }
-    
-    if (isRelevant && imgUrl.startsWith('http')) {
-      images.push(imgUrl);
-    }
-  }
-  
-  // 去重
-  return [...new Set(images)];
-}
 
-// 新增：提取章节内所有图片的函数（严格按章节边界）
+// 提取章节内所有图片的函数（严格按章节边界）
 function extractSectionImages(sectionContent) {
   const images = [];
   const seenUrls = new Set(); // 用于去重
   
   // 策略1: HTML img标签
-  const imgPattern = /<img[^>]+src="([^"]+)"[^>]*>/g;
+  const imgPattern = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi;
   let match;
-  
   while ((match = imgPattern.exec(sectionContent)) !== null) {
-    const imgUrl = match[1];
+    const imgUrl = match[1].trim();
     if (imgUrl && imgUrl.startsWith('http') && !seenUrls.has(imgUrl)) {
       images.push(imgUrl);
       seenUrls.add(imgUrl);
@@ -758,29 +706,29 @@ function extractSectionImages(sectionContent) {
   }
   
   // 策略2: Markdown图片语法
-  const mdPattern = /!\[([^\]]*)\]\(([^)]+)\)/g;
+  const mdPattern = /!\[([^\]]*)\]\((https?:\/\/[^\s\)]+)\)/gi;
   while ((match = mdPattern.exec(sectionContent)) !== null) {
-    const imgUrl = match[2];
-    if (imgUrl && imgUrl.startsWith('http') && !seenUrls.has(imgUrl)) {
+    const imgUrl = match[2].trim();
+    if (imgUrl && !seenUrls.has(imgUrl)) {
       images.push(imgUrl);
       seenUrls.add(imgUrl);
     }
   }
   
-  // 策略3: 查找GitHub图片链接
-  const githubImgPattern = /https:\/\/github\.com\/[^\/]+\/[^\/]+\/assets\/\d+[^\)\s]+/g;
-  while ((match = githubImgPattern.exec(sectionContent)) !== null) {
-    const imgUrl = match[0];
+  // 策略3: 查找GitHub图片链接及 user-attachments asset UUID (如 https://github.com/user-attachments/assets/6440b1eb-...)
+  const assetPattern = /(?:^|[\s"'\(])(https:\/\/github\.com\/user-attachments\/assets\/[a-f0-9-]+)(?:[\s"'\)]|$)/gi;
+  while ((match = assetPattern.exec(sectionContent)) !== null) {
+    const imgUrl = match[1].trim();
     if (!seenUrls.has(imgUrl)) {
       images.push(imgUrl);
       seenUrls.add(imgUrl);
     }
   }
-  
+
   // 策略4: 查找raw.githubusercontent.com图片
-  const rawImgPattern = /https:\/\/raw\.githubusercontent\.com\/[^\)\s]+\.(jpg|jpeg|png|gif|webp)/gi;
+  const rawImgPattern = /(?:^|[\s"'\(])(https:\/\/raw\.githubusercontent\.com\/[^\s\)"']+\.(?:jpg|jpeg|png|gif|webp|svg))/gi;
   while ((match = rawImgPattern.exec(sectionContent)) !== null) {
-    const imgUrl = match[0];
+    const imgUrl = match[1].trim();
     if (!seenUrls.has(imgUrl)) {
       images.push(imgUrl);
       seenUrls.add(imgUrl);
@@ -788,10 +736,10 @@ function extractSectionImages(sectionContent) {
   }
   
   // 策略5: 查找其他常见的图片URL模式
-  const otherImgPattern = /https:\/\/[^\)\s]+\.(jpg|jpeg|png|gif|webp|svg)/gi;
+  const otherImgPattern = /(?:^|[\s"'\(])(https?:\/\/[^\s\)"']+\.(?:jpg|jpeg|png|gif|webp|svg))/gi;
   while ((match = otherImgPattern.exec(sectionContent)) !== null) {
-    const imgUrl = match[0];
-    if (!seenUrls.has(imgUrl) && !imgUrl.includes('github.com/user-attachments')) {
+    const imgUrl = match[1].trim();
+    if (!seenUrls.has(imgUrl)) {
       images.push(imgUrl);
       seenUrls.add(imgUrl);
     }
