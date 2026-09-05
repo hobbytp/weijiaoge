@@ -1,4 +1,4 @@
-# WeiJiaoGe - Gemini 2.5 Flash Image Preview Resource Collection
+# WeiJiaoGe - Gemini Nano Banana Resource Collection
 # Unified Management Commands
 
 .PHONY: help install update serve preview clean push pull

@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> 持续收集与展示 Gemini Flash Image Preview（Nano Banana）的资源与使用案例，并提供自动化的 Prompt/效果/图片提取、筛选与展示。
+> 持续收集与展示 Gemini Nano Banana 的资源与使用案例，并提供自动化的 Prompt/效果/图片提取、筛选与展示。
 >
 > 🔗 **在线访问地址**：[https://hobbytp.github.io/weijiaoge/](https://hobbytp.github.io/weijiaoge/)
 

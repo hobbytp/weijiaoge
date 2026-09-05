@@ -245,7 +245,7 @@ export class LLMScanner {
 
     // 组合批量 Prompt
     const systemPrompt = `
-You are an expert data extractor for "Nano Banana" / Gemini Flash Image Preview (a generative AI image model).
+You are an expert data extractor for "Gemini Nano Banana" (a generative AI image model).
 Your task is to extract all "Use Cases" from each of the provided web pages.
 
 Each Use Case consists of:
