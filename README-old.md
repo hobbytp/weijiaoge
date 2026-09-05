@@ -1,6 +1,6 @@
 # 微蕉阁 (WeiJiaoGe)
 
-持续收集和展示 Gemini 2.5 Flash Image Preview（Nano Banana）的使用案例和教程。
+持续收集和展示 Gemini Nano Banana 的使用案例和教程。
 
 ## 功能特性
 
