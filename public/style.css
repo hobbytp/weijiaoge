@@ -477,6 +477,94 @@ mark {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+.quick-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(13, 17, 23, 0.75);
+  color: #f0f6fc;
+  font-size: 0.68rem;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.case-card:hover .quick-copy-btn,
+.quick-copy-btn:focus-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quick-copy-btn:hover {
+  background: var(--accent-gold);
+  color: #0d1117;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 12px var(--accent-gold-dim);
+}
+
+.quick-copy-btn.copied {
+  background: #238636;
+  color: #ffffff;
+  border-color: #2ea043;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.toast-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background: rgba(13, 17, 23, 0.92);
+  color: #f0f6fc;
+  border: 1px solid var(--accent-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px var(--accent-gold-dim);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: auto;
+}
+
+.toast-message.toast-fading {
+  animation: toastOut 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes toastOut {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(-8px) scale(0.95); }
+}
+
 .batch-sentinel {
   width: 100%;
   padding: 32px 0 48px;

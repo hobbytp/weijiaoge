@@ -222,8 +222,23 @@ function renderCase(caseItem) {
     `;
   }).filter(Boolean).join('');
   
+  const totalSteps = caseItem.prompts ? caseItem.prompts.length : 1;
+  const primaryPromptRaw = (caseItem.prompts && caseItem.prompts.length > 0)
+    ? (typeof caseItem.prompts[0] === 'string' ? caseItem.prompts[0] : caseItem.prompts[0].text || '')
+    : '';
+  const primaryPrompt = cleanPrompt(primaryPromptRaw);
+
   // 效果部分主要显示图片，文字描述作为补充
   const imagesHtml = (() => {
+    const copyBtnHtml = `
+      <button class="quick-copy-btn" title="一键复制主 Prompt" aria-label="一键复制主 Prompt" data-prompt="${escapeHtml(primaryPrompt)}" data-steps="${totalSteps}" onclick="event.stopPropagation(); copyMainPrompt(this);">
+        <svg class="copy-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span class="copy-label">复制 Prompt</span>
+      </button>
+    `;
     if (!caseItem.images || caseItem.images.length === 0) return '';
     // 主图是第一张
     const primary = caseItem.images[0];
@@ -235,6 +250,7 @@ function renderCase(caseItem) {
       <div class="case-image-wrap" onclick="openLightbox('${primary.replace(/'/g, "&apos;")}', '')">
         <img src="${primary}" alt="${escapeHtml(caseItem.title || '效果图')}" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'">
         ${aspectBadge}
+        ${copyBtnHtml}
         ${countBadge}
       </div>
     `;
@@ -300,7 +316,7 @@ function renderCase(caseItem) {
   }
   
   return `
-    <div class="case-card">
+    <div class="case-card" data-steps="${totalSteps}">
       ${imagesHtml}
       <div class="case-body">
         <div class="case-header">
@@ -777,3 +793,78 @@ function togglePrompt(button) {
 
 // 页面加载完成后加载数据
 document.addEventListener('DOMContentLoaded', loadCases);
+
+// ── Toast 通知系统 ─────────────────────────────────────────────
+function showToast(message, duration = 2800) {
+  let container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+  const toast = document.createElement('div');
+  toast.className = 'toast-message';
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('toast-fading');
+    setTimeout(() => {
+      if (toast.parentNode) {
+        toast.parentNode.removeChild(toast);
+      }
+    }, 400);
+  }, duration);
+}
+
+// ── 快捷复制主 Prompt ──────────────────────────────────────────
+function copyMainPrompt(button, caseItem) {
+  let promptText = '';
+  let steps = 1;
+
+  if (caseItem) {
+    const raw = (caseItem.prompts && caseItem.prompts.length > 0)
+      ? (typeof caseItem.prompts[0] === 'string' ? caseItem.prompts[0] : caseItem.prompts[0].text || '')
+      : '';
+    promptText = cleanPrompt(raw);
+    steps = (caseItem.prompts && caseItem.prompts.length) || 1;
+  } else if (button) {
+    promptText = button.getAttribute('data-prompt') || '';
+    if (!promptText) {
+      const card = button.closest('.case-card');
+      const promptEl = card ? card.querySelector('.prompt-text') : null;
+      promptText = promptEl ? (promptEl.getAttribute('data-full') || promptEl.textContent || '') : '';
+    }
+    const stepsAttr = button.getAttribute('data-steps') || (button.closest('.case-card') ? button.closest('.case-card').getAttribute('data-steps') : '1');
+    steps = parseInt(stepsAttr || '1', 10);
+  }
+
+  if (promptText && typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(promptText).catch(err => console.error('复制到剪贴板失败:', err));
+  }
+
+  if (button) {
+    button.classList.add('copied');
+    const label = button.querySelector('.copy-label');
+    const origText = label ? label.textContent : '';
+    if (label) label.textContent = '已复制';
+    setTimeout(() => {
+      button.classList.remove('copied');
+      if (label) label.textContent = origText;
+    }, 2000);
+  }
+
+  const toastMessage = steps > 1
+    ? `已复制首步 Prompt（共 ${steps} 步工作流）`
+    : '已复制主 Prompt 到剪贴板';
+  showToast(toastMessage);
+}
+
+// 导出全局对象，方便浏览器与测试脚本访问
+if (typeof window !== 'undefined') {
+  window.deriveFeatureTags = deriveFeatureTags;
+  window.showToast = showToast;
+  window.copyMainPrompt = copyMainPrompt;
+  window.loadCases = loadCases;
+}

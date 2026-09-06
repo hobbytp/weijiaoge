@@ -268,4 +268,69 @@ assert(chipAfterSecondClick && !chipAfterSecondClick.classList.contains('active'
 console.log('  ✅ Feature Chip 单选交互与数据过滤全部通过！');
 console.log('🎉 Ticket 3 集成测试用例执行完毕！\n');
 
+// ── Ticket 4: Card Micro-interactions & Quick Main Prompt Copying ──
+console.log('🧪 开始运行 Ticket 4: 卡片微交互与快捷复制测试...');
+
+// 14. 验证 style.css 中包含快捷复制与 Toast 样式
+console.log('  ▸ 校验 CSS 快捷复制按钮与 Toast 容器样式...');
+assert(cssContent.includes('.quick-copy-btn'), 'public/style.css 必须包含 .quick-copy-btn 样式');
+assert(cssContent.includes('.toast-container'), 'public/style.css 必须包含 .toast-container 样式');
+assert(cssContent.includes('.toast-message'), 'public/style.css 必须包含 .toast-message 样式');
+console.log('  ✅ CSS 快捷复制与 Toast 样式校验通过');
+
+// 15. 验证 cases.html 中存在 toast-container
+console.log('  ▸ 校验 cases.html Toast 容器节点...');
+const toastContainer = document.getElementById('toast-container');
+assert(toastContainer, 'cases.html 必须包含 id="toast-container" 容器');
+console.log('  ✅ Toast 容器节点校验通过');
+
+// 16. 验证卡片上的 quick-copy-btn 存在
+console.log('  ▸ 校验 Card 快捷复制按钮与点击写入剪贴板...');
+const renderedCard = casesGrid.querySelector('.case-card');
+assert(renderedCard, '必须存在已渲染的 Case Card');
+const copyBtn = renderedCard.querySelector('.quick-copy-btn');
+assert(copyBtn, 'Case Card 必须包含 .quick-copy-btn 快捷复制按钮');
+
+// Mock clipboard
+let copiedClipboardText = '';
+window.navigator.clipboard = {
+  writeText: async (text) => {
+    copiedClipboardText = text;
+    return Promise.resolve();
+  }
+};
+
+// 模拟点击快捷复制按钮
+copyBtn.click();
+await new Promise(resolve => setTimeout(resolve, 50));
+
+assert(copiedClipboardText.length > 0, '点击快捷复制按钮后，必须向剪贴板写入非空 Prompt 文本');
+assert(copiedClipboardText.includes('Prompt for test case'), '写入的剪贴板内容必须为该案例的 Main Prompt');
+
+// 验证 Toast 出现
+const toastMsg = toastContainer.querySelector('.toast-message');
+assert(toastMsg, '点击快捷复制后，toast-container 中必须出现 .toast-message 提示');
+assert(toastMsg.textContent.includes('Prompt') || toastMsg.textContent.includes('复制'), 'Toast 必须包含提示词复制成功的正反馈信息');
+
+// 验证多步案例的 Toast 提示步数
+console.log('  ▸ 校验多步工作流案例的步数反馈提示...');
+const multiPromptCase = {
+  title: 'Multi Step Case',
+  category: 'test',
+  categoryName: '测试',
+  sourceUrl: 'https://example.com/multi',
+  prompts: ['Step 1 prompt', 'Step 2 prompt', 'Step 3 prompt'],
+  effects: ['Step effects'],
+  images: ['https://example.com/multi.png']
+};
+window.copyMainPrompt(null, multiPromptCase);
+await new Promise(resolve => setTimeout(resolve, 50));
+
+const latestToast = toastContainer.lastElementChild;
+assert(latestToast && (latestToast.textContent.includes('3 步') || latestToast.textContent.includes('3步') || latestToast.textContent.includes('3')), '多步案例复制时 Toast 必须包含总步数提示');
+
+console.log('  ✅ 卡片微交互、快捷复制与 Toast 反馈全部通过！');
+console.log('🎉 Ticket 4 集成测试用例执行完毕！\n');
+
+
 
