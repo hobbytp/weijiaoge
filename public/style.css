@@ -5,22 +5,54 @@
 
 /* ── Design Tokens ─────────────────────────────────────────── */
 :root {
-  --bg:        #f5f3ef;
-  --bg-card:   #ffffff;
-  --bg-glass:  rgba(255,255,255,0.82);
-  --ink:        #111111;
-  --ink-mid:    #555555;
-  --ink-muted:  #999999;
-  --rule:       #d8d4cc;
-  --accent:     #c8513a;
-  --accent-dim: rgba(200,81,58,0.12);
+  --bg-primary:    #f5f3ef;
+  --bg-surface:    #ffffff;
+  --bg-glass:      rgba(255, 255, 255, 0.85);
+  --bg-elevated:   #ffffff;
+  --text-primary:  #111111;
+  --text-secondary:#555555;
+  --text-muted:    #8c887b;
+  --border-subtle: #e2ded5;
+  --border-focus:  #c8513a;
+  --accent-gold:   #c69214;
+  --accent-gold-dim: rgba(198, 146, 20, 0.15);
+  --accent:        #c8513a;
+  --accent-dim:    rgba(200, 81, 58, 0.12);
+  --shadow-card:   0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-hover:  0 12px 32px rgba(0, 0, 0, 0.12);
+
+  /* Legacy aliases for backward compatibility */
+  --bg:        var(--bg-primary);
+  --bg-card:   var(--bg-surface);
+  --ink:       var(--text-primary);
+  --ink-mid:   var(--text-secondary);
+  --ink-muted: var(--text-muted);
+  --rule:      var(--border-subtle);
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
 
-  --radius-sm: 2px;
-  --radius:    4px;
-  --transition: 0.22s ease;
+  --radius-sm: 4px;
+  --radius:    8px;
+  --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary:    #0d1117;
+  --bg-surface:    #161b22;
+  --bg-glass:      rgba(22, 27, 34, 0.85);
+  --bg-elevated:   #21262d;
+  --text-primary:  #f0f6fc;
+  --text-secondary:#8b949e;
+  --text-muted:    #6e7681;
+  --border-subtle: #30363d;
+  --border-focus:  #d29922;
+  --accent-gold:   #e3b341;
+  --accent-gold-dim: rgba(227, 179, 65, 0.18);
+  --accent:        #e3b341;
+  --accent-dim:    rgba(227, 179, 65, 0.15);
+  --shadow-card:   0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-hover:  0 12px 32px rgba(0, 0, 0, 0.65), 0 0 16px rgba(227, 179, 65, 0.12);
 }
 
 /* ── Reset ─────────────────────────────────────────────────── */
@@ -68,6 +100,61 @@ body {
   border-bottom: 1px solid transparent;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px var(--accent-gold-dim);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  position: absolute;
+}
+
+:root:not([data-theme="dark"]) .theme-toggle .sun-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+:root:not([data-theme="dark"]) .theme-toggle .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+[data-theme="dark"] .theme-toggle .moon-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
 
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero {
