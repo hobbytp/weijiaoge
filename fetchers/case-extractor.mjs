@@ -531,7 +531,7 @@ export async function extractCasesFromGitHubReadme(item) {
   // 检测README格式
   
   // 检测README格式并相应处理 - 优先检查更具体的格式
-  if (fullText.includes('### 例 1:') || fullText.includes('### 例 2:')) {
+  if (item.url?.includes('Awesome-Nano-Banana-images') || /###\s*例\s*\d+[:：]/.test(fullText)) {
     // PicoTrex仓库格式：使用"### 例 X:"
     return normalizeCaseItems(extractPicoTrexFormat(fullText, item), item);
   } else if (fullText.includes('Case 1:') || fullText.includes('Case 2:')) {
@@ -752,47 +752,113 @@ function extractSectionImages(sectionContent) {
 function extractPicoTrexFormat(fullText, item) {
   const cases = [];
   
-  // 按案例分割内容 - 匹配 ### 例 X: 格式
-  const sections = fullText.split(/(?=### 例 \d+:)/);
+  // 按案例分割内容 - 兼容各种格式变体：### 例 1:、### 例69：、### 例70： 等
+  const sections = fullText.split(/(?=^###\s*例\s*\d+\s*[:：])/m);
   
   for (const section of sections) {
-    if (!section.trim()) continue;
+    const trimmedSection = section.trim();
+    if (!trimmedSection) continue;
     
-    // 提取案例标题 - 匹配 ### 例 X: [标题](链接)（by 作者）格式
-    const trimmedSection = section.trimStart();
-    const titleMatch = trimmedSection.match(/^### (例 \d+:[^）]*?)（by[^）]+）(.*)/s);
+    // 提取案例标题 - 匹配 ### 例 X: [标题](链接)（by 作者）或 ### 例X：[标题](链接)
+    const firstNewline = trimmedSection.indexOf('\n');
+    const headingLine = firstNewline !== -1 ? trimmedSection.slice(0, firstNewline).trim() : trimmedSection;
+    const sectionContent = firstNewline !== -1 ? trimmedSection.slice(firstNewline + 1).trim() : '';
+    
+    const titleMatch = headingLine.match(/^###\s*例\s*(\d+)\s*[:：]\s*(.*?)(?:[\(（]\s*by\b.*)?$/i);
     if (!titleMatch) continue;
     
-    const sectionTitle = titleMatch[1].trim();
-    const sectionContent = titleMatch[2];
+    const caseNum = titleMatch[1];
+    let sectionTitle = titleMatch[2].trim();
+    if (!sectionTitle) {
+      sectionTitle = headingLine.replace(/^###\s*/, '').trim();
+    }
     
-    // 在章节内容中查找prompt
-    const promptPattern = /```\s*([^`]+?)\s*```/gis;
-    let promptMatch;
+    // 严格提取当前章节内的所有图片，并确保输出图（output）排在第一位（作为封面）
+    const rawImages = [];
+    const seenUrls = new Set();
     
-    while ((promptMatch = promptPattern.exec(sectionContent)) !== null) {
-      const promptText = promptMatch[1].trim();
+    const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi;
+    let match;
+    while ((match = imgRegex.exec(sectionContent)) !== null) {
+      rawImages.push({ src: match[1].trim(), full: match[0] });
+    }
+    
+    const mdRegex = /!\[([^\]]*)\]\(([^)]+)\)/gi;
+    while ((match = mdRegex.exec(sectionContent)) !== null) {
+      rawImages.push({ src: match[2].trim(), full: match[1] });
+    }
+    
+    // 区分 output 与 input
+    const outputImages = [];
+    const otherImages = [];
+    
+    for (const imgItem of rawImages) {
+      let url = imgItem.src;
+      if (url.startsWith('images/')) {
+        url = `https://raw.githubusercontent.com/PicoTrex/Awesome-Nano-Banana-images/main/${url}`;
+      }
+      if (!url.startsWith('http') || seenUrls.has(url)) continue;
+      seenUrls.add(url);
       
-      if (promptText.length > 20 && !promptText.includes('输入:') && !promptText.includes('输出:')) {
-        const category = categorizeCase(sectionTitle, sectionContent, [promptText]);
-        const effects = extractEffects(sectionContent);
-        const images = extractImages(sectionContent, sectionTitle, sectionContent);
-        
-        cases.push({
-          id: `case:${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          title: cleanTitle(sectionTitle),
-          category: category,
-          categoryName: CASE_CATEGORIES[category],
-          prompts: [promptText],
-          effects: effects,
-          images: images,
-          sourceUrl: item.url,
-          source: item.source || 'github',
-          extractedAt: new Date().toISOString(),
-          originalItem: item
-        });
+      const isOutput = /output|输出|结果|case\./i.test(imgItem.src) || /输出|结果/i.test(imgItem.full);
+      if (isOutput) {
+        outputImages.push(url);
+      } else {
+        otherImages.push(url);
       }
     }
+    
+    const sortedImages = [...outputImages, ...otherImages];
+    
+    // 提取 prompt
+    const prompts = [];
+    const seenPrompts = new Set();
+    
+    const promptPattern = /```(?:[a-zA-Z0-9_-]*\r?\n)?([\s\S]*?)```/gi;
+    while ((match = promptPattern.exec(sectionContent)) !== null) {
+      const promptText = match[1].trim();
+      if (promptText.length >= 5 && !promptText.includes('输入:') && !promptText.includes('输出:')) {
+        if (!seenPrompts.has(promptText)) {
+          prompts.push(promptText);
+          seenPrompts.add(promptText);
+        }
+      }
+    }
+    
+    // 如果没有代码块，检查 **提示词:** 后的文本
+    if (prompts.length === 0) {
+      const promptLabelMatch = sectionContent.match(/\*\*(?:提示词|Prompt)[：:]\*\*\s*([^\n]+(?:\n[^\n#]+)*)/i);
+      if (promptLabelMatch) {
+        const p = promptLabelMatch[1].trim();
+        if (p.length >= 5) {
+          prompts.push(p);
+        }
+      }
+    }
+    
+    if (prompts.length === 0 && sortedImages.length === 0) continue;
+    
+    const category = categorizeCase(sectionTitle, sectionContent, prompts);
+    const effects = extractEffects(sectionContent);
+    const finalTitle = cleanTitle(sectionTitle);
+    
+    const promptList = prompts.length > 0 ? prompts : [''];
+    promptList.forEach((promptText, idx) => {
+      const caseTitle = promptList.length > 1 ? `${finalTitle} - 示例 ${idx + 1}` : finalTitle;
+      cases.push({
+        id: `case:picotrex_${caseNum}_${Date.now()}_${idx}_${Math.random().toString(36).substr(2, 6)}`,
+        title: caseTitle,
+        category: category,
+        categoryName: CASE_CATEGORIES[category],
+        prompts: promptText ? [promptText] : [],
+        effects: effects,
+        images: sortedImages,
+        sourceUrl: item.url,
+        source: item.source || 'github',
+        extractedAt: new Date().toISOString(),
+        originalItem: item
+      });
+    });
   }
   
   return cases;
