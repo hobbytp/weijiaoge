@@ -186,6 +186,18 @@ function cleanPrompt(text) {
   return cleaned;
 }
 
+// 自动探测或提取案例长宽比
+function detectAspectRatio(caseItem) {
+  if (caseItem.aspectRatio) return caseItem.aspectRatio;
+  const text = `${caseItem.title || ''} ${(caseItem.prompts || []).map(p => typeof p === 'string' ? p : p.text || '').join(' ')}`.toLowerCase();
+  if (text.includes('16:9') || text.includes('landscape') || text.includes('横版') || text.includes('壁纸') || text.includes('cinematic')) return '16:9';
+  if (text.includes('9:16') || text.includes('portrait') || text.includes('竖版') || text.includes('海报') || text.includes('手机')) return '9:16';
+  if (text.includes('4:3')) return '4:3';
+  if (text.includes('3:4')) return '3:4';
+  if (text.includes('21:9')) return '21:9';
+  return '1:1';
+}
+
 function renderCase(caseItem) {
   const promptsHtml = caseItem.prompts.map((prompt) => {
     // 处理prompt可能是字符串或对象的情况
@@ -212,14 +224,17 @@ function renderCase(caseItem) {
   
   // 效果部分主要显示图片，文字描述作为补充
   const imagesHtml = (() => {
-    if (caseItem.images.length === 0) return '';
+    if (!caseItem.images || caseItem.images.length === 0) return '';
     // 主图是第一张
     const primary = caseItem.images[0];
     const countBadge = caseItem.images.length > 1
       ? `<span class="img-count-badge">${caseItem.images.length} 张</span>` : '';
+    const aspect = detectAspectRatio(caseItem);
+    const aspectBadge = aspect ? `<span class="aspect-badge">${escapeHtml(aspect)}</span>` : '';
     return `
       <div class="case-image-wrap" onclick="openLightbox('${primary.replace(/'/g, "&apos;")}', '')">
-        <img src="${primary}" alt="效果图" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'">
+        <img src="${primary}" alt="${escapeHtml(caseItem.title || '效果图')}" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'">
+        ${aspectBadge}
         ${countBadge}
       </div>
     `;
@@ -313,15 +328,112 @@ function renderCase(caseItem) {
   `;
 }
 
+// ── Masonry Column Balancer & Batch State ────────────────────
+const BATCH_SIZE = 24;
+let activeCases = [];
+let renderedCount = 0;
+let columnElements = [];
+let columnHeights = [];
+let currentColumnCount = 0;
+let batchObserver = null;
+
+// 响应式计算当前适宜的列数 (1~4列)
+function getColumnCount() {
+  if (typeof window === 'undefined') return 3;
+  const w = window.innerWidth || 1200;
+  if (w < 640) return 1;
+  if (w < 1024) return 2;
+  if (w < 1440) return 3;
+  return 4;
+}
+
+// 初始化/重置列容器
+function setupColumns(count) {
+  casesGrid.innerHTML = '';
+  columnElements = [];
+  columnHeights = [];
+  currentColumnCount = count;
+
+  for (let i = 0; i < count; i++) {
+    const col = document.createElement('div');
+    col.className = 'masonry-column';
+    casesGrid.appendChild(col);
+    columnElements.push(col);
+    columnHeights.push(0);
+  }
+}
+
+// 更新滚动哨兵状态
+function updateSentinel(hasMore) {
+  const sentinel = document.getElementById('batch-sentinel');
+  if (!sentinel) return;
+  if (hasMore) {
+    sentinel.classList.remove('hidden');
+    sentinel.innerHTML = '<span class="sentinel-text">向下滚动加载更多…</span>';
+  } else {
+    sentinel.classList.add('hidden');
+    sentinel.innerHTML = '';
+  }
+}
+
+// 增量分批渲染 (Shortest-column-first 均衡算法)
+function renderNextBatch(batchSize = BATCH_SIZE) {
+  if (!activeCases || activeCases.length === 0) {
+    updateSentinel(false);
+    return;
+  }
+  if (renderedCount >= activeCases.length) {
+    updateSentinel(false);
+    return;
+  }
+
+  const nextItems = activeCases.slice(renderedCount, renderedCount + batchSize);
+  nextItems.forEach(item => {
+    // 找出当前高度最短的列
+    let shortestIdx = 0;
+    for (let i = 1; i < currentColumnCount; i++) {
+      if (columnHeights[i] < columnHeights[shortestIdx]) {
+        shortestIdx = i;
+      }
+    }
+
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = renderCase(item);
+    const card = wrapper.firstElementChild;
+    if (card && columnElements[shortestIdx]) {
+      columnElements[shortestIdx].appendChild(card);
+      // 预估卡片高度（基准高 + 图片占位 + prompt高度估算）
+      const approxHeight = 350 + (item.prompts ? item.prompts.length * 35 : 0);
+      columnHeights[shortestIdx] += approxHeight;
+    }
+  });
+
+  renderedCount += nextItems.length;
+  updateSentinel(renderedCount < activeCases.length);
+}
+
+// 监听滚动哨兵触碰事件
+function initBatchObserver() {
+  const sentinel = document.getElementById('batch-sentinel');
+  if (!sentinel || typeof IntersectionObserver === 'undefined') return;
+  if (batchObserver) {
+    batchObserver.disconnect();
+  }
+  batchObserver = new IntersectionObserver((entries) => {
+    if (entries[0] && entries[0].isIntersecting) {
+      renderNextBatch();
+    }
+  }, { rootMargin: '300px' });
+  batchObserver.observe(sentinel);
+}
+
 function renderCases(cases) {
   if (cases.length === 0) {
     casesGrid.innerHTML = '<div class="empty">没有找到匹配的案例</div>';
     stats.textContent = `共 0 个案例`;
+    updateSentinel(false);
     return;
   }
-
-  // 防嵌套：重置容器的内容，避免残留节点造成嵌套
-  casesGrid.innerHTML = '';
 
   // 去重：按 (标题 + 来源路径 + 首个prompt片段) 生成稳定键
   const seen = new Set();
@@ -342,18 +454,30 @@ function renderCases(cases) {
     }
   }
 
-  // 渲染卡片（逐个追加，避免大字符串拼接造成结构异常）
-  const fragments = document.createDocumentFragment();
-  deduped.forEach(item => {
-    const wrapper = document.createElement('div');
-    wrapper.innerHTML = renderCase(item);
-    // 提取最外层 .case-card 并追加到容器，确保结构平整
-    const card = wrapper.firstElementChild;
-    fragments.appendChild(card);
-  });
-
-  casesGrid.appendChild(fragments);
+  activeCases = deduped;
+  renderedCount = 0;
   stats.textContent = `共 ${deduped.length} 个案例`;
+
+  const colCount = getColumnCount();
+  setupColumns(colCount);
+  renderNextBatch(BATCH_SIZE);
+  initBatchObserver();
+}
+
+// 窗口尺寸变化时防抖重新分列
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', debounce(() => {
+    const newColCount = getColumnCount();
+    if (newColCount !== currentColumnCount && activeCases.length > 0) {
+      const countToRestore = renderedCount;
+      setupColumns(newColCount);
+      renderedCount = 0;
+      renderNextBatch(countToRestore);
+    }
+  }, 250));
+
+  window.loadCases = loadCases;
+  window.renderNextBatch = renderNextBatch;
 }
 
 function filterAndSort() {

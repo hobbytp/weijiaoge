@@ -122,3 +122,85 @@ assert.strictEqual(
 
 console.log('  ✅ 主题切换与持久化测试完全通过！');
 console.log('🎉 Ticket 1 集成测试用例执行完毕！');
+
+// ── Ticket 2: Masonry Balancer & Incremental Batch Rendering ──
+console.log('\n🧪 开始运行 Ticket 2: Masonry 瀑布流与分批增量渲染测试...');
+
+// 7. 验证 style.css 中包含瀑布流相关选择器
+console.log('  ▸ 校验 CSS 瀑布流与角标样式...');
+assert(cssContent.includes('.masonry-column'), 'public/style.css 必须定义 .masonry-column 样式');
+assert(cssContent.includes('.aspect-badge'), 'public/style.css 必须定义 .aspect-badge 比例角标样式');
+assert(cssContent.includes('.batch-sentinel'), 'public/style.css 必须定义 .batch-sentinel 哨兵样式');
+console.log('  ✅ CSS 瀑布流与角标样式校验通过');
+
+// 8. 验证 cases.html 中存在 batch-sentinel 元素
+console.log('  ▸ 校验 cases.html 结构与哨兵节点...');
+const batchSentinel = document.getElementById('batch-sentinel');
+assert(batchSentinel, 'cases.html 必须包含 id="batch-sentinel" 哨兵元素');
+console.log('  ✅ 哨兵节点校验通过');
+
+// 9. 验证 cases.js 导出的瀑布流与分批渲染机制
+console.log('  ▸ 校验 Masonry 列均衡与 24 张分批增量加载...');
+const casesGrid = document.getElementById('cases-grid');
+assert(casesGrid, '必须存在 id="cases-grid" 容器');
+
+// 读取 cases.js 并注入执行
+const casesJsCode = fs.readFileSync(path.join(rootDir, 'cases.js'), 'utf-8');
+
+// 构造 30 个包含不同尺寸与比例的 mock 案例
+const mockCases = Array.from({ length: 30 }, (_, i) => ({
+  title: `Test Case ${i + 1}`,
+  category: 'test',
+  categoryName: '测试分类',
+  sourceUrl: `https://example.com/test-${i}`,
+  prompts: [`Prompt for test case ${i + 1}`],
+  effects: [`Effect description ${i + 1}`],
+  images: [`https://example.com/image-${i}.png`],
+  aspectRatio: i % 3 === 0 ? '16:9' : (i % 3 === 1 ? '9:16' : '1:1')
+}));
+
+// Mock fetch 返回 mock 案例数据
+window.fetch = async () => ({
+  json: async () => ({ cases: mockCases })
+});
+
+// Mock IntersectionObserver
+let observerCallback = null;
+class IntersectionObserverMock {
+  constructor(cb) {
+    observerCallback = cb;
+  }
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+window.IntersectionObserver = IntersectionObserverMock;
+
+// 执行 cases.js
+window.eval(casesJsCode);
+
+// 触发 loadCases
+await window.loadCases();
+
+// 验证第一批渲染：必须分列且卡片数正好为 24
+const columns = casesGrid.querySelectorAll('.masonry-column');
+assert(columns.length >= 1, 'casesGrid 必须包含至少 1 个 .masonry-column 列容器');
+
+const initialCards = casesGrid.querySelectorAll('.case-card');
+assert.strictEqual(initialCards.length, 24, `首屏第一批必须渲染 24 张卡片，实际得到 ${initialCards.length}`);
+
+// 验证卡片内含有 aspect-badge
+const firstCardBadge = initialCards[0].querySelector('.aspect-badge');
+assert(firstCardBadge, 'Case Card 必须包含 .aspect-badge 比例角标');
+
+// 模拟滚动触碰哨兵，触发第二批渲染
+assert(typeof observerCallback === 'function', '必须为 batch-sentinel 注册 IntersectionObserver 回调');
+observerCallback([{ isIntersecting: true }]);
+
+// 再次统计卡片数量：30 张应全量加载完毕
+const allCards = casesGrid.querySelectorAll('.case-card');
+assert.strictEqual(allCards.length, 30, `第二批加载后卡片总数应为 30，实际得到 ${allCards.length}`);
+
+console.log('  ✅ Masonry 列均衡与分批流式渲染全部通过！');
+console.log('🎉 Ticket 2 集成测试用例执行完毕！\n');
+
