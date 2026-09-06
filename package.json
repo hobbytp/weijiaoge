@@ -26,6 +26,7 @@
     "test:clean": "node scripts/test-prompt-display-clean.mjs",
     "test:zho": "node scripts/test-zho-extraction.mjs",
     "test:google-blog": "node scripts/test-google-blog-extraction.mjs",
+    "test:picotrex": "node scripts/test-picotrex-extraction.mjs",
     "test:gallery": "node scripts/test-gallery-v2-integration.mjs",
     "help": "echo '🍌 微蕉阁项目管理命令: make help'"
   },
