@@ -247,7 +247,7 @@ function renderCase(caseItem) {
     const aspect = detectAspectRatio(caseItem);
     const aspectBadge = aspect ? `<span class="aspect-badge">${escapeHtml(aspect)}</span>` : '';
     return `
-      <div class="case-image-wrap" onclick="openLightbox('${primary.replace(/'/g, "&apos;")}', '')">
+      <div class="case-image-wrap" onclick="openWorkbench('${primary.replace(/'/g, "&apos;")}')">
         <img src="${primary}" alt="${escapeHtml(caseItem.title || '效果图')}" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'">
         ${aspectBadge}
         ${copyBtnHtml}
@@ -861,10 +861,293 @@ function copyMainPrompt(button, caseItem) {
   showToast(toastMessage);
 }
 
+// ── Workbench Modal Architecture (Ticket 5 & ADR 0004) ─────
+let currentWorkbenchCase = null;
+let currentWorkbenchIndex = 0;
+let currentWorkbenchImageIndex = 0;
+let currentWorkbenchStepIndex = 0;
+let isWorkbenchKeydownBound = false;
+
+function renderPromptWithVariables(rawText) {
+  const cleaned = cleanPrompt(rawText);
+  if (!cleaned) return '<span style="color: var(--text-tertiary);">（无提示词）</span>';
+  
+  // 识别方括号内的变量令牌，如 [Subject], [Style], [Search for...]
+  const parts = cleaned.split(/(\[[^\]\n\r]+\])/g);
+  return parts.map(part => {
+    if (part.startsWith('[') && part.endsWith(']')) {
+      const inner = part.slice(1, -1);
+      return `<span class="prompt-var-token" data-var="${escapeHtml(inner)}">[${escapeHtml(inner)}]</span>`;
+    }
+    return escapeHtml(part);
+  }).join('');
+}
+
+function openWorkbench(target) {
+  let caseItem = null;
+  let caseIndex = -1;
+
+  if (typeof target === 'number') {
+    caseIndex = target;
+    caseItem = (activeCases && activeCases[target]) || (casesData && casesData.cases ? casesData.cases[target] : null);
+  } else if (target && typeof target === 'object' && target.nodeType === 1) {
+    // DOM 节点传入
+    const titleEl = target.querySelector('.case-title');
+    const titleText = titleEl ? titleEl.textContent.trim() : '';
+    if (activeCases) {
+      caseIndex = activeCases.findIndex(c => c.title === titleText);
+      if (caseIndex >= 0) caseItem = activeCases[caseIndex];
+    }
+  } else if (target && typeof target === 'object' && (target.title || target.prompts)) {
+    // Case 对象传入
+    caseItem = target;
+    if (activeCases) {
+      caseIndex = activeCases.indexOf(target);
+    }
+  } else if (typeof target === 'string') {
+    // 可能是图片 URL 或标题
+    if (activeCases) {
+      caseIndex = activeCases.findIndex(c => (c.images && c.images.includes(target)) || c.title === target);
+      if (caseIndex >= 0) {
+        caseItem = activeCases[caseIndex];
+      }
+    }
+    if (!caseItem && casesData && casesData.cases) {
+      caseIndex = casesData.cases.findIndex(c => (c.images && c.images.includes(target)) || c.title === target);
+      if (caseIndex >= 0) caseItem = casesData.cases[caseIndex];
+    }
+  }
+
+  if (!caseItem) {
+    if (activeCases && activeCases.length > 0) {
+      caseItem = activeCases[0];
+      caseIndex = 0;
+    } else {
+      return;
+    }
+  }
+
+  currentWorkbenchCase = caseItem;
+  currentWorkbenchIndex = caseIndex >= 0 ? caseIndex : 0;
+  currentWorkbenchImageIndex = 0;
+  currentWorkbenchStepIndex = 0;
+
+  const modal = document.getElementById('workbench-modal');
+  if (!modal) return;
+
+  const mainImg = document.getElementById('workbench-main-img');
+  const thumbStrip = document.getElementById('workbench-thumb-strip');
+  const titleEl = document.getElementById('workbench-title');
+  const categoryEl = document.getElementById('workbench-category');
+  const tagsEl = document.getElementById('workbench-tags');
+  const chainTabs = document.getElementById('workbench-chain-tabs');
+  const promptContent = document.getElementById('workbench-prompt-content');
+  const effectsContent = document.getElementById('workbench-effects-content');
+  const effectsSection = document.getElementById('workbench-effects-section');
+  const copyBtn = document.getElementById('workbench-copy-btn');
+  const studioBtn = document.getElementById('workbench-studio-btn');
+  const sourceLink = document.getElementById('workbench-source-link');
+  const caseCounter = document.getElementById('workbench-case-counter');
+  const prevBtn = document.getElementById('workbench-prev-btn');
+  const nextBtn = document.getElementById('workbench-next-btn');
+
+  // 1. 填充标题与分类元数据
+  if (titleEl) titleEl.textContent = caseItem.title || '案例详情';
+  if (categoryEl) categoryEl.textContent = caseItem.categoryName || caseItem.category || '';
+  
+  // 标签
+  if (tagsEl) {
+    const tags = caseItem.derivedTags || deriveFeatureTags(caseItem);
+    tagsEl.innerHTML = tags.map(t => `<span class="workbench-tag-badge">#${escapeHtml(t)}</span>`).join('');
+  }
+
+  // 来源链接
+  if (sourceLink) {
+    sourceLink.href = caseItem.sourceUrl || '#';
+    sourceLink.style.display = caseItem.sourceUrl ? 'inline-block' : 'none';
+  }
+
+  // 2. 填充主图与缩略图条
+  const images = caseItem.images || [];
+  if (mainImg) {
+    if (images.length > 0) {
+      mainImg.src = images[0];
+      mainImg.alt = caseItem.title || '效果图';
+      mainImg.style.display = 'block';
+    } else {
+      mainImg.src = '';
+      mainImg.style.display = 'none';
+    }
+  }
+
+  if (thumbStrip) {
+    thumbStrip.innerHTML = '';
+    if (images.length > 1) {
+      thumbStrip.style.display = 'flex';
+      images.forEach((url, i) => {
+        const thumb = document.createElement('img');
+        thumb.className = `workbench-thumb ${i === 0 ? 'active' : ''}`;
+        thumb.src = url;
+        thumb.alt = `缩略图 ${i + 1}`;
+        thumb.onclick = () => {
+          thumbStrip.querySelectorAll('.workbench-thumb').forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+          if (mainImg) mainImg.src = url;
+          currentWorkbenchImageIndex = i;
+        };
+        thumbStrip.appendChild(thumb);
+      });
+    } else {
+      thumbStrip.style.display = 'none';
+    }
+  }
+
+  // 3. 填充 Prompt 结构与多步工作流 Tab
+  const prompts = caseItem.prompts || [];
+  if (chainTabs) {
+    chainTabs.innerHTML = '';
+    if (prompts.length > 1) {
+      chainTabs.style.display = 'flex';
+      prompts.forEach((p, idx) => {
+        const tab = document.createElement('button');
+        tab.className = `workbench-chain-tab ${idx === 0 ? 'active' : ''}`;
+        tab.textContent = `步骤 ${idx + 1}`;
+        tab.onclick = () => {
+          chainTabs.querySelectorAll('.workbench-chain-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentWorkbenchStepIndex = idx;
+          const pText = typeof p === 'string' ? p : (p ? p.text : '');
+          if (promptContent) promptContent.innerHTML = renderPromptWithVariables(pText);
+        };
+        chainTabs.appendChild(tab);
+      });
+    } else {
+      chainTabs.style.display = 'none';
+    }
+  }
+
+  if (promptContent) {
+    const firstPrompt = prompts.length > 0 ? (typeof prompts[0] === 'string' ? prompts[0] : (prompts[0].text || '')) : '';
+    promptContent.innerHTML = renderPromptWithVariables(firstPrompt);
+  }
+
+  // 4. 填充效果说明
+  const effects = caseItem.effects || [];
+  if (effectsSection && effectsContent) {
+    if (effects.length > 0) {
+      effectsSection.style.display = 'flex';
+      effectsContent.innerHTML = effects.map(e => `<div>${escapeHtml(e)}</div>`).join('');
+    } else {
+      effectsSection.style.display = 'none';
+    }
+  }
+
+  // 5. 序号指示与导航
+  const totalCount = (activeCases && activeCases.length) ? activeCases.length : 1;
+  const displayIdx = (currentWorkbenchIndex >= 0 && currentWorkbenchIndex < totalCount) ? currentWorkbenchIndex + 1 : 1;
+  if (caseCounter) {
+    caseCounter.textContent = `${displayIdx} / ${totalCount}`;
+  }
+
+  // 6. 操作按钮绑定
+  if (copyBtn) {
+    copyBtn.onclick = () => {
+      const curP = prompts[currentWorkbenchStepIndex] || prompts[0] || '';
+      const raw = typeof curP === 'string' ? curP : (curP ? curP.text : '');
+      const clean = cleanPrompt(raw);
+      if (clean && typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(clean).catch(err => console.error(err));
+      }
+      const label = document.getElementById('workbench-copy-label');
+      if (label) label.textContent = '已复制！';
+      setTimeout(() => { if (label) label.textContent = '复制 Prompt'; }, 2000);
+      showToast('已复制 Prompt 到剪贴板');
+    };
+  }
+
+  if (studioBtn) {
+    studioBtn.onclick = () => {
+      const curP = prompts[currentWorkbenchStepIndex] || prompts[0] || '';
+      const raw = typeof curP === 'string' ? curP : (curP ? curP.text : '');
+      const clean = cleanPrompt(raw);
+      if (clean && typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(clean).catch(err => console.error(err));
+      }
+      showToast('已复制 Prompt，正在前往 Google AI Studio...');
+    };
+  }
+
+  // 导航按钮
+  if (prevBtn) prevBtn.onclick = showPrevCase;
+  if (nextBtn) nextBtn.onclick = showNextCase;
+
+  // 关闭按钮与背景遮罩
+  const closeBtn = document.getElementById('workbench-close-btn');
+  const backdrop = document.getElementById('workbench-backdrop');
+  if (closeBtn) closeBtn.onclick = closeWorkbench;
+  if (backdrop) backdrop.onclick = closeWorkbench;
+
+  // 键盘快捷键监听
+  if (!isWorkbenchKeydownBound && typeof window !== 'undefined') {
+    window.addEventListener('keydown', handleWorkbenchKeydown);
+    isWorkbenchKeydownBound = true;
+  }
+
+  // 展现模态框
+  modal.style.display = 'flex';
+  modal.setAttribute('aria-hidden', 'false');
+  modal.classList.add('open');
+  if (typeof document !== 'undefined' && document.body) {
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeWorkbench() {
+  const modal = document.getElementById('workbench-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+  if (typeof document !== 'undefined' && document.body) {
+    document.body.style.overflow = '';
+  }
+}
+
+function showPrevCase() {
+  if (!activeCases || activeCases.length === 0) return;
+  const nextIdx = (currentWorkbenchIndex - 1 + activeCases.length) % activeCases.length;
+  openWorkbench(nextIdx);
+}
+
+function showNextCase() {
+  if (!activeCases || activeCases.length === 0) return;
+  const nextIdx = (currentWorkbenchIndex + 1) % activeCases.length;
+  openWorkbench(nextIdx);
+}
+
+function handleWorkbenchKeydown(e) {
+  const modal = document.getElementById('workbench-modal');
+  if (!modal || (modal.style.display === 'none' && !modal.classList.contains('open'))) return;
+
+  if (e.key === 'Escape') {
+    if (e.preventDefault) e.preventDefault();
+    closeWorkbench();
+  } else if (e.key === 'ArrowLeft') {
+    if (e.preventDefault) e.preventDefault();
+    showPrevCase();
+  } else if (e.key === 'ArrowRight') {
+    if (e.preventDefault) e.preventDefault();
+    showNextCase();
+  }
+}
+
 // 导出全局对象，方便浏览器与测试脚本访问
 if (typeof window !== 'undefined') {
   window.deriveFeatureTags = deriveFeatureTags;
   window.showToast = showToast;
   window.copyMainPrompt = copyMainPrompt;
   window.loadCases = loadCases;
+  window.openWorkbench = openWorkbench;
+  window.closeWorkbench = closeWorkbench;
+  window.openLightbox = openWorkbench;
 }

@@ -109,6 +109,84 @@
     <span class="sentinel-text">向下滚动加载更多…</span>
 </div>
 
+<!-- Workbench Modal (Ticket 5 & ADR 0004) -->
+<div id="workbench-modal" class="workbench-modal" role="dialog" aria-modal="true" aria-hidden="true" style="display: none;">
+    <div class="workbench-backdrop" id="workbench-backdrop"></div>
+    <div class="workbench-dialog">
+        <button class="workbench-close-btn" id="workbench-close-btn" aria-label="关闭工作台 (Esc)" title="关闭 (Esc)">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="workbench-nav-bar">
+            <button class="workbench-nav-btn prev-case-btn" id="workbench-prev-btn" aria-label="上一个案例 (←)" title="上一个案例 (←)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>上一个</span>
+            </button>
+            <span class="workbench-case-counter" id="workbench-case-counter">1 / 1</span>
+            <button class="workbench-nav-btn next-case-btn" id="workbench-next-btn" aria-label="下一个案例 (→)" title="下一个案例 (→)">
+                <span>下一个</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="workbench-content">
+            <!-- Left Pane: Media Viewport & Thumbnail Strip -->
+            <div class="workbench-media-pane">
+                <div class="workbench-media-viewport">
+                    <img id="workbench-main-img" class="workbench-main-img" src="" alt="案例效果图" />
+                </div>
+                <div class="workbench-thumbnail-strip" id="workbench-thumb-strip"></div>
+            </div>
+            <!-- Right Pane: Structured Prompt Breakdown, Variables, Studio Handoff -->
+            <div class="workbench-info-pane">
+                <div class="workbench-header">
+                    <h2 class="workbench-title" id="workbench-title"></h2>
+                    <div class="workbench-meta">
+                        <span class="workbench-category" id="workbench-category"></span>
+                        <div class="workbench-tags" id="workbench-tags"></div>
+                    </div>
+                </div>
+                <div class="workbench-prompt-section">
+                    <div class="workbench-prompt-header">
+                        <span class="workbench-section-label">Prompt 结构化解析</span>
+                        <div class="workbench-chain-tabs" id="workbench-chain-tabs"></div>
+                    </div>
+                    <div class="workbench-prompt-box" id="workbench-prompt-box">
+                        <div class="workbench-prompt-content" id="workbench-prompt-content"></div>
+                    </div>
+                </div>
+                <div class="workbench-effects-section" id="workbench-effects-section">
+                    <span class="workbench-section-label">效果与说明</span>
+                    <div class="workbench-effects-content" id="workbench-effects-content"></div>
+                </div>
+                <div class="workbench-actions">
+                    <button class="workbench-action-btn workbench-copy-btn" id="workbench-copy-btn" title="复制当前步骤 Prompt">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span id="workbench-copy-label">复制 Prompt</span>
+                    </button>
+                    <a class="workbench-action-btn studio-handoff-btn" id="workbench-studio-btn" href="https://aistudio.google.com/prompts/new_chat" target="_blank" rel="noopener noreferrer" title="在 Google AI Studio 中尝试此提示词">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <span>在 Google AI Studio 中运行</span>
+                    </a>
+                </div>
+                <div class="workbench-source">
+                    <a id="workbench-source-link" href="#" target="_blank" rel="noopener noreferrer">查看原始案例来源 ↗</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Footer -->
 <footer class="site-footer">
     <span>微蕉阁 · WeiJiaoGe</span>
@@ -119,7 +197,7 @@
 <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
 <script>
-/* ── Gallery image enhancements injected before cases.js ── */
+/* ── Gallery enhancements injected before cases.js ── */
 (function() {
     // Progress bar
     const bar = document.getElementById('progress-bar');
@@ -129,21 +207,11 @@
         bar.style.width = (docHeight > 0 ? (scrollTop / docHeight * 100) : 0) + '%';
     }, { passive: true });
 
-    // Lightbox
-    const lb    = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    const lbCap = document.getElementById('lightbox-caption');
-
-    document.getElementById('lightbox-close').addEventListener('click', closeLb);
-    lb.addEventListener('click', function(e) { if (e.target === lb) closeLb(); });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLb(); });
-
-    function closeLb() { lb.classList.remove('open'); lbImg.src = ''; }
-
+    // Workbench Modal Bridge for backward compatibility
     window.openLightbox = function(src, caption) {
-        lbImg.src = src;
-        lbCap.textContent = caption || '';
-        lb.classList.add('open');
+        if (typeof window.openWorkbench === 'function') {
+            window.openWorkbench(src);
+        }
     };
 
     // Lazy-load images + fade-in after cases.js renders
@@ -154,10 +222,6 @@
                 img.addEventListener('load',  function() { img.classList.add('loaded'); });
                 img.addEventListener('error', function() { img.style.display = 'none'; });
             }
-            img.addEventListener('click', function(e) {
-                e.stopPropagation();
-                openLightbox(img.src, img.alt || '');
-            });
         });
     }
 
