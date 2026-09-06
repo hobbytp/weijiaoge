@@ -72,25 +72,13 @@
 
 <!-- Filters -->
 <div class="filters">
-    <div class="filter-group">
+    <div class="filter-group search-group">
         <label for="search">搜索案例</label>
         <div class="search-wrapper">
-            <input type="text" id="search" placeholder="标题、Prompt 或效果描述…">
+            <input type="text" id="search" placeholder="输入标题、Prompt 或效果关键词…">
         </div>
     </div>
-    <div class="filter-group">
-        <label for="category">分类</label>
-        <select id="category">
-            <option value="">全部分类</option>
-        </select>
-    </div>
-    <div class="filter-group">
-        <label for="path">来源路径</label>
-        <select id="path">
-            <option value="">全部来源</option>
-        </select>
-    </div>
-    <div class="filter-group">
+    <div class="filter-group sort-group">
         <label for="sort">排序</label>
         <select id="sort">
             <option value="category">按分类</option>
@@ -98,6 +86,14 @@
             <option value="path">按来源</option>
         </select>
     </div>
+    <select id="category" style="display: none;"><option value="">全部分类</option></select>
+    <select id="path" style="display: none;"><option value="">全部来源</option></select>
+</div>
+
+<!-- Horizontal Taxonomy Bar (Primary Categories & Feature Chips) -->
+<div class="taxonomy-bar" id="taxonomy-bar">
+    <div class="category-chips-row" id="category-chips"></div>
+    <div class="feature-chips-row" id="feature-chips"></div>
 </div>
 
 <!-- Stats -->

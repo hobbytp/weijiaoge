@@ -204,3 +204,68 @@ assert.strictEqual(allCards.length, 30, `第二批加载后卡片总数应为 30
 console.log('  ✅ Masonry 列均衡与分批流式渲染全部通过！');
 console.log('🎉 Ticket 2 集成测试用例执行完毕！\n');
 
+// ── Ticket 3: Hybrid Feature Chips & Horizontal Taxonomy Bar ──
+console.log('🧪 开始运行 Ticket 3: 胶囊标签栏与混合规则打标测试...');
+
+// 10. 验证 style.css 中包含标签栏相关样式
+console.log('  ▸ 校验 CSS 胶囊标签栏与 Chip 样式...');
+assert(cssContent.includes('.taxonomy-bar'), 'public/style.css 必须包含 .taxonomy-bar 容器样式');
+assert(cssContent.includes('.category-chip'), 'public/style.css 必须包含 .category-chip 样式');
+assert(cssContent.includes('.feature-chip'), 'public/style.css 必须包含 .feature-chip 样式');
+console.log('  ✅ CSS 胶囊标签栏与 Chip 样式校验通过');
+
+// 11. 验证 cases.html 结构中存在标签栏容器
+console.log('  ▸ 校验 cases.html 标签栏容器节点...');
+const taxonomyBar = document.getElementById('taxonomy-bar');
+const categoryChips = document.getElementById('category-chips');
+const featureChips = document.getElementById('feature-chips');
+assert(taxonomyBar, 'cases.html 必须包含 id="taxonomy-bar" 容器');
+assert(categoryChips, 'cases.html 必须包含 id="category-chips" 容器');
+assert(featureChips, 'cases.html 必须包含 id="feature-chips" 容器');
+console.log('  ✅ 标签栏容器节点校验通过');
+
+// 12. 验证 deriveFeatureTags 规则提取功能
+console.log('  ▸ 校验 deriveFeatureTags 混合打标规则引擎...');
+assert(typeof window.deriveFeatureTags === 'function', 'cases.js 必须导出 deriveFeatureTags 函数');
+
+const testMultiImgCase = {
+  title: '双图结构提取',
+  prompts: ['Using the attached napkin sketch as structure'],
+  effects: ['多图合成效果'],
+  images: ['https://example.com/1.jpg', 'https://example.com/2.jpg']
+};
+const tagsMulti = window.deriveFeatureTags(testMultiImgCase);
+assert(tagsMulti.includes('多图参考'), '含多图或 attached sketch 的案例必须推导出 #多图参考 标签');
+
+const testWeatherCase = {
+  title: '旧金山天气微缩杯',
+  prompts: ['[Search for current weather and date in San Francisco]'],
+  effects: ['天气微缩城'],
+  images: ['https://example.com/w.jpg']
+};
+const tagsWeather = window.deriveFeatureTags(testWeatherCase);
+assert(tagsWeather.includes('实时联网'), '含 Search for current weather 的案例必须推导出 #实时联网 标签');
+console.log('  ✅ 混合打标规则引擎校验通过');
+
+// 13. 验证点击 Feature Chip 单选互斥与重置过滤
+console.log('  ▸ 校验 Feature Chip 点击单选激活与反选还原交互...');
+// 获取已渲染的第一个 feature chip
+const firstChip = featureChips.querySelector('.feature-chip:not([data-tag=""])');
+assert(firstChip, 'feature-chips 容器中必须渲染至少一个二级特性 Chip');
+const targetTag = firstChip.getAttribute('data-tag');
+assert(targetTag, 'Feature chip 必须包含 data-tag 属性');
+
+// 点击激活 Chip
+firstChip.click();
+const activeChipAfterClick = featureChips.querySelector(`[data-tag="${targetTag}"]`);
+assert(activeChipAfterClick && activeChipAfterClick.classList.contains('active'), '点击 feature-chip 后重新渲染的对应 Chip 必须具备 active 类');
+
+// 再次点击同一 Chip（反选还原）
+activeChipAfterClick.click();
+const chipAfterSecondClick = featureChips.querySelector(`[data-tag="${targetTag}"]`);
+assert(chipAfterSecondClick && !chipAfterSecondClick.classList.contains('active'), '再次点击已激活的 feature-chip 必须取消 active 状态');
+
+console.log('  ✅ Feature Chip 单选交互与数据过滤全部通过！');
+console.log('🎉 Ticket 3 集成测试用例执行完毕！\n');
+
+

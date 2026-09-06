@@ -478,28 +478,98 @@ if (typeof window !== 'undefined') {
 
   window.loadCases = loadCases;
   window.renderNextBatch = renderNextBatch;
+  window.deriveFeatureTags = deriveFeatureTags;
 }
+
+// ── Hybrid Feature Tag Extraction Engine ────────────────────
+const FEATURE_TAG_RULES = [
+  {
+    tag: '多图参考',
+    test: (text, item) => (item.images && item.images.length > 1) || /多图|图一|图二|参考图|结构图|reference|using the attached|blend|fusion|合成/i.test(text)
+  },
+  {
+    tag: '实时联网',
+    test: (text) => /search for|current weather|real-time|实时|联网|天气|新闻/i.test(text)
+  },
+  {
+    tag: '局部修图',
+    test: (text) => /remove the|消除|局部|替换|修图|erase|mask|inpaint|inpainting/i.test(text)
+  },
+  {
+    tag: '风格迁移',
+    test: (text) => /recreate this photo into|style|style transfer|油画|水彩|像素|风格|film|胶片|vintage|1980s|梵高/i.test(text)
+  },
+  {
+    tag: '海报排版',
+    test: (text) => /poster|typographic|typography|海报|排版|字体|文字|text|lettering/i.test(text)
+  },
+  {
+    tag: '人物角色',
+    test: (text) => /portrait|character|model|person|man|woman|人物|角色|模特|人像|希斯莱杰|女孩|小丑/i.test(text)
+  },
+  {
+    tag: '材质光影',
+    test: (text) => /chiaroscuro|lighting|texture|material|armor|材质|光影|纹理|质感|布光|studio/i.test(text)
+  },
+  {
+    tag: '产品设计',
+    test: (text) => /product|commercial|bottle|packaging|design|产品|包装|工业设计|香水|易拉罐|手办/i.test(text)
+  },
+  {
+    tag: '镜头视角',
+    test: (text) => /gopro|action shot|angle|lens|wide angle|close-up|俯视|仰视|特写|镜头|视角/i.test(text)
+  },
+  {
+    tag: '手绘转实景',
+    test: (text) => /sketch|illustration|手绘|草图|转实景|线稿|手绘草图/i.test(text)
+  }
+];
+
+function deriveFeatureTags(caseItem) {
+  if (caseItem.tags && Array.isArray(caseItem.tags) && caseItem.tags.length > 0) {
+    return caseItem.tags;
+  }
+  const text = `${caseItem.title || ''} ${(caseItem.prompts || []).map(p => typeof p === 'string' ? p : p.text || '').join(' ')} ${(caseItem.effects || []).join(' ')}`;
+  const tags = [];
+  for (const rule of FEATURE_TAG_RULES) {
+    if (rule.test(text, caseItem)) {
+      tags.push(rule.tag);
+    }
+  }
+  return tags.length > 0 ? tags : ['通用生图'];
+}
+
+let activeCategory = '';
+let activeFeatureTag = '';
 
 function filterAndSort() {
   const searchTerm = (searchInput.value || '').toLowerCase();
-  const selectedCategory = categorySelect.value;
-  const selectedPath = pathSelect.value;
-  const sortBy = sortSelect.value;
+  const selectedCategory = activeCategory || (categorySelect ? categorySelect.value : '');
+  const selectedPath = pathSelect ? pathSelect.value : '';
+  const sortBy = sortSelect ? sortSelect.value : 'category';
   
   let filteredCases = casesData.cases.slice();
   
-  // 搜索过滤
+  // 搜索过滤 (支持标题、Prompt、效果与衍生标签)
   if (searchTerm) {
     filteredCases = filteredCases.filter(caseItem => {
       const promptsText = (caseItem.prompts || []).map(p => typeof p === 'string' ? p : p.text || '').join(' ');
-      const searchText = `${caseItem.title} ${promptsText} ${caseItem.effects.join(' ')}`.toLowerCase();
+      const tagsText = (caseItem.derivedTags || []).join(' ');
+      const searchText = `${caseItem.title} ${promptsText} ${caseItem.effects.join(' ')} ${tagsText}`.toLowerCase();
       return searchText.includes(searchTerm);
     });
   }
   
-  // 分类过滤
+  // 一级分类过滤
   if (selectedCategory) {
     filteredCases = filteredCases.filter(caseItem => caseItem.category === selectedCategory);
+  }
+
+  // 二级特性标签过滤 (单选互斥)
+  if (activeFeatureTag) {
+    filteredCases = filteredCases.filter(caseItem =>
+      caseItem.derivedTags && caseItem.derivedTags.includes(activeFeatureTag)
+    );
   }
   
   // 路径过滤
@@ -531,11 +601,76 @@ function filterAndSort() {
   renderCases(filteredCases);
 }
 
+function renderTaxonomyBar(categoryCounts, categoryNames, featureCounts) {
+  const categoryChips = document.getElementById('category-chips');
+  const featureChips = document.getElementById('feature-chips');
+  if (!categoryChips || !featureChips) return;
+
+  // 渲染一级分类胶囊
+  const totalCount = casesData.cases.length;
+  let catHtml = `
+    <button class="category-chip ${activeCategory === '' ? 'active' : ''}" data-category="">
+      全部案例 <span class="chip-count">${totalCount}</span>
+    </button>
+  `;
+  Object.keys(categoryCounts).forEach(cat => {
+    const isActive = activeCategory === cat;
+    catHtml += `
+      <button class="category-chip ${isActive ? 'active' : ''}" data-category="${escapeHtml(cat)}">
+        ${escapeHtml(categoryNames[cat])} <span class="chip-count">${categoryCounts[cat]}</span>
+      </button>
+    `;
+  });
+  categoryChips.innerHTML = catHtml;
+
+  // 渲染二级特性标签胶囊 (按频次高低排序)
+  const sortedTags = Object.keys(featureCounts).sort((a, b) => featureCounts[b] - featureCounts[a]);
+  let featHtml = `
+    <button class="feature-chip ${activeFeatureTag === '' ? 'active' : ''}" data-tag="">
+      全部特性
+    </button>
+  `;
+  sortedTags.forEach(tag => {
+    const isActive = activeFeatureTag === tag;
+    featHtml += `
+      <button class="feature-chip ${isActive ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+        #${escapeHtml(tag)} <span class="chip-count">${featureCounts[tag]}</span>
+      </button>
+    `;
+  });
+  featureChips.innerHTML = featHtml;
+
+  // 绑定一级分类胶囊事件
+  categoryChips.querySelectorAll('.category-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.getAttribute('data-category');
+      activeCategory = cat;
+      if (categorySelect) categorySelect.value = cat;
+      populateFilters();
+      filterAndSort();
+    });
+  });
+
+  // 绑定二级特性标签胶囊事件 (单选互斥与反选还原)
+  featureChips.querySelectorAll('.feature-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.getAttribute('data-tag');
+      if (activeFeatureTag === tag && tag !== '') {
+        activeFeatureTag = '';
+      } else {
+        activeFeatureTag = tag;
+      }
+      populateFilters();
+      filterAndSort();
+    });
+  });
+}
+
 function populateFilters() {
-  // P3优化：单次遍历预计算分类和路径频次 (O(N) 复杂度，避免重复 map + filter + URL 解析)
   const categoryCounts = {};
   const categoryNames = {};
   const pathCounts = {};
+  const featureCounts = {};
 
   for (const c of casesData.cases) {
     if (c.category) {
@@ -546,25 +681,35 @@ function populateFilters() {
     if (p) {
       pathCounts[p] = (pathCounts[p] || 0) + 1;
     }
+    if (c.derivedTags && Array.isArray(c.derivedTags)) {
+      for (const t of c.derivedTags) {
+        featureCounts[t] = (featureCounts[t] || 0) + 1;
+      }
+    }
   }
 
-  // 清空并重新填充分类选项
-  categorySelect.innerHTML = '<option value="">全部分类</option>';
-  Object.keys(categoryCounts).forEach(category => {
-    const option = document.createElement('option');
-    option.value = category;
-    option.textContent = `${categoryNames[category]} (${categoryCounts[category]})`;
-    categorySelect.appendChild(option);
-  });
+  // 填充兼容用的隐藏分类与路径选项
+  if (categorySelect) {
+    categorySelect.innerHTML = '<option value="">全部分类</option>';
+    Object.keys(categoryCounts).forEach(category => {
+      const option = document.createElement('option');
+      option.value = category;
+      option.textContent = `${categoryNames[category]} (${categoryCounts[category]})`;
+      categorySelect.appendChild(option);
+    });
+  }
 
-  // 清空并重新填充路径选项
-  pathSelect.innerHTML = '<option value="">全部来源</option>';
-  Object.keys(pathCounts).sort().forEach(path => {
-    const option = document.createElement('option');
-    option.value = path;
-    option.textContent = `${path} (${pathCounts[path]})`;
-    pathSelect.appendChild(option);
-  });
+  if (pathSelect) {
+    pathSelect.innerHTML = '<option value="">全部来源</option>';
+    Object.keys(pathCounts).sort().forEach(path => {
+      const option = document.createElement('option');
+      option.value = path;
+      option.textContent = `${path} (${pathCounts[path]})`;
+      pathSelect.appendChild(option);
+    });
+  }
+
+  renderTaxonomyBar(categoryCounts, categoryNames, featureCounts);
 }
 
 function debounce(fn, ms) {
@@ -581,12 +726,13 @@ async function loadCases() {
     casesData = await response.json();
     console.log(`加载了 ${casesData.cases.length} 个案例`);
     
-    // P3 优化：加载时预先计算 urlPath，消除后续筛选/排序中重复的数百次 URL 解析
+    // P3 优化：加载时预先计算 urlPath 与 derivedTags，消除重复计算
     casesData.cases.forEach(c => {
       c.urlPath = extractUrlPath(c.sourceUrl);
+      c.derivedTags = deriveFeatureTags(c);
     });
     
-    // 填充筛选选项
+    // 填充筛选选项与胶囊标签
     populateFilters();
     
     // 初始渲染
