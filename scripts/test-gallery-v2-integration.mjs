@@ -416,5 +416,40 @@ assert(!workbenchModal.classList.contains('open') || workbenchModal.style.displa
 console.log('  ✅ 双栏沉浸工作台、Prompt 变量令牌、Studio Handoff 与快捷键测试全部通过！');
 console.log('🎉 Ticket 5 集成测试用例执行完毕！\n');
 
+// 真实数据回归：兼容旧版单个 prompt 字段，并完整加载所有批次。
+const realCasesData = JSON.parse(fs.readFileSync(path.join(rootDir, 'public', 'cases.json'), 'utf-8'));
+const legacyCase = realCasesData.cases.find(c => !c.prompts && typeof c.prompt === 'string');
+assert(legacyCase, '真实数据应覆盖旧版 prompt 字段');
+const loadErrors = [];
+virtualConsole.on('error', (...args) => loadErrors.push(args));
+window.fetch = async () => ({ json: async () => structuredClone(realCasesData) });
+await window.loadCases();
+assert.strictEqual(loadErrors.length, 0, `真实案例加载失败: ${loadErrors.map(args => args.join(' ')).join('\n')}`);
+assert.strictEqual(casesGrid.querySelectorAll('.case-card').length, 24);
+assert(!batchSentinel.classList.contains('hidden'), '存在后续批次时应显示滚动提示');
+for (let i = 24; i < realCasesData.cases.length; i += 24) {
+  observerCallback([{ isIntersecting: true }]);
+}
+const expectedCount = Number(document.getElementById('stats').textContent.match(/\d+/)[0]);
+assert.strictEqual(casesGrid.querySelectorAll('.case-card').length, expectedCount);
+assert(batchSentinel.classList.contains('hidden'), '加载完毕后应隐藏滚动提示');
+window.openWorkbench(legacyCase.title);
+assert.strictEqual(workbenchPromptContent.textContent, window.cleanPrompt(legacyCase.prompt));
+document.getElementById('workbench-copy-btn').click();
+assert.strictEqual(copiedClipboardText, window.cleanPrompt(legacyCase.prompt));
+document.getElementById('search').value = legacyCase.prompt.slice(0, 45);
+window.filterAndSort();
+assert(casesGrid.textContent.includes(legacyCase.title), '搜索应包含旧版 prompt 内容');
+console.log('✅ 真实案例加载、全部批次、旧版 Prompt 展示/复制/搜索回归通过');
+
+// 请求失败时，错误信息不能与“加载更多”同时出现。
+batchSentinel.classList.remove('hidden');
+window.fetch = async () => { throw new Error('Network unavailable'); };
+await window.loadCases();
+assert(casesGrid.textContent.includes('加载案例数据失败'));
+assert(batchSentinel.classList.contains('hidden'));
+assert.strictEqual(batchSentinel.textContent, '');
+dom.window.close();
+
 
 
