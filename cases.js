@@ -744,6 +744,10 @@ async function loadCases() {
     
     // P3 优化：加载时预先计算 urlPath 与 derivedTags，消除重复计算
     casesData.cases.forEach(c => {
+      // 兼容旧数据中的单个 prompt，供渲染、搜索和工作台统一使用。
+      if (!Array.isArray(c.prompts)) {
+        c.prompts = typeof c.prompt === 'string' ? [c.prompt] : [];
+      }
       c.urlPath = extractUrlPath(c.sourceUrl);
       c.derivedTags = deriveFeatureTags(c);
     });
@@ -757,6 +761,7 @@ async function loadCases() {
     console.error('加载案例数据失败:', error);
     casesGrid.innerHTML = '<div class="empty">加载案例数据失败</div>';
     stats.textContent = '加载失败';
+    updateSentinel(false);
   }
 }
 
